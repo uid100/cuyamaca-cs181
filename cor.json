@@ -91,27 +91,7 @@
       "Paul J. Deitel and Harvey Deitel. C How to Program with the Pearson My Programming Lab component. 8th edition, Pearson, 2015."
     ],
     "supplemental": "None",
-    "textbook": {
-        "title": "Starting Out With C++: From Control Structures through Objects",
-        "author": "Tony Gaddis",
-        "chapters": {
-            "Chapter 1": "Introduction to Computers and Programming",
-            "Chapter 2": "Introduction to C++",
-            "Chapter 3": "Expressions and Interactivity",
-            "Chapter 4": "Making Decisions",
-            "Chapter 5": "Loops and Files",
-            "Chapter 6": "Functions",
-            "Chapter 7": "Arrays and Vectors",
-            "Chapter 8": "Searching and Sorting Arrays",
-            "Chapter 9": "Pointers",
-            "Chapter 10": "Characters, C-Strings, and More",
-            "Chapter 11": "Structured Data",
-            "Chapter 12": "Advanced File Operations",
-            "Chapter 13": "Introduction to Classes",
-            "Chapter 14": "More About Classes",
-            "Chapter 15": "Inheritance, polymorphism, and Virtual Functions"
-        }
-    }
+
   },
   "exit_skills": [
     "Write well-designed C++ code to solve a variety of scientific problems as standalone programs.",
