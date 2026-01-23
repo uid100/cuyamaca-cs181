@@ -32,18 +32,50 @@
   "textbook": "materials/textbook.json",
   "content": {
     "modules": {
+      "00": {
+        "title": "Notes ## DO NOT PUBLISH ##",
+        "shortTitle": "notes",
+        "pages": {
+          "1": "use *resource* for absolute (external) links",
+          "2": "use *source* for course-repo relative (internal) links, courseBase + source"
+        }
+      },
       "01": { 
         "title": "Introduction to Computers, Programming, and C++",
+        "shortTitle": "intro",
+        "length": "1 week",
+        "topics": [
+          "What computers do",
+          "History of C-based Languages",
+          "Introduction to C++ Programming",
+          "Source -> compile -> run",
+          "Anatomy of a simple C++ program",
+          "Typical C++ Program Development Environment",
+          "IDE setup"
+        ],
+        "chapters": [
+          "Chapter 1: An Introduction to Computers and Programming",
+          "Chapter 2: Introduction to C++"
+        ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/01/overview01.html" },
-          "history": { "title": "Short History of C-based Languages", "type": "content", "source": "/content/01/history.html" },
-          "intro-cpp": { "title": "Introduction to C++ Programming", "type": "content", "source": "/content/01/intro-cpp.html" },
-          "dev-environment": { "title": "Typical C++ Program Development Environment", "type": "content", "source": "/content/01/dev-environment.html" },
-          "end": { "title": "End of Module 1", "type": "content", "source": "/content/end-module.html" }
+          "start": { "title": "PICK ME! PICK ME! ---- ( ***START HERE*** )", "type": "content", "source": "content/start.html" },
+          "overview": { "title": "Module Overview", "type": "content", "source": "content/01/overview01.html" },
+          "history": { "title": "Short History of C-based Languages", "type": "content", "source": "content/01/history.html" },
+          "intro-cpp": { "title": "Introduction to C++ Programming", "type": "content", "source": "content/01/intro-cpp.html" },
+          "dev-environment": { "title": "Typical C++ Program Development Environment", "type": "content", "source": "content/01/dev-environment.html" },
+          "end": { "title": "End of Module 1", "type": "content", "source": "content/end-module.html" }
         }
       },
       "02": {
         "title": "Variables, Data Types, Expressions",
+        "shortTitle": "variables",
+        "length": "2 weeks",
+        "topics": [
+          "Variables, primitive types",
+          "Arithmetic expressions and operators",
+          "Input/output (cin, cout)",
+          "Style and naming conventions"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/02/overview02.html" },
           "variables": { "title": "Variables and Data Types", "type": "content", "source": "/content/02/variables.html" },
@@ -52,243 +84,197 @@
         }
       },
       "03": {
-        "title": "Decisions (Part 1)",
-        "pages": {
+        "title": "Decisions, Debugging, and Pseudocode",
+        "shortTitle": "decisions",
+        "length": "2 weeks",
+        "topics": [
+          "If statements",
+          "Logical operators",
+          "Debugging techniques",
+          "Pseudocode for program design",
+          "if, else, nested decisions",
+          "Boolean logic",
+          "Relational and logical operators",
+          "switch",
+          "Intro to debugging techniques",
+          "Program design with pseudocode and flowcharts"
+        ],
+        "pages": {  
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/03/overview03.html" },
           "if-statements": { "title": "If Statements", "type": "content", "source": "/content/03/if-statements.html" },
           "logical-operators": { "title": "Logical Operators", "type": "content", "source": "/content/03/logical-operators.html" }, 
-          "end": { "title": "End of Module 3", "type": "content", "source": "/content/end-module.html" }
+          "end": { "title": "End of Module 3", "type": "content", "source": "/content/end-module.html" },
+          "debugging": { "title": "Debugging Techniques", "type": "content", "source": "/content/03/debugging.html" },
+          "pseudocode": { "title": "Pseudocode for Program Design", "type": "content", "source": "/content/03/pseudocode.html" }
         }
       },
       "04": {
-        "title": "Decisions (Part 2), Debugging, and Pseudocode",
+        "title": "Iteration using Loops",
+        "shortTitle": "loops",
+        "length": "2 weeks",
+        "topics": [
+          "While loops",
+          "For loops",
+          "Loop control",
+          "while, for, do-while",
+          "Sentinel values, counters, accumulators",
+          "Common loop algorithms",
+          "Loop debugging",
+          "Nested loops"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/04/overview04.html" },
-          "debugging": { "title": "Debugging Techniques", "type": "content", "source": "/content/04/debugging.html" },
-          "pseudocode": { "title": "Pseudocode for Program Design", "type": "content", "source": "/content/04/pseudocode.html" },
+          "while-loops": { "title": "While Loops", "type": "content", "source": "/content/04/while-loops.html" },
+          "for-loops": { "title": "For Loops", "type": "content", "source": "/content/04/for-loops.html" }, 
           "end": { "title": "End of Module 4", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "05": {
-        "title": "Loops (Part 1)",
+        "title": "Functions and Scope",
+        "shortTitle": "functions",
+        "length": "2 weeks",
+        "topics": [
+          "Defining and calling functions",
+          "Function prototypes/definitions",
+          "Return values",
+          "Passing by value",
+          "Reference parameters",
+          "Local vs global variables",
+          "Storage classes (light)",
+          "Top‑down design",
+          "Function parameters and return values",
+          "Reference parameters and scope"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/05/overview05.html" },
-          "while-loops": { "title": "While Loops", "type": "content", "source": "/content/05/while-loops.html" },
-          "for-loops": { "title": "For Loops", "type": "content", "source": "/content/05/for-loops.html" }, 
+          "defining-functions": { "title": "Defining and Calling Functions", "type": "content", "source": "/content/05/defining-functions.html" },
+          "function-parameters": { "title": "Function Parameters and Return Values", "type": "content", "source": "/content/05/function-parameters.html" },
           "end": { "title": "End of Module 5", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "06": {
-        "title": "Loops (Part 2)",
+        "title": "Arrays",
+        "shortTitle": "arrays",
+        "length": "2 weeks",
+        "topics": [
+          "Defining and using arrays",
+          "Passing arrays to functions",
+          "Sorting and searching arrays",
+          "Multidimensional arrays",
+          "Declaring/initializing arrays",
+          "Passing arrays to functions",
+          "Visualizing array memory as contiguous blocks"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/06/overview06.html" },
-          "loop-debugging": { "title": "For Loops", "type": "content", "source": "/content/06/debugging.html" },
-          "nested-loops": { "title": "Nested Loops", "type": "content", "source": "/content/06/nested-loops.html" },
+          "arrays": { "title": "Arrays", "type": "content", "source": "/content/06/arrays.html" },
           "end": { "title": "End of Module 6", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "07": {
-        "title": "Functions (Part 1)",
+        "title": "Sorting, Searching & Vectors",
+        "shortTitle": "vectors",
+        "length": "2 weeks",
+        "topics": [
+          "Sorting algorithms",
+          "Searching algorithms",
+          "Linear search",
+          "Binary search",
+          "Selection sort / bubble sort",
+          "Intro to std::vector and why it’s safer",
+          "Using vectors"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/07/overview07.html" },
-          "defining-functions": { "title": "Defining and Calling Functions", "type": "content", "source": "/content/07/defining-functions.html" },
-          "function-parameters": { "title": "Function Parameters and Return Values", "type": "content", "source": "/content/07/function-parameters.html" },
+          "sorting-searching": { "title": "Sorting and Searching Arrays", "type": "content", "source": "/content/07/sorting-searching.html" },
+          "vectors": { "title": "Vectors", "type": "content", "source": "/content/07/vectors.html" },
           "end": { "title": "End of Module 7", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "08": {
-        "title": "Functions (Part 2) Reference Parameters and Scope",
+        "title": "Pointers",
+        "shortTitle": "pointers",
+        "length": "2 weeks",
+        "topics": [
+          "Pointer basics",
+          "Pointer arithmetic",
+          "Pointers and arrays",
+          "Memory addresses",
+          "Basic pointer syntax",
+          "Pointers and arrays connection (conceptual)",
+          "No pointer arithmetic unless students are strong",
+          "Dynamic memory allocation"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/08/overview08.html" },
-          "reference-parameters": { "title": "Reference Parameters", "type": "content", "source": "/content/08/reference-parameters.html" },
-          "variable-scope": { "title": "Variable Scope", "type": "content", "source": "/content/08/variable-scope.html" },
-          "end": { "title": "End of Module 8", "type": "content", "source": "/content/end-module.html" }
+          "pointers": { "title": "Pointers", "type": "content", "source": "/content/08/pointers.html" },
+          "end": { "title": "End of Module 08", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "09": {
-        "title": "Arrays",
+        "title": "Strings",
+        "shortTitle": "strings",
+        "length": "1 week",
+        "topics": [
+          "C-strings vs. std::string",
+          "String manipulation",
+          "String functions",
+          "std::string",
+          "Basic string operations",
+          "Input/output with strings",
+          "Avoid deep C‑string functions unless needed"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/09/overview09.html" },
-          "arrays": { "title": "Arrays", "type": "content", "source": "/content/09/arrays.html" },
-          "end": { "title": "End of Module 9", "type": "content", "source": "/content/end-module.html" }
+          "strings": { "title": "Strings", "type": "content", "source": "/content/09/strings.html" },
+          "end": { "title": "End of Module 09", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "10": {
-        "title": "Sorting, Searching & Vectors",
+        "title": "Classes and Objects",
+        "shortTitle": "oop",
+        "length": "2 weeks",
+        "topics": [
+          "Defining classes",
+          "Creating objects",
+          "Member functions and attributes",
+          "Constructors and destructors",
+          "Access specifiers (public/private)",
+          "this pointer",
+          "Designing simple classes",
+          "Creating and using objects",
+          "Overloading: <<, maybe ==",
+          "Simple ADT building"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/10/overview10.html" },
-          "sorting-searching": { "title": "Sorting and Searching Arrays", "type": "content", "source": "/content/10/sorting-searching.html" },
-          "vectors": { "title": "Vectors", "type": "content", "source": "/content/10/vectors.html" },
+          "classes-objects": { "title": "Classes and Objects", "type": "content", "source": "/content/10/classes-objects.html" },
           "end": { "title": "End of Module 10", "type": "content", "source": "/content/end-module.html" }
         }
       },
       "11": {
-        "title": "Pointers",
+        "title": "Inheritance",
+        "shortTitle": "inheritance",
+        "length": "1 week",
+        "topics": [
+          "Base and derived classes",
+          "Access specifiers (public/private/protected)",
+          "Overriding member functions",
+          "Polymorphism and virtual functions",
+          "Simple inheritance hierarchies",
+          "Using base class pointers to derived objects"
+        ],
         "pages": {
           "overview": { "title": "Module Overview", "type": "content", "source": "/content/11/overview11.html" },
-          "pointers": { "title": "Pointers", "type": "content", "source": "/content/11/pointers.html" },
+          "polymorphism": { "title": "Polymorphism and Virtual Functions", "type": "content", "source": "/content/11/polymorphism.html" },
           "end": { "title": "End of Module 11", "type": "content", "source": "/content/end-module.html" }
         }
       },
-      "12": {
-        "title": "Strings",
+      "99": {
+        "title": "Resources",
+        "shortTitle": "resources",
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/12/overview12.html" },
-          "strings": { "title": "Strings", "type": "content", "source": "/content/12/strings.html" },
-          "end": { "title": "End of Module 12", "type": "content", "source": "/content/end-module.html" }
-        }
-      },
-      "13": {
-        "title": "Classes and Objects",
-        "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/13/overview13.html" },
-          "classes-objects": { "title": "Classes and Objects", "type": "content", "source": "/content/13/classes-objects.html" },
-          "end": { "title": "End of Module 13", "type": "content", "source": "/content/end-module.html" }
-        }
-      },
-      "14": {
-        "title": "Advanced Object-Oriented Programming",
-        "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/14/overview14.html" },
-          "advanced-oop": { "title": "Advanced Object-Oriented Programming Concepts", "type": "content", "source": "/content/14/advanced-oop.html" },
-          "overloading": { "title": "Operator Overloading", "type": "content", "source": "/content/14/operator-overloading.html" },
-          "inheritance": { "title": "Inheritance", "type": "content", "source": "/content/14/inheritance.html" },
-          "end": { "title": "End of Module 14", "type": "content", "source": "/content/end-module.html" }
-        }
-      },
-      "15": {
-        "title": "Inheritance",
-        "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/15/overview15.html" },
-          "polymorphism": { "title": "Polymorphism and Virtual Functions", "type": "content", "source": "/content/15/polymorphism.html" },
-          "end": { "title": "End of Module 15", "type": "content", "source": "/content/end-module.html" }
-        }
-      }
-    },
-    "**modules": {
-      "01-sequential": {
-        "title": "Module 1 - Sequential Processing",
-        "pages": {
-          "implementation-note": {
-            "1": "use *resource* for absolute (external) links",
-            "2": "use *source* for course-repo relative (internal) links, courseBase + source"
-          },
-          "announce1": { "title": "Announcement: Welcome to CSIT 175!", "type": "announcement", "resource": "https://uid100.github.io/palomar-csit175/content/01/01.0.0.welcome.html" },
-          "overview": {  "title": "Module Overview", "type": "content", "source": "/content/01/overview01.html"},
-          "install-python": {  "title": "Installing Python", "type": "content", "resource": "https://uid100.github.io/py/content/install-python.html"},
-          "chapter1": {  "title": "An Introduction to Python Programming", "type": "content", "resource": "https://uid100.github.io/py/notes/murach2d/ch1.html"},
-          "chapter2": { "title": "Writing your first programs","type": "content", "resource": "https://uid100.github.io/py/notes/murach2d/ch2.html"},
-          "ack": { "title": "Syllabus Acknowledgement","type": "content", "source": "/content/01/ack.html"},
-          "disc-intro": { "title": "Discussion: Sequential Processing","type": "content", "source": "/content/01/disc-intro.html"},
-          "hello-world": {"title": "Hello, World!","type": "content", "resource": "https://uid100.github.io/py/content/hello-world.html" },
-          "variables": {"title": "Variables: An Introduction","type": "content", "resource": "https://uid100.github.io/py/content/variables.html" },
-          "end": { "title": "End of Module 1: Sequential Processing", "type": "content", "source": "/content/end-module.html"}
-        },
-        "lab": {
-          "title": "Lab #1 - Sequential Processing",
-          "taskListUrl": "https://uid100.github.io/py/01-sequential/ex/task-list.json",
-          "fragmentsBase": "https://uid100.github.io/py/01-sequential/ex/"
-        }
-      },
-      "02-conditional": {
-        "title": "Module 2 - Conditional Processing",
-        "pages": {
-          "announce2": { "title": "week 2", "type": "announcement", "resource": "" },
-          "overview": { "title": "Making Decisions","type": "content", "source": "/content/02/overview02.html"},
-          "chapter3": { "title": "Boolean Logic", "type": "content", "resource": "https://uid100.github.io/py/notes/murach2d/ch3.html"},
-          "interpreter": { "title": "The Python Interpreter", "type": "content", "resource": "https://uid100.github.io/py/content/python-interpreter.html" },
-          "directive": { "title": "The Interpreter Directive", "type": "content", "resource": "https://uid100.github.io/py/content/interpreter-directive.html" },
-          "demo-code": { "title": "Demo Code Examples", "type": "content", "source": "/content/02/demo-code.html"},
-          "end": { "title": "End of Module 2: Conditional Processing", "type": "content", "source": "/content/end-module.html"}
-        },
-        "lab": {
-          "title": "Lab #2 - Conditional Processing",
-          "taskListUrl": "https://uid100.github.io/py/02-conditional/ex/task-list.json",
-          "fragmentsBase": "https://uid100.github.io/py/02-conditional/ex/"
-        }
-      },
-      "03-iteration": {
-        "title": "Module 3 - Repetitive Processing",
-        "pages": {
-          "overview": { "title": "Repetition Structures","type": "content","source": "/content/03/overview03.html"},
-          "page1": { "title": "Loops","type": "content","source": "/content/03/lesson1/page1.html"},
-          "page2": { "title": "Loop Control", "type": "content", "source": "/content/03/lesson1/page2.html"},
-          "end": { "title": "End of Module 3: Repetitive Processing", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "04-functions": {
-        "title": "Module 4 - Functions",
-        "pages": {
-          "overview": { "title": "Defining and Using Functions","type": "content","source": "/content/04/overview04.html"},
-          "page1": { "title": "Functions","type": "content","source": "content/modules/04-functions/lesson1/page1.html"},
-          "page2": { "title": "Function Control", "type": "content", "source": "content/modules/04-functions/lesson1/page2.html"},
-          "pycache": { "title": "Understanding __pycache__","type": "content","resource": "https://uid100.github.io/py/content/bytecode.html"},
-          "end": { "title": "End of Module 4: Functions", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "05-testing-debugging": {
-        "title": "Module 5 - Testing and Debugging",
-        "pages": {
-          "page1": { "title": "Testing","type": "content","source": "content/modules/05-testing-debugging/lesson1/page1.html"},
-          "disc-testing": { "title": "Debugging", "type": "content", "source": "/content/05/disc-testing.html"},
-          "end": { "title": "End of Module 5: Testing and Debugging", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "06-collections": {
-        "title": "Module 6 - Collections",
-        "pages": {
-          "page1": { "title": "Lists","type": "content","source": "content/modules/06-collections/lesson1/page1.html"},
-          "page2": { "title": "Dictionaries", "type": "content", "source": "content/modules/06-collections/lesson1/page2.html"},
-          "end": { "title": "End of Module 6: Collections", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "07-files": {
-        "title": "Module 7 - File IO and Exception Handling",
-        "pages": {
-          "page1": { "title": "File I/O","type": "content","source": "content/modules/07-files/lesson1/page1.html"},
-          "page2": { "title": "Working with Files", "type": "content", "source": "content/modules/07-files/lesson1/page2.html"},
-          "page3": { "title": "Exceptions","type": "content","source": "content/modules/08-exceptions/lesson1/page1.html"},
-          "page4": { "title": "Handling Exceptions", "type": "content", "source": "content/modules/08-exceptions/lesson1/page2.html"},
-          "end": { "title": "End of Module 7: File IO and Exception Handling", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "08-dictionaries": {
-        "title": "Module 8 - Advanced Data Structures",
-        "pages": {
-          "overview": { "title": "Data Structures","type": "content","source": "content/modules/08-dictionaries/lesson1/page1.html"},
-          "chapter12": { "title": "Dictionaries", "type": "content", "resource": "https://uid100.github.io/py/notes/murach2d/ch3.html"},
-          "end": { "title": "End of Module 8: Advanced Data Structures", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "09-classes": {
-        "title": "Module 9 - Object-Oriented Programming",
-        "pages": {
-          "page1": { "title": "Classes and Objects","type": "content","source": "content/modules/09-classes/lesson1/page1.html"},
-          "page2": { "title": "Methods and Attributes", "type": "content", "source": "content/modules/09-classes/lesson1/page2.html"},
-          "end": { "title": "End of Module 9: Object-Oriented Programming", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "10-inheritance": {
-        "title": "Module 10 - Inheritance and Polymorphism",
-        "pages": {
-          "page1": { "title": "Inheritance","type": "content","source": "content/modules/10-inheritance/lesson1/page1.html"},
-          "page2": { "title": "Polymorphism", "type": "content", "source": "content/modules/10-inheritance/lesson1/page2.html"},
-          "end": { "title": "End of Module 10: Inheritance and Polymorphism", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "11-webapps": {
-        "title": "Module 11 - Web Applications",
-        "pages": {
-          "page1": { "title": "Web Frameworks","type": "content","source": "content/modules/11-webapps/lesson1/page1.html"},
-          "page2": { "title": "Building Web Apps", "type": "content", "source": "content/modules/11-webapps/lesson1/page2.html"},
-          "end": { "title": "End of Module 11: Web Applications", "type": "content", "source": "/content/end-module.html"}
-        }
-      },
-      "12-wrapup": {
-        "title": "Module 12 - Course Wrap-Up",
-        "pages": {
-          "page1": { "title": "Review and Next Steps","type": "content","source": "content/modules/12-wrapup/lesson1/page1.html"},
-          "end": { "title": "End of Course", "type": "content", "source": "/content/end-module.html"}
+          "resources": { "title": "Course Resources", "type": "content", "source": "/content/99/resources.html" }
         }
       }
     }
