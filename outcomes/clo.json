@@ -1,0 +1,5 @@
+[
+  { "id": "CLO #1", "outcome": "Decompose problems and design program solutions using flowcharts, pseudocode, models, or other tools." },
+  { "id": "CLO #2", "outcome": "Properly code applications using the fundamental coding structures: sequence, selection, and loops." },
+  { "id": "CLO #3", "outcome": "Test and debug applications using debugging tools such as trace execution." }
+]

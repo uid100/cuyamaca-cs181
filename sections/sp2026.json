@@ -1,0 +1,36 @@
+{ 
+  "canvas": {
+    "server": "https://gcccd.instructure.com",
+    "coursePath": "/courses/-99999"
+  },
+  "sectionNumber": "8351",
+  "courseId": "CS-181-8351",
+  "term": "Spring 2026",
+    "dates": {
+    "start": "2026-02-02",
+    "end": "2026-06-01",
+    "withdraw": "",
+    "classesEnd": "",
+    "finals": "",
+    "finalsEnd": "",
+    "gradesDue": "",
+    "gradesPosted": "",
+    "holidays": {
+      "mlkDay": "2026-01-19",
+      "Pres. Lincoln's Day": "2026-02-13",
+      "Pres. Washington's Day": "2026-02-16",
+      "springBreak": {
+        "start": "",
+        "end": ""
+      },
+      "memorialDay": "2026-05-25"
+    }
+  },
+  "*startDate": "2026-02-02T08:00:00",
+  "*endDate": "2026-06-01T08:00:00",
+  "schedule": {
+    "day": "Tuesday",
+    "time": "6P - 10P",
+    "location": "E 212"
+  }
+}

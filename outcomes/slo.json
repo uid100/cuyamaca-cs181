@@ -1,0 +1,17 @@
+[
+  { "id": "LO #1", "objective": "Storage class characteristics for variables, objects and methods and justify the reason(s) for the selection" },
+  { "id": "LO #2", "objective": "Solve a variety of programming problems using sound structured, top-down, object-oriented design principles" },
+  { "id": "LO #3", "objective": "Use operator overloading and inheritance to minimize reinvention of similar objects" },
+  { "id": "LO #4", "objective": "Access standard C++ library modules" },
+  { "id": "LO #5", "objective": "Explain and apply pointers and memory allocation techniques" },
+  { "id": "LO #6", "objective": "Explain the difference between (and implications of) reference vs. primitive data types" },
+  { "id": "LO #7", "objective": "Design, create and utilize complex classes and their associated objects" },
+  { "id": "LO #8", "objective": "Input and output data to and from standard devices and files" },
+  { "id": "LO #9", "objective": "Visualize array subscripting as memory offset calculations and explain some of the implications. Represent this visualization in drawings" },
+  { "id": "LO #10", "objective": "Utilize fundamental program control structures (sequence, decision, and repetition)" },
+  { "id": "LO #11", "objective": "Explain the role of pre-processed code and effectively utilize it" },
+  { "id": "LO #12", "objective": "Code efficient sort and search algorithms" },
+  { "id": "LO #13", "objective": "Identify the scope of a C++ variable in a program" },
+  { "id": "LO #14", "objective": "Demonstrate in a program the use of a method that returns an array" },
+  { "id": "LO #15", "objective": "Trace program flow and predict outcomes" }
+]

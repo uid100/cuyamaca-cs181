@@ -1,0 +1,135 @@
+{
+  "college_name": "CUYAMACA COLLEGE",
+  "document_type": "COURSE OUTLINE OF RECORD",
+  "course_details": {
+    "code": "COMPUTER SCIENCE 181",
+    "title": "INTRODUCTION TO C++ PROGRAMMING",
+    "credit_hours": "3 hours lecture, 3 hours laboratory, 4 units",
+    "curriculum_committee_approval": "09/01/2020",
+    "learning_hours": {
+      "lecture_contact_hours": "48-54",
+      "homework_hours": "96-108",
+      "total_student_learning_hours": "144-162",
+      "laboratory_contact_hours": "48-54",
+      "laboratory_homework_hours": "0",
+      "total_lab_learning_hours": "48-54"
+    }
+  },
+  "catalog_description": "Introduction to computer programming using a C family language. Students with no previous programming experience in C++ will learn computer organization and operation, binary representation of information, how to plan and create well-structured programs, write programs using sequence, selection and repetition structures, and create and manipulate sequential access files, structs, classes, pointers and arrays.",
+  "prerequisite": "None",
+  "recommended_preparation": "“C” grade or higher or “Pass” in CS 119 or equivalent, and intermediate algebra",
+  "entrance_skills": [
+    "Demonstrate knowledge of software engineering methodologies and practices.",
+    "Identify common tools, functions, classes and utilities available in modern programming languages.",
+    "Define and utilize structured programming principles.",
+    "Identify logical “objects” and their “attributes” and “behaviors.”",
+    "Design “behaviors” that follow all structured programming guidelines.",
+    "Utilize the three basic logic control structures of sequence, decision and repetition.",
+    "Conceptualize abstraction, polymorphism, inheritance and encapsulation.",
+    "Manipulate arrays.",
+    "Contrast procedural vs. object-oriented languages.",
+    "Trace the flow of execution and values of all variables through a complex object-oriented program."
+  ],
+  "course_content": [
+    "Introduction to Computers, the Internet, and the Web",
+    "Short history of C-based languages",
+    "Introduction to C Programming",
+    "Typical C Program Development Environment",
+    "Structured Program Development in C: Algorithms, Pseudocode, If, While, Operators",
+    "Program Control",
+    "Functions: Modules, Libraries, Definitions, Headers, Random Number Generator, Recursion",
+    "Arrays: Arrays to Functions, Sorting, Searching",
+    "Pointers: Operators, Passing Arguments to Functions by Reference, Expressions and Arithmetic, Arrays",
+    "Characters and Strings: Character-Handling Library, Input/Output, Search, Memory",
+    "Formatted Input/Output: printf, Integers, floating-point numbers, strings, characters, scanf",
+    "Structures, Unions, Bit Manipulations and Enumerations",
+    "File Processing",
+    "Data types and structures",
+    "Preprocessor",
+    "Classes and objects",
+    "Multidimensional arrays",
+    "Inheritance, polymorphism and operator overloading"
+  ],
+  "course_objectives": [
+    "Storage class characteristics for variables, objects and methods and justify the reason(s) for the selection",
+    "Solve a variety of programming problems using sound structured, top-down, object-oriented design principles",
+    "Use operator overloading and inheritance to minimize reinvention of similar objects",
+    "Access standard C++ library modules",
+    "Explain and apply pointers and memory allocation techniques",
+    "Explain the difference between (and implications of) reference vs. primitive data types",
+    "Design, create and utilize complex classes and their associated objects",
+    "Input and output data to and from standard devices and files",
+    "Visualize array subscripting as memory offset calculations and explain some of the implications. Represent this visualization in drawings",
+    "Utilize fundamental program control structures (sequence, decision, and repetition)",
+    "Explain the role of pre-processed code and effectively utilize it",
+    "Code efficient sort and search algorithms",
+    "Identify the scope of a C++ variable in a program",
+    "Demonstrate in a program the use of a method that returns an array",
+    "Trace program flow and predict outcomes"
+  ],
+  "method_of_evaluation": [
+    "Quizzes and exams that measure students’ ability to use programming terminology and explain technical concepts related to program development and implementation in C++.",
+    "Practical exams requiring students to trace programming code to predict outcome. For example, a 10-20 line section of code is provided and students must be able to identify how all of the values in all variables are altered by that code and predict the final output as specified in the code.",
+    "Projects requiring students to write complete application programs demonstrating effective use of object-oriented principles, methodology and concepts."
+  ],
+  "special_materials_required_of_student": [
+    "Flash drive"
+  ],
+  "minimum_instructional_facilities": "Computer lab with networked computers and software to create C++ programming environment",
+  "method_of_instruction": [
+    "Lecture and demonstration",
+    "Hands-on practice",
+    "Lab problems"
+  ],
+  "out_of_class_assignments": [
+    "Design, code and debug multiple C++ programs and objects that demonstrate class objectives",
+    "Analyze instructor-assigned pre-coded C++ programs, post analysis comments on the class discussion board."
+  ],
+  "texts_and_references": {
+    "required": [
+      "Gaddis, Tony. Starting Out With C++: From Control Structures through Objects. 8th edition. Pearson, 2014.",
+      "Paul J. Deitel and Harvey Deitel. C How to Program with the Pearson My Programming Lab component. 8th edition, Pearson, 2015."
+    ],
+    "supplemental": "None",
+    "textbook": {
+        "title": "Starting Out With C++: From Control Structures through Objects",
+        "author": "Tony Gaddis",
+        "chapters": {
+            "Chapter 1": "Introduction to Computers and Programming",
+            "Chapter 2": "Introduction to C++",
+            "Chapter 3": "Expressions and Interactivity",
+            "Chapter 4": "Making Decisions",
+            "Chapter 5": "Loops and Files",
+            "Chapter 6": "Functions",
+            "Chapter 7": "Arrays and Vectors",
+            "Chapter 8": "Searching and Sorting Arrays",
+            "Chapter 9": "Pointers",
+            "Chapter 10": "Characters, C-Strings, and More",
+            "Chapter 11": "Structured Data",
+            "Chapter 12": "Advanced File Operations",
+            "Chapter 13": "Introduction to Classes",
+            "Chapter 14": "More About Classes",
+            "Chapter 15": "Inheritance, polymorphism, and Virtual Functions"
+        }
+    }
+  },
+  "exit_skills": [
+    "Write well-designed C++ code to solve a variety of scientific problems as standalone programs.",
+    "Select appropriate storage class characteristics for variables as well as methods.",
+    "Solve a variety of programming problems using sound structured, top-down, object-oriented design principles.",
+    "Effectively use inheritance to minimize reinvention of similar objects.",
+    "Effectively access standard C++ library modules.",
+    "Recognize the difference between (and implications of) reference vs. primitive data types.",
+    "Design, create and utilize complex classes and objects.",
+    "Input and output data to and from standard devices and files.",
+    "Visualize array subscripting as memory offset calculations and recognize some of the implications.",
+    "Understand and effectively utilize fundamental program control structures.",
+    "Understand the relative efficiency of the various sort and search algorithms.",
+    "Untangle poorly designed code."
+  ],
+  "student_learning_outcomes": [
+    "Decompose problems and design program solutions using flowcharts, pseudocode, models, or other tools.",
+    "Properly code applications using the fundamental coding structures: sequence, selection, and loops.",
+    "Test and debug applications using debugging tools such as trace execution."
+  ]
+}
