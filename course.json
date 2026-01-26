@@ -40,7 +40,7 @@
           "2": "use *source* for course-repo relative (internal) links, courseBase + source"
         }
       },
-      "01": { 
+      "01": {
         "title": "Introduction to Computers, Programming, and C++",
         "shortTitle": "intro",
         "length": "1 week",
@@ -58,12 +58,46 @@
           "Chapter 2: Introduction to C++"
         ],
         "pages": {
-          "start": { "title": "PICK ME! PICK ME! ---- ( ***START HERE*** )", "type": "content", "source": "content/start.html" },
-          "overview": { "title": "Module Overview", "type": "content", "source": "content/01/module1.html" },
-          "history": { "title": "Short History of C-based Languages", "type": "content", "source": "content/01/history.html" },
-          "intro-cpp": { "title": "Introduction to C++ Programming", "type": "content", "source": "content/01/intro-cpp.html" },
-          "dev-environment": { "title": "Typical C++ Program Development Environment", "type": "content", "source": "content/01/dev-environment.html" },
-          "end": { "title": "End of Module 1", "type": "content", "source": "content/end-module.html" }
+          "start": {
+            "title": "PICK ME! PICK ME! ---- ( ***START HERE*** )",
+            "type": "content",
+            "source": "content/start.html"
+          },
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "content/01/module1.html"
+          },
+          "history": {
+            "title": "Short History of C-based Languages",
+            "type": "content",
+            "source": "content/01/history.html"
+          },
+          "intro-cpp": {
+            "title": "Introduction to C++ Programming",
+            "type": "content",
+            "source": "content/01/intro-cpp.html"
+          },
+          "data-types": {
+            "title": "Basic Data Types in C++",
+            "type": "content",
+            "source": "content/01/data-types.html"
+          },
+          "simple-program": {
+            "title": "Anatomy of a Simple C++ Program",
+            "type": "content",
+            "source": "content/01/simple-program.html"
+          },
+          "dev-environment": {
+            "title": "Typical C++ Program Development Environment",
+            "type": "content",
+            "source": "content/01/dev-environment.html"
+          },
+          "end": {
+            "title": "End of Module 1",
+            "type": "content",
+            "source": "content/end-module.html"
+          }
         }
       },
       "02": {
@@ -77,10 +111,26 @@
           "Style and naming conventions"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/02/module2.html" },
-          "variables": { "title": "Variables and Data Types", "type": "content", "source": "/content/02/variables.html" },
-          "expressions": { "title": "Expressions and Operators", "type": "content", "source": "/content/02/expressions.html" },
-          "end": { "title": "End of Module 2", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/02/module2.html"
+          },
+          "variables": {
+            "title": "Variables and Data Types",
+            "type": "content",
+            "source": "/content/02/variables.html"
+          },
+          "expressions": {
+            "title": "Expressions and Operators",
+            "type": "content",
+            "source": "/content/02/expressions.html"
+          },
+          "end": {
+            "title": "End of Module 2",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "03": {
@@ -99,13 +149,37 @@
           "Intro to debugging techniques",
           "Program design with pseudocode and flowcharts"
         ],
-        "pages": {  
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/03/module3.html" },
-          "if-statements": { "title": "If Statements", "type": "content", "source": "/content/03/if-statements.html" },
-          "logical-operators": { "title": "Logical Operators", "type": "content", "source": "/content/03/logical-operators.html" }, 
-          "end": { "title": "End of Module 3", "type": "content", "source": "/content/end-module.html" },
-          "debugging": { "title": "Debugging Techniques", "type": "content", "source": "/content/03/debugging.html" },
-          "pseudocode": { "title": "Pseudocode for Program Design", "type": "content", "source": "/content/03/pseudocode.html" }
+        "pages": {
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/03/module3.html"
+          },
+          "if-statements": {
+            "title": "If Statements",
+            "type": "content",
+            "source": "/content/03/if-statements.html"
+          },
+          "logical-operators": {
+            "title": "Logical Operators",
+            "type": "content",
+            "source": "/content/03/logical-operators.html"
+          },
+          "end": {
+            "title": "End of Module 3",
+            "type": "content",
+            "source": "/content/end-module.html"
+          },
+          "debugging": {
+            "title": "Debugging Techniques",
+            "type": "content",
+            "source": "/content/03/debugging.html"
+          },
+          "pseudocode": {
+            "title": "Pseudocode for Program Design",
+            "type": "content",
+            "source": "/content/03/pseudocode.html"
+          }
         }
       },
       "04": {
@@ -123,10 +197,26 @@
           "Nested loops"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/04/module4.html" },
-          "while-loops": { "title": "While Loops", "type": "content", "source": "/content/04/while-loops.html" },
-          "for-loops": { "title": "For Loops", "type": "content", "source": "/content/04/for-loops.html" }, 
-          "end": { "title": "End of Module 4", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/04/module4.html"
+          },
+          "while-loops": {
+            "title": "While Loops",
+            "type": "content",
+            "source": "/content/04/while-loops.html"
+          },
+          "for-loops": {
+            "title": "For Loops",
+            "type": "content",
+            "source": "/content/04/for-loops.html"
+          },
+          "end": {
+            "title": "End of Module 4",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "05": {
@@ -146,10 +236,26 @@
           "Reference parameters and scope"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/05/module5.html" },
-          "defining-functions": { "title": "Defining and Calling Functions", "type": "content", "source": "/content/05/defining-functions.html" },
-          "function-parameters": { "title": "Function Parameters and Return Values", "type": "content", "source": "/content/05/function-parameters.html" },
-          "end": { "title": "End of Module 5", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/05/module5.html"
+          },
+          "defining-functions": {
+            "title": "Defining and Calling Functions",
+            "type": "content",
+            "source": "/content/05/defining-functions.html"
+          },
+          "function-parameters": {
+            "title": "Function Parameters and Return Values",
+            "type": "content",
+            "source": "/content/05/function-parameters.html"
+          },
+          "end": {
+            "title": "End of Module 5",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "06": {
@@ -166,9 +272,21 @@
           "Visualizing array memory as contiguous blocks"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/06/module6.html" },
-          "arrays": { "title": "Arrays", "type": "content", "source": "/content/06/arrays.html" },
-          "end": { "title": "End of Module 6", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/06/module6.html"
+          },
+          "arrays": {
+            "title": "Arrays",
+            "type": "content",
+            "source": "/content/06/arrays.html"
+          },
+          "end": {
+            "title": "End of Module 6",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "07": {
@@ -185,10 +303,26 @@
           "Using vectors"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/07/module7.html" },
-          "sorting-searching": { "title": "Sorting and Searching Arrays", "type": "content", "source": "/content/07/sorting-searching.html" },
-          "vectors": { "title": "Vectors", "type": "content", "source": "/content/07/vectors.html" },
-          "end": { "title": "End of Module 7", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/07/module7.html"
+          },
+          "sorting-searching": {
+            "title": "Sorting and Searching Arrays",
+            "type": "content",
+            "source": "/content/07/sorting-searching.html"
+          },
+          "vectors": {
+            "title": "Vectors",
+            "type": "content",
+            "source": "/content/07/vectors.html"
+          },
+          "end": {
+            "title": "End of Module 7",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "08": {
@@ -206,9 +340,21 @@
           "Dynamic memory allocation"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/08/module8.html" },
-          "pointers": { "title": "Pointers", "type": "content", "source": "/content/08/pointers.html" },
-          "end": { "title": "End of Module 08", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/08/module8.html"
+          },
+          "pointers": {
+            "title": "Pointers",
+            "type": "content",
+            "source": "/content/08/pointers.html"
+          },
+          "end": {
+            "title": "End of Module 08",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "09": {
@@ -225,9 +371,21 @@
           "Avoid deep C‑string functions unless needed"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/09/module9.html" },
-          "strings": { "title": "Strings", "type": "content", "source": "/content/09/strings.html" },
-          "end": { "title": "End of Module 09", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/09/module9.html"
+          },
+          "strings": {
+            "title": "Strings",
+            "type": "content",
+            "source": "/content/09/strings.html"
+          },
+          "end": {
+            "title": "End of Module 09",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "10": {
@@ -247,9 +405,21 @@
           "Simple ADT building"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/10/module10.html" },
-          "classes-objects": { "title": "Classes and Objects", "type": "content", "source": "/content/10/classes-objects.html" },
-          "end": { "title": "End of Module 10", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/10/module10.html"
+          },
+          "classes-objects": {
+            "title": "Classes and Objects",
+            "type": "content",
+            "source": "/content/10/classes-objects.html"
+          },
+          "end": {
+            "title": "End of Module 10",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "11": {
@@ -265,16 +435,32 @@
           "Using base class pointers to derived objects"
         ],
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/11/module11.html" },
-          "polymorphism": { "title": "Polymorphism and Virtual Functions", "type": "content", "source": "/content/11/polymorphism.html" },
-          "end": { "title": "End of Module 11", "type": "content", "source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/11/module11.html"
+          },
+          "polymorphism": {
+            "title": "Polymorphism and Virtual Functions",
+            "type": "content",
+            "source": "/content/11/polymorphism.html"
+          },
+          "end": {
+            "title": "End of Module 11",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "99": {
         "title": "Resources",
         "shortTitle": "resources",
         "pages": {
-          "resources": { "title": "Course Resources", "type": "content", "source": "/content/99/resources.html" }
+          "resources": {
+            "title": "Course Resources",
+            "type": "content",
+            "source": "/content/99/resources.html"
+          }
         }
       }
     }
