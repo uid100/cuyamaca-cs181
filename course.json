@@ -60,8 +60,7 @@
         "pages": {
           "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/start.html"},
           "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
-          "history": {"title": "Short History of C-based Languages","type": "content","source": "content/01/history.html"},
-          "intro-cpp": {"title": "Introduction to C++ Programming","type": "content","source": "content/01/intro-cpp.html"},
+          "chapter": {"title": "Chapter 1 & 2 Notes","type": "content","source": "content/01/ch1-2-notes.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
           "simple-program": {"title": "Anatomy of a Simple C++ Program","type": "content","source": "content/01/simple-program.html"},  
           "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/01/dev-environment.html"},
