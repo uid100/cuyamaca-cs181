@@ -66,7 +66,12 @@
           "simple-program": {"title": "Anatomy of a Simple C++ Program","type": "content","source": "content/01/simple-program.html"},  
           "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/01/dev-environment.html"},
           "end": {"title": "End of Module 1","type": "content","source": "content/end-module.html"}
-        }
+        },
+        "lab": {
+            "title": "Lab #1 - Getting Started",
+            "taskListUrl": "https://uid100.github.io/cs181/01/lab/task-list.json",
+            "fragmentsBase": "https://uid100.github.io/cs181/01/lab/"
+          }
       },
       "02": {
         "title": "Variables, Data Types, Expressions",
