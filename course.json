@@ -69,8 +69,8 @@
         },
         "lab": {
             "title": "Lab #1 - Getting Started",
-            "taskListUrl": "../../content/01/lab/task-list.json",
-            "fragmentsBase": "../../content/01/lab/"
+            "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/task-list.json",
+            "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/"
           }
       },
       "02": {
