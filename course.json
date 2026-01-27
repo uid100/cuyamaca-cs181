@@ -69,8 +69,8 @@
         },
         "lab": {
             "title": "Lab #1 - Getting Started",
-            "taskListUrl": "content/01/lab/task-list.json",
-            "fragmentsBase": "content/01/lab/"
+            "taskListUrl": "../../content/01/lab/task-list.json",
+            "fragmentsBase": "../../content/01/lab/"
           }
       },
       "02": {
