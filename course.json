@@ -60,6 +60,7 @@
         "pages": {
           "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
           "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
+          "ack": { "title": "Syllabus Acknowledgement","type": "content", "source": "content/01/ack.html"},
           "intro": { "title": "About me", "type": "discussion", "source": "content/01/intro.html" },
           "chapter": {"title": "Chapter 1 & 2 Notes","type": "content","source": "content/01/ch1-2-notes.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
