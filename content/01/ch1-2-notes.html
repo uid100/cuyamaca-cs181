@@ -1,7 +1,7 @@
 <h1 class="mb-4 text-center">Summary Notes - Chapter 1 & 2</h1>
 
 <div class="container">
-    <div class="card">
+    <div class="card" mb-3 shadow-sm">
         <div class="card-header"><em>'Simple'</em> C++ Programming</div>
         <div class="card-body">
         <p class="boxed-paragraph">
@@ -24,104 +24,104 @@
 
     <!-- Chapter 1 Summary -->
     <div class="card mb-3 shadow-sm">
-    <div class="card-header bg-primary text-white">
-        Chapter 1 — Introduction to Computers and Programming
-    </div>
-    <div class="card-body">
-        <ul class="mb-0">
-        <li>A <strong>program</strong> is a set of instructions executed by the computer.</li>
-        <li>Programming languages allow humans to tell computers what to do.</li>
-        <li>C++ is a <strong>compiled</strong> language: source code → executable program.</li>
-        <li>Basic model of a program: <strong>Input → Processing → Output</strong>.</li>
-        <li>Programming follows a process: design, code, compile, test, debug.</li>
-        </ul>
-    </div>
+        <div class="card-header">
+            Chapter 1 — Introduction to Computers and Programming
+        </div>
+        <div class="card-body">
+            <ul class="mb-0">
+            <li>A <strong>program</strong> is a set of instructions executed by the computer.</li>
+            <li>Programming languages allow humans to tell computers what to do.</li>
+            <li>C++ is a <strong>compiled</strong> language: source code → executable program.</li>
+            <li>Basic model of a program: <strong>Input → Processing → Output</strong>.</li>
+            <li>Programming follows a process: design, code, compile, test, debug.</li>
+            </ul>
+        </div>
     </div> <!-- .card -->
 
     <!-- Chapter 2 Summary -->
     <div class="card mb-3 shadow-sm">
-    <div class="card-header bg-secondary text-white">
-        Chapter 2 — Introduction to C++
-    </div>
-    <div class="card-body">
-        <h5 class="fw-bold">Minimal Program Structure</h5>
-        <pre class="bg-dark text-light p-2"><code>#include &lt;iostream&gt;
+        <div class="card-header">
+            Chapter 2 — Introduction to C++
+        </div>
+        <div class="card-body">
+            <h5 class="fw-bold">Minimal Program Structure</h5>
+            <pre class="bg-dark text-light p-2"><code>#include &lt;iostream&gt;
 
-    int main() {
-    // program statements
-    return 0;
-    }</code></pre>
+        int main() {
+        // program statements
+        return 0;
+        }</code></pre>
 
-        <ul>
-        <li><code>#include &lt;iostream&gt;</code> enables input/output (<code>cin</code>, <code>cout</code>).</li>
-        <li><code>int main()</code> is the <strong>entry point</strong> of every C++ program.</li>
-        <li><strong>All statements end with a semicolon</strong>.</li>
-        </ul>
-
-        <h5 class="fw-bold mt-3">Input and Output</h5>
-        <ul>
-        <li><code>cout</code> → sends output to the console.</li>
-        <li><code>cin</code> → receives input from the keyboard.</li>
-        <li>Escape sequences:
             <ul>
-            <li><code>\n</code> newline</li>
-            <li><code>\t</code> tab</li>
+            <li><code>#include &lt;iostream&gt;</code> enables input/output (<code>cin</code>, <code>cout</code>).</li>
+            <li><code>int main()</code> is the <strong>entry point</strong> of every C++ program.</li>
+            <li><strong>All statements end with a semicolon</strong>.</li>
             </ul>
-        </li>
-        </ul>
 
-        <h5 class="fw-bold mt-3">Basic Data Types</h5>
-        <ul>
-        <li><code>int</code> — whole numbers (e.g., <code>42</code>)</li>
-        <li><code>double</code> — decimal numbers (e.g., <code>3.14</code>)</li>
-        <li><code>char</code> — single character (e.g., <code>'A'</code>)</li>
-        <li><code>string</code> — text (e.g., <code>"Hello"</code>)</li>
-        <li><code>bool</code> — boolean values (<code>true</code>, <code>false</code>)</li>
-        </ul>
+            <h5 class="fw-bold mt-3">Input and Output</h5>
+            <ul>
+            <li><code>cout</code> → sends output to the console.</li>
+            <li><code>cin</code> → receives input from the keyboard.</li>
+            <li>Escape sequences:
+                <ul>
+                <li><code>\n</code> newline</li>
+                <li><code>\t</code> tab</li>
+                </ul>
+            </li>
+            </ul>
 
-        <h5 class="fw-bold mt-3">Variables & Assignment</h5>
-        <ul>
-        <li><strong>Identifiers</strong> are names for variables.</li>
-        <li>The <strong>assignment operator</strong> <code>=</code> stores values: <code>x = 10;</code></li>
-        <li><strong>Initialization</strong> assigns a value at declaration: <code>int x = 5;</code></li>
-        </ul>
+            <h5 class="fw-bold mt-3">Basic Data Types</h5>
+            <ul>
+            <li><code>int</code> — whole numbers (e.g., <code>42</code>)</li>
+            <li><code>double</code> — decimal numbers (e.g., <code>3.14</code>)</li>
+            <li><code>char</code> — single character (e.g., <code>'A'</code>)</li>
+            <li><code>string</code> — text (e.g., <code>"Hello"</code>)</li>
+            <li><code>bool</code> — boolean values (<code>true</code>, <code>false</code>)</li>
+            </ul>
 
-        <h5 class="fw-bold mt-3">Operators & Expressions</h5>
-        <ul>
-        <li>Arithmetic: <code>+ - * / %</code></li>
-        <li>Expressions combine values and operators to produce results.</li>
-        </ul>
+            <h5 class="fw-bold mt-3">Variables & Assignment</h5>
+            <ul>
+            <li><strong>Identifiers</strong> are names for variables.</li>
+            <li>The <strong>assignment operator</strong> <code>=</code> stores values: <code>x = 10;</code></li>
+            <li><strong>Initialization</strong> assigns a value at declaration: <code>int x = 5;</code></li>
+            </ul>
 
-        <h5 class="fw-bold mt-3">Comments</h5>
-        <ul>
-        <li><code>//</code> single-line comment</li>
-        <li><code>/* ... */</code> block comment</li>
-        </ul>
+            <h5 class="fw-bold mt-3">Operators & Expressions</h5>
+            <ul>
+            <li>Arithmetic: <code>+ - * / %</code></li>
+            <li>Expressions combine values and operators to produce results.</li>
+            </ul>
 
-        <h5 class="fw-bold mt-3">Style & Formatting</h5>
-        <ul>
-        <li>Readable indentation and spacing matters.</li>
-        <li>Meaningful variable names improve clarity.</li>
-        </ul>
+            <h5 class="fw-bold mt-3">Comments</h5>
+            <ul>
+            <li><code>//</code> single-line comment</li>
+            <li><code>/* ... */</code> block comment</li>
+            </ul>
 
-    </div>
+            <h5 class="fw-bold mt-3">Style & Formatting</h5>
+            <ul>
+            <li>Readable indentation and spacing matters.</li>
+            <li>Meaningful variable names improve clarity.</li>
+            </ul>
+
+        </div>
     </div> <!-- .card -->
 
     <!-- Quick Readiness Checklist -->
     <div class="card mb-4 shadow-sm">
-    <div class="card-header bg-dark text-white">
-        Ready to Write Code? — Quick Checklist
-    </div>
-    <div class="card-body">
-        <ul class="mb-0">
-        <li>You know that every C++ program needs <code>int main()</code>.</li>
-        <li>You know every statement ends with <code>;</code>.</li>
-        <li>You can use <code>cout</code> to display text.</li>
-        <li>You know how to declare and initialize variables.</li>
-        <li>You recognize basic data types (<code>int</code>, <code>double</code>, <code>char</code>, <code>string</code>, <code>bool</code>).</li>
-        <li>You understand <code>=</code> assigns a value.</li>
-        <li>You can read <code>//</code> and <code>/* ... */</code> comments.</li>
-        </ul>
-    </div>
+        <div class="card-header">
+            Ready to Write Code? — Quick Checklist
+        </div>
+        <div class="card-body">
+            <ul class="mb-0">
+            <li>You know that every C++ program needs <code>int main()</code>.</li>
+            <li>You know every statement ends with <code>;</code>.</li>
+            <li>You can use <code>cout</code> to display text.</li>
+            <li>You know how to declare and initialize variables.</li>
+            <li>You recognize basic data types (<code>int</code>, <code>double</code>, <code>char</code>, <code>string</code>, <code>bool</code>).</li>
+            <li>You understand <code>=</code> assigns a value.</li>
+            <li>You can read <code>//</code> and <code>/* ... */</code> comments.</li>
+            </ul>
+        </div>
     </div> <!-- .card -->
 </div> <!-- .container -->
