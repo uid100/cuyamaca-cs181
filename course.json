@@ -63,9 +63,8 @@
           "ack": { "title": "Syllabus Acknowledgement","type": "content", "source": "content/01/ack.html"},
           "intro": { "title": "About me", "type": "discussion", "source": "content/01/intro.html" },
           "chapter": {"title": "Chapter 1 & 2 Notes","type": "content","source": "content/01/ch1-2-notes.html"},
-          "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
-          "pgm-header": {"title": "Required Header Content","type": "content","source": "content/01/pgm-header.html"},  
-          "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/01/dev-env.html"},
+          "pgm-header": {"title": "Required Header Content","type": "content","source": "content/99/pgm-header.html"},  
+          "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/99/dev-env.html"},
           "simple-program": {"title": "Anatomy of a Simple C++ Program","type": "content","source": "content/01/simple-program.html"},  
           "end": {"title": "End of Module 1","type": "content","source": "content/end-module.html"}
         },
@@ -88,6 +87,7 @@
         "pages": {
           "overview": {"title": "Module Overview","type": "content","source": "/content/02/module2.html"},
           "variables": {"title": "Variables and Data Types","type": "content","source": "/content/02/variables.html"},
+          "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
           "expressions": {"title": "Expressions and Operators","type": "content","source": "/content/02/expressions.html"},
 
           "end": {
