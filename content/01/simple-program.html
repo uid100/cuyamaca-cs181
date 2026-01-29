@@ -68,7 +68,7 @@
     <hr />
     <section id="hello2">
         <p>
-            As the textbook chapter indicates, the typical application pattern follows the simple sequence:
+            As indicated in the textbook, the typical application pattern follows the simple sequence:
             <ol>
                 <li>input</li>
                 <li>processing</li>
@@ -102,6 +102,7 @@
                 </section>
             </div> <!-- card-body -->
         </div> <!-- card #step2 -->
+        <p>&nbsp;</p>
         <p>Save your changes and compile again.</p>
         <p>This time add the -o option to specify the output file name:</p>
         <section class="my-3">
@@ -114,15 +115,15 @@
         </p>
     </section> <!-- section #part-2 -->
     <hr />
-    <section id="hello3">
+    <section id="hello3">        
         <p>This code works, but we need to fix a couple things.</p>    
         <div class="card border-radius" id="step3">
             <div class="card-header">hello.cpp - step 3</div>
             <div class="card-body">
                 <section class="my-3 p-3 rounded">
                     <pre>
-    #include <iostream>
-    #include <string>
+    #include &lt;iostream&gt;
+    #include &lt;string&gt;
 
     using namespace std;
 
@@ -141,95 +142,108 @@
                 </section>
             </div> <!-- card-body -->
         </div> <!-- card #step3 -->
-                    <p style="font-style: italic;">
-                        What did we fix?
-                    </p>
-                    <p> First, the program uses the <code>std::string</code> type to hold the user's name, 
-                        but C++ doesn't really know what a <code>string</code> is unless we include the 
-                        appropriate header file. Some compilers may allow this code to compile without the 
-                        header, and it <em>almost accidentally</em> works because the string header is 
-                        indirectly included by the <code>iostream</code> header. However, this is not 
-                        guaranteed behavior and relying on it can lead to portability issues. To fix this, 
-                        we should explicitly include the <code>&lt;string&gt;</code> header at the beginning 
-                        of our program.
-                    </p>
-                    <p class="boxed-paragraph">
-                        If you use the <code>string</code> type in your programs, always 
-                        include the <code>&lt;string&gt;</code> header.
-                    </p>
-                    <p>
-                        Also, we are repeatedly using the <code>std::</code> prefix before standard library
-                        components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
-                        the program. This can make the code verbose and harder to read. To simplify this, we
-                        can use the <code>using namespace std;</code> directive after our include statements.
-                        This allows us to use standard library components without the <code>std::</code> prefix.
-                    </p>
-                    <p class="boxed-paragraph">
-                        The <code>using namespace std;</code> directive is commonly used in 
-                        simple programs for convenience. There are situations in larger programs 
-                        where it might be better to avoid it, but for our purposes, it may be helpful.
-                    </p>
-                </div> <!-- card-body -->
-            </div> <!-- card #step3 -->
-        </div> <!-- card-body #part-3 -->
-        <div class="card-body" id="part-3">
-            <div class="card border-radius" id="step3">
-                <div class="card-header">hello.cpp - step 3</div>
-                <div class="card-body">
-                    <p>
-                        This code is functionally identical to the previous version but includes the necessary
-                        <code>&lt;string&gt;</code> header and uses the <code>using namespace std;</code> directive
-                        to simplify the code.
-                    </p>
-                    <p>
-                        There is one more thing we will add. The code works as is, but as it will be a requirement
-                        for all of your programs, we will add the formatted header comment block at the top as described
-                        in the "Required Header Content" section.
-                    </p>
-                    <section class="my-3 p-3 rounded">
-                        <pre>
-    /*
-        File:        hello.cpp
-        Author:      Dan Sullivan
-        Course:      Cuyamaca College - CS 181
-        Instructor:  D. Sullivan
-        Date:        2026-02-03
+        <p>&nbsp;</p>
+        <p style="font-style: italic;">
+            What did we fix?
+        </p>
+        <p> First, the program uses the <code>std::string</code> type to hold the user's name, 
+            but C++ doesn't really know what a <code>string</code> is unless we include the 
+            appropriate header file. Some compilers may allow this code to compile without the 
+            header, and it <em>almost accidentally</em> works because the string header is 
+            indirectly included by the <code>iostream</code> header. However, this is not 
+            guaranteed behavior and relying on it can lead to portability issues. To fix this, 
+            we should explicitly include the <code>&lt;string&gt;</code> header at the beginning 
+            of our program.
+        </p>
+        <p class="boxed-paragraph">
+            If you use the <code>string</code> type in your programs, always 
+            include the <code>&lt;string&gt;</code> header.
+        </p>
+        <p>
+            Also, we are repeatedly using the <code>std::</code> prefix before standard library
+            components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
+            the program. This can make the code verbose and harder to read. To simplify this, we
+            can use the <code>using namespace std;</code> directive after our include statements.
+            This allows us to use standard library components without the <code>std::</code> prefix.
+        </p>
+        <p class="boxed-paragraph">
+            The <code>using namespace std;</code> directive is commonly used in 
+            simple programs for convenience. There are situations in larger programs 
+            where it might be better to avoid it, but for our purposes, it may be helpful.
+        </p>
+    </section> <!-- section #part-3 -->
+    <hr />
+    <section id="hello4">
+        <p>
+            The code in this final step is functionally identical to the previous version but includes the necessary
+            <code>&lt;string&gt;</code> header and uses the <code>using namespace std;</code> directive
+            to simplify the code.
+        </p>
+        <p>
+            There is one more thing we will add. The code works as is, but as it will be a requirement
+            for all of your programs, we will add the formatted header comment block at the top as described
+            in the "Required Header Content" section.
+        </p>
+        <p>
+            Here is the completed version of the program with all the necessary fixes and
+            the required header comment block at the top.
+        </p>
 
-        Description:
-            Prompts for the user's name and outputs a custom greeting.
+        <div class="card border-radius" id="step4">
+            <div class="card-header">hello.cpp - final</div>
+            <div class="card-body">
+                <section class="my-3 p-3 rounded">
+                    <pre>
+/*
+    File:        hello.cpp
+    Author:      Dan Sullivan
+    Course:      Cuyamaca College - CS 181
+    Instructor:  D. Sullivan
+    Date:        2026-02-03
 
-        Inputs:
-            UserName (string) - the name entered by the user at the console.
+    Description:
+        Prompts for the user's name and outputs a custom greeting.
 
-        Outputs:
-            Formatted greeting messages to the console.
+    Inputs:
+        UserName (string) - the name entered by the user at the console.
 
-        Notes:
-            Demonstrate basic input and output operations using cin and cout.
-    */
-    #include <iostream>
-    #include <string>
+    Outputs:
+        Formatted greeting messages to the console.
 
-    using namespace std;
+    Notes:
+        Demonstrate basic input and output operations using cin and cout.
+*/
+#include <iostream>
+#include <string>
 
-    int main()
-    {
-        string userName;
+using namespace std;
 
-        cout << "Hello!" << endl;
-        cout << "What's your name? ";
-        cin >> userName;
-        cout << "Hello, " << userName << '.' << endl;
-        cout << "\tIs it ok if I call you " << userName << '?' << endl;
+int main()
+{
+    string userName;
 
-        return 0;
-    }</pre>
-                    </section>
-                </div> <!-- card-body -->
-            </div> <!-- card #step3 -->
-        </div> <!-- card-body #part-3 -->
-    </div> <!-- card -->
-  </div>
+    cout << "Hello!" << endl;
+    cout << "What's your name? ";
+    cin >> userName;
+    cout << "Hello, " << userName << '.' << endl;
+    cout << "\tIs it ok if I call you " << userName << '?' << endl;
+
+    return 0;
+}</pre>
+                </section> 
+            </div> <!-- card-body -->
+        </div> <!-- card #step4 -->
+        <p>&nbsp;</p>
+        <p>
+            Most of the time, I would have started with the header comment block first. It contains
+            important information about the program, and sometimes clarifies the purpose and requirements.
+            It's a good practice to revisit and refine the header comment block after completing the code 
+            to ensure accuracy.
+        </p>
+        <p>
+            Of course, after you finish with your edits, always remember to save, compile, and 
+            test-test-test!
+        </p>
+    </section> <!-- section #part-4 -->
 </div>
-        </div> <!-- card-body -->
             
