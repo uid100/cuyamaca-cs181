@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Getting Started</div>
+        <div class="card-body">
+            <h2 class="mb-3">Basic Structure of a C++ Program</h2>
+
+            <div class="card" id="step1">
+                <div class="card-header bg-primary text-white">
+                    hello.cpp
+                </div>
+                <div class="card-body">
+                    <p>
+                        Create a new C++ source file named <code>simple_program.cpp</code> and add the following code:
+                    </p>
+                    <section class="my-3">
+                        <pre>#include &lt;iostream&gt;
+
+                    int main() {
+                        std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
+                        return 0;
+                    }
+                        </pre>
+                    </section>
+                </div> <!-- card-body -->
+            </div> <!-- card -->
+            <p>
+                This simple C++ program consists of the following components:
+            </p>
+            <ul>
+                <li>
+                    <strong>Preprocessor Directives:</strong> The line <code>#include &lt;iostream&gt;</code> 
+                    is a preprocessor directive that tells the compiler to include the standard input-output 
+                    stream library, which is necessary for using <code>std::cout</code> and <code>std::endl</code>.
+                </li>
+                <li>
+                    <strong>Main Function:</strong> The <code>int main()</code> function is the entry point 
+                    of the program. Execution starts from this function.
+                </li>
+                <li>
+                    <strong>Output Statement:</strong> The line <code>std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;</code> outputs the text "Hello!" to the console, followed by a newline.
+                </li>
+                <li>
+                    <strong>Return Statement:</strong> The line <code>return 0;</code> indicates that the program has completed successfully.
+                </li>
+            </ul>
+            <p>
+                Save your file and compile it from the command line. Use the following command:
+            </p>
+            <section class="my-3">
+                <pre>g++ hello.cpp
+                </pre>
+            </section>
+            <p>
+                If there are any warnings or errors, review your code for typos. If the compilation is successful, 
+                an executable file, typically named <code>a.out</code> on Unix-like systems or <code>hello.exe</code>
+                on Windows, will be created. Run the executable with the following command and observe the output:
+            </p>
+            <p>
+                <pre>
+ % ./a.out 
+ 
+ Hello!
+
+                </pre>
+            </section>
+            <div class="card">
+  <div class="card-header bg-primary text-white">
+    hello1.cpp
+  </div>
+  <div class="card-body">
+    <pre>#include &lt;iostream&gt;
+// #include &lt;string&gt;
+
+int main()
+{
+    std::string userName;
+
+    std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;What&#x27;s your name? &quot;;
+    std::cin &gt;&gt; userName;
+    std::cout &lt;&lt; &quot;Hello, &quot; &lt;&lt; userName &lt;&lt; &#x27;.&#x27; &lt;&lt; std::endl;
+    std::cout &lt;&lt; &quot;\tIs it ok if I call you &quot; &lt;&lt; userName &lt;&lt; &#x27;?&#x27; &lt;&lt; std::endl;
+
+    return 0;
+}
+</pre>
+  </div>
+</div>
+        </div> <!-- card-body -->
+            
