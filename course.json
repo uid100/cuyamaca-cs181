@@ -66,7 +66,8 @@
           "pgm-header": {"title": "Required Header Content","type": "content","source": "content/pgm-header.html"},  
           "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/dev-env.html"},
           "simple-program": {"title": "Anatomy of a Simple C++ Program","type": "content","source": "content/01/simple-program.html"},  
-          "end": {"title": "End of Module 1","type": "content","source": "content/end-module.html"}
+          "end": {"title": "End of Module 1: Introduction to Computers, Programming, and C++",
+          "type": "content","source": "content/end-module.html"}
         },
         "lab": {
             "title": "Lab #1 - Getting Started",
@@ -89,9 +90,8 @@
           "variables": {"title": "Variables and Data Types","type": "content","source": "/content/02/variables.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
           "expressions": {"title": "Expressions and Operators","type": "content","source": "/content/02/expressions.html"},
-
           "end": {
-            "title": "End of Module 2",
+            "title": "End of Module 2: Variables, Data Types, Expressions",
             "type": "content",
             "source": "/content/end-module.html"
           }
