@@ -1,102 +1,113 @@
 <div class="container">
-    <div class="card">
-        <div class="card-header">Getting Started</div>
-        <div class="card-body" id="part-1">
-            <div class="card border-radius" id="step1">
-                <div class="card-header">
-                    hello.cpp - step 1
-                </div>
-                <div class="card-body">
-                    <p>
-                        Create a new C++ source file named <code>hello.cpp</code> and add the following code:
-                    </p>
-                    <section class="my-3 p-3 rounded">
-                        <pre>
+    <h2>Getting Started</h2>
+
+    <section id="hello1">
+        <div class="card border-radius" id="step1">
+            <div class="card-header">
+                hello.cpp - step 1
+            </div>
+            <div class="card-body">
+                <p>
+                    Create a new C++ source file named <code>hello.cpp</code> and add the following code:
+                </p>
+                <section class="my-3 p-3 rounded">
+                    <pre>
     #include &lt;iostream&gt;
 
     int main() {
-        std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
-        return 0;
+    std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
+    return 0;
     }</pre>
-                    </section>
-                </div> <!-- card-body -->
-            </div> <!-- card #step1 -->
-            <p>
-                This simple C++ program consists of the following components:
-            </p>
-            <ul>
-                <li>
-                    <strong>Preprocessor Directives:</strong> The line <code>#include &lt;iostream&gt;</code> 
-                    is a preprocessor directive that tells the compiler to include the standard input-output 
-                    stream library, which is necessary for using <code>std::cout</code> and <code>std::endl</code>.
-                </li>
-                <li>
-                    <strong>Main Function:</strong> The <code>int main()</code> function is the entry point 
-                    of the program. Execution starts from this function.
-                </li>
-                <li>
-                    <strong>Output Statement:</strong> The line <code>std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;</code> outputs the text "Hello!" to the console, followed by a newline.
-                </li>
-                <li>
-                    <strong>Return Statement:</strong> The line <code>return 0;</code> indicates that the program has completed successfully.
-                </li>
-            </ul>
-            <p>
-                Save your file and compile it from the command line. Use the following command:
-            </p>
-            <section class="my-3">
-                <pre>g++ hello.cpp
-                </pre>
-            </section>
-            <div class="p-3">
-                <p>
-                    If there are any warnings or errors, review your code for typos. 
-                </p>
-                <p>
-                    If the compilation is successful, an executable file, typically named <code>a.out</code> on 
-                    Unix-like systems or <code>hello.exe</code> on Windows, will be created. Run the executable 
-                    with the following command and observe the output:
-                </p>
-            </div>
-            <pre>
- % ./a.out 
-
- Hello!
-
+                </section>
+            </div> <!-- card-body -->
+        </div> <!-- card #step1 -->
+        <p>
+            This simple C++ program consists of the following components:
+        </p>
+        <ul>
+            <li>
+                <strong>Preprocessor Directives:</strong> The line <code>#include &lt;iostream&gt;</code> 
+                is a preprocessor directive that tells the compiler to include the standard input-output 
+                stream library, which is necessary for using <code>std::cout</code> and <code>std::endl</code>.
+            </li>
+            <li>
+                <strong>Main Function:</strong> The <code>int main()</code> function is the entry point 
+                of the program. Execution starts from this function.
+            </li>
+            <li>
+                <strong>Output Statement:</strong> The line <code>std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;</code> outputs the text "Hello!" to the console, followed by a newline.
+            </li>
+            <li>
+                <strong>Return Statement:</strong> The line <code>return 0;</code> indicates that the program has completed successfully.
+            </li>
+        </ul>
+        <p>
+            Save your file and compile it from the command line. Use the following command:
+        </p>
+        <section class="my-3">
+            <pre>g++ hello.cpp
             </pre>
-        </div> <!-- card-body #part-1 -->
-        <div class="card-body" id="part-2">
-            <div class="card border-radius" id="step2">
-                <div class="card-header">hello.cpp - step 2</div>
-                <div class="card-body">
-                    <p>
-                        From the textbook chapter, we saw that the typical pattern for applications includes
-                        collecting input, processing the input, and producing output. Our simple program so 
-                        far only produces output. The C++ standard library provides a simple way to write to 
-                        the console using the <code>std::cout</code> object. Add to the program to gather input 
-                        from the user using the <code>std::cin</code> object.
-                    </p>
-                    <section class="my-3 p-3 rounded">
-                        <pre>
-    #include <iostream>
-    // #include <string>
+        </section>
+        <div class="p-3">
+            <p>
+                If there are any warnings or errors, review your code for typos. 
+            </p>
+            <p>
+                If the compilation is successful, an executable file, typically named <code>a.out</code> on 
+                Unix-like systems or <code>hello.exe</code> on Windows, will be created. Run the executable 
+                with the following command and observe the output:
+            </p>
+        </div>
+        <pre>
+    % ./a.out 
+
+    Hello!
+        </pre>
+    </section> <!-- #hello1 -->
+
+    <section id="hello2">
+        <div class="card border-radius" id="step2">
+            <div class="card-header">hello.cpp - step 2</div>
+            <div class="card-body">
+                <p>
+                    As the textbook chapter indicates, the typical pattern includes
+                    <ul>
+                        <li>input</li> <li>processing</li> <li>output</li>
+                    </ul>
+                </p>
+                <p>
+                    Our simple program so far only produces output. The C++ standard library provides a 
+                    simple way to write to the console using the <code>std::cout</code> object. Add to 
+                    the program to gather input from the user using the <code>std::cin</code> object.
+                </p>
+                <section class="my-3 p-3 rounded">
+                    <pre>
+    #include &lt;iostream&gt;
 
     int main()
     {
-        std::string userName;
+    std::string userName;
 
-        std::cout << "Hello!" << std::endl;
-        std::cout << "What's your name? ";
-        std::cin >> userName;
-        std::cout << "Hello, " << userName << '.' << std::endl;
-        std::cout << "\tIs it ok if I call you " << userName << '?' << std::endl;
+    std::cout << "Hello!" << std::endl;
+    std::cout << "What's your name? ";
+    std::cin >> userName;
+    std::cout << "Hello, " << userName << '.' << std::endl;
+    std::cout << "\tIs it ok if I call you " << userName << '?' << std::endl;
 
-        return 0;
+    return 0;
     }</pre>
-                    </section>
-                </div> <!-- card-body -->
-            </div> <!-- card #step2 -->
-        </div> <!-- card-body #part-2 -->
+                </section>
+                <p>
+                    Save your changes and compile again. This time add the -o option to specify the output file name:
+                </p>
+                <section class="my-3">
+                    <pre>g++ hello.cpp -o hello
+                    </pre>
+                </section>
+            </div> <!-- card-body -->
+
+        </div> <!-- card #step2 -->
+    </div> <!-- section #part-2 -->
         <div class="card-body" id="part-3">
             <div class="card border-radius" id="step3">
                 <div class="card-header">hello.cpp - step 3</div>
