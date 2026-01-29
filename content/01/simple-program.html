@@ -15,12 +15,13 @@
     #include &lt;iostream&gt;
 
     int main() {
-    std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
-    return 0;
+        std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
+        return 0;
     }</pre>
                 </section>
             </div> <!-- card-body -->
         </div> <!-- card #step1 -->
+        <p>&nbsp;</p>
         <p>
             This simple C++ program consists of the following components:
         </p>
@@ -64,22 +65,24 @@
     Hello!
         </pre>
     </section> <!-- #hello1 -->
-
+    <hr />
     <section id="hello2">
+        <p>
+            As the textbook chapter indicates, the typical application pattern follows the simple sequence:
+            <ol>
+                <li>input</li>
+                <li>processing</li>
+                <li>output</li>
+            </ol>
+        </p>
+        <p>
+            Our simple program so far only produces output. The C++ standard library provides a 
+            simple way to write to the console using the <code>std::cout</code> object. 
+        </p>
         <div class="card border-radius" id="step2">
             <div class="card-header">hello.cpp - step 2</div>
             <div class="card-body">
-                <p>
-                    As the textbook chapter indicates, the typical pattern includes
-                    <ul>
-                        <li>input</li> <li>processing</li> <li>output</li>
-                    </ul>
-                </p>
-                <p>
-                    Our simple program so far only produces output. The C++ standard library provides a 
-                    simple way to write to the console using the <code>std::cout</code> object. Add to 
-                    the program to gather input from the user using the <code>std::cin</code> object.
-                </p>
+                <p>Edit the program to gather input from the user using the <code>std::cin</code> object.</p>
                 <section class="my-3 p-3 rounded">
                     <pre>
     #include &lt;iostream&gt;
@@ -97,17 +100,33 @@
     return 0;
     }</pre>
                 </section>
-                <p>
-                    Save your changes and compile again. This time add the -o option to specify the output file name:
-                </p>
-                <section class="my-3">
-                    <pre>g++ hello.cpp -o hello
-                    </pre>
-                </section>
             </div> <!-- card-body -->
-
         </div> <!-- card #step2 -->
-    </div> <!-- section #part-2 -->
+        <p>Save your changes and compile again.</p>
+        <p>This time add the -o option to specify the output file name:</p>
+        <section class="my-3">
+            <pre>g++ hello.cpp -o hello
+            </pre>
+        </section>
+        <p>
+            Look at the directory contents to confirm that the executable file named <code>hello</code> has been created.
+            Run the program and provide your name when prompted.
+        </p>
+    </section> <!-- section #part-2 -->
+    <section id="hello3">
+        <div class="card border-radius">
+        <div class="card-header">Improving the Program</div>
+        <div class="card-body" id="part-3">
+            <div class="card border-radius" id="step3">
+                <div class="card-header">hello.cpp - step 3</div>
+                <div class="card-body">
+                    <p>
+                        Review the code and identify any issues or improvements that can be made.
+                    </p>
+                </div> <!-- card-body -->
+            </div> <!-- card #step3 -->
+        </div> <!-- card-body #part-3 --><
+    <
         <div class="card-body" id="part-3">
             <div class="card border-radius" id="step3">
                 <div class="card-header">hello.cpp - step 3</div>
