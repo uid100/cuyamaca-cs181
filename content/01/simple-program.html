@@ -113,46 +113,14 @@
             Run the program and provide your name when prompted.
         </p>
     </section> <!-- section #part-2 -->
+    <hr />
     <section id="hello3">
-        <div class="card border-radius">
-        <div class="card-header">Improving the Program</div>
-        <div class="card-body" id="part-3">
-            <div class="card border-radius" id="step3">
-                <div class="card-header">hello.cpp - step 3</div>
-                <div class="card-body">
-                    <p>
-                        Review the code and identify any issues or improvements that can be made.
-                    </p>
-                </div> <!-- card-body -->
-            </div> <!-- card #step3 -->
-        </div> <!-- card-body #part-3 --><
-    <
-        <div class="card-body" id="part-3">
-            <div class="card border-radius" id="step3">
-                <div class="card-header">hello.cpp - step 3</div>
-                <div class="card-body">
-                    <p>
-                        Better.
-                    </p>
-                    <p>
-                        This program works, but there are a couple of issues. First, the program uses the
-                        <code>std::string</code> type to hold the user's name, but C++ doesn't really know
-                        what a <code>string</code> is unless we include the appropriate header file. Some 
-                        compilers may allow this code to compile without the header, and it <em>almost 
-                        accidentally</em> works because the string header is indirectly included by the
-                        <code>iostream</code> header. However, this is not guaranteed behavior and relying
-                        on it can lead to portability issues. To fix this, we should explicitly include the
-                        <code>&lt;string&gt;</code> header at the beginning of our program.
-                    </p>
-                    <p>
-                        Also, we are repeatedly using the <code>std::</code> prefix before standard library
-                        components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
-                        the program. This can make the code verbose and harder to read. To simplify this, we
-                        can use the <code>using namespace std;</code> directive after our include statements.
-                        This allows us to use standard library components without the <code>std::</code> prefix.
-                    </p>
-                    <section class="my-3 p-3 rounded">
-                        <pre>
+        <p>This code works, but we need to fix a couple things.</p>    
+        <div class="card border-radius" id="step3">
+            <div class="card-header">hello.cpp - step 3</div>
+            <div class="card-body">
+                <section class="my-3 p-3 rounded">
+                    <pre>
     #include <iostream>
     #include <string>
 
@@ -170,7 +138,37 @@
 
         return 0;
     }</pre>
-                    </section>
+                </section>
+            </div> <!-- card-body -->
+        </div> <!-- card #step3 -->
+                    <p style="font-style: italic;">
+                        What did we fix?
+                    </p>
+                    <p> First, the program uses the <code>std::string</code> type to hold the user's name, 
+                        but C++ doesn't really know what a <code>string</code> is unless we include the 
+                        appropriate header file. Some compilers may allow this code to compile without the 
+                        header, and it <em>almost accidentally</em> works because the string header is 
+                        indirectly included by the <code>iostream</code> header. However, this is not 
+                        guaranteed behavior and relying on it can lead to portability issues. To fix this, 
+                        we should explicitly include the <code>&lt;string&gt;</code> header at the beginning 
+                        of our program.
+                    </p>
+                    <p class="boxed-paragraph">
+                        If you use the <code>string</code> type in your programs, always 
+                        include the <code>&lt;string&gt;</code> header.
+                    </p>
+                    <p>
+                        Also, we are repeatedly using the <code>std::</code> prefix before standard library
+                        components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
+                        the program. This can make the code verbose and harder to read. To simplify this, we
+                        can use the <code>using namespace std;</code> directive after our include statements.
+                        This allows us to use standard library components without the <code>std::</code> prefix.
+                    </p>
+                    <p class="boxed-paragraph">
+                        The <code>using namespace std;</code> directive is commonly used in 
+                        simple programs for convenience. There are situations in larger programs 
+                        where it might be better to avoid it, but for our purposes, it may be helpful.
+                    </p>
                 </div> <!-- card-body -->
             </div> <!-- card #step3 -->
         </div> <!-- card-body #part-3 -->
