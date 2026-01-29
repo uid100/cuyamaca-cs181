@@ -89,15 +89,15 @@
 
     int main()
     {
-    std::string userName;
+        std::string userName;
 
-    std::cout << "Hello!" << std::endl;
-    std::cout << "What's your name? ";
-    std::cin >> userName;
-    std::cout << "Hello, " << userName << '.' << std::endl;
-    std::cout << "\tIs it ok if I call you " << userName << '?' << std::endl;
+        std::cout << "Hello!" << std::endl;
+        std::cout << "What's your name? ";
+        std::cin >> userName;
+        std::cout << "Hello, " << userName << '.' << std::endl;
+        std::cout << "\tIs it ok if I call you " << userName << '?' << std::endl;
 
-    return 0;
+        return 0;
     }</pre>
                 </section>
             </div> <!-- card-body -->
@@ -116,7 +116,7 @@
     </section> <!-- section #part-2 -->
     <hr />
     <section id="hello3">        
-        <p>This code works, but we need to fix a couple things.</p>    
+        <p>This code works, but we should still fix a couple things.</p>    
         <div class="card border-radius" id="step3">
             <div class="card-header">hello.cpp - step 3</div>
             <div class="card-body">
@@ -146,8 +146,10 @@
         <p style="font-style: italic;">
             What did we fix?
         </p>
-        <p> First, the program uses the <code>std::string</code> type to hold the user's name, 
-            but C++ doesn't really know what a <code>string</code> is unless we include the 
+        <p> 
+            First, the program uses the <code>std::string</code> type to hold the user's name, 
+            but recall from the reading that <code>string</code> isn't a primitive type in C++ 
+            and the language doesn't really know what a <code>string</code> is unless we include the 
             appropriate header file. Some compilers may allow this code to compile without the 
             header, and it <em>almost accidentally</em> works because the string header is 
             indirectly included by the <code>iostream</code> header. However, this is not 
@@ -159,6 +161,7 @@
             If you use the <code>string</code> type in your programs, always 
             include the <code>&lt;string&gt;</code> header.
         </p>
+        <p>&nbsp;</p>
         <p>
             Also, we are repeatedly using the <code>std::</code> prefix before standard library
             components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
@@ -171,16 +174,17 @@
             simple programs for convenience. There are situations in larger programs 
             where it might be better to avoid it, but for our purposes, it may be helpful.
         </p>
+        <p>&nbsp;</p>
     </section> <!-- section #part-3 -->
     <hr />
     <section id="hello4">
         <p>
-            The code in this final step is functionally identical to the previous version but includes the necessary
-            <code>&lt;string&gt;</code> header and uses the <code>using namespace std;</code> directive
-            to simplify the code.
+            The code in this final step is functionally identical to the previous version and includes 
+            the necessary <code>&lt;string&gt;</code> header and uses the <code>using namespace std;</code> 
+            directive to simplify the code.
         </p>
         <p>
-            There is one more thing we will add. The code works as is, but as it will be a requirement
+            There is one more thing we will add. The code works as is, but since it will be a requirement
             for all of your programs, we will add the formatted header comment block at the top as described
             in the "Required Header Content" section.
         </p>
@@ -213,8 +217,8 @@
     Notes:
         Demonstrate basic input and output operations using cin and cout.
 */
-#include <iostream>
-#include <string>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
 
 using namespace std;
 
