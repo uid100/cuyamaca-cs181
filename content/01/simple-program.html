@@ -1,7 +1,7 @@
 <div class="container">
     <div class="card">
         <div class="card-header">Getting Started</div>
-        <div class="card-body">
+        <div class="card-body" id="part-1">
             <div class="card border-radius" id="step1">
                 <div class="card-header">
                     hello.cpp - step 1
@@ -20,7 +20,7 @@
     }</pre>
                     </section>
                 </div> <!-- card-body -->
-            </div> <!-- card -->
+            </div> <!-- card #step1 -->
             <p>
                 This simple C++ program consists of the following components:
             </p>
@@ -48,40 +48,159 @@
                 <pre>g++ hello.cpp
                 </pre>
             </section>
-            <p>
-                If there are any warnings or errors, review your code for typos. If the compilation is successful, 
-                an executable file, typically named <code>a.out</code> on Unix-like systems or <code>hello.exe</code>
-                on Windows, will be created. Run the executable with the following command and observe the output:
-            </p>
-            <p>
-                <pre>
+            <div class="p-3">
+                <p>
+                    If there are any warnings or errors, review your code for typos. 
+                </p>
+                <p>
+                    If the compilation is successful, an executable file, typically named <code>a.out</code> on 
+                    Unix-like systems or <code>hello.exe</code> on Windows, will be created. Run the executable 
+                    with the following command and observe the output:
+                </p>
+            </div>
+            <pre>
  % ./a.out 
 
  Hello!
 
-                </pre>
-            </section>
-            <div class="card">
-  <div class="card-header bg-primary text-white">
-    hello1.cpp
-  </div>
-  <div class="card-body">
-    <pre>#include &lt;iostream&gt;
-// #include &lt;string&gt;
+            </pre>
+        </div> <!-- card-body #part-1 -->
+        <div class="card-body" id="part-2">
+            <div class="card border-radius" id="step2">
+                <div class="card-header">hello.cpp - step 2</div>
+                <div class="card-body">
+                    <p>
+                        From the textbook chapter, we saw that the typical pattern for applications includes
+                        collecting input, processing the input, and producing output. Our simple program so 
+                        far only produces output. The C++ standard library provides a simple way to write to 
+                        the console using the <code>std::cout</code> object. Add to the program to gather input 
+                        from the user using the <code>std::cin</code> object.
+                    </p>
+                    <section class="my-3 p-3 rounded">
+                        <pre>
+    #include <iostream>
+    // #include <string>
 
-int main()
-{
-    std::string userName;
+    int main()
+    {
+        std::string userName;
 
-    std::cout &lt;&lt; &quot;Hello!&quot; &lt;&lt; std::endl;
-    std::cout &lt;&lt; &quot;What&#x27;s your name? &quot;;
-    std::cin &gt;&gt; userName;
-    std::cout &lt;&lt; &quot;Hello, &quot; &lt;&lt; userName &lt;&lt; &#x27;.&#x27; &lt;&lt; std::endl;
-    std::cout &lt;&lt; &quot;\tIs it ok if I call you &quot; &lt;&lt; userName &lt;&lt; &#x27;?&#x27; &lt;&lt; std::endl;
+        std::cout << "Hello!" << std::endl;
+        std::cout << "What's your name? ";
+        std::cin >> userName;
+        std::cout << "Hello, " << userName << '.' << std::endl;
+        std::cout << "\tIs it ok if I call you " << userName << '?' << std::endl;
 
-    return 0;
-}
-</pre>
+        return 0;
+    }</pre>
+                    </section>
+                </div> <!-- card-body -->
+            </div> <!-- card #step2 -->
+        </div> <!-- card-body #part-2 -->
+        <div class="card-body" id="part-3">
+            <div class="card border-radius" id="step3">
+                <div class="card-header">hello.cpp - step 3</div>
+                <div class="card-body">
+                    <p>
+                        Better.
+                    </p>
+                    <p>
+                        This program works, but there are a couple of issues. First, the program uses the
+                        <code>std::string</code> type to hold the user's name, but C++ doesn't really know
+                        what a <code>string</code> is unless we include the appropriate header file. Some 
+                        compilers may allow this code to compile without the header, and it <em>almost 
+                        accidentally</em> works because the string header is indirectly included by the
+                        <code>iostream</code> header. However, this is not guaranteed behavior and relying
+                        on it can lead to portability issues. To fix this, we should explicitly include the
+                        <code>&lt;string&gt;</code> header at the beginning of our program.
+                    </p>
+                    <p>
+                        Also, we are repeatedly using the <code>std::</code> prefix before standard library
+                        components like <code>cout</code>, <code>cin</code>, and <code>string</code> throughout
+                        the program. This can make the code verbose and harder to read. To simplify this, we
+                        can use the <code>using namespace std;</code> directive after our include statements.
+                        This allows us to use standard library components without the <code>std::</code> prefix.
+                    </p>
+                    <section class="my-3 p-3 rounded">
+                        <pre>
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main()
+    {
+        string userName;
+
+        cout << "Hello!" << endl;
+        cout << "What's your name? ";
+        cin >> userName;
+        cout << "Hello, " << userName << '.' << endl;
+        cout << "\tIs it ok if I call you " << userName << '?' << endl;
+
+        return 0;
+    }</pre>
+                    </section>
+                </div> <!-- card-body -->
+            </div> <!-- card #step3 -->
+        </div> <!-- card-body #part-3 -->
+        <div class="card-body" id="part-3">
+            <div class="card border-radius" id="step3">
+                <div class="card-header">hello.cpp - step 3</div>
+                <div class="card-body">
+                    <p>
+                        This code is functionally identical to the previous version but includes the necessary
+                        <code>&lt;string&gt;</code> header and uses the <code>using namespace std;</code> directive
+                        to simplify the code.
+                    </p>
+                    <p>
+                        There is one more thing we will add. The code works as is, but as it will be a requirement
+                        for all of your programs, we will add the formatted header comment block at the top as described
+                        in the "Required Header Content" section.
+                    </p>
+                    <section class="my-3 p-3 rounded">
+                        <pre>
+    /*
+        File:        hello.cpp
+        Author:      Dan Sullivan
+        Course:      Cuyamaca College - CS 181
+        Instructor:  D. Sullivan
+        Date:        2026-02-03
+
+        Description:
+            Prompts for the user's name and outputs a custom greeting.
+
+        Inputs:
+            UserName (string) - the name entered by the user at the console.
+
+        Outputs:
+            Formatted greeting messages to the console.
+
+        Notes:
+            Demonstrate basic input and output operations using cin and cout.
+    */
+    #include <iostream>
+    #include <string>
+
+    using namespace std;
+
+    int main()
+    {
+        string userName;
+
+        cout << "Hello!" << endl;
+        cout << "What's your name? ";
+        cin >> userName;
+        cout << "Hello, " << userName << '.' << endl;
+        cout << "\tIs it ok if I call you " << userName << '?' << endl;
+
+        return 0;
+    }</pre>
+                    </section>
+                </div> <!-- card-body -->
+            </div> <!-- card #step3 -->
+        </div> <!-- card-body #part-3 -->
+    </div> <!-- card -->
   </div>
 </div>
         </div> <!-- card-body -->
