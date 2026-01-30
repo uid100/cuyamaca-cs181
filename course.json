@@ -32,18 +32,17 @@
   "textbook": "materials/textbook.json",
   "content": {
     "modules": {
-      "00": {
-        "title": "Notes ## DO NOT PUBLISH ##",
+      "00": { "title": "Notes ## DO NOT PUBLISH ##",
         "shortTitle": "notes",
         "pages": {
           "1": "use *resource* for absolute (external) links",
           "2": "use *source* for course-repo relative (internal) links, courseBase + source"
         }
       },
-      "01": {
-        "title": "Introduction to Computers, Programming, and C++",
+      "01": { "title": "Introduction to Computers, Programming, and C++",
         "shortTitle": "intro",
         "length": "1 week",
+        "chapter": "1 & 2: An Intro to Computers and Programming and C++",
         "topics": [
           "What computers do",
           "History of C-based Languages",
@@ -52,10 +51,6 @@
           "Anatomy of a simple C++ program",
           "Typical C++ Program Development Environment",
           "IDE setup"
-        ],
-        "chapters": [
-          "Chapter 1: An Introduction to Computers and Programming",
-          "Chapter 2: Introduction to C++"
         ],
         "pages": {
           "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
@@ -75,10 +70,10 @@
             "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/"
           }
       },
-      "02": {
-        "title": "Variables, Data Types, Expressions",
+      "02": { "title": "Variables, Data Types, Expressions",
         "shortTitle": "variables",
         "length": "2 weeks",
+        "chapter": "3: Variables, Data Types, and Expressions",
         "topics": [
           "Variables, primitive types",
           "Arithmetic expressions and operators",
@@ -97,10 +92,10 @@
           }
         }
       },
-      "03": {
-        "title": "Decisions, Debugging, and Pseudocode",
+      "03": { "title": "Decisions, Debugging, and Pseudocode",
         "shortTitle": "decisions",
         "length": "2 weeks",
+        "chapter": "4: Making Decisions",
         "topics": [
           "If statements",
           "Logical operators",
@@ -146,10 +141,10 @@
           }
         }
       },
-      "04": {
-        "title": "Iteration using Loops",
+      "04": { "title": "Iteration using Loops",
         "shortTitle": "loops",
         "length": "2 weeks",
+        "chapter": "5: Looping",
         "topics": [
           "While loops",
           "For loops",
@@ -183,10 +178,10 @@
           }
         }
       },
-      "05": {
-        "title": "Functions and Scope",
+      "05": { "title": "Functions and Scope",
         "shortTitle": "functions",
-        "length": "2 weeks",
+        "length": "1 week",
+        "chapter": "6: Functions",
         "topics": [
           "Defining and calling functions",
           "Function prototypes/definitions",
@@ -222,140 +217,10 @@
           }
         }
       },
-      "06": {
-        "title": "Arrays",
-        "shortTitle": "arrays",
-        "length": "2 weeks",
-        "topics": [
-          "Defining and using arrays",
-          "Passing arrays to functions",
-          "Sorting and searching arrays",
-          "Multidimensional arrays",
-          "Declaring/initializing arrays",
-          "Passing arrays to functions",
-          "Visualizing array memory as contiguous blocks"
-        ],
-        "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/06/module6.html"
-          },
-          "arrays": {
-            "title": "Arrays",
-            "type": "content",
-            "source": "/content/06/arrays.html"
-          },
-          "end": {
-            "title": "End of Module 6",
-            "type": "content",
-            "source": "/content/end-module.html"
-          }
-        }
-      },
-      "07": {
-        "title": "Sorting, Searching & Vectors",
-        "shortTitle": "vectors",
-        "length": "2 weeks",
-        "topics": [
-          "Sorting algorithms",
-          "Searching algorithms",
-          "Linear search",
-          "Binary search",
-          "Selection sort / bubble sort",
-          "Intro to std::vector and why it’s safer",
-          "Using vectors"
-        ],
-        "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/07/module7.html"
-          },
-          "sorting-searching": {
-            "title": "Sorting and Searching Arrays",
-            "type": "content",
-            "source": "/content/07/sorting-searching.html"
-          },
-          "vectors": {
-            "title": "Vectors",
-            "type": "content",
-            "source": "/content/07/vectors.html"
-          },
-          "end": {
-            "title": "End of Module 7",
-            "type": "content",
-            "source": "/content/end-module.html"
-          }
-        }
-      },
-      "08": {
-        "title": "Pointers",
-        "shortTitle": "pointers",
-        "length": "2 weeks",
-        "topics": [
-          "Pointer basics",
-          "Pointer arithmetic",
-          "Pointers and arrays",
-          "Memory addresses",
-          "Basic pointer syntax",
-          "Pointers and arrays connection (conceptual)",
-          "No pointer arithmetic unless students are strong",
-          "Dynamic memory allocation"
-        ],
-        "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/08/module8.html"
-          },
-          "pointers": {
-            "title": "Pointers",
-            "type": "content",
-            "source": "/content/08/pointers.html"
-          },
-          "end": {
-            "title": "End of Module 08",
-            "type": "content",
-            "source": "/content/end-module.html"
-          }
-        }
-      },
-      "09": {
-        "title": "Strings",
-        "shortTitle": "strings",
-        "length": "1 week",
-        "topics": [
-          "C-strings vs. std::string",
-          "String manipulation",
-          "String functions",
-          "std::string",
-          "Basic string operations",
-          "Input/output with strings",
-          "Avoid deep C‑string functions unless needed"
-        ],
-        "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/09/module9.html"
-          },
-          "strings": {
-            "title": "Strings",
-            "type": "content",
-            "source": "/content/09/strings.html"
-          },
-          "end": {
-            "title": "End of Module 09",
-            "type": "content",
-            "source": "/content/end-module.html"
-          }
-        }
-      },
-      "10": {
-        "title": "Classes and Objects",
+      "06": { "title": "Classes and Objects",
         "shortTitle": "oop",
         "length": "2 weeks",
+        "chapter": "7: Object-Oriented Programming",
         "topics": [
           "Defining classes",
           "Creating objects",
@@ -372,24 +237,124 @@
           "overview": {
             "title": "Module Overview",
             "type": "content",
-            "source": "/content/10/module10.html"
+            "source": "/content/06/module6.html"
           },
           "classes-objects": {
             "title": "Classes and Objects",
             "type": "content",
-            "source": "/content/10/classes-objects.html"
+            "source": "/content/06/classes-objects.html"
           },
           "end": {
-            "title": "End of Module 10",
+            "title": "End of Module 06",
             "type": "content",
             "source": "/content/end-module.html"
           }
         }
       },
-      "11": {
+      "07": { "title": "Arrays",
+        "shortTitle": "arrays",
+        "length": "1 week",
+        "chapter": "8: Arrays",
+        "topics": [
+          "Defining and using arrays",
+          "Passing arrays to functions",
+          "Sorting and searching arrays",
+          "Multidimensional arrays",
+          "Declaring/initializing arrays",
+          "Passing arrays to functions",
+          "Visualizing array memory as contiguous blocks"
+        ],
+        "pages": {
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/07/module7.html"
+          },
+          "arrays": {
+            "title": "Arrays",
+            "type": "content",
+            "source": "/content/07/arrays.html"
+          },
+          "end": {
+            "title": "End of Module 7",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
+        }
+      },
+      "08": { "title": "Sorting, Searching & Vectors",
+        "shortTitle": "vectors and algorithms",
+        "length": "1 week",
+        "chapter": "9: Algorithms",
+        "topics": [
+          "Sorting algorithms",
+          "Searching algorithms",
+          "Linear search",
+          "Binary search",
+          "Selection sort / bubble sort",
+          "Intro to std::vector and why it’s safer",
+          "Using vectors"
+        ],
+        "pages": {
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/08/module8.html"
+          },
+          "sorting-searching": {
+            "title": "Sorting and Searching Arrays",
+            "type": "content",
+            "source": "/content/08/sorting-searching.html"
+          },
+          "vectors": {
+            "title": "Vectors",
+            "type": "content",
+            "source": "/content/08/vectors.html"
+          },
+          "end": {
+            "title": "End of Module 8",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
+        }
+      },
+      "09": { "title": "Pointers",
+        "shortTitle": "pointers",
+        "length": "1 week",
+        "chapter": "10: Pointers",
+        "topics": [
+          "Pointer basics",
+          "Pointer arithmetic",
+          "Pointers and arrays",
+          "Memory addresses",
+          "Basic pointer syntax",
+          "Pointers and arrays connection (conceptual)",
+          "No pointer arithmetic unless students are strong",
+          "Dynamic memory allocation"
+        ],
+        "pages": {
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/09/module9.html"
+          },
+          "pointers": {
+            "title": "Pointers",
+            "type": "content",
+            "source": "/content/09/pointers.html"
+          },
+          "end": {
+            "title": "End of Module 09",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
+        }
+      },
+      "10": {
         "title": "Inheritance",
         "shortTitle": "inheritance",
         "length": "1 week",
+        "chapter": "11: Inheritance and Polymorphism",
         "topics": [
           "Base and derived classes",
           "Access specifiers (public/private/protected)",
@@ -402,18 +367,56 @@
           "overview": {
             "title": "Module Overview",
             "type": "content",
-            "source": "/content/11/module11.html"
+            "source": "/content/10/module10.html"
           },
           "polymorphism": {
             "title": "Polymorphism and Virtual Functions",
             "type": "content",
-            "source": "/content/11/polymorphism.html"
+            "source": "/content/10/polymorphism.html"
+          },
+          "end": {
+            "title": "End of Module 10",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
+        }
+      },
+      "11": { "title": "Strings",
+        "shortTitle": "strings",
+        "length": "1 week",
+        "topics": [
+          "C-strings vs. std::string",
+          "String manipulation",
+          "String functions",
+          "std::string",
+          "Basic string operations",
+          "Input/output with strings",
+          "Avoid deep C‑string functions unless needed"
+        ],
+        "pages": {
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/11/module11.html"
+          },
+          "strings": {
+            "title": "Strings",
+            "type": "content",
+            "source": "/content/11/strings.html"
           },
           "end": {
             "title": "End of Module 11",
             "type": "content",
             "source": "/content/end-module.html"
           }
+        }
+      },
+      "12": { "title": "Wrap-up",
+        "shortTitle": "wrap-up",
+        "length": "1 week",
+        "pages": {
+          "overview": { "title": "Module Overview", "type": "content", "source": "/content/12/module12.html" },
+          "end": { "title": "End of Module 12", "type": "content", "source": "/content/end-module.html" } 
         }
       },
       "99": {
