@@ -83,7 +83,7 @@
           "overview": {"title": "Module Overview","type": "content","source": "/content/02/module2.html"},
           "variables": {"title": "Variables and Data Types","type": "content", "resource": "https://uid100.github.io/py/content/variables.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/02/data-types.html"},
-          "expressions": {"title": "Expressions and Operators","type": "content","source": "/content/02/expressions.html"},
+          "operators": {"title": "Expressions and Operators","type": "content","source": "/content/02/operators.html"},
           "magic-numbers": { "title": "Unnamed Constants - Magic Numbers","type": "content","resource": "https://uid100.github.io/edu-core/shared/magic-numbers.html"},
           "self-documenting": { "title": "Documenting Code","type": "content","resource": "https://uid100.github.io/edu-core/shared/self-documenting-code.html"},
           "end": {"title": "End of Module 2: Variables, Data Types, Expressions","type": "content","source": "/content/end-module.html"}
