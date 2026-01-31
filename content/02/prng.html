@@ -2,7 +2,7 @@
     <h2>What Is a PRNG?</h2>
     <div class="card">
         <div class="card-header">Pseudo-Random Number Generator</div>
-        <div class="card-body">
+        <div class="card-body" style="padding: 10px;">
             <div class="boxed-paragraph">
                 <p>
                     A <strong>PRNG</strong> is a math‑based generator that produces repeatable sequences of
@@ -15,7 +15,7 @@
                 generated using mathematical rules and algorithms.
             </p>
 
-            <h3>Why it’s called “pseudo” random</h3>
+            <h3 style="margin: 10px;">Why it’s called “pseudo-” random</h3>
 
             <p>
                 PRNGs are not truly random.  
@@ -38,14 +38,15 @@
                 </ul>
             </p>
 
-            <h3>PRNGs in C++</h3>
+            <h3 style="margin: 10px;">PRNGs in C++</h3>
 
             <p>
                 In C++, the function <code>rand()</code> uses a PRNG.
                 The function <code>srand()</code> sets the starting value (the seed).
             </p>
 
-            <pre><code>srand(42);  // set seed to 42
+            <pre><code>
+        srand(42);  // set seed to 42
         rand();  // same result every run
         rand();</code></pre>
 
@@ -53,11 +54,12 @@
                 Using a different seed produces a different sequence:
             </p>
 
-            <pre><code>srand(100);
+            <pre><code>
+        srand(100);
         rand();  // different sequence
         rand();</code></pre>
 
-            <h2>Why this matters</h2>
+            <h2 style="margin: 10px;">Why this matters</h2>
 
             <ul>
                 <li>Same seed → same results (good for testing)</li>
@@ -65,6 +67,7 @@
                 <li>Without <code>srand</code>, the sequence is always the same each run</li>
             </ul>
 
+            <p>&nbsp;</p>
             <div class="note mt-3 mb-0">
                 <strong>Important note</strong>
                 <p>
