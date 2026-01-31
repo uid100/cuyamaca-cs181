@@ -116,7 +116,6 @@ std::cin.getline(name, 30);  // reads a whole line up to 29 chars + '\0'
             <code>char s[5] = "hello";</code> <em>ERROR</em> needs 6. Use <code>char s[6]</code> or let the compiler size it.</li>
           <li><strong>Using <code>=</code> after declaration</strong>: arrays can't be assigned; use <code>strcpy</code>.</li>
           <li><strong>Buffer too small</strong>: copying a longer string than the array size corrupts memory.</li>
-          <li><strong>Prefer <code>std::string</code> later</strong>: once you learn classes, <code>std::string</code> is safer and easier.</li>
         </ul>
         <pre><code class="language-cpp">// Safer sizing at initialization:
 char s[] = "hello"; // compiler picks size 6 automatically
@@ -125,6 +124,11 @@ char s[] = "hello"; // compiler picks size 6 automatically
 char t[20];
 strcpy(t, "short text"); // OK; fits (including '\0')
 </code></pre>
+        <div class="note mt-3 mb-0">
+          <strong>Safer:</strong>
+            <p>
+                c-strings are important but <code>std::string</code> is safer and easier. 
+            </p>
       </div>
     </section>
 
