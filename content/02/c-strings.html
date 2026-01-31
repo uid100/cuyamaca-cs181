@@ -1,0 +1,134 @@
+<div class="container">
+
+    <!-- What is a C-string -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">What is a C-string?</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          A <strong>C-string</strong> is a sequence of characters stored in a <em>char array</em> and
+          ended by a special character called the <strong>null terminator</strong> <code>'\0'</code>.
+          That “zero” character marks the end of the text.
+        </p>
+        <pre><code class="language-cpp">char name[6] = {'A','l','i','c','e','\0'}; // 5 letters + '\0'
+/* same as */
+char name2[6] = "Alice"; // string literal adds '\0' automatically
+</code></pre>
+        <div class="note mt-3 mb-0">
+          <strong>Key idea:</strong> A C-string is just a <em>char array</em> with a <code>'\0'</code> at the end.
+          The array must be big enough for all characters <em>plus</em> the null terminator.
+        </div>
+      </div>
+    </section>
+
+    <!-- Declaring and initializing -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Declaring and initializing</h2>
+      </div>
+      <div class="card-body">
+        <p>Two common ways to create a C-string:</p>
+        <pre><code class="language-cpp">char word1[10] = "hello"; // OK: compile-time initialization
+char word2[10];
+/* ...later... */</code></pre>
+        <p class="mb-0">
+          The first line is an <strong>initialization</strong> with a string literal (adds <code>'\0'</code> for you).
+          The second line just reserves space; it doesn’t set a value yet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why '=' doesn't work later & why strcpy -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Why can’t I use <code>=</code> later? Why <code>strcpy</code>?</h2>
+      </div>
+      <div class="card-body">
+        <p>
+          After an array exists, you <strong>can’t assign</strong> a new C-string to it using <code>=</code>.
+          Arrays don’t support assignment like variables do.
+        </p>
+        <pre><code class="language-cpp">char msg[20];
+msg = "hello";   // ❌ Error: cannot assign to an array
+</code></pre>
+        <p>
+          Instead, you must <em>copy characters into the array</em>. That’s what <code>strcpy</code> does:
+          it copies the bytes from a source string (including the <code>'\0'</code>) into your destination array.
+        </p>
+        <pre><code class="language-cpp">#include &lt;cstring&gt;  // for strcpy
+
+char msg[20];
+strcpy(msg, "hello");   // ✅ copies 'h' 'e' 'l' 'l' 'o' '\0' into msg
+</code></pre>
+        <div class="note mt-3">
+          <strong>Important:</strong> Make sure your destination array is big enough for the text <em>and</em> the null terminator.
+          If the text is longer than the array, you’ll overwrite memory (a bug).
+        </div>
+        <p class="mb-0 mt-3">
+          Variants you might see: <code>strncpy</code> (copy up to N chars; be careful—it may not add <code>'\0'</code>),
+          or platform-specific <code>strcpy_s</code> (takes the destination size). For this class,
+          the main idea is: <strong>use a copy function, not <code>=</code>, to change a C-string</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Input into C-strings -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Reading input into a C-string</h2>
+      </div>
+      <div class="card-body">
+        <p>You can read directly into a <code>char</code> array with <code>cin</code> or <code>cin.getline</code>:</p>
+        <pre><code class="language-cpp">char name[30];
+
+std::cin &gt;&gt; name;        // reads a word (stops at whitespace)
+std::cin.ignore(1000, '\n'); // (optional) clear remaining input
+
+std::cin.getline(name, 30);  // reads a whole line up to 29 chars + '\0'
+</code></pre>
+        <div class="note mt-3 mb-0">
+          <strong>Tip:</strong> Prefer <code>cin.getline</code> when you want spaces (e.g., full names).
+          Always pass the <em>array size</em> so it won’t overflow.
+        </div>
+      </div>
+    </section>
+
+    <!-- Common pitfalls -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Common pitfalls (and fixes)</h2>
+      </div>
+      <div class="card-body">
+        <ul class="mb-3">
+          <li><strong>Forgetting space for <code>'\0'</code></strong>:
+            <code>char s[5] = "hello";</code> ❌ needs 6. Use <code>char s[6]</code> or let the compiler size it.</li>
+          <li><strong>Using <code>=</code> after declaration</strong>: arrays can’t be assigned; use <code>strcpy</code>.</li>
+          <li><strong>Buffer too small</strong>: copying a longer string than the array size corrupts memory.</li>
+          <li><strong>Prefer <code>std::string</code> later</strong>: once you learn classes, <code>std::string</code> is safer and easier.</li>
+        </ul>
+        <pre><code class="language-cpp">// Safer sizing at initialization:
+char s[] = "hello"; // compiler picks size 6 automatically
+
+// Later update:
+char t[20];
+strcpy(t, "short text"); // OK; fits (including '\0')
+</code></pre>
+      </div>
+    </section>
+
+    <!-- Quick practice -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Try it</h2>
+      </div>
+      <div class="card-body">
+        <ol class="mb-0">
+          <li>Declare <code>char course[16]</code>, then set it to <code>"CS 181"</code> using <code>strcpy</code>.</li>
+          <li>Use <code>cin.getline(course, 16)</code> to read a new value with spaces (e.g., <em>“CS 181 Lab”</em>).</li>
+          <li>Print the result to confirm it worked.</li>
+        </ol>
+      </div>
+    </section>
+
+</div>
