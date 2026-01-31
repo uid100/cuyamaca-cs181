@@ -1,0 +1,55 @@
+<section class="container my-5">
+  <div class="p-4 border rounded">
+    <h2>Program: Seed PRNG and Convert Seconds</h2>
+    <p class="my-5 italic">
+      Write a C++ program that prompts the user for an integer seed, initializes the pseudo‑random number generator,
+      takes the <em>first</em> value returned by <code>rand()</code> as a number of seconds, and converts it into
+      weeks, days, hours, minutes, and seconds, then displays the result.
+    </p>
+
+    <h3>Specifications:</h3>
+    <dl>
+      <dt>File name:</dt>
+      <dd>seed_seconds_convert.cpp</dd>
+
+      <dt>Focus:</dt>
+      <dd>Use <code>std::srand</code>/<code>std::rand</code>, integer arithmetic (division and modulus), constants, input, and output.</dd>
+
+      <dt>Input:</dt>
+      <dd>One integer seed entered by the user.</dd>
+
+      <dt>Output:</dt>
+      <dd>The random seconds value in a labeled breakdown of weeks, days, hours, minutes, and seconds.</dd>
+
+      <dt>Example:</dt>
+      <dd>
+        <pre class="border">
+Enter seed: 1
+(16807s) = 0 weeks, 0 days, 4 hours, 40 minutes, 7 seconds
+        </pre>
+      </dd>
+    </dl>
+
+    <div class="boxed-paragraph">
+      <ul>
+        <li>Use <code>#include &lt;cstdlib&gt;</code> for <code>std::srand</code>/<code>std::rand</code> and
+            <code>#include &lt;iostream&gt;</code> for input/output.</li>
+        <li>Call <code>std::srand(seed)</code> with the user’s integer, then call <code>std::rand()</code> once to get the seconds value.</li>
+        <li>Define clear constants, e.g., <code>const int SECS_PER_MIN = 60;</code>, <code>SECS_PER_HOUR = 3600;</code>, <code>SECS_PER_DAY = 86400;</code>, <code>SECS_PER_WEEK = 604800;</code>.</li>
+        <li><strong>Hint (modulus):</strong> Use integer division <em>and</em> modulus to peel off each unit:
+          <ul>
+            <li><code>weeks = total / SECS_PER_WEEK;</code></li>
+            <li><code>rem = total % SECS_PER_WEEK;</code> (remainder after weeks)</li>
+            <li><code>days = rem / SECS_PER_DAY;</code>, then <code>rem = rem % SECS_PER_DAY;</code></li>
+            <li><code>hours = rem / SECS_PER_HOUR;</code>, then <code>rem = rem % SECS_PER_HOUR;</code></li>
+            <li><code>minutes = rem / SECS_PER_MIN;</code>, and <code>seconds = rem % SECS_PER_MIN;</code></li>
+          </ul>
+          <em>Think: “divide to get the count, use <code>%</code> to keep what’s left for the next smaller unit.”</em>
+        </li>
+        <li>No loops, no conditionals, and no arrays; just arithmetic and straightforward calculations.</li>
+        <li>Format your output similar to the example; include the original seconds in parentheses with an <code>s</code> suffix.</li>
+        <li>Include the required file header comment block as discussed in class and ensure it compiles from the command line.</li>
+      </ul>
+    </div>
+  </div>
+</section>

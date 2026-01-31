@@ -88,7 +88,12 @@
           "c-strings": {"title": "c-strings","type": "content","source": "/content/02/c-strings.html"},
           "random": {"title": "(Pseudo) Random Numbers","type": "content","source": "/content/02/prng.html"},
           "end": {"title": "End of Module 2: Variables, Data Types, Expressions","type": "content","source": "/content/end-module.html"}
-        }
+        },
+        "lab": {
+            "title": "Lab #2 - Variables and Data Types",
+            "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/task-list.json",
+            "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/"
+          }
       },
       "03": { "title": "Decisions, Debugging, and Pseudocode",
         "shortTitle": "decisions",
