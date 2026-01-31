@@ -1,0 +1,124 @@
+<h1 class="h3 mb-0">C++ Operators (PEMDAS), Precedence &amp; Associativity</h1>
+
+<div class="container">
+
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Operators</h2>
+      </div>
+      <div class="card-body">
+        <p>An <strong>operator</strong> is a symbol that tells C++ to do something with values.</p>
+        <ul class="mb-3">
+          <li><code>+</code> add, <code>-</code> subtract, <code>*</code> multiply, <code>/</code> divide</li>
+          <li><code>=</code> assign (store a value), <code>==</code> compare two values</li>
+          <li><code>&amp;&amp;</code> logical AND, <code>||</code> logical OR, <code>!</code> logical NOT</li>
+        </ul>
+        <pre><code class="language-cpp">int total = 5 + 3;     // add
+bool same = (5 == 3);  // compare (false)
+</code></pre>
+      </div>
+    </section>
+
+    <!-- Precedence with PEMDAS -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Precedence (think PEMDAS)</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>Precedence</strong> is the “order of operations.” Use the math rule you already know: <strong>PEMDAS</strong>.</p>
+        <ul class="mb-3">
+          <li><strong>P</strong>arentheses</li>
+          <li><strong>E</strong>xponents — <em>not a built-in operator in C++</em> (use <code>std::pow</code> when allowed)</li>
+          <li><strong>M</strong>ultiplication &amp; <strong>D</strong>ivision</li>
+          <li><strong>A</strong>ddition &amp; <strong>S</strong>ubtraction</li>
+        </ul>
+        <pre><code class="language-cpp">int result1 = 2 + 3 * 4;   // 14: do multiplication first, then addition
+int result2 = (2 + 3) * 4; // 20: parentheses change the order
+</code></pre>
+        <div class="note mt-3 mb-0"><strong>Rule:</strong> When in doubt, add parentheses. Clear code &gt; clever code.</div>
+      </div>
+    </section>
+
+    <!-- Associativity -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Associativity (when priorities tie)</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>Associativity</strong> tells which direction we group when operators have the same precedence.</p>
+        <ul>
+          <li><strong>Left-to-right</strong> for most math: <code>+ - * / %</code></li>
+          <li><strong>Right-to-left</strong> for assignment: <code>=</code>, <code>+=</code>, etc.</li>
+        </ul>
+        <pre class="mt-2"><code class="language-cpp">int v = 10 - 3 - 2;  // (10 - 3) - 2 = 5 (left-to-right)
+int a, b, c;
+a = b = c = 4;       // c=4, then b=c, then a=b (right-to-left)
+</code></pre>
+      </div>
+    </section>
+
+    <!-- Simple precedence cheat sheet -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Simple precedence checklist</h2>
+      </div>
+      <div class="card-body">
+        <ol class="mb-3">
+          <li><strong>()</strong> parentheses</li>
+          <li><strong>* / %</strong> multiplication/division/remainder</li>
+          <li><strong>+ -</strong> addition/subtraction</li>
+          <li><strong>&lt; &gt; &lt;= &gt;=</strong> comparisons</li>
+          <li><strong>== !=</strong> equality</li>
+          <li><strong>&amp;&amp;</strong> logical AND</li>
+          <li><strong>||</strong> logical OR</li>
+          <li><strong>=</strong> assignment (usually last)</li>
+        </ol>
+        <pre><code class="language-cpp">bool r = 3 + 4 * 2 == 11 &amp;&amp; true;
+// Steps: (4*2)=8 → 3+8=11 → 11==11 true → true &amp;&amp; true → true
+</code></pre>
+      </div>
+    </section>
+
+    <!-- Common mistakes -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Common mistakes (and quick fixes)</h2>
+      </div>
+      <div class="card-body">
+        <ul class="mb-3">
+          <li><strong><code>=</code> vs <code>==</code></strong>: <code>=</code> assigns, <code>==</code> compares.</li>
+          <li><strong>Integer division</strong>: <code>7/2</code> is <code>3</code>, not <code>3.5</code>. Use <code>7.0/2</code> or cast.</li>
+          <li><strong>Clarity</strong>: When the order isn’t obvious, add parentheses.</li>
+        </ul>
+        <pre><code class="language-cpp">// Wrong vs right
+if (x = 5) { }   // assigns 5; condition becomes true (bug)
+if (x == 5) { }  // compares correctly
+
+int a = 7 / 2;       // 3
+double b = 7.0 / 2;  // 3.5
+</code></pre>
+      </div>
+    </section>
+
+    <!-- Quick practice -->
+    <section class="card my-3">
+      <div class="card-header">
+        <h2 class="h5 mb-0">Quick practice</h2>
+      </div>
+      <div class="card-body">
+        <ol class="mb-3">
+          <li>Predict the values, then test:</li>
+        </ol>
+        <pre class="mb-3"><code class="language-cpp">int a = 2 + 3 * 4;
+int b = (2 + 3) * 4;
+int c = 8 / 2 * 2;
+int d = 5 - 2 - 1;
+bool e = (3 * 3 == 9) || (4 &lt; 2) &amp;&amp; (10 &gt; 1);
+</code></pre>
+        <ol start="2" class="mb-0">
+          <li>Rewrite any unclear expression with parentheses to show the order.</li>
+        </ol>
+      </div>
+    </section>
+
+</div> <!-- /container -->
