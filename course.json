@@ -86,6 +86,7 @@
           "operators": {"title": "Expressions and Operators","type": "content","source": "/content/02/operators.html"},
           "magic-numbers": { "title": "Unnamed Constants - Magic Numbers","type": "content","resource": "https://uid100.github.io/edu-core/shared/magic-numbers.html"},
           "c-strings": {"title": "Expressions and Operators","type": "content","source": "/content/02/c-strings.html"},
+          "random": {"title": "(Pseudo) Random Numbers","type": "content","source": "/content/02/prng.html"},
           "end": {"title": "End of Module 2: Variables, Data Types, Expressions","type": "content","source": "/content/end-module.html"}
         }
       },
