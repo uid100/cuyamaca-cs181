@@ -82,7 +82,7 @@
         ],
         "pages": {
           "overview": {"title": "Module Overview","type": "content","source": "/content/02/module2.html"},
-          "variables": {"title": "Variables and Data Types","type": "content","source": "/content/02/variables.html"},
+          "variables": {"title": "Variables and Data Types","type": "content", "resource": "https://uid100.github.io/py/content/variables.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/01/data-types.html"},
           "expressions": {"title": "Expressions and Operators","type": "content","source": "/content/02/expressions.html"},
           "end": {
