@@ -31,44 +31,55 @@ char name2[6] = "Alice"; // string literal adds '\0' automatically
         <p>Two common ways to create a C-string:</p>
         <pre><code class="language-cpp">char word1[10] = "hello"; // OK: compile-time initialization
 char word2[10];
-/* ...later... */</code></pre>
+/* ...assign this later... */</code></pre>
         <p class="mb-0">
           The first line is an <strong>initialization</strong> with a string literal (adds <code>'\0'</code> for you).
           The second line just reserves space; it doesn’t set a value yet.
         </p>
+        <div class="note mt-3 mb-0">
+          <strong>Definitions:</strong>
+          <ul>
+            <li><strong>Declaration</strong>: telling the compiler about the variable's type and name.</li>
+            <li><strong>Assignment</strong>: setting, or changing a variable's value.</li>
+            <li><strong>Initialization</strong>: <em>both</em> assigning and declaring a variable at the same time.</li>
+          </ul>
       </div>
     </section>
 
-    <!-- Why '=' doesn't work later & why strcpy -->
+    <!-- why strcpy() -->
     <section class="card my-3">
       <div class="card-header">
-        <h2 class="h5 mb-0">Why can’t I use <code>=</code> later? Why <code>strcpy</code>?</h2>
+        <h2 class="h5 mb-0">Why <code>strcpy()</code>?</h2>
       </div>
       <div class="card-body">
         <p>
-          After an array exists, you <strong>can’t assign</strong> a new C-string to it using <code>=</code>.
-          Arrays don’t support assignment like variables do.
+          After an array exists, you <strong>can't assign</strong> a new C-string to it using
+          the usual assignment operator ( '<code>=</code>' ). Arrays don't support assignment 
+          like variables do.
         </p>
         <pre><code class="language-cpp">char msg[20];
-msg = "hello";   // ❌ Error: cannot assign to an array
+msg = "hello";   // ERROR: cannot assign to an array
 </code></pre>
         <p>
-          Instead, you must <em>copy characters into the array</em>. That’s what <code>strcpy</code> does:
+          Instead, you must <em>copy characters into the array</em>. That's what <code>strcpy</code> does:
           it copies the bytes from a source string (including the <code>'\0'</code>) into your destination array.
         </p>
         <pre><code class="language-cpp">#include &lt;cstring&gt;  // for strcpy
 
 char msg[20];
-strcpy(msg, "hello");   // ✅ copies 'h' 'e' 'l' 'l' 'o' '\0' into msg
+strcpy(msg, "hello");   // copies 'h' 'e' 'l' 'l' 'o' '\0' into msg
 </code></pre>
         <div class="note mt-3">
-          <strong>Important:</strong> Make sure your destination array is big enough for the text <em>and</em> the null terminator.
-          If the text is longer than the array, you’ll overwrite memory (a bug).
+          <strong>Important:</strong> Make sure your destination array is big enough for the text <em>and</em> 
+          the null terminator. If the text is longer than the array, you'll overwrite memory (a bug). (BAD!)
         </div>
         <p class="mb-0 mt-3">
           Variants you might see: <code>strncpy</code> (copy up to N chars; be careful—it may not add <code>'\0'</code>),
           or platform-specific <code>strcpy_s</code> (takes the destination size). For this class,
           the main idea is: <strong>use a copy function, not <code>=</code>, to change a C-string</strong>.
+        </p>
+        <p>
+            This will make a lot more sense in a couple weeks when we get to <em>arrays</em>.
         </p>
       </div>
     </section>
@@ -97,13 +108,13 @@ std::cin.getline(name, 30);  // reads a whole line up to 29 chars + '\0'
     <!-- Common pitfalls -->
     <section class="card my-3">
       <div class="card-header">
-        <h2 class="h5 mb-0">Common pitfalls (and fixes)</h2>
+        <h2 class="h5 mb-0">Common mistakes (and fixes)</h2>
       </div>
       <div class="card-body">
         <ul class="mb-3">
           <li><strong>Forgetting space for <code>'\0'</code></strong>:
-            <code>char s[5] = "hello";</code> ❌ needs 6. Use <code>char s[6]</code> or let the compiler size it.</li>
-          <li><strong>Using <code>=</code> after declaration</strong>: arrays can’t be assigned; use <code>strcpy</code>.</li>
+            <code>char s[5] = "hello";</code> <em>ERROR</em> needs 6. Use <code>char s[6]</code> or let the compiler size it.</li>
+          <li><strong>Using <code>=</code> after declaration</strong>: arrays can't be assigned; use <code>strcpy</code>.</li>
           <li><strong>Buffer too small</strong>: copying a longer string than the array size corrupts memory.</li>
           <li><strong>Prefer <code>std::string</code> later</strong>: once you learn classes, <code>std::string</code> is safer and easier.</li>
         </ul>
