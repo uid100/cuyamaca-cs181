@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>What Is a PRNG?</h2>
+    <div class="card">
+        <div class="card-header">Pseudo-Random Number Generator</div>
+        <div class="card-body">
+            <div class="boxed-paragraph">
+                <p>
+                    A <strong>PRNG</strong> is a math‑based generator that produces repeatable sequences of
+                    numbers that only <em>appear</em> random.
+                </p>    
+            </div>
+            <p>
+                <strong>PRNG</strong> stands for <strong>Pseudo‑Random Number Generator</strong>.
+                It is a program that produces numbers that <em>look</em> random, but are actually
+                generated using mathematical rules and algorithms.
+            </p>
+
+            <h3>Why it’s called “pseudo” random</h3>
+
+            <p>
+                PRNGs are not truly random.  
+                If you start them with the same starting value (called a <strong>seed</strong>),
+                they will always produce the same sequence of numbers.
+            </p>
+
+            <p>
+                This is useful for testing and debugging programs,
+                because you can get the same results each time you run the program.
+            </p>
+
+            <p>
+                True randomness requires physical sources, such as:
+                <ul>
+                    <li>Mouse movements</li>
+                    <li>Keyboard timing</li>
+                    <li>CPU temperature noise</li>
+                    <li>Hardware random-number generators</li>
+                </ul>
+            </p>
+
+            <h3>PRNGs in C++</h3>
+
+            <p>
+                In C++, the function <code>rand()</code> uses a PRNG.
+                The function <code>srand()</code> sets the starting value (the seed).
+            </p>
+
+            <pre><code>srand(42);  // set seed to 42
+        rand();  // same result every run
+        rand();</code></pre>
+
+            <p>
+                Using a different seed produces a different sequence:
+            </p>
+
+            <pre><code>srand(100);
+        rand();  // different sequence
+        rand();</code></pre>
+
+            <h2>Why this matters</h2>
+
+            <ul>
+                <li>Same seed → same results (good for testing)</li>
+                <li>Different seed → different results</li>
+                <li>Without <code>srand</code>, the sequence is always the same each run</li>
+            </ul>
+
+            <div class="note mt-3 mb-0">
+                <strong>Important note</strong>
+                <p>
+                    PRNGs are fine for simple programs, games, and class assignments,
+                    but they should <strong>not</strong> be used for security, passwords, or encryption.
+                </p>
+            </div>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+</div> <!-- container -->
