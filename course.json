@@ -83,9 +83,9 @@
           "overview": {"title": "Module Overview","type": "content","source": "/content/02/module2.html"},
           "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/02/data-types.html"},
           "variables": {"title": "Variables and Data Types","type": "content", "resource": "https://uid100.github.io/py/content/variables.html"},
-          "operators": {"title": "Expressions and Operators","type": "content","source": "/content/02/operators.html"},
+          "operators": {"title": "Operators","type": "content","source": "/content/02/operators.html"},
           "magic-numbers": { "title": "Unnamed Constants - Magic Numbers","type": "content","resource": "https://uid100.github.io/edu-core/shared/magic-numbers.html"},
-          "c-strings": {"title": "Expressions and Operators","type": "content","source": "/content/02/c-strings.html"},
+          "c-strings": {"title": "c-strings","type": "content","source": "/content/02/c-strings.html"},
           "random": {"title": "(Pseudo) Random Numbers","type": "content","source": "/content/02/prng.html"},
           "end": {"title": "End of Module 2: Variables, Data Types, Expressions","type": "content","source": "/content/end-module.html"}
         }
