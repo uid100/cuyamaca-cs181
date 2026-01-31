@@ -1,0 +1,52 @@
+<section class="container my-5">
+  <div class="p-4 border rounded">
+    <h2>Program: Average of Three Test Scores</h2>
+    <p class="my-5 italic">
+      Write a C++ program that gets and stores the values of three test scores as integers,
+      calculates their average as a floating‑point number, and displays the result.
+    </p>
+
+    <h3>Specifications:</h3>
+    <dl>
+      <dt>File name:</dt>
+      <dd>average_three_scores.cpp</dd>
+
+      <dt>Focus:</dt>
+      <dd>Use <code>int</code> for inputs, compute a floating‑point average with type casting, and produce clear labeled output.</dd>
+
+      <dt>Constants (avoid magic numbers):</dt>
+      <dd>
+        <pre class="border">
+const int NUM_TESTS = 3; // Use this instead of writing "3" in multiple places
+        </pre>
+      </dd>
+
+      <dt>Input:</dt>
+      <dd>Three integer test scores entered by the user.</dd>
+
+      <dt>Output:</dt>
+      <dd>The average of the three scores as a floating‑point number (e.g., with 1–2 decimal places).</dd>
+
+      <dt>Example:</dt>
+      <dd>
+        <pre class="border">
+Enter score 1: 90
+Enter score 2: 86
+Enter score 3: 95
+Average: 90.33
+        </pre>
+      </dd>
+    </dl>
+
+    <div class="boxed-paragraph">
+      <ul>
+        <li>Include <code>#include &lt;iostream&gt;</code> and store each score in an <code>int</code> variable.</li>
+        <li><strong>Avoid unnamed constants (magic numbers):</strong> use <code>NUM_TESTS</code> when dividing to compute the average.</li>
+        <li>Compute the average as floating‑point by casting the sum or one operand to <code>double</code> (e.g., <code>static_cast&lt;double&gt;(sum) / NUM_TESTS</code>).</li>
+        <li>Optionally use formatted output (e.g., <code>std::fixed</code> and <code>std::setprecision(2)</code>) for readability.</li>
+        <li>No loops, no conditionals, and no arrays; read exactly three scores and compute directly.</li>
+        <li>Include the required file header comment block as discussed in class and ensure it compiles from the command line.</li>
+      </ul>
+    </div>
+  </div>
+</section>

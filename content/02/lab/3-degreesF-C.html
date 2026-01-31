@@ -1,0 +1,58 @@
+<section class="container my-5">
+  <div class="p-4 border rounded">
+    <h2>Program: Fahrenheit to Celsius Calculator</h2>
+    <p class="my-5 italic">
+      Write a C++ program that reads a temperature in Fahrenheit from the user (accepting either an integer or a double),
+      converts it to Celsius using named constants, and displays the result.
+    </p>
+
+    <h3>Specifications:</h3>
+    <dl>
+      <dt>File name:</dt>
+      <dd>fahrenheit_to_celsius.cpp</dd>
+
+      <dt>Focus:</dt>
+      <dd>Use input/output with <code>cin</code>/<code>cout</code>, arithmetic expressions with named constants, and clear formatted output.</dd>
+
+      <dt>Constants (use these; do not hard‑code numbers inline):</dt>
+      <dd>
+        <pre class="border">
+const double OFFSET = 32.0;     // the 32° offset between scales
+const double NUMERATOR = 5.0;   // 5 part of 5/9
+const double DENOMINATOR = 9.0; // 9 part of 5/9
+        </pre>
+      </dd>
+
+      <dt>Formula:</dt>
+      <dd>
+        <code>Celsius = (Fahrenheit - OFFSET) * (NUMERATOR / DENOMINATOR)</code>
+      </dd>
+
+      <dt>Input:</dt>
+      <dd>One value entered by the user as Fahrenheit (e.g., <code>32</code>, <code>98.6</code>, or <code>-40</code>).</dd>
+
+      <dt>Output:</dt>
+      <dd>A clearly labeled Celsius value computed from the input Fahrenheit.</dd>
+
+      <dt>Example:</dt>
+      <dd>
+        <pre class="border">
+Enter temperature in Fahrenheit: 98.6
+Celsius: 37.0
+        </pre>
+      </dd>
+    </dl>
+
+    <div class="boxed-paragraph">
+      <ul>
+        <li>Include <code>#include &lt;iostream&gt;</code> and use <code>double</code> variables for the Fahrenheit input and Celsius result
+            so the code works for both integer and floating‑point entries.</li>
+        <li><strong>Avoid unnamed constants:</strong> do not write numbers like <code>32</code> or <code>5.0/9.0</code> directly in the expression—use the named constants provided.</li>
+        <li>Compute using <code>(fahrenheit - OFFSET) * (NUMERATOR / DENOMINATOR)</code>; the division will be floating‑point because the constants are <code>double</code>.</li>
+        <li>Print the result with a label (e.g., <code>"Celsius: "</code>), and consider fixed formatting (e.g., one decimal place) if desired.</li>
+        <li>No loops, no conditionals, and no arrays; keep it to input, arithmetic, and output.</li>
+        <li>Include the required file header comment block as discussed in class and ensure it compiles from the command line.</li>
+      </ul>
+    </div>
+  </div>
+</section>

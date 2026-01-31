@@ -1,0 +1,43 @@
+<section class="container my-5">
+  <div class="p-4 border rounded">
+    <h2>Program: Greeting with a C‑String</h2>
+    <p class="my-5 italic">
+      Write a C++ program that reads a user’s first name into a C‑string
+      and prints a greeting message using that name.
+    </p>
+
+    <h3>Specifications:</h3>
+    <dl>
+      <dt>File name:</dt>
+      <dd>cstring_greeting.cpp</dd>
+
+      <dt>Focus:</dt>
+      <dd>Use C‑strings (<code>char[]</code>), input with <code>cin</code>, and output with <code>cout</code>.</dd>
+
+      <dt>Input:</dt>
+      <dd>The user’s first name (a single word with no spaces).</dd>
+
+      <dt>Output:</dt>
+      <dd>A greeting message that includes the entered name.</dd>
+
+      <dt>Example:</dt>
+      <dd>
+        <pre class="border">
+Enter your first name: Alex
+Hello, Alex!
+        </pre>
+      </dd>
+    </dl>
+
+    <div class="boxed-paragraph">
+      <ul>
+        <li>Declare a <code>char</code> array large enough to hold the name and the null terminator (e.g., <code>char name[20];</code>).</li>
+        <li>Use <code>cin &gt;&gt; name;</code> to read the name into the C‑string.</li>
+        <li><strong>This is a C‑string, not a <code>std::string</code>:</strong> do not use string objects or assignment.</li>
+        <li>The input will stop at whitespace, so this program only needs to handle a first name.</li>
+        <li>No loops, no conditionals, and no arrays other than the C‑string.</li>
+        <li>Include the required file header comment block and ensure the program compiles from the command line.</li>
+      </ul>
+    </div>
+  </div>
+</section>

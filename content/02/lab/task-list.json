@@ -1,5 +1,8 @@
 [
   { "title": "Introduction", "file": "0-intro.html" },
-  { "title": "Ex.1: seconds -> days, hours, minutes, seconds", "file": "1-seconds.html" },
+  { "title": "Ex.1: Scores", "file": "1-scores.html" },
+  { "title": "Ex.2: hello-c-string", "file": "2-hello-c-string.html" },
+  { "title": "Ex.3: Fahrenheit to Celsius", "file": "3-degreesF-C.html" },
+  { "title": "Ex.4: seconds -> days, hours, minutes, seconds", "file": "4-seconds.html" },
   { "title": "Submit to Canvas", "file": "9-submit.html" }
 ]
