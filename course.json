@@ -112,37 +112,14 @@
           "Program design with pseudocode and flowcharts"
         ],
         "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/03/module3.html"
-          },
-          "if-statements": {
-            "title": "If Statements",
-            "type": "content",
-            "source": "/content/03/if-statements.html"
-          },
-          "logical-operators": {
-            "title": "Logical Operators",
-            "type": "content",
-            "source": "/content/03/logical-operators.html"
-          },
+          "overview": {"title": "Module Overview","type": "content","source": "/content/03/module3.html"},
           "self-documenting": { "title": "Documenting Code","type": "content","resource": "https://uid100.github.io/edu-core/shared/self-documenting-code.html"},
-          "end": {
-            "title": "End of Module 3",
-            "type": "content",
-            "source": "/content/end-module.html"
-          },
-          "debugging": {
-            "title": "Debugging Techniques",
-            "type": "content",
-            "source": "/content/03/debugging.html"
-          },
-          "pseudocode": {
-            "title": "Pseudocode for Program Design",
-            "type": "content",
-            "source": "/content/03/pseudocode.html"
-          }
+          "logical-operators": {"title": "Logical Operators","type": "content","source": "/content/03/logical-operators.html"},
+          "if-statements": {"title": "If Statements","type": "content","source": "/content/03/if-statements.html"},
+          "debugging": {"title": "Debugging Techniques","type": "content","source": "/content/03/debugging.html"},
+          "switch-case": {"title": "Switch Case","type": "content","source": "/content/03/switch-case.html"},
+          "menu-app": {"title": "Demo: Menu-Driven Application","type": "content","source": "/content/03/menu-app.html"},
+          "end": {"title": "End of Module 3: Conditional Processing","type": "content","source": "/content/end-module.html"}
         }
       },
       "04": { "title": "Iteration using Loops",
@@ -175,6 +152,7 @@
             "type": "content",
             "source": "/content/04/for-loops.html"
           },
+          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/03/pseudocode.html"},
           "end": {
             "title": "End of Module 4",
             "type": "content",
