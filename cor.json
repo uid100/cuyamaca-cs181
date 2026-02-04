@@ -90,8 +90,7 @@
       "Gaddis, Tony. Starting Out With C++: From Control Structures through Objects. 8th edition. Pearson, 2014.",
       "Paul J. Deitel and Harvey Deitel. C How to Program with the Pearson My Programming Lab component. 8th edition, Pearson, 2015."
     ],
-    "supplemental": "None",
-
+    "supplemental": "None"
   },
   "exit_skills": [
     "Write well-designed C++ code to solve a variety of scientific problems as standalone programs.",
