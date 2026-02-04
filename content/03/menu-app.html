@@ -1,0 +1,110 @@
+<div class="container">
+  <h1>Menu-Driven Application Examples</h1>
+  
+  <!-- create two collapsible bootstrap cards here. Use a button for the card-header and each card will contain different examples -->
+  <div class="card mb-3">
+    <div class="card-header">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#example1" aria-expanded="true" aria-controls="example1">
+        Example 1: Simple Menu with Numeric Choices
+      </button>
+    </div>
+    <div id="example1" class="collapse show">
+      <div class="card-body">
+        <pre><code class="language-cpp">
+// simple menu-driven application using switch statement
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+
+    do {
+        // Display menu
+        cout << "Menu:\n"; // Discuss: Do we need to declare a string variable for this?
+        cout << "1. Option 1\n";
+        cout << "2. Option 2\n";
+        cout << "3. Option 3\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        // Handle menu choice
+        switch (choice) {
+            case 1:
+                cout << "You selected Option 1.\n";
+                break;  // Discuss: What does break do here?
+            case 2:
+                cout << "You selected Option 2.\n";
+                break;
+            case 3:
+                cout << "You selected Option 3.\n";
+                break;
+            case 4:
+                cout << "Exiting the program.\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-header">
+      <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#example2" aria-expanded="false" aria-controls="example2">
+        Example 2: Menu with Character Choices
+      </button>
+    </div>
+    <div id="example2" class="collapse">
+      <div class="card-body">
+        <pre><code class="language-cpp">
+// modify the simple menu-driven application to use string inputs
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string userInput;
+
+    while (true) {
+        // Display menu
+        cout << "Menu:\n"; // Discuss: Do we need to declare a string variable for this?
+        cout << "\t(A)pples\n";
+        cout << "\t(B)ananas\n";
+        cout << "\t(C)herries\n";
+        cout << "\t(Q) Quit\n";
+        cout << "Enter your choice: ";
+        cin >> userInput;
+
+        // Handle menu choice
+        switch ( toupper(userInput[0]) ) { // Use first character of input
+            case 'A':
+                cout << "You selected Apples.\n";
+                break;
+            case 'B':
+                cout << "This is Bananas!\n";
+                break;
+            case 'C':
+                cout << "Cherries it is.\n";
+                break;
+            case 'Q':
+            case 'X':  // Added 'X' as an alternative quit option
+                cout << "Exiting the program.\n";
+                return 0;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
+        </code></pre>
+      </div>
+    </div>
+  </div>
+</div>
