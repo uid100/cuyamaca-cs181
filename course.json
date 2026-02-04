@@ -3,7 +3,7 @@
   "instructor": "dan-sullivan",
   "courseNumber": "CS 181",
   "courseTitle": "Introduction to C++ Programming",
-  "units": 3,
+  "units": 4,
   "coverImage": "/images/programmer.jpg",
   "description": [
     "(catalog:)\n Introduction to computer programming using a C family language. Students with no previous programming experience in C++ will learn computer organization and operation, binary representation of information, how to plan and create well-structured programs, write programs using sequence, selection and repetition structures, and create and manipulate sequential access files, structs, classes, pointers and arrays.",
