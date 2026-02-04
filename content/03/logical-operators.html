@@ -1,0 +1,89 @@
+<!-- boolean expressions, logical operators in C++ -->
+<div class="container">
+        <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Boolean Variables and Boolean Expressions</h2>
+            <div class="card-text">
+                <p>
+                    A boolean variable is a data type that can hold one of two values: <code>true</code> or <code>false</code>. 
+                </p>
+                <h3>Examples:</h3>
+                <pre><code class="language-cpp">
+    #include &lt;iostream&gt;
+    using namespace std;
+    int main() {
+        bool isRaining = true;
+        bool isSunny = false;
+        cout &lt;&lt; "Is it raining? " &lt;&lt; isRaining &lt;&lt; endl; // true
+        cout &lt;&lt; "Is it sunny? " &lt;&lt; isSunny &lt;&lt; endl;   // false
+        return 0;
+    }
+                </code></pre>
+                <p ">
+                    A boolean expression is an expression that evaluates to a boolean value (<code>true</code> or <code>false</code>). 
+                    Examples of boolean expressions include comparisons like <code>5 &gt; 3</code> (which evaluates to <code>true</code>) 
+                    and <code>2 == 4</code> (which evaluates to <code>false</code>).
+                </p>
+                <p>
+                    The distinction is important. A boolean variable will always hold a boolean value. With a relational operator, any
+                    variable type may be used to create a boolean expression.
+                </p>
+                <p>
+                    <code><pre>
+int heightOfTreeInFeet = 12; // integer variable
+if (heightOfTreeInFeet &gt; 10) { // boolean expression using relational operator
+    cout &lt;&lt; "The tree is tall!" &lt;&lt; endl; // executes because expression is true
+}
+                    </pre></code>
+                </p>
+                <p>
+                    Like a boolean variable, a boolean expression will always evaluate to either <code>true</code> or <code>false</code>.
+                </p>
+            </div>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title">Logical Operators in C++</h2>
+            <p class="card-text">In C++, logical operators are used to combine multiple boolean expressions. The primary logical operators are:</p>
+            <ul>
+                <li><strong>AND (&&)</strong>: Returns true if both operands are true.</li>
+                <li><strong>OR (||)</strong>: Returns true if at least one operand is true.</li>
+                <li><strong>NOT (!)</strong>: Returns true if the operand is false.</li>
+            </ul>
+            <h3>Examples:</h3>
+            <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    bool a = true;
+    bool b = false;
+    cout &lt;&lt; "a AND b: " &lt;&lt; (a && b) &lt;&lt; endl; // false
+    cout &lt;&lt; "a OR b: " &lt;&lt; (a || b) &lt;&lt; endl;  // true
+    cout &lt;&lt; "NOT a: " &lt;&lt; (!a) &lt;&lt; endl;      // false
+    return 0;
+}
+            </code></pre>
+            <p>
+                Logical operators are commonly used in conditional statements to control the flow of a program 
+                based on multiple conditions.
+            </p>
+            <p>
+                Best practice suggests positioning the more complex condition on the right side of an AND (&&) 
+                operator to optimize performance, as the left condition is evaluated first and may <em>short-circuit</em>
+                the evaluation.
+            </p>
+            <p class="boxed-paragraph" style="width: 50%; margin: auto; font-style: italic;">
+                What does it mean to "short-circuit" a logical operation?
+            </p>
+            <p>
+                Example:
+                <code><pre>
+int x = 5;
+if (x &gt; 0 && (10 / x) &gt; 1) {
+    cout &lt;&lt; "Condition met!" &lt;&lt; endl;
+}
+            </p>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+</div> <!-- container -->
