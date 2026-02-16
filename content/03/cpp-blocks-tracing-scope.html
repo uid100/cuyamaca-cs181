@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intro to C++: Code Blocks, Execution Tracing, and Variable Scope</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+  <style>
+    body { background:#f8f9fa; }
+    pre { position: relative; }
+    .copy-btn { position:absolute; top:.5rem; right:.5rem; z-index:5; font-size:.8rem; }
+    .sidebar { position: sticky; top: 1rem; }
+    .kbd-badge { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#e9ecef; border-radius:.25rem; padding:.1rem .35rem; }
+    code.language-cpp { font-size:.95rem; }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="#overview">C++ Foundations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blocks">Code Blocks</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tracing">Execution Tracing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scope">Variable Scope</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lifetime">Lifetime & Storage Duration</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pitfalls">Common Pitfalls</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card" id="overview">
+          <div class="card-header bg-primary text-white">Overview</div>
+          <div class="card-body">
+            <p class="mb-2">This page introduces three essential ideas for beginning C++ programmers:</p>
+            <ol>
+              <li><strong>Code blocks</strong> — groups of statements enclosed in braces <span class="kbd-badge">{ }</span>.</li>
+              <li><strong>Execution tracing</strong> — following your program step-by-step to see the order in which statements run and how variables change.</li>
+              <li><strong>Variable scope</strong> — where a name is visible and can be used in your code.</li>
+            </ol>
+            <p class="mb-0">Mastering these early will make debugging easier and your programs more predictable.</p>
+          </div>
+        </div>
+
+        <div class="card" id="blocks">
+          <div class="card-header bg-secondary text-white">Code Blocks in C++</div>
+          <div class="card-body">
+            <p>A <em>block</em> is a sequence of statements wrapped in braces. Blocks create a <em>scope</em> and are used in functions, loops, and conditionals.</p>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    // This is a block: the body of main
+    int x = 10;            // x is declared in this block
+
+    { // start inner block
+        int y = 5;         // y only exists inside this inner block
+        std::cout &lt;&lt; x + y &lt;&lt; "\n"; // x is visible here; y is visible here
+    } // y is destroyed here
+
+    // std::cout &lt;&lt; y; // ERROR: y is out of scope
+    std::cout &lt;&lt; x &lt;&lt; "\n"; // OK: x is still in scope
+}
+</code></pre>
+            </div>
+            <ul class="mb-0">
+              <li>Blocks can be nested. Inner blocks can <em>see</em> names from outer blocks (unless shadowed).</li>
+              <li>Variables declared inside a block are created (constructed) when the block starts and destroyed when it ends.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" id="tracing">
+          <div class="card-header bg-info text-white">Execution Tracing: Step-by-Step</div>
+          <div class="card-body">
+            <p>Tracing means following the program flow in order. Read from top to bottom, left to right, and jump into/over blocks when conditions or loops dictate.</p>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    int a = 2;               // (1) a=2
+    int b = 3;               // (2) b=3
+    int sum = 0;             // (3) sum=0
+
+    if (a &lt; b) {             // (4) true, enter block
+        sum = a + b;         // (5) sum=5
+    } else {
+        sum = a - b;         // skipped
+    }
+
+    for (int i = 0; i &lt; 3; ++i) { // (6) i=0,1,2
+        sum += i;            // (7) sum becomes 5,6,8 across iterations
+    }
+
+    std::cout &lt;&lt; sum &lt;&lt; "\n"; // (8) prints 8
+}
+</code></pre>
+            </div>
+            <p class="mb-2"><strong>How to trace:</strong></p>
+            <ol>
+              <li>Track each variable’s value after every assignment.</li>
+              <li>When you hit a conditional, decide whether its test is <em>true</em> or <em>false</em> and follow that branch only.</li>
+              <li>For loops, note the initialization, condition check each turn, the body, and the increment/update step.</li>
+              <li>For function calls, jump to the function, trace it, then return with the result.</li>
+            </ol>
+            <p class="mb-0"><strong>Tools:</strong> Use your IDE’s debugger: set breakpoints, step into/over, and watch variables change in real time.</p>
+          </div>
+        </div>
+
+        <div class="card" id="scope">
+          <div class="card-header bg-warning">Variable Scope (Where a Name Is Visible)</div>
+          <div class="card-body">
+            <p>Scope answers: <em>Where can I use this variable?</em> In C++, braces create block scope. Functions also create scope, and the global namespace exists outside any function.</p>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">#include &lt;iostream&gt;
+int g = 1; // global variable (avoid globals in large programs)
+
+void foo() {
+    int a = 10;       // local to foo()
+    std::cout &lt;&lt; a &lt;&lt; " " &lt;&lt; g &lt;&lt; "\n"; // can see a and g
+}
+
+int main() {
+    int a = 5;        // local to main(), different from foo()'s a
+
+    if (a &gt; 0) {
+        int b = 42;   // b lives only inside this if-block
+        std::cout &lt;&lt; a + b + g &lt;&lt; "\n"; // OK
+    }
+
+    // std::cout &lt;&lt; b; // ERROR: b is out of scope here
+    foo();
+}
+</code></pre>
+            </div>
+            <ul>
+              <li><strong>Local scope:</strong> names declared inside a function or block.</li>
+              <li><strong>Global (namespace) scope:</strong> names declared outside any function.</li>
+              <li><strong>Shadowing:</strong> an inner scope can declare a name identical to an outer one; the inner name temporarily “hides” the outer.</li>
+              <li><strong>Header tip:</strong> Prefer <code>const</code> variables, <code>constexpr</code>, and function parameters over globals for clarity and testability.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" id="lifetime">
+          <div class="card-header bg-success text-white">Lifetime & Storage Duration</div>
+          <div class="card-body">
+            <p><em>Scope</em> is where a name is visible; <em>lifetime</em> is how long the object exists in memory.</p>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int& badRef() {
+    int x = 10;   // automatic storage: destroyed when function ends
+    return x;     // BUG: returns reference to a destroyed object
+}
+
+int& goodRef() {
+    static int x = 10; // static storage: lives for entire program
+    return x;          // OK: reference remains valid
+}
+
+int main() {
+    // int& r = badRef(); // undefined behavior if used
+    int& s = goodRef();
+    std::cout &lt;&lt; s &lt;&lt; "\n"; // prints 10
+}
+</code></pre>
+            </div>
+            <ul class="mb-0">
+              <li><strong>Automatic storage</strong> (typical local variables): lifetime is the block/function where declared.</li>
+              <li><strong>Static storage</strong> (globals, <code>static</code> locals): exists for the entire program run.</li>
+              <li><strong>Dynamic storage</strong> (<code>new</code>/<code>delete</code>, or smart pointers): lifetime is controlled manually or by owners (prefer smart pointers).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" id="pitfalls">
+          <div class="card-header bg-dark text-white">Common Pitfalls & Good Practices</div>
+          <div class="card-body">
+            <h6 class="mt-0">1) Shadowing can confuse readers</h6>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">int value = 1; // global
+int main() {
+    int value = 2; // shadows global here
+    {
+        int value = 3; // shadows the outer value again
+        std::cout &lt;&lt; value &lt;&lt; "\n"; // prints 3
+    }
+    std::cout &lt;&lt; value &lt;&lt; "\n"; // prints 2
+}
+</code></pre>
+            </div>
+
+            <h6>2) Use braces to define and limit scope intentionally</h6>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">#include &lt;iostream&gt;
+int main() {
+    { // limit temp's lifetime to this small region
+        int temp = 99;
+        std::cout &lt;&lt; temp &lt;&lt; "\n";
+    }
+    // temp no longer exists here
+}
+</code></pre>
+            </div>
+
+            <h6>3) Prefer initialization over assignment</h6>
+            <div class="position-relative">
+              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+              <pre><code class="language-cpp">int x{42};      // direct, safe initialization
+int y = 42;     // also OK for simple types
+// Avoid leaving variables uninitialized in a block.
+</code></pre>
+            </div>
+
+            <h6>4) Don’t return references/pointers to locals</h6>
+            <p class="mb-0">Locals die when the block ends; return by value or use <code>static</code> (rare) or dynamic storage with smart pointers.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header bg-secondary text-white">Quick Practice</div>
+          <div class="card-body">
+            <ol class="mb-0">
+              <li>Trace the values of <code>i</code> and <code>sum</code> for a loop that runs from 1 to 4. Write each value after every iteration.</li>
+              <li>Write a program that declares a variable inside an <code>if</code> block and try to use it after the block. What error do you get?</li>
+              <li>Write a function that mistakenly returns a reference to a local. Fix it safely.</li>
+              <li>Use braces to create a small inner scope that reuses a variable name without affecting the outer one (demonstrate shadowing carefully).</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card sidebar">
+          <div class="card-header bg-light">Sidebar: Tracing & Scope Tips</div>
+          <div class="card-body">
+            <ul>
+              <li><strong>Write values in the margin:</strong> After each line with an assignment, jot the new value.</li>
+              <li><strong>Draw the call stack:</strong> Each function call adds a frame containing its locals; returning pops it.</li>
+              <li><strong>Use a debugger:</strong> Breakpoints, step-into (<span class="kbd-badge">F11</span>), step-over (<span class="kbd-badge">F10</span>), and watch windows help visualize execution.</li>
+              <li><strong>Limit scope:</strong> Declare variables where you first need them; keep lifetimes short to avoid mistakes.</li>
+              <li><strong>Name carefully:</strong> Avoid reusing names in nested blocks unless you’re purposefully demonstrating shadowing.</li>
+              <li><strong>Prefer <code>const</code>:</strong> Make variables <code>const</code> when they shouldn’t change; it prevents accidental writes while tracing.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/languages/cpp.min.js"></script>
+  <script>
+    hljs.highlightAll();
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pre = btn.nextElementSibling;
+        const code = pre.querySelector('code');
+        const text = code.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          const original = btn.innerText;
+          btn.innerText = 'Copied!';
+          setTimeout(() => btn.innerText = original, 1200);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
