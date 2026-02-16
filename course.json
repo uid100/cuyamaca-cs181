@@ -115,7 +115,7 @@
           "overview": {"title": "Module Overview","type": "content","source": "/content/03/module3.html"},
           "self-documenting": { "title": "Documenting Code","type": "content","resource": "https://uid100.github.io/edu-core/shared/self-documenting-code.html"},
           "logical-operators": {"title": "Logical Operators","type": "content","source": "/content/03/logical-operators.html"},
-          "if-statements": {"title": "If Statements","type": "content","source": "/content/03/if-statements.html"},
+          "if-statements": {"title": "If Statements","type": "content","resource": "https://uid100.github.io/edu-core/shared/conditionals-cpp.html"},
           "debugging": {"title": "Debugging Techniques","type": "content","source": "/content/03/debugging.html"},
           "switch-case": {"title": "Switch Case","type": "content","source": "/content/03/switch-case.html"},
           "menu-app": {"title": "Demo: Menu-Driven Application","type": "content","source": "/content/03/menu-app.html"},
