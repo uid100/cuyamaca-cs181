@@ -16,18 +16,21 @@
   </style>
 </head>
 <body>
-  <h1>Execution Tracing and Variable Scope</h1>
+  <h1>Fundamentals: Debugging code</h1>
   <div class="container">
         <div class="card" id="overview">
+
           <div class="card-header">Overview</div>
           <div class="card-body">
-            <p class="mb-2">Three essential ideas for beginning C++ programmers:</p>
+            <h2>Execution Tracing and Variable Scope</h2>
             <ol>
               <li><strong>Code blocks</strong> — groups of statements enclosed in braces <span class="kbd-badge">{ }</span>.</li>
               <li><strong>Execution tracing</strong> — following your program step-by-step to see the order in which statements run and how variables change.</li>
               <li><strong>Variable scope</strong> — where a name is visible and can be used in your code.</li>
             </ol>
-            <p class="mb-0">Mastering these early will make debugging easier and your programs more predictable.</p>
+            <p>
+              Understanding these concepts will make debugging easier and your programs more predictable.
+            </p>
           </div>
         </div>
 
@@ -35,8 +38,7 @@
           <div class="card-header">Code Blocks in C++</div>
           <div class="card-body">
             <p>A <em>block</em> is a sequence of statements wrapped in braces. Blocks create a <em>scope</em> and are used in functions, loops, and conditionals.</p>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">#include &lt;iostream&gt;
 int main() {
     // This is a block: the body of main
@@ -63,8 +65,7 @@ int main() {
           <div class="card-header">Execution Tracing: Step-by-Step</div>
           <div class="card-body">
             <p>Tracing means following the program flow in order. Read from top to bottom, left to right, and jump into/over blocks when conditions or loops dictate.</p>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">#include &lt;iostream&gt;
 int main() {
     int a = 2;               // (1) a=2
@@ -100,8 +101,7 @@ int main() {
           <div class="card-header">Variable Scope (Where a Name Is Visible)</div>
           <div class="card-body">
             <p>Scope answers: <em>Where can I use this variable?</em> In C++, braces create block scope. Functions also create scope, and the global namespace exists outside any function.</p>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">#include &lt;iostream&gt;
 int g = 1; // global variable (avoid globals in large programs)
 
@@ -136,8 +136,7 @@ int main() {
           <div class="card-header">Lifetime & Storage Duration</div>
           <div class="card-body">
             <p><em>Scope</em> is where a name is visible; <em>lifetime</em> is how long the object exists in memory.</p>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">#include &lt;iostream&gt;
 
 int& badRef() {
@@ -169,8 +168,7 @@ int main() {
           <div class="card-header">Common Pitfalls & Good Practices</div>
           <div class="card-body">
             <h6 class="mt-0">1) Shadowing can confuse readers</h6>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">int value = 1; // global
 int main() {
     int value = 2; // shadows global here
@@ -184,8 +182,7 @@ int main() {
             </div>
 
             <h6>2) Use braces to define and limit scope intentionally</h6>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">#include &lt;iostream&gt;
 int main() {
     { // limit temp's lifetime to this small region
@@ -198,8 +195,7 @@ int main() {
             </div>
 
             <h6>3) Prefer initialization over assignment</h6>
-            <div class="position-relative">
-              <button class="btn btn-sm btn-outline-secondary copy-btn" type="button">Copy</button>
+            <div style="padding:20px;">
               <pre><code class="language-cpp">int x{42};      // direct, safe initialization
 int y = 42;     // also OK for simple types
 // Avoid leaving variables uninitialized in a block.
