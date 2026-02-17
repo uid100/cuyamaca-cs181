@@ -16,30 +16,12 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="#overview">C++ Foundations</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
-      <div id="nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
-          <li class="nav-item"><a class="nav-link" href="#blocks">Code Blocks</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tracing">Execution Tracing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#scope">Variable Scope</a></li>
-          <li class="nav-item"><a class="nav-link" href="#lifetime">Lifetime & Storage Duration</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pitfalls">Common Pitfalls</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <h1>Execution Tracing and Variable Scope</h1>
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-8">
         <div class="card" id="overview">
-          <div class="card-header bg-primary text-white">Overview</div>
+          <div class="card-header">Overview</div>
           <div class="card-body">
-            <p class="mb-2">This page introduces three essential ideas for beginning C++ programmers:</p>
+            <p class="mb-2">Three essential ideas for beginning C++ programmers:</p>
             <ol>
               <li><strong>Code blocks</strong> — groups of statements enclosed in braces <span class="kbd-badge">{ }</span>.</li>
               <li><strong>Execution tracing</strong> — following your program step-by-step to see the order in which statements run and how variables change.</li>
@@ -50,7 +32,7 @@
         </div>
 
         <div class="card" id="blocks">
-          <div class="card-header bg-secondary text-white">Code Blocks in C++</div>
+          <div class="card-header">Code Blocks in C++</div>
           <div class="card-body">
             <p>A <em>block</em> is a sequence of statements wrapped in braces. Blocks create a <em>scope</em> and are used in functions, loops, and conditionals.</p>
             <div class="position-relative">
@@ -78,7 +60,7 @@ int main() {
         </div>
 
         <div class="card" id="tracing">
-          <div class="card-header bg-info text-white">Execution Tracing: Step-by-Step</div>
+          <div class="card-header">Execution Tracing: Step-by-Step</div>
           <div class="card-body">
             <p>Tracing means following the program flow in order. Read from top to bottom, left to right, and jump into/over blocks when conditions or loops dictate.</p>
             <div class="position-relative">
@@ -115,7 +97,7 @@ int main() {
         </div>
 
         <div class="card" id="scope">
-          <div class="card-header bg-warning">Variable Scope (Where a Name Is Visible)</div>
+          <div class="card-header">Variable Scope (Where a Name Is Visible)</div>
           <div class="card-body">
             <p>Scope answers: <em>Where can I use this variable?</em> In C++, braces create block scope. Functions also create scope, and the global namespace exists outside any function.</p>
             <div class="position-relative">
@@ -151,7 +133,7 @@ int main() {
         </div>
 
         <div class="card" id="lifetime">
-          <div class="card-header bg-success text-white">Lifetime & Storage Duration</div>
+          <div class="card-header">Lifetime & Storage Duration</div>
           <div class="card-body">
             <p><em>Scope</em> is where a name is visible; <em>lifetime</em> is how long the object exists in memory.</p>
             <div class="position-relative">
@@ -184,7 +166,7 @@ int main() {
         </div>
 
         <div class="card" id="pitfalls">
-          <div class="card-header bg-dark text-white">Common Pitfalls & Good Practices</div>
+          <div class="card-header">Common Pitfalls & Good Practices</div>
           <div class="card-body">
             <h6 class="mt-0">1) Shadowing can confuse readers</h6>
             <div class="position-relative">
@@ -230,7 +212,7 @@ int y = 42;     // also OK for simple types
         </div>
 
         <div class="card">
-          <div class="card-header bg-secondary text-white">Quick Practice</div>
+          <div class="card-header">Quick Practice</div>
           <div class="card-body">
             <ol class="mb-0">
               <li>Trace the values of <code>i</code> and <code>sum</code> for a loop that runs from 1 to 4. Write each value after every iteration.</li>
@@ -242,23 +224,20 @@ int y = 42;     // also OK for simple types
         </div>
       </div>
 
-      <div class="col-lg-4">
-        <div class="card sidebar">
-          <div class="card-header bg-light">Sidebar: Tracing & Scope Tips</div>
-          <div class="card-body">
-            <ul>
-              <li><strong>Write values in the margin:</strong> After each line with an assignment, jot the new value.</li>
-              <li><strong>Draw the call stack:</strong> Each function call adds a frame containing its locals; returning pops it.</li>
-              <li><strong>Use a debugger:</strong> Breakpoints, step-into (<span class="kbd-badge">F11</span>), step-over (<span class="kbd-badge">F10</span>), and watch windows help visualize execution.</li>
-              <li><strong>Limit scope:</strong> Declare variables where you first need them; keep lifetimes short to avoid mistakes.</li>
-              <li><strong>Name carefully:</strong> Avoid reusing names in nested blocks unless you’re purposefully demonstrating shadowing.</li>
-              <li><strong>Prefer <code>const</code>:</strong> Make variables <code>const</code> when they shouldn’t change; it prevents accidental writes while tracing.</li>
-            </ul>
-          </div>
+      <div class="card" style="display: none;">
+        <div class="card-header">Sidebar: Tracing & Scope Tips</div>
+        <div class="card-body">
+          <ul>
+            <li><strong>Write values in the margin:</strong> After each line with an assignment, jot the new value.</li>
+            <li><strong>Draw the call stack:</strong> Each function call adds a frame containing its locals; returning pops it.</li>
+            <li><strong>Use a debugger:</strong> Breakpoints, step-into (<span class="kbd-badge">F11</span>), step-over (<span class="kbd-badge">F10</span>), and watch windows help visualize execution.</li>
+            <li><strong>Limit scope:</strong> Declare variables where you first need them; keep lifetimes short to avoid mistakes.</li>
+            <li><strong>Name carefully:</strong> Avoid reusing names in nested blocks unless you’re purposefully demonstrating shadowing.</li>
+            <li><strong>Prefer <code>const</code>:</strong> Make variables <code>const</code> when they shouldn’t change; it prevents accidental writes while tracing.</li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> <!-- card -->
+    </div> <!-- container -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/highlight.min.js"></script>
