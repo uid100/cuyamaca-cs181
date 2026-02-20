@@ -120,6 +120,11 @@
           "switch-case": {"title": "Switch Case","type": "content","source": "/content/03/switch-case.html"},
           "menu-app": {"title": "Demo: Menu-Driven Application","type": "content","source": "/content/03/menu-app.html"},
           "end": {"title": "End of Module 3: Conditional Processing","type": "content","source": "/content/end-module.html"}
+        },
+        "lab": {
+          "title": "Lab #3 - Conditional Logic and Program Design",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/03/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/03/lab/"
         }
       },
       "04": { "title": "Iteration using Loops",
