@@ -1,0 +1,60 @@
+<div>
+  <h1>Temperature Checker — if / else if / else (C++)</h1>
+  <p><strong>Goal:</strong> Read an integer Fahrenheit temperature from the user and classify it as <em>cold</em>, <em>warm</em>, or <em>hot</em> using an <code>if</code> / <code>else if</code> / <code>else</code> structure. Keep everything in <code>main()</code>, include the standard header comment from earlier labs, and avoid magic numbers by using named constants.</p>
+
+  <h2>Requirements</h2>
+  <ul class="req">
+    <li><strong>Input:</strong> One integer temperature in <em>Fahrenheit</em> (e.g., <code>-5</code>, <code>0</code>, <code>72</code>, <code>100</code>).</li>
+    <li><strong>Classification:</strong> Print exactly one of: <code>"cold"</code>, <code>"warm"</code>, or <code>"hot"</code>.</li>
+    <li><strong>Decision logic:</strong> Use a clear <code>if</code> / <code>else if</code> / <code>else</code> chain.</li>
+    <li><strong>No magic numbers:</strong> Define named constants (e.g., <code>COLD_MAX_F</code>, <code>HOT_MIN_F</code>) and use those in comparisons.</li>
+    <li><strong>One function only:</strong> All code resides in <code>main()</code>. (No functions/methods yet.)</li>
+    <li><strong>Header block:</strong> Include the standard header comment used in earlier labs at the top of the <code>.cpp</code> file.</li>
+  </ul>
+
+  <div class="tip">
+    <strong>Tip:</strong> Choose and document your thresholds with named constants at the top of <code>main()</code>. For example, you might define a maximum for “cold” and a minimum for “hot”; “warm” is the range in between.
+  </div>
+
+  <h2>Suggested Behavior</h2>
+  <ul>
+    <li>If the temperature is at or below your “cold max” constant → print <code>cold</code>.</li>
+    <li>Else if the temperature is at or above your “hot min” constant → print <code>hot</code>.</li>
+    <li>Else → print <code>warm</code>.</li>
+  </ul>
+
+  <h2>Starter C++ Template</h2>
+  <p>Refer to Lab 1 for the basic structure and header comment template.</p>
+
+  <pre><code class="language-cpp">/*
+ * Purpose:   Read an integer Fahrenheit temperature and classify it as
+ *            "cold", "warm", or "hot" using if / else if / else.
+ *
+ * Notes:
+ *            Suggested limits: 
+ *            COLD_MAX_F = 59;   // example: 59°F and below => cold
+ *            HOT_MIN_F  = 80;   // example: 80°F and above => hot
+ *            (These are just examples. You can choose your own thresholds.)
+ */
+</code></pre>
+
+  <h2>Sample Runs (Examples)</h2>
+  <pre><code>Enter temperature (Fahrenheit, integer): 45
+cold
+
+Enter temperature (Fahrenheit, integer): 72
+warm
+
+Enter temperature (Fahrenheit, integer): 95
+hot
+</code></pre>
+
+  <h2>Checklist Before You Submit</h2>
+  <ul class="req">
+    <li>Header block at the top is filled out (course, lab, file, author, date, purpose).</li>
+    <li>All logic is inside <code>main()</code>.</li>
+    <li>Defined and used named constants (no magic numbers in comparisons).</li>
+    <li>Used <code>if</code> / <code>else if</code> / <code>else</code> exactly once for the classification.</li>
+    <li>Program compiles and produces one of: <code>cold</code>, <code>warm</code>, <code>hot</code>.</li>
+  </ul>
+</div>

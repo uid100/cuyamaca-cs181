@@ -1,0 +1,67 @@
+<div>
+
+<h1>C++ Assignment: Grade Calculator</h1>
+
+<p>
+  Write a program that collects multiple assignment scores from the user, calculates the 
+  average of those scores, and displays the corresponding letter grade. This program 
+  must follow the structural and style guidelines used in previous labs.
+</p>
+
+<h2>Program Requirements</h2>
+
+<ul>
+  <li>Include the **standard header block** at the top of your <code>.cpp</code> file (same format used in earlier labs).</li>
+  <li>All logic must be contained within <code>main()</code>. Do <strong>not</strong> write additional functions or methods.</li>
+  <li>Use a **loop** to collect assignment scores as floating-point percentages (e.g., <code>87.5</code>).</li>
+  <li>The loop must continue **as long as the user enters input that can be converted to a <code>double</code>**.</li>
+  <li>When the user enters anything that is not a valid floating-point number, the loop ends.</li>
+  <li>Keep a **running total** of all valid scores and maintain a **count** of how many scores were entered.</li>
+  <li>After the loop ends, calculate and display the **average score**.</li>
+  <li>Use an <code>if - else if - else</code> structure to convert the numeric average into a letter grade:
+    <ul>
+      <li>average ≥ 90 → A</li>
+      <li>average ≥ 80 → B</li>
+      <li>average ≥ 70 → C</li>
+      <li>average ≥ 60 → D</li>
+      <li>otherwise → F</li>
+    </ul>
+  </li>
+  <li><strong>No magic numbers:</strong> All numeric grade thresholds must be named constants declared at the top of <code>main()</code>.</li>
+  <li>After displaying the average and letter grade, the program should end normally.</li>
+</ul>
+
+<div class="box">
+  <strong>Input behavior:</strong><br>
+  Prompt the user before each score. If they type a number (e.g., <code>91</code> or <code>72.4</code>), 
+  it is added to the running total.  
+  If they type anything else (e.g., <code>x</code>, <code>done</code>, or blank input), the loop ends.
+</div>
+
+<h2>Output Requirements</h2>
+
+<ul>
+  <li>Display the calculated average score.</li>
+  <li>Display the letter grade determined by your <code>if / else if / else</code> logic.</li>
+  <li>Output should be clear and readable.</li>
+</ul>
+
+<h2>Before You Submit</h2>
+
+<ul>
+  <li>Your header block is complete and correctly formatted.</li>
+  <li>Your program compiles and runs without warnings.</li>
+  <li>All values used in conditions are named constants.</li>
+  <li>Loop collects scores until the user enters invalid numeric input.</li>
+  <li>You use exactly one <code>if / else if / else</code> chain for letter-grade determination.</li>
+</ul>
+
+<h3>Additional notes</h3>
+
+<ul>
+  <li>Output does not need to be rounded or printed with a specified precision.</li>
+  <li>Only positive values, between 0 and 100 should be considered valid scores.</li>
+  <li>Zero points is a valid score and should be added to the total and increment the count.</li>
+</ul>
+
+</div>

@@ -1,0 +1,7 @@
+[
+  { "title": "Introduction", "file": "0-intro.html" },
+  { "title": "Ex.1: Heat", "file": "1-heat.html" },
+  { "title": "Ex.2: Grades", "file": "2-grades.html" },
+  { "title": "Ex.3: Business Hours", "file": "3-hours.html" },
+  { "title": "Ex.4: Calculator", "file": "4-calculator.html" }
+]

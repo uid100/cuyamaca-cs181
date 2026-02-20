@@ -1,0 +1,144 @@
+<div>
+  <div class="container py-4">
+    <h1 class="mb-3">C++: Random Sales Price &amp; Make Change (Fewest Coins)</h1>
+    <p class="text-muted mb-4">Beginner instructions — all logic in <code>main()</code>, include your standard header, and avoid unnamed constants.</p>
+
+    <div class="card mb-3">
+      <div class="card-header">Goal</div>
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Generate a random <strong>sales price &lt; $1.00</strong>.</li>
+          <li>Assume the customer pays with <strong>$1.00</strong>; compute the <strong>change</strong> in the <em>fewest</em> coins using <strong>quarters, dimes, nickels, pennies</strong>.</li>
+          <li>Use a clear <strong><code>if</code> / <code>else if</code> / <code>else</code></strong> structure with simple arithmetic (no functions, keep everything in <code>main()</code>).</li>
+          <li><strong>No magic numbers:</strong> define named constants for coin values and for $1.00 in cents.</li>
+          <li>Display the random price and the coin breakdown.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-header">Program Requirements</div>
+      <div class="card-body">
+        <ul>
+          <li>Include the required <strong>standard header block</strong> (from earlier labs) at the very top of your <code>.cpp</code> file.</li>
+          <li><strong>All logic in <code>main()</code></strong>; do not write additional functions or methods.</li>
+          <li>Use <strong>named constants</strong> for: <code>ONE_DOLLAR_CENTS</code>, <code>QUARTER</code>, <code>DIME</code>, <code>NICKEL</code>, <code>PENNY</code>.</li>
+          <li>Generate a random price <em>under</em> $1.00 and print it as dollars.cents (e.g., <code>$0.73</code>).</li>
+          <li>Compute change from $1.00, then use <strong>if / else if / else</strong> with simple subtraction to form the fewest coins (try larger coins first).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Inset hint: PRNG -->
+    <div class="card mb-3 border-0">
+      <div class="card-body bg-light border rounded">
+        <h5 class="card-title">Hint: Generating a Random Price (using <code>std::srand</code> / <code>std::rand</code>)</h5>
+        <p class="mb-2">Seed once with the current time, then bound the random value to the range <code>[0.00, 0.99]</code>. Work in <strong>cents</strong> to avoid rounding errors, then format for display.</p>
+        <pre><code class="language-cpp">#include &lt;cstdlib&gt;   // std::srand, std::rand
+#include &lt;ctime&gt;     // std::time
+
+std::srand(static_cast<unsigned>(std::time(nullptr)));
+int priceCents = std::rand() % 100;     // 0..99 cents  (i.e., $0.00 .. $0.99)
+// Optional as double between 0.00 and 0.99:
+// double price = static_cast<double>(priceCents) / 100.0;
+</code></pre>
+        <p class="mb-0"><em>Display tip:</em> show as dollars.cents with leading zeroes for cents (e.g., 7 → <code>"$0.07"</code>).</p>
+      </div>
+    </div>
+
+    <!-- Inset hint: logic scaffold -->
+    <div class="card mb-3 border-0">
+      <div class="card-body bg-light border rounded">
+        <h5 class="card-title">Hint: Control Flow Skeleton (If / Else‑If / Else)</h5>
+        <p class="mb-2">Start with a <strong>remaining change</strong> variable (in cents). Subtract the largest coin while possible, then move to the next coin size.</p>
+        <pre><code class="language-cpp">// Named constants at the top of main(): ONE_DOLLAR_CENTS=100, QUARTER=25, DIME=10, NICKEL=5, PENNY=1
+int change = ONE_DOLLAR_CENTS - priceCents;
+int quarters = 0, dimes = 0, nickels = 0, pennies = 0;
+
+while (change &gt; 0) {
+    if (change &gt;= QUARTER) {
+        change -= QUARTER; quarters++;
+    } else if (change &gt;= DIME) {
+        change -= DIME; dimes++;
+    } else if (change &gt;= NICKEL) {
+        change -= NICKEL; nickels++;
+    } else { // pennies
+        change -= PENNY; pennies++;
+    }
+}
+</code></pre>
+        <p class="mb-0">Print the original price and the counts for each coin type.</p>
+      </div>
+    </div>
+
+    <!-- Inset hint: currency formatting -->
+    <div class="card mb-3 border-0">
+      <div class="card-body bg-light border rounded">
+        <h5 class="card-title">Hint: Format Output as USD Currency</h5>
+        <p class="mb-2">Use iomanip to show two decimal places and a leading zero for cents. If you store the price in cents, either divide to a double and format, or print dollars and cents separately.</p>
+        <pre><code class="language-cpp">#include &lt;iomanip&gt;  // std::fixed, std::setprecision, std::setfill, std::setw
+
+// Option A: using a double
+double price = static_cast<double>(priceCents) / 100.0;
+std::cout &lt;&lt; "$" &lt;&lt; std::fixed &lt;&lt; std::setprecision(2) &lt;&lt; price; // $0.73
+
+// Option B: printing dollars and cents separately from ints
+int dollars = priceCents / 100;
+int cents   = priceCents % 100;
+std::cout &lt;&lt; "$" &lt;&lt; dollars
+          &lt;&lt; "." &lt;&lt; std::setw(2) &lt;&lt; std::setfill('0') &lt;&lt; cents; // $0.73
+</code></pre>
+        <p class="mb-0">Apply the same approach when displaying totals or other monetary values.</p>
+      </div>
+    </div>
+
+    <!-- Sample Output -->
+    <div class="card mb-3">
+      <div class="card-header">Sample Output (Modeled)</div>
+      <div class="card-body">
+        <p class="mb-2">Your exact numbers will vary because the price is random; formatting and structure should look similar.</p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="card border-0">
+              <div class="card-body bg-light border rounded">
+<pre><code>Price: $0.73
+Change from $1.00 (fewest coins):
+  Quarters: 1
+  Dimes:    0
+  Nickels:  0
+  Pennies:  27
+</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card border-0">
+              <div class="card-body bg-light border rounded">
+<pre><code>Price: $0.58
+Change from $1.00 (fewest coins):
+  Quarters: 1
+  Dimes:    1
+  Nickels:  1
+  Pennies:  2
+</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Submission Checklist</div>
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Standard header block is complete and appears at the very top of the file.</li>
+          <li>All code is contained in <code>main()</code>.</li>
+          <li>All coin values and $1.00 are named constants (no unnamed literals in logic).</li>
+          <li>Program compiles and runs without errors; output shows price and fewest-coin breakdown.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>

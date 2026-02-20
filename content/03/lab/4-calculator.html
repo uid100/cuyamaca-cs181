@@ -1,0 +1,61 @@
+<div>
+  <h1>C++ Assignment: Simple Calculator</h1>
+  <p>
+    Write a short C++ program that displays a menu of arithmetic operations and performs the 
+    selected calculation using a <strong>switch-case</strong> selection structure. Keep the 
+    entire solution in <code>main()</code> and follow the header and style rules from earlier labs.</p>
+
+  <h2>Program Requirements</h2>
+  <ul>
+    <li>Include the <strong>standard header block</strong> at the top of your <code>.cpp</code> file 
+        (same format used in earlier labs).</li>
+    <li>All logic must be contained in <strong><code>main()</code></strong>. <em>Do not</em> write any 
+        additional functions or methods.</li>
+    <li><strong>Menu &amp; Selection:</strong> Display a simple menu and let the user choose an operation 
+        using a single character: <code>'+'</code>, <code>'-'</code>, <code>'*'</code>, or <code>'/'</code>.</li>
+    <li><strong>Switch–case:</strong> Use a <code>switch</code> statement on the chosen character to select 
+        which arithmetic operation to perform.</li>
+    <li><strong>Operands:</strong> In the chosen operation's code block, prompt the user to enter two numeric 
+        values as <strong>double</strong>s, perform the calculation, and display the result.</li>
+    <li><strong>Loop (optional):</strong> You may wrap the menu in a loop to allow multiple calculations, or
+        run the menu once and end the program.</li>
+    <li><strong>Error handling:</strong> Provide a message for an unknown operator; if you implement the loop, 
+        let the user exit cleanly.</li>
+    <li><strong>Division:</strong> If division is selected, include a basic check to avoid dividing by zero 
+        (e.g., ask for a non‑zero second value or show an error message).</li>
+  </ul>
+
+  <div class="box">
+    <strong>Input format:</strong> Read a single character for the operator from the menu (<code>+ - * /</code>). 
+    Then read two <code>double</code> values as operands in the selected case. If you implement a loop, re-prompt 
+    for the operator each time; allow the user to quit by entering any non-operator key (or by a separate prompt).
+  </div>
+
+  <h2>Output Requirements</h2>
+  <ul>
+    <li>Show the chosen operation and the computed result in a clear, readable format.</li>
+    <li>For division by zero, show an explanatory message instead of a numeric result.</li>
+    <li>For an unrecognized operator, show an appropriate error message.</li>
+  </ul>
+
+  <h2>Before You Submit</h2>
+  <ul>
+    <li>Header block is complete and correctly formatted.</li>
+    <li>All code is inside <code>main()</code>; no additional functions or methods are defined.</li>
+    <li>Program compiles and runs without errors.</li>
+    <li>Menu accepts <code>+ - * /</code> and performs the correct arithmetic with two <code>double</code> operands.</li>
+    <li>Division by zero is handled gracefully.</li>
+    <li>(If loop implemented) The program repeats and exits cleanly when requested.</li>
+  </ul>
+
+  <h2>Suggested Improvements to Clarify the Instructions</h2>
+  <ul>
+    <li><strong>Specify exact prompts</strong> you expect (e.g., the operator prompt and operand prompts) to standardize I/O across submissions.</li>
+    <li><strong>Define exit behavior</strong> if using a loop (e.g., "enter <code>q</code> to quit" or "any non‑operator key exits").</li>
+    <li><strong>State the desired numeric formatting</strong> for results (e.g., show fixed notation with two decimal places, or default formatting).</li>
+    <li><strong>Clarify whitespace rules</strong> (whether spaces around operators are required in output, and how to display the full expression, e.g., <code>3.0 + 4.5 = 7.5</code>).</li>
+    <li><strong>Confirm input assumptions</strong> (e.g., whether to accept scientific notation, and whether to reprompt on invalid numeric input for operands).</li>
+  </ul>
+
+  <p><em>Reminder:</em> Include your lab's required standard header structure at the very top of the file before any <code>#include</code> directives.</p>
+</div>
