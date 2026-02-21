@@ -79,8 +79,10 @@ while (change &gt; 0) {
     <!-- Inset hint: currency formatting -->
     <div class="card mb-3 border-0">
       <div class="card-body bg-light border rounded">
-        <h5 class="card-title">Hint: Format Output as USD Currency</h5>
-        <p class="mb-2">Use iomanip to show two decimal places and a leading zero for cents. If you store the price in cents, either divide to a double and format, or print dollars and cents separately.</p>
+        <h5 class="card-title">Hint: Format Output</h5>
+        <p class="mb-2">
+          Use iomanip to show two decimal places and a leading zero for cents. If you store the price in 
+          cents, either divide to a double and format, or print dollars and cents separately.</p>
         <pre><code class="language-cpp">#include &lt;iomanip&gt;  // std::fixed, std::setprecision, std::setfill, std::setw
 
 // Option A: using a double
