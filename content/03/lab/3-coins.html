@@ -53,17 +53,22 @@ int priceCents = std::rand() % 100;     // 0..99 cents  (i.e., $0.00 .. $0.99)
         <p class="mb-2">Start with a <strong>remaining change</strong> variable (in cents). Subtract the largest coin while possible, then move to the next coin size.</p>
         <pre><code class="language-cpp">// Named constants at the top of main(): ONE_DOLLAR_CENTS=100, QUARTER=25, DIME=10, NICKEL=5, PENNY=1
 int change = ONE_DOLLAR_CENTS - priceCents;
-int quarters = 0, dimes = 0, nickels = 0, pennies = 0;
+int quarters = 0, dimes = 0, nickels = 0, pennies = 0;</code>
 
+<code class="language-cpp" style="display: none;">
 while (change &gt; 0) {
     if (change &gt;= QUARTER) {
-        change -= QUARTER; quarters++;
+        change -= QUARTER; 
+        quarters++;</code><code class="language-cpp" style="display: none;">
     } else if (change &gt;= DIME) {
-        change -= DIME; dimes++;
+        change -= DIME; 
+        dimes++;
     } else if (change &gt;= NICKEL) {
-        change -= NICKEL; nickels++;
+        change -= NICKEL; 
+        nickels++;
     } else { // pennies
-        change -= PENNY; pennies++;
+        change -= PENNY; 
+        pennies++;
     }
 }
 </code></pre>
