@@ -1,30 +1,57 @@
 <div>
-  <h1>Temperature Checker — if / else if / else (C++)</h1>
-  <p><strong>Goal:</strong> Read an integer Fahrenheit temperature from the user and classify it as <em>cold</em>, <em>warm</em>, or <em>hot</em> using an <code>if</code> / <code>else if</code> / <code>else</code> structure. Keep everything in <code>main()</code>, include the standard header comment from earlier labs, and avoid magic numbers by using named constants.</p>
+  <h1>Temperature Checker<br>
+       if / else if / else (C++)</h1>
+  <p><strong>Objective:</strong> 
+    Read an integer Fahrenheit temperature from the user and classify it as <em>cold</em>, 
+    <em>warm</em>, or <em>hot</em> using an <code>if</code> / <code>else if</code> / <code>else</code> 
+    structure. Keep everything in <code>main()</code>, include the standard header comment 
+    from earlier labs, and avoid magic numbers by using named constants.
+  </p>
 
   <h2>Requirements</h2>
-  <ul class="req">
-    <li><strong>Input:</strong> One integer temperature in <em>Fahrenheit</em> (e.g., <code>-5</code>, <code>0</code>, <code>72</code>, <code>100</code>).</li>
-    <li><strong>Classification:</strong> Print exactly one of: <code>"cold"</code>, <code>"warm"</code>, or <code>"hot"</code>.</li>
-    <li><strong>Decision logic:</strong> Use a clear <code>if</code> / <code>else if</code> / <code>else</code> chain.</li>
-    <li><strong>No magic numbers:</strong> Define named constants (e.g., <code>COLD_MAX_F</code>, <code>HOT_MIN_F</code>) and use those in comparisons.</li>
-    <li><strong>One function only:</strong> All code resides in <code>main()</code>. (No functions/methods yet.)</li>
-    <li><strong>Header block:</strong> Include the standard header comment used in earlier labs at the top of the <code>.cpp</code> file.</li>
-  </ul>
+  <p>
+    <ul class="req">
+      <li><strong>Input:</strong> 
+        One integer temperature in <em>Fahrenheit</em> 
+        (e.g., <code>-5</code>, <code>0</code>, <code>72</code>, <code>100</code>).</li>
+      <li><strong>Classification:</strong> 
+        Print exactly one of: 
+        <code>"cold"</code>, <code>"warm"</code>, or <code>"hot"</code>.</li>
+      <li><strong>Decision logic:</strong> 
+        Use a clear 
+        <code>if</code> / <code>else if</code> / <code>else</code> chain.</li>
+      <li><strong>No magic numbers:</strong> 
+        Define named constants (e.g., <code>COLD_MAX_F</code>, <code>HOT_MIN_F</code>) 
+        and use those in comparisons.</li>
+      <li><strong>One function only:</strong> 
+        All code resides in <code>main()</code>. (No functions/methods yet.)</li>
+      <li><strong>Header block:</strong> 
+        Include the standard header comment used in earlier labs at the top of the 
+        <code>.cpp</code> file.</li>
+    </ul>
 
-  <div class="tip">
-    <strong>Tip:</strong> Choose and document your thresholds with named constants at the top of <code>main()</code>. For example, you might define a maximum for “cold” and a minimum for “hot”; “warm” is the range in between.
-  </div>
+    <div class="tip">
+      <strong>Tip:</strong> 
+      Choose and document your thresholds with named constants at the top of <code>main()</code>. 
+      For example, you might define a maximum for “cold” and a minimum for “hot”; “warm” is the 
+      range in between.
+    </div>
+  </p>
 
   <h2>Suggested Behavior</h2>
-  <ul>
-    <li>If the temperature is at or below your “cold max” constant → print <code>cold</code>.</li>
-    <li>Else if the temperature is at or above your “hot min” constant → print <code>hot</code>.</li>
-    <li>Else → print <code>warm</code>.</li>
-  </ul>
+  <p>
+    <ul>
+      <li>If the temperature is at or below your “cold max” constant → print <code>cold</code>.</li>
+      <li>Else if the temperature is at or above your “hot min” constant → print <code>hot</code>.</li>
+      <li>Else → print <code>warm</code>.</li>
+    </ul>
+  </p>
 
   <h2>Starter C++ Template</h2>
-  <p>Refer to Lab 1 for the basic structure and header comment template.</p>
+  <p>
+    Refer to Lab 1 for the basic structure and header comment template. The suggested content below
+    is in addition to the other required fields in the header block.
+  </p>
 
   <pre><code class="language-cpp">/*
  * Purpose:   Read an integer Fahrenheit temperature and classify it as
