@@ -47,25 +47,27 @@
           Use a <code>for</code> loop when you know (or can easily express) the 
           <strong>Start</strong>, <strong>Stop</strong>, and <strong>Step</strong> right up front.
         </p>
-        <div class="row">
-          <div class="col-12 col-lg-7">
-            <h6 class="mt-2">Shape</h6>
-            <pre class="mb-3"><code>//       Start        Stop         Step
+        <p>
+          Or, put another way, <em>when you know how many times you want to repeat the loop.</em>
+        </p>
+
+        <h4 class="mt-2">Shape</h4>
+        <pre class="mb-3"><code>//       Start    Stop     Step
 for (int i = 0;   i &lt; 5;      i++) {
     std::cout &lt;&lt; i &lt;&lt; " ";
 }
 // Output: 0 1 2 3 4
 </code></pre>
 
-            <h6>Annotated</h6>
-            <ul>
-              <li><strong>Start:</strong> <code>int i = 0;</code> — initialize counter</li>
-              <li><strong>Stop:</strong> <code>i &lt; 5;</code> — loop runs while true</li>
-              <li><strong>Step:</strong> <code>i++</code> — move toward stopping</li>
-            </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li><strong>Start:</strong> <code>int i = 0;</code> — initialize counter</li>
+          <li><strong>Stop:</strong> <code>i &lt; 5;</code> — loop runs while true</li>
+          <li><strong>Step:</strong> <code>i++</code> — move toward stopping</li>
+        </ul>
 
-            <h6 class="mt-3">Common Variations</h6>
-            <pre class="mb-3"><code>// Count down
+        <h4 class="mt-3">Common Variations</h4>
+        <pre class="mb-3"><code>// Count down
 for (int i = 5; i &gt; 0; --i) {
     // Start: 5, Stop: i &gt; 0, Step: --i
 }
@@ -75,30 +77,29 @@ for (int i = 0; i &lt;= 10; i += 2) {
     // Start: 0, Stop: i &lt;= 10, Step: +2
 }
 </code></pre>
-          </div>
-          <div class="col-12 col-lg-5">
-            <h6 class="mt-2">Pitfalls</h6>
+
+        <h4 class="mt-2">Watch for:</h4>
             <ul>
               <li>Forgetting to update the counter (infinite loop risk)</li>
               <li>Using the wrong comparison (off-by-one errors)</li>
               <li>Mutating the loop variable in the body unexpectedly</li>
             </ul>
 
-            <h6 class="mt-3">Demo Exercise</h6>
-            <p class="mb-1">Print the first 10 multiples of 3 on one line, separated by spaces.</p>
-            <pre class="mb-0"><code>// Your turn:
+        <h4 class="mt-3">Try It!</h4>
+        <p class="mb-1">
+          Print the first 10 multiples of 3 on one line, separated by spaces.</p>
+        <pre class="mb-0"><code>// Your turn:
 for (/* Start */; /* Stop */; /* Step */) {
     // print 3, 6, 9, ..., 30
 }
-</code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <strong>Discussion:</strong> When is a <code>for</code> loop more readable than a 
-        <code>while</code> loop?
-      </div>
-    </div>
+</code></pre>   
+        <p>&nbsp;</p>
+        </p style="text-align: center; font-style: italic;">
+          When is a <code>for</code> loop more readable than a <code>while</code> loop?
+              </p>
+
+      </div> <!-- card-body -->
+    </div> <!-- card -->
 
     <!-- WHILE LOOP -->
     <div class="card mb-4">
@@ -108,10 +109,8 @@ for (/* Start */; /* Stop */; /* Step */) {
           Use <code>while</code> when you want to keep looping <em>as long as</em> some condition 
           holds true, and the <strong>Step</strong> might depend on work done in the loop body.
         </p>
-        <div class="row">
-          <div class="col-12 col-lg-7">
-            <h6 class="mt-2">Shape</h6>
-            <pre class="mb-3"><code>// Start (set up before the loop)
+        <h4 class="mt-2">Shape</h4>
+        <pre class="mb-3"><code>// Start (set up before the loop)
 int count = 0;
 
 // Stop (checked before each iteration)
@@ -123,14 +122,14 @@ while (count &lt; 5) {
 // Output: 0 1 2 3 4
 </code></pre>
 
-            <h6>Annotated</h6>
+            <h4>Annotated</h4>
             <ul>
               <li><strong>Start:</strong> initialize variables before the loop</li>
               <li><strong>Stop:</strong> <code>while (condition)</code> — loop runs while true</li>
               <li><strong>Step:</strong> must happen in the body (e.g., <code>count++</code>)</li>
             </ul>
 
-            <h6 class="mt-3">Use Cases</h6>
+            <h4 class="mt-3">Use Cases</h4>
             <ul>
               <li>Reading input until EOF or a sentinel value</li>
               <li>Waiting for a condition to change</li>
@@ -138,14 +137,14 @@ while (count &lt; 5) {
             </ul>
           </div>
           <div class="col-12 col-lg-5">
-            <h6 class="mt-2">Pitfalls</h6>
+            <h6 class="mt-2">Watch for:</h6>
             <ul>
               <li>Forgetting the Step → infinite loop</li>
               <li>Condition never becomes false</li>
               <li>Modifying the condition variable incorrectly</li>
             </ul>
 
-            <h6 class="mt-3">Demo Exercise</h6>
+            <h4 class="mt-3">Try It!</h4>
             <p class="mb-1">Ask the user for numbers and sum them until they enter <code>0</code>.</p>
             <pre class="mb-0"><code>// Pseudocode sketch:
 int x = -1;        // Start
@@ -156,11 +155,9 @@ while (/* Stop: while x != 0 */) {
     // Step: change x so the condition can become false
 }
 </code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <strong>Discussion:</strong> Why is it risky to put <code>cin</code> both in the condition 
+<p>&nbsp;</p>
+<p style="text-align: center; font-style: italic;">
+        Why is it risky to put <code>cin</code> both in the condition 
         and the body?
       </div>
     </div>
@@ -173,9 +170,7 @@ while (/* Stop: while x != 0 */) {
           Use <code>do-while</code> when the body must run <em>at least once</em> before checking 
           the condition. The condition is evaluated at the end.
         </p>
-        <div class="row">
-          <div class="col-12 col-lg-7">
-            <h6 class="mt-2">Shape</h6>
+            <h4 class="mt-2">Shape</h4>
             <pre class="mb-3"><code>// Start
 int n = 0;
 do {
@@ -185,28 +180,26 @@ do {
 // Prints n = 0, n = 1, n = 2
 </code></pre>
 
-            <h6>Annotated</h6>
+            <h4>Annotated</h4>
             <ul>
               <li><strong>Start:</strong> set initial state before the loop</li>
               <li><strong>Stop:</strong> condition at the end (<code>while (...);</code>)</li>
               <li><strong>Step:</strong> usually inside the block, before the condition</li>
             </ul>
 
-            <h6 class="mt-3">Great For</h6>
+            <h4 class="mt-3">Great For</h4>
             <ul>
               <li>Menus that should display at least once</li>
               <li>Input validation that asks again if invalid</li>
             </ul>
-          </div>
-          <div class="col-12 col-lg-5">
-            <h6 class="mt-2">Pitfalls</h6>
+            <h4 class="mt-2">Pitfalls</h4>
             <ul>
               <li>Semicolon required after the condition: <code>} while (cond);</code></li>
               <li>Easy to forget Step → potential infinite loop</li>
               <li>Body always runs once—even if the condition is false initially</li>
             </ul>
 
-            <h6 class="mt-3">Demo Exercise</h6>
+            <h4 class="mt-3">Try It!</h4>
             <p class="mb-1">Show a simple menu at least once; repeat until the user selects “Exit”.</p>
             <pre class="mb-0"><code>int choice;
 do {
@@ -215,11 +208,8 @@ do {
     // handle choice
 } while (/* Stop: choice != Exit */);
 </code></pre>
-          </div>
-        </div>
-      </div>
-      <div class="card-footer">
-        <strong>Discussion:</strong> When would a <code>do-while</code> be clearer than a <code>while</code>?
+  <p style="text-align: center; font-style: italic;">
+        When would a <code>do-while</code> be clearer than a <code>while</code>?
       </div>
     </div>
 
