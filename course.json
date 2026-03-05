@@ -134,6 +134,7 @@
         "topics": [
           "While loops",
           "For loops",
+          "whitespace",
           "Loop control",
           "while, for, do-while",
           "Sentinel values, counters, accumulators",
@@ -156,6 +157,11 @@
             "title": "For Loops",
             "type": "content",
             "source": "/content/04/for-loops.html"
+          },
+          "whitespace": {
+            "title": "Whitespace and Formatting",
+            "type": "content",
+            "source": "/content/04/whitespace.html"
           },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/03/pseudocode.html"},
           "end": {

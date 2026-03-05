@@ -1,0 +1,169 @@
+<div class="container py-4">
+
+    <!-- Title Card -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">Whitespace in C++</h2>
+            <p class="card-text">
+                A 30‑minute introductory lesson on the role of whitespace in C++ programming.
+            </p>
+        </div>
+    </div>
+
+    <!-- Warm-Up -->
+    <div class="card mb-4">
+        <div class="card-header">Warm-Up (2 minutes)</div>
+        <div class="card-body">
+            <ul>
+                <li>What do you think the computer sees when it reads your code—every detail, or just certain parts?</li>
+                <li>Would code still run if written all on one line?</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- What is Whitespace -->
+    <div class="card mb-4">
+        <div class="card-header">What Is Whitespace? (5 minutes)</div>
+        <div class="card-body">
+            <p>In C++, <strong>whitespace</strong> includes:</p>
+            <ul>
+                <li>spaces</li>
+                <li>tabs</li>
+                <li>newlines (Enter key)</li>
+                <li>carriage returns</li>
+            </ul>
+            <p>The compiler mostly ignores whitespace, except when needed to separate identifiers and tokens.</p>
+        </div>
+    </div>
+
+    <!-- Why It Matters -->
+    <div class="card mb-4">
+        <div class="card-header">Why Is Whitespace Important? (5 minutes)</div>
+        <div class="card-body">
+            <p>Whitespace impacts:</p>
+            <ul>
+                <li><strong>Readability</strong> – helps humans understand structure</li>
+                <li><strong>Maintainability</strong> – reduces errors and makes debugging easier</li>
+                <li><strong>Professionalism</strong> – teams expect clean formatting</li>
+                <li><strong>Error Prevention</strong> – prevents merged tokens and ambiguous code</li>
+            </ul>
+            <p><em>Leading question:</em> Have you ever read a text with no spaces? Hard, right?</p>
+        </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="card mb-4">
+        <div class="card-header">Are There Rules? (5 minutes)</div>
+        <div class="card-body">
+            <h5>Compiler Rules (Required)</h5>
+            <pre><code>intmain() { }  // ERROR: compiler thinks it's "intmain"</code></pre>
+
+            <h5 class="mt-3">Style Rules (Strongly Recommended)</h5>
+            <ul>
+                <li>Indent code inside braces</li>
+                <li>Use consistent tabs or spaces</li>
+                <li>One statement per line</li>
+                <li>Use blank lines between sections</li>
+            </ul>
+
+            <p><em>Leading question:</em> Which version would you want to debug at 1 AM?</p>
+
+            <pre><code>
+int main() {
+    int a = 5;
+    int b = 10;
+
+    std::cout << a + b << std::endl;
+}
+            </code></pre>
+        </div>
+    </div>
+
+    <!-- What Happens If You Don’t Follow -->
+    <div class="card mb-4">
+        <div class="card-header">What Happens If You Don’t Format Whitespace Well? (5 minutes)</div>
+        <div class="card-body">
+            <p>Poor whitespace can cause:</p>
+            <ul>
+                <li>Hard-to-read code</li>
+                <li>Merged tokens and compiler errors</li>
+                <li>Hidden bugs</li>
+                <li>Team friction during reviews</li>
+            </ul>
+
+            <h5>Examples</h5>
+            <pre><code>
+int main(){int a=10;int b=20;std::cout<<a+b;}
+            </code></pre>
+
+            <pre><code>
+inta=10;  // error: merged tokens
+            </code></pre>
+
+            <p><em>Leading question:</em> If your teammate handed you messy code, how would it slow you down?</p>
+        </div>
+    </div>
+
+    <!-- Live Example -->
+    <div class="card mb-4">
+        <div class="card-header">Live Example (5 minutes)</div>
+        <div class="card-body">
+            <h5>Bad Whitespace</h5>
+            <pre><code>
+#include<iostream>
+int main(){int x=10;int y=20;if(x>y){std::cout<<"x";}else{std::cout<<"y";}}
+            </code></pre>
+
+            <h5>Improved Whitespace</h5>
+            <pre><code>
+#include <iostream>
+
+int main() {
+    int x = 10;
+    int y = 20;
+
+    if (x > y) {
+        std::cout << "x";
+    } else {
+        std::cout << "y";
+    }
+}
+            </code></pre>
+
+            <p><em>Leading question:</em> Where does indentation help you understand the logic?</p>
+        </div>
+    </div>
+
+    <!-- Exercise -->
+    <div class="card mb-4">
+        <div class="card-header">Class Exercise (3 minutes)</div>
+        <div class="card-body">
+            <p>Reformat this with proper whitespace:</p>
+            <pre><code>
+int main(){int a=5;int b=15;if(a<b){std::cout<<"a is smaller";}return 0;}
+            </code></pre>
+            <p>Optional: Add one blank line where it improves clarity.</p>
+        </div>
+    </div>
+
+    <!-- Further Resources -->
+    <div class="card mb-4">
+        <div class="card-header">Where to Go for More (2 minutes)</div>
+        <div class="card-body">
+            <p>Recommended resources:</p>
+            <ul>
+                <li>Google C++ Style Guide</li>
+                <li>C++ Core Guidelines</li>
+                <li>Auto-formatting tools:
+                    <ul>
+                        <li>clang-format</li>
+                        <li>Visual Studio / VS Code formatting</li>
+                        <li>JetBrains CLion auto-format</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><em>Leading question:</em> Why might an auto-formatter help even experienced programmers?</p>
+        </div>
+    </div>
+
+</div>
