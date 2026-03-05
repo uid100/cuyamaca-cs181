@@ -148,6 +148,11 @@
             "type": "content",
             "source": "/content/04/module4.html"
           },
+          "loops": {
+            "title": "Loops and Iteration",
+            "type": "content",
+            "source": "/content/04/loops.html"
+          },
           "while-loops": {
             "title": "While Loops",
             "type": "content",
