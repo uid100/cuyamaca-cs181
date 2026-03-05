@@ -1,13 +1,22 @@
 
   <div class="container py-4">
-    <!-- Header -->
-    <header class="mb-4">
-      <h1 class="mb-1">C++ Loops: <span class="text-primary">Start</span> • <span class="text-success">Stop</span> • <span class="text-warning">Step</span></h1>
-      <p class="lead mb-0">
-        Learn how <code>for</code>, <code>while</code>, and <code>do-while</code> loops work in C++, with an emphasis on
-        <strong>where loops begin (Start)</strong>, <strong>when they end (Stop)</strong>, and <strong>how they move (Step)</strong>.
-      </p>
-    </header>
+    <div class="card mb-4">
+        <h1 class="mb-1">C++ Loops</h1>
+        <p class="lead mb-0">
+            Using <code>for</code>, <code>while</code>, and <code>do-while</code> in C++.
+        </p>
+        <div class="boxed-paragraph">
+            <p>
+                <strong>Hint:</strong>
+            </p>
+            <p style="text-align: center;">
+                Watch for:
+                    <span class="text-primary">Start</span> 
+                    • <span class="text-success">Stop</span> 
+                    • <span class="text-warning">Step</span>
+            </p>
+        </div>
+    </div>
 
     <!-- Overview Card -->
     <div class="card mb-4">
@@ -17,11 +26,16 @@
           Loops repeat a block of code. Every loop can be described with three ideas:
         </p>
         <ul class="mb-3">
-          <li><strong>Start</strong>: the initial state (e.g., a counter’s first value)</li>
-          <li><strong>Stop</strong>: the condition checked each iteration (when this becomes <code>false</code>, the loop ends)</li>
-          <li><strong>Step</strong>: how we move toward stopping (e.g., increment/decrement)</li>
+          <li>
+            <strong>Start</strong>: the initial state (e.g., a counter's first value)</li>
+          <li>
+            <strong>Stop</strong>: the condition checked each iteration (when this becomes 
+            <code>false</code>, the loop ends)</li>
+          <li>
+            <strong>Step</strong>: how we move toward stopping (e.g., increment/decrement)</li>
         </ul>
-        <p class="mb-0">Pick the loop that best matches how clearly you can express Start, Stop, and Step.</p>
+        <p class="mb-0">Pick the loop that best matches how clearly you can express Start, 
+            Stop, and Step.</p>
       </div>
     </div>
 
@@ -30,7 +44,8 @@
       <div class="card-header">The <code>for</code> Loop</div>
       <div class="card-body">
         <p class="mb-2">
-          Use a <code>for</code> loop when you know (or can easily express) the <strong>Start</strong>, <strong>Stop</strong>, and <strong>Step</strong> right up front.
+          Use a <code>for</code> loop when you know (or can easily express) the 
+          <strong>Start</strong>, <strong>Stop</strong>, and <strong>Step</strong> right up front.
         </p>
         <div class="row">
           <div class="col-12 col-lg-7">
@@ -65,7 +80,7 @@ for (int i = 0; i &lt;= 10; i += 2) {
             <h6 class="mt-2">Pitfalls</h6>
             <ul>
               <li>Forgetting to update the counter (infinite loop risk)</li>
-              <li>Using the wrong comparison (off‑by‑one errors)</li>
+              <li>Using the wrong comparison (off-by-one errors)</li>
               <li>Mutating the loop variable in the body unexpectedly</li>
             </ul>
 
@@ -80,7 +95,8 @@ for (/* Start */; /* Stop */; /* Step */) {
         </div>
       </div>
       <div class="card-footer">
-        <strong>Discussion:</strong> When is a <code>for</code> loop more readable than a <code>while</code> loop?
+        <strong>Discussion:</strong> When is a <code>for</code> loop more readable than a 
+        <code>while</code> loop?
       </div>
     </div>
 
@@ -89,7 +105,8 @@ for (/* Start */; /* Stop */; /* Step */) {
       <div class="card-header">The <code>while</code> Loop</div>
       <div class="card-body">
         <p class="mb-2">
-          Use <code>while</code> when you want to keep looping <em>as long as</em> some condition holds true, and the <strong>Step</strong> might depend on work done in the loop body.
+          Use <code>while</code> when you want to keep looping <em>as long as</em> some condition 
+          holds true, and the <strong>Step</strong> might depend on work done in the loop body.
         </p>
         <div class="row">
           <div class="col-12 col-lg-7">
@@ -117,7 +134,7 @@ while (count &lt; 5) {
             <ul>
               <li>Reading input until EOF or a sentinel value</li>
               <li>Waiting for a condition to change</li>
-              <li>When iteration count isn’t known upfront</li>
+              <li>When iteration count isn't known upfront</li>
             </ul>
           </div>
           <div class="col-12 col-lg-5">
@@ -143,7 +160,8 @@ while (/* Stop: while x != 0 */) {
         </div>
       </div>
       <div class="card-footer">
-        <strong>Discussion:</strong> Why is it risky to put <code>cin</code> both in the condition and the body?
+        <strong>Discussion:</strong> Why is it risky to put <code>cin</code> both in the condition 
+        and the body?
       </div>
     </div>
 
@@ -152,7 +170,8 @@ while (/* Stop: while x != 0 */) {
       <div class="card-header">The <code>do-while</code> Loop</div>
       <div class="card-body">
         <p class="mb-2">
-          Use <code>do-while</code> when the body must run <em>at least once</em> before checking the condition. The condition is evaluated at the end.
+          Use <code>do-while</code> when the body must run <em>at least once</em> before checking 
+          the condition. The condition is evaluated at the end.
         </p>
         <div class="row">
           <div class="col-12 col-lg-7">
@@ -209,13 +228,17 @@ do {
       <div class="card-header">Choosing the Right Loop</div>
       <div class="card-body">
         <ul class="mb-3">
-          <li><strong>Use <code>for</code></strong> when Start–Stop–Step are clean and numeric (counting loops).</li>
-          <li><strong>Use <code>while</code></strong> when you repeat “while a condition holds” and Step depends on the body.</li>
-          <li><strong>Use <code>do-while</code></strong> when you must run the body at least once (e.g., menus, input loops).</li>
+          <li><strong>Use <code>for</code></strong> when Start-Stop-Step are clean and numeric 
+            (counting loops).</li>
+          <li><strong>Use <code>while</code></strong> when you repeat “while a condition holds” 
+            and Step depends on the body.</li>
+          <li><strong>Use <code>do-while</code></strong> when you must run the body at least 
+            once (e.g., menus, input loops).</li>
         </ul>
 
         <h6>Challenge</h6>
-        <p class="mb-1">Rewrite the same task three ways (for/while/do‑while): print numbers from 10 down to 1.</p>
+        <p class="mb-1">Rewrite the same task three ways (for/while/do-while): print numbers 
+            from 10 down to 1.</p>
         <pre class="mb-0"><code>// for
 for (int i = 10; i &gt;= 1; --i) { std::cout &lt;&lt; i &lt;&lt; " "; }
 
@@ -238,17 +261,24 @@ do { std::cout &lt;&lt; j &lt;&lt; " "; --j; } while (j &gt;= 1);
       <div class="card-header">Common Loop Bugs (and How to Avoid Them)</div>
       <div class="card-body">
         <ul class="mb-3">
-          <li><strong>Off‑by‑one errors:</strong> double‑check whether you need <code>&lt;</code> or <code>&lt;=</code>.</li>
+          <li><strong>Off-by-one errors:</strong> double-check whether you need <code>&lt;</code> or 
+            <code>&lt;=</code>.</li>
           <li><strong>Infinite loops:</strong> ensure your Step actually moves toward Stop.</li>
-          <li><strong>Changing the loop variable inside the body:</strong> keep updates consistent and intentional.</li>
-          <li><strong>Shadowing variables:</strong> avoid re‑declaring loop counters in nested scopes inadvertently.</li>
+          <li><strong>Changing the loop variable inside the body:</strong> keep updates consistent and 
+            intentional.</li>
+          <li><strong>Shadowing variables:</strong> avoid re-declaring loop counters in nested scopes 
+            inadvertently.</li>
         </ul>
 
         <h6>Quick Fix Patterns</h6>
         <ul class="mb-0">
-          <li>Write out <em>Start – Stop – Step</em> as comments before coding the loop.</li>
-          <li>Print the loop variable during debugging to observe Step/termination.</li>
-          <li>Use meaningful variable names (e.g., <code>index</code>, <code>count</code>) when clarity matters.</li>
+          <li>
+            Write out <em>Start - Stop - Step</em> as comments before coding the loop.</li>
+          <li>
+            Print the loop variable during debugging to observe Step/termination.</li>
+          <li>
+            Use meaningful variable names (e.g., <code>index</code>, <code>count</code>) when clarity 
+            matters.</li>
         </ul>
       </div>
     </div>
@@ -267,6 +297,7 @@ do { std::cout &lt;&lt; j &lt;&lt; " "; --j; } while (j &gt;= 1);
 
     <!-- Footer -->
     <footer class="text-muted small">
-      <p class="mb-0">Tip: When stuck, write <strong>Start – Stop – Step</strong> in comments before coding.</p>
+      <p class="mb-0">Tip: if it helps, try writing <strong>Start - Stop - Step</strong> 
+        in comments before coding.</p>
     </footer>
   </div>
