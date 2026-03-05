@@ -5,25 +5,23 @@
         <div class="card-body">
             <h2 class="card-title">Whitespace in C++</h2>
             <p class="card-text">
-                A 30‑minute introductory lesson on the role of whitespace in C++ programming.
+                The role of whitespace in C++ programming.
             </p>
-        </div>
-    </div>
-
-    <!-- Warm-Up -->
-    <div class="card mb-4">
-        <div class="card-header">Warm-Up (2 minutes)</div>
-        <div class="card-body">
+            <p>&nbsp;</p>
             <ul>
-                <li>What do you think the computer sees when it reads your code—every detail, or just certain parts?</li>
-                <li>Would code still run if written all on one line?</li>
+                <li>
+                    What do you think the computer sees when it reads your 
+                    code—every detail, or just certain parts?
+                </li>
+                <li>
+                    Would code still run if written all on one line?</li>
             </ul>
         </div>
     </div>
 
     <!-- What is Whitespace -->
     <div class="card mb-4">
-        <div class="card-header">What Is Whitespace? (5 minutes)</div>
+        <div class="card-header">What Is Whitespace?</div>
         <div class="card-body">
             <p>In C++, <strong>whitespace</strong> includes:</p>
             <ul>
@@ -32,28 +30,42 @@
                 <li>newlines (Enter key)</li>
                 <li>carriage returns</li>
             </ul>
-            <p>The compiler mostly ignores whitespace, except when needed to separate identifiers and tokens.</p>
+            <p>
+                The compiler mostly ignores whitespace, except when needed to 
+                separate identifiers and tokens.
+            </p>
         </div>
     </div>
 
     <!-- Why It Matters -->
     <div class="card mb-4">
-        <div class="card-header">Why Is Whitespace Important? (5 minutes)</div>
+        <div class="card-header">Why Is Whitespace Important?</div>
         <div class="card-body">
             <p>Whitespace impacts:</p>
             <ul>
-                <li><strong>Readability</strong> – helps humans understand structure</li>
-                <li><strong>Maintainability</strong> – reduces errors and makes debugging easier</li>
-                <li><strong>Professionalism</strong> – teams expect clean formatting</li>
-                <li><strong>Error Prevention</strong> – prevents merged tokens and ambiguous code</li>
+                <li>
+                    <strong>Readability</strong> - 
+                        helps humans understand structure</li>
+                <li>
+                    <strong>Maintainability</strong> - 
+                        reduces errors and makes debugging easier</li>
+                <li>
+                    <strong>Professionalism</strong> - 
+                        teams expect clean formatting</li>
+                <li>
+                    <strong>Error Prevention</strong> - 
+                        prevents merged tokens and ambiguous code</li>
             </ul>
-            <p><em>Leading question:</em> Have you ever read a text with no spaces? Hard, right?</p>
+            <p>&nbsp;</p>
+            <p style="text-align: center;">
+                <em>Have you ever read a text with no spaces? Hard, right?</em>
+            </p>
         </div>
     </div>
 
     <!-- Rules -->
     <div class="card mb-4">
-        <div class="card-header">Are There Rules? (5 minutes)</div>
+        <div class="card-header">Are There Rules?</div>
         <div class="card-body">
             <h5>Compiler Rules (Required)</h5>
             <pre><code>intmain() { }  // ERROR: compiler thinks it's "intmain"</code></pre>
@@ -66,7 +78,9 @@
                 <li>Use blank lines between sections</li>
             </ul>
 
-            <p><em>Leading question:</em> Which version would you want to debug at 1 AM?</p>
+            <p style="text-align: center;">
+                <em>Which version would you want to debug at 1 AM?</em>
+            </p>
 
             <pre><code>
 int main() {
@@ -76,12 +90,16 @@ int main() {
     std::cout << a + b << std::endl;
 }
             </code></pre>
+
+            <p>&nbsp;</p>
+            <pre><code>int main(){int a=5;int b=10;std::cout<<a+b<<std::endl;}</code></pre>
+            <p>&nbsp;</p>
         </div>
     </div>
 
     <!-- What Happens If You Don’t Follow -->
     <div class="card mb-4">
-        <div class="card-header">What Happens If You Don’t Format Whitespace Well? (5 minutes)</div>
+        <div class="card-header">What Happens If You Don't Format Whitespace Well?</div>
         <div class="card-body">
             <p>Poor whitespace can cause:</p>
             <ul>
@@ -100,21 +118,26 @@ int main(){int a=10;int b=20;std::cout<<a+b;}
 inta=10;  // error: merged tokens
             </code></pre>
 
-            <p><em>Leading question:</em> If your teammate handed you messy code, how would it slow you down?</p>
+            <p>
+                <em>If your teammate handed you messy code, how would it slow you down?</em>
+            </p>
         </div>
     </div>
 
     <!-- Live Example -->
     <div class="card mb-4">
-        <div class="card-header">Live Example (5 minutes)</div>
+        <div class="card-header">Example</div>
         <div class="card-body">
-            <h5>Bad Whitespace</h5>
-            <pre><code>
+            <details>
+                <summary>This?</summary>
+                <pre><code>
 #include<iostream>
 int main(){int x=10;int y=20;if(x>y){std::cout<<"x";}else{std::cout<<"y";}}
             </code></pre>
+            </details>
 
-            <h5>Improved Whitespace</h5>
+            <details>
+                <summary>Or This?</summary>
             <pre><code>
 #include <iostream>
 
@@ -129,26 +152,31 @@ int main() {
     }
 }
             </code></pre>
+            </details>
 
-            <p><em>Leading question:</em> Where does indentation help you understand the logic?</p>
+            <p style="text-align: center;">
+                <em>Where does indentation help you understand the logic?</em>
+            </p>
         </div>
     </div>
 
     <!-- Exercise -->
     <div class="card mb-4">
-        <div class="card-header">Class Exercise (3 minutes)</div>
+        <div class="card-header">Class Exercise</div>
         <div class="card-body">
             <p>Reformat this with proper whitespace:</p>
             <pre><code>
 int main(){int a=5;int b=15;if(a<b){std::cout<<"a is smaller";}return 0;}
             </code></pre>
-            <p>Optional: Add one blank line where it improves clarity.</p>
+            <p>
+                Optional: Add one blank line where it improves clarity.
+            </p>
         </div>
     </div>
 
     <!-- Further Resources -->
     <div class="card mb-4">
-        <div class="card-header">Where to Go for More (2 minutes)</div>
+        <div class="card-header">Where to Go for More</div>
         <div class="card-body">
             <p>Recommended resources:</p>
             <ul>
@@ -162,7 +190,9 @@ int main(){int a=5;int b=15;if(a<b){std::cout<<"a is smaller";}return 0;}
                     </ul>
                 </li>
             </ul>
-            <p><em>Leading question:</em> Why might an auto-formatter help even experienced programmers?</p>
+            <p style="text-align: center;">
+                <em>Why might an auto-formatter help even experienced programmers?</em>
+            </p>
         </div>
     </div>
 
