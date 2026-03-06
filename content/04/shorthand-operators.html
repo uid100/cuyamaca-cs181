@@ -153,10 +153,11 @@ m >>= 2;    // m = m >> 2
                 Which version is easier to read and why? When might the long form be clearer?
             </div>
         </div>
+        <p>&nbsp;</p>
         <div>
             <h4>More Thoughts</h4>
             <ul>
-                <li>Watch out for integer division with <code>/=</code> —-- results truncate toward zero for integers.</li>
+                <li>Watch out for integer division with <code>/=</code> &nbsp;<em>results truncate toward zero for integers.</em></li>
                 <li><code>%=</code> requires an integer (or integral type); avoid with floating-point.</li>
                 <li>Bitwise compound ops operate on bits, not booleans or logical conditions.</li>
                 <li>Avoid writing expressions with multiple side effects in one line if it hurts readability.</li>
