@@ -1,0 +1,86 @@
+
+  <div class="container py-4">
+
+    <!-- Header -->
+    <div class="card mb-4">
+      <h2>Incrementing & Decrementing in C++</h2>
+        <p>
+          Many C++ programs involve updating a variable by one step.
+        </p>
+        <p>
+          We call this <strong>incrementing</strong> (adding 1) and 
+          <strong>decrementing</strong>(subtracting 1).
+        </p>
+    </div>
+
+    <!-- Increment / Decrement -->
+    <div class="card mb-4">
+      <div class="card-header">Basic Increment & Decrement</div>
+      <div class="card-body">
+        <p>
+            C++ provides special operators for adding or subtracting <code>1</code> 
+            from a variable:</p>
+        <ul>
+          <li><code>x++</code> — increment by 1</li>
+          <li><code>x--</code> — decrement by 1</li>
+          <li><code>++x</code> — also increments by 1</li>
+          <li><code>--x</code> — also decrements by 1</li>
+        </ul>
+
+        <h6>Examples</h6>
+        <pre><code>int x = 5;
+x++;     // now x = 6
+x--;     // now x = 5 again
+</code></pre>
+
+        <h6>Demo Exercise</h6>
+        <p>Start with <code>int n = 10;</code>, then decrement it three times.
+        What value should n hold afterward?</p>
+      </div>
+    </div>
+
+    <!-- Prefix vs Postfix -->
+    <div class="card mb-4">
+      <div class="card-header">Prefix vs Postfix</div>
+      <div class="card-body">
+        <p>
+          Both <code>++x</code> and <code>x++</code> add 1 to <code>x</code>,
+          but <strong>they differ in when the increment happens</strong>.
+        </p>
+
+        <h6>Postfix (x++)</h6>
+        <p>Return the old value, then increment.</p>
+        <pre><code>int a = 5;
+int b = a++;   // b = 5, then a becomes 6
+</code></pre>
+
+        <h6>Prefix (++x)</h6>
+        <p>Increment first, then return the new value.</p>
+        <pre><code>int a = 5;
+int b = ++a;   // a becomes 6, then b = 6
+</code></pre>
+
+        <h6>Discussion Question</h6>
+        <p>
+          Why can postfix (<code>x++</code>) sometimes be less efficient than prefix (<code>++x</code>)
+          in certain data types or loops?
+        </p>
+      </div>
+    </div>
+
+    <!-- When to Use -->
+    <div class="card mb-4">
+      <div class="card-header">When Should You Use Each?</div>
+      <div class="card-body">
+        <ul>
+          <li><strong>Prefix (++x)</strong> — often preferred inside loops, especially with objects.</li>
+          <li><strong>Postfix (x++)</strong> — useful when you explicitly need the old value first.</li>
+        </ul>
+
+        <h6>Practice</h6>
+        <p>Rewrite a <code>for</code> loop using postfix increments, then rewrite the same loop using prefix increments.
+        Does anything change about the output?</p>
+      </div>
+    </div>
+
+  </div>

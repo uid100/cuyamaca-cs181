@@ -148,27 +148,31 @@
             "type": "content",
             "source": "/content/04/module4.html"
           },
+          "scope": {
+            "title": "Variable Scope and Lifetime",
+            "type": "content",
+            "source": "/content/04/scope.html"
+          },
           "loops": {
             "title": "Loops and Iteration",
             "type": "content",
             "source": "/content/04/loops.html"
           },
-          "while-loops": {
-            "title": "While Loops",
+          "shorthand-operators": {
+            "title": "Shorthand Operators",
             "type": "content",
-            "source": "/content/04/while-loops.html"
+            "source": "/content/04/shorthand-operators.html"
           },
-          "for-loops": {
-            "title": "For Loops",
+          "nesting": {
+            "title": "Nested Loops",
             "type": "content",
-            "source": "/content/04/for-loops.html"
+            "source": "/content/04/nesting.html"
           },
           "whitespace": {
             "title": "Whitespace and Formatting",
             "type": "content",
             "source": "/content/04/whitespace.html"
           },
-          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/03/pseudocode.html"},
           "end": {
             "title": "End of Module 4",
             "type": "content",
@@ -203,6 +207,7 @@
             "type": "content",
             "source": "/content/05/defining-functions.html"
           },
+          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "function-parameters": {
             "title": "Function Parameters and Return Values",
             "type": "content",
