@@ -85,4 +85,99 @@ int b = ++a;   // a becomes 6, then b = 6
       </div>
     </div>
 
+    <!-- Compound Assignment Intro -->
+    <div class="card mb-4">
+      <div class="card-header">Compound Assignment Operators</div>
+      <div class="card-body">
+        <p>
+            More shorthand operators exist for combining arithmetic operations with assignment.
+            These are called <strong>compound assignment operators</strong>.
+        </p>
+        <p>
+            Compound assignment updates a variable in place, combining an operation with assignment. 
+            These are shorthand for common patterns:
+        </p>
+        <p>&nbsp;</p>
+        <div>
+            <pre class="mb-3"><code>// Arithmetic
+    x += 5;   // x = x + 5
+    x -= 3;   // x = x - 3
+    x *= 2;   // x = x * 2
+    x /= 4;   // x = x / 4
+    x %= 10;  // x = x % 10
+    </code></pre>
+        </div>
+        <p>&nbsp;</p>
+        <div style="display: none;">
+<pre class="mb-3"><code>// Bitwise
+m &= mask;  // m = m & mask
+m |= mask;  // m = m | mask
+m ^= mask;  // m = m ^ mask
+m <<= 1;    // m = m << 1
+m >>= 2;    // m = m >> 2
+</code></pre>
+        </div>
+
+        <div>
+            <h4>Why Use Them?</h4>
+            <ul>
+            <li><strong>Clarity:</strong> Express intent concisely ("add and store").</li>
+            <li><strong>Maintainability:</strong> Less repetition of the variable name reduces mistakes.</li>
+            <li><strong>Performance:</strong> For user-defined types/iterators, the shorthand may avoid extra 
+                temporaries (implementation-dependent).</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Try It!</h4>
+            <p>
+                Starting with <code>int score = 50;</code>, 
+                apply updates in order: <code>+10</code>, <code>-5</code>, 
+                double it, then modulo <code>100</code>. 
+            </p>
+            <p>
+                Show the final value.
+            </p>
+        </div>
+      </div> <!-- card-body -->
+    </div> <!-- card -->
+
+    <!-- Side-by-side Examples -->
+    <div class="card mb-4">
+      <div class="card-header">Side‑by‑Side: Long Form vs Compound</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h6>Long Form</h6>
+            <pre><code>int n = 10;
+n = n + 3;
+n = n * 2;
+n = n - 4;
+</code></pre>
+          </div>
+          <div class="col-12 col-lg-6">
+            <h6>Compound Assignment</h6>
+            <pre><code>int n = 10;
+n += 3;
+n *= 2;
+n -= 4;
+</code></pre>
+          </div>
+        </div>
+        <div class="mt-2"><strong>Question:</strong> Which version is easier to read and why? When might the long form be clearer?</div>
+      </div>
+    </div>
+
+    <!-- Gotchas -->
+    <div class="card mb-4">
+      <div class="card-header">Gotchas & Best Practices</div>
+      <div class="card-body">
+        <ul>
+          <li>Watch out for integer division with <code>/=</code> — results truncate toward zero for integers.</li>
+          <li><code>%=</code> requires an integer (or integral type); avoid with floating‑point.</li>
+          <li>Bitwise compound ops operate on bits, not booleans or logical conditions.</li>
+          <li>Avoid writing expressions with multiple side effects in one line if it hurts readability.</li>
+        </ul>
+        <div class="mt-2"><strong>Quick Check:</strong> If <code>int a = 7;</code> and <code>int b = 2;</code>, what are the values after <code>a /= b;</code> and <code>a %= b;</code>?</div>
+      </div>
+    </div>
   </div>
