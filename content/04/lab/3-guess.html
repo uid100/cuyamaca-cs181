@@ -1,0 +1,53 @@
+<div>
+  <h1>Number Guessing Game</h1>
+
+  <p><strong>Objective:</strong>
+    Create a simple number guessing game where the user has to guess a randomly
+    generated number between 1 and 100. The user will have a limited number of
+    attempts to guess the correct number, and after each guess, the program will
+    provide feedback on whether the guess is too low, too high, or correct.
+  </p>
+
+  <h2>Requirements</h2>
+  <p>
+    <ul class="req">
+      <li>Define a maximum number of attempts <code>const int MAX_ATTEMPTS = 5;</code>.</li>
+      <li>Generate a random number between 1 and 100.</li>
+      <li>Seed the random number generator with <code>srand(time(0));</code>.</li>
+      <li>
+        Use a constant seed <code>const int SEED = 42;</code> for testing.
+        Comment this out, but leave it in your code.
+      </li>
+      <li>Prompt the user to enter a guess.</li>
+      <li>Use a <code>do-while</code> loop to repeatedly prompt the user for guesses.</li>
+      <li>If the user enters the correct number, print <em>"You guessed it!"</em> and exit.</li>
+      <li>If the user fails to guess within the maximum attempts, print <em>"Game over."</em></li>
+    </ul>
+  </p>
+
+  <h2>Sample Output</h2>
+  <pre>
+I'm thinking of a number between 1 and 100.
+Enter your guess: 50
+Too low!
+
+Enter your guess: 75
+Too high!
+
+Enter your guess: 63
+Too high!
+
+Enter your guess: 57
+Too low!
+
+Enter your guess: 60
+You guessed it!
+  </pre>
+
+  <h2>Checklist Before You Submit</h2>
+  <ul class="req">
+    <li>Header block at the top is filled out (course, lab, file, author, date, purpose).</li>
+    <li>All logic is inside <code>main()</code>.</li>
+    <li>Defined and used named constants (no magic numbers in comparisons).</li>
+  </ul>
+</div>
