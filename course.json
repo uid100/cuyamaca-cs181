@@ -173,6 +173,11 @@
             "type": "content",
             "source": "/content/end-module.html"
           }
+        },
+        "lab": {
+          "title": "Lab #4 - Looping and Iteration",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/04/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/04/lab/"
         }
       },
       "05": { "title": "Functions and Scope",
