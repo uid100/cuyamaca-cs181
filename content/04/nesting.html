@@ -1,0 +1,310 @@
+<div class="mb-4">
+    <h1 class="h2">Nested Loops in C++</h1>
+    <p class="lead mb-1">
+        Designed for a beginning programming class right after <code>for</code>, 
+        <code>while</code>, and <code>do&#8209;while</code>.</p>
+    <p class="text-muted mb-0">
+        No custom styling—ready for your own CSS. Uses Bootstrap cards for clear sections.</p>
+</div>
+
+<div class="card">
+    <div class="card-header">What are Nested Loops?</div>
+    <div class="card-body">
+        <p>
+            <strong>Nested loops</strong> are loops placed inside the body of another loop. 
+            The <em>outer</em> loop runs multiple times, and for each iteration of the outer 
+            loop, the <em>inner</em> loop runs completely.</p>
+        <ul>
+            <li>
+                Common when working with <strong>grids, tables, matrices</strong>, 
+                or <strong>patterns</strong>.</li>
+            <li>
+                Any loop type can be nested: <code>for</code> inside <code>for</code>, 
+                <code>while</code> inside <code>for</code>, etc.</li>
+        </ul>
+
+        <pre class="mb-0">
+<code>// General idea (pseudocode)
+    outer_loop {
+    // do something before inner loop
+    inner_loop {
+    // do something repeatedly for each outer iteration
+    }
+    // do something after inner loop
+    }</code>
+
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Common Syntax Patterns (C++)</div>
+    <div class="card-body">
+        <pre>
+<code class="language-cpp">// for-in-for: printing a rows x cols grid of '*'
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int rows = 3, cols = 5;
+    for (int r = 0; r &lt; rows; ++r) {            // outer loop controls rows
+        for (int c = 0; c &lt; cols; ++c) {        // inner loop controls columns
+            cout &lt;&lt; "*";
+        }
+        cout &lt;&lt; "\n";                         // end of a row
+    }
+}
+</code>
+        </pre>
+        <p>&nbsp;</p>
+        <pre class="mt-3">
+<code class="language-cpp">// while-in-for: same idea, different structure
+for (int r = 0; r &lt; rows; ++r) {
+    int c = 0;
+    while (c &lt; cols) {
+        cout &lt;&lt; "*";
+        ++c;
+    }
+    cout &lt;&lt; "\n";
+}
+</code>
+        </pre>
+        <p>&nbsp;</p>
+        <pre class="mt-3 mb-0">
+<code class="language-cpp">// do-while inside for: guarantees the inner loop runs at least once
+for (int r = 0; r &lt; rows; ++r) {
+    int c = 0;
+    do {
+        cout &lt;&lt; "*";
+        ++c;
+    } while (c &lt; cols);
+    cout &lt;&lt; "\n";
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Tracing Execution (Mentally Step Through)</div>
+    <div class="card-body">
+        <pre>
+<code class="language-cpp">int rows = 2, cols = 3;
+for (int r = 0; r &lt; rows; ++r) {
+    for (int c = 0; c &lt; cols; ++c) {
+        cout &lt;&lt; "(" &lt;&lt; r &lt;&lt; "," &lt;&lt; c &lt;&lt; ") ";
+    }
+    cout &lt;&lt; "\n";
+}
+// Output:
+// (0,0) (0,1) (0,2)
+// (1,0) (1,1) (1,2)
+</code>
+        </pre>
+        <p>&nbsp;</p>
+        <ol class="mb-0">
+            <li><strong>r=0</strong>: inner loop prints <code>(0,0) (0,1) (0,2)</code>.</li>
+            <li><strong>r=1</strong>: inner loop prints <code>(1,0) (1,1) (1,2)</code>.</li>
+        </ol>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Pattern Printing Examples</div>
+    <div class="card-body">
+        <pre>
+<code class="language-cpp">// Right triangle
+int n = 5;
+for (int r = 1; r &lt;= n; ++r) {
+    for (int c = 1; c &lt;= r; ++c) {
+        cout &lt;&lt; "*";
+    }
+    cout &lt;&lt; "\n";
+}
+</code>
+        </pre>
+        <p>&nbsp;</p>
+        <pre class="mt-3 mb-0">
+<code class="language-cpp">// Times table (1..n)
+int n = 5;
+for (int i = 1; i &lt;= n; ++i) {
+    for (int j = 1; j &lt;= n; ++j) {
+        cout &lt;&lt; (i * j) &lt;&lt; "\t";
+    }
+    cout &lt;&lt; "\n";
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Common Mistakes</div>
+    <div class="card-body">
+        <ul class="mb-0">
+            <li>
+                <strong>Off-by-one errors</strong>
+                    : using <code>&lt;=</code> instead of <code>&lt;</code> (or vice versa) 
+                    and producing an extra iteration.</li>
+            <li>
+                <strong>Resetting inner counters</strong>
+                    : ensure inner loop variables are initialized <em>inside</em> the outer loop.</li>
+            <li>
+                <strong>Infinite inner loops</strong>
+                    : always update the inner loop condition variables.</li>
+            <li>
+                <strong>Misusing <code>break</code>/<code>continue</code></strong>
+                    : remember <code>break</code> exits only the <em>nearest</em> loop.</li>
+            <li>
+                <strong>Variable scope</strong>
+                    : loop indices declared in <code>for (...)</code> exist only within that loop’s scope.</li>
+        </ul>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Performance & Big-O Intuition</div>
+    <div class="card-body">
+        <p>Two loops, each running <code>n</code> times, often lead to roughly 
+            <code>n × n = n²</code> operations. Three nested loops of size <code>n</code> 
+            lead to ~<code>n³</code>. This matters for large inputs.</p>
+        <pre class="mb-0">
+<code class="language-cpp">// Example: O(n^2)
+int n = 1000; long long sum = 0;
+for (int i = 0; i &lt; n; ++i) {
+    for (int j = 0; j &lt; n; ++j) {
+        sum += i + j; // ~ n^2 operations
+    }
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">When to Use vs. Avoid</div>
+    <div class="card-body">
+        <ul>
+            <li><strong>Use</strong>: tables, 2D arrays/matrices, character graphics, comparing all pairs, building patterns.</li>
+            <li><strong>Avoid (or refactor)</strong>: when there’s an available formula, library algorithm, or data structure that reduces complexity.</li>
+        </ul>
+        <pre class="mb-0">
+<code class="language-cpp">// All pairs sum (naive): O(n^2)
+long long sumPairs(const vector<int>& a) {
+    long long s = 0;
+    for (size_t i = 0; i &lt; a.size(); ++i)
+        for (size_t j = i + 1; j &lt; a.size(); ++j)
+            s += a[i] + a[j];
+    return s;
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Classroom Discussion & Prompts</div>
+    <div class="card-body">
+        <ol>
+            <li>How does the number of prints change if we swap the inner and outer loops?</li>
+            <li>What happens if the inner loop does <em>not</em> reset its counter for each outer iteration?</li>
+            <li>Trace the order of pairs <code>(i, j)</code> visited for a <code>rows × cols</code> grid.</li>
+            <li>Where would <code>break</code> vs. <code>continue</code> be useful in a nested loop?</li>
+            <li>Can we generate a hollow rectangle using nested loops? How?</li>
+        </ol>
+        <pre class="mb-0">
+<code class="language-cpp">// Hollow rectangle challenge
+int rows = 5, cols = 10;
+for (int r = 0; r &lt; rows; ++r) {
+    for (int c = 0; c &lt; cols; ++c) {
+        bool border = (r == 0) || (r == rows - 1) || (c == 0) || (c == cols - 1);
+        cout &lt;&lt; (border ? '#' : ' ');
+    }
+    cout &lt;&lt; "\n";
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Mini-Projects / Applications</div>
+    <div class="card-body">
+        <ul>
+            <li>
+                <strong>Multiplication table</strong>
+                    : format with tabs or fixed widths.</li>
+            <li>
+                <strong>Image processing concept</strong>
+                    : iterate over rows/cols of a pixel grid (no libraries needed to discuss).</li>
+            <li>
+                <strong>Game board</strong>
+                    : print a tic-tac-toe or minesweeper board.</li>
+            <li>
+                <strong>String combinations</strong>: generate all pairs of characters from two strings.</li>
+        </ul>
+        <pre class="mb-0">
+<code class="language-cpp">// All pairs of characters from two strings
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string A = "ab", B = "XYZ";
+    for (char a : A) {
+        for (char b : B) {
+            cout &lt;&lt; a &lt;&lt; b &lt;&lt; ' ';
+        }
+    }
+    // Output: aX aY aZ bX bY bZ
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Debugging & Tracing Tips</div>
+    <div class="card-body">
+        <ul>
+            <li>Add <code>cout</code> statements that print the indices before/after the inner loop.</li>
+            <li>Start with tiny sizes (e.g., 2×3) so you can fully trace output.</li>
+            <li>Check boundary conditions: what happens for 0, 1, and typical values?</li>
+            <li>Prefer <code>size_t</code> for indexing vectors/arrays; avoid mixing signed and unsigned without care.</li>
+        </ul>
+        <pre class="mb-0">
+<code class="language-cpp">for (int r = 0; r &lt; rows; ++r) {
+    cout &lt;&lt; "r=" &lt;&lt; r &lt;&lt; " start\n";
+    for (int c = 0; c &lt; cols; ++c) {
+        cout &lt;&lt; "  c=" &lt;&lt; c &lt;&lt; "\n";
+    }
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->
+
+<div class="card">
+    <div class="card-header">Try It!</div>
+    <div class="card-body">
+        <ol>
+            <li>Print a left‑aligned triangle of height <code>n</code>.</li>
+            <li>Print a centered pyramid of height <code>n</code>.</li>
+            <li>Given <code>n</code>, print all coordinate pairs <code>(i, j)</code> with <code>0 ≤ i &lt; j &lt; n</code>.</li>
+            <li>Given a 2D vector <code>grid</code>, count how many elements are even.</li>
+        </ol>
+        <pre class="mb-0">
+<code class="language-cpp">// Count evens in a 2D vector
+int countEven(const vector<vector<int>>& grid) {
+    int cnt = 0;
+    for (size_t r = 0; r &lt; grid.size(); ++r) {
+        for (size_t c = 0; c &lt; grid[r].size(); ++c) {
+            if (grid[r][c] % 2 == 0) ++cnt;
+        }
+    }
+    return cnt;
+}
+</code>
+        </pre>
+    </div> <!-- card-body -->
+</div> <!-- card -->

@@ -148,11 +148,6 @@
             "type": "content",
             "source": "/content/04/module4.html"
           },
-          "scope": {
-            "title": "Variable Scope and Lifetime",
-            "type": "content",
-            "source": "/content/04/scope.html"
-          },
           "loops": {
             "title": "Loops and Iteration",
             "type": "content",
@@ -207,6 +202,12 @@
             "type": "content",
             "source": "/content/05/defining-functions.html"
           },
+          "scope": {
+            "title": "Variable Scope and Lifetime",
+            "type": "content",
+            "source": "/content/04/scope.html"
+          },
+
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "function-parameters": {
             "title": "Function Parameters and Return Values",
