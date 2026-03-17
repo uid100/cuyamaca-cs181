@@ -1,0 +1,87 @@
+<div class="container mt-4">
+
+    <!-- Card: Introduction to Function Overloading -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Function Overloading</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                In C++, <strong>function overloading</strong> allows multiple functions to have the
+                same name as long as they have <strong>different parameter lists</strong>.  
+                This makes functions easier to read and use because related tasks can share a name.
+            </p>
+
+            <p><strong>Examples of overloading:</strong></p>
+            <pre><code>int add(int a, int b) {
+    return a + b;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+int add(int a, int b, int c) {
+    return a + b + c;
+}</code></pre>
+
+            <p>
+                The compiler chooses which version to call based on the number and types of the
+                arguments. Overloading helps keep function names meaningful without inventing
+                variations like <code>addInts</code> or <code>addThree</code>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Caution About Default Parameters and Overloading -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Caution: Overloading and Default Parameters</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                Default parameters can sometimes cause confusion when combined with overloaded 
+                functions. The problem happens when two overloaded functions could both match
+                a call because of default values.
+            </p>
+
+            <p><strong>Example of a confusing situation:</strong></p>
+            <pre><code>void show(int x);
+void show(int x, int y = 0);</code></pre>
+
+            <p>
+                If you call:
+            </p>
+
+            <pre><code>show(5);</code></pre>
+
+            <p>
+                The compiler cannot tell which version to use:
+            </p>
+
+            <ul>
+                <li><code>show(int x)</code> → exact match</li>
+                <li><code>show(int x, int y = 0)</code> → also a match because <code>y</code> has a default</li>
+            </ul>
+
+            <p>
+                This creates an ambiguity error, which stops the program from compiling.
+            </p>
+
+            <h5 class="mt-4">How to Avoid These Problems</h5>
+            <ul>
+                <li>Do <strong>not</strong> overload a function in a way that only differs by a default parameter.</li>
+                <li>Use default parameters in <strong>one</strong> version of a function, not several.</li>
+                <li>Make sure each overloaded version clearly requires different arguments.</li>
+                <li>When teaching beginners, keep overloading simple: vary the <strong>number</strong> or
+                    <strong>types</strong> of parameters, not default values.</li>
+            </ul>
+
+            <p>
+                Used carefully, overloading and default parameters are powerful tools,
+                but mixing them without planning can lead to confusing or ambiguous code.
+            </p>
+        </div>
+    </div>
+
+</div>
