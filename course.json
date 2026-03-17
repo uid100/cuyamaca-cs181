@@ -227,11 +227,10 @@
             "type": "content",
             "source": "/content/05/reference-parameters.html"
           },
-          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
-          "function-parameters": {
-            "title": "Function Parameters and Return Values",
+          "overloading": {
+            "title": "Function Overloading",
             "type": "content",
-            "source": "/content/05/function-parameters.html"
+            "source": "/content/05/overloading.html"
           },
           "end": {
             "title": "End of Module 5",
@@ -267,6 +266,7 @@
             "type": "content",
             "source": "/content/06/classes-objects.html"
           },
+          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "end": {
             "title": "End of Module 06",
             "type": "content",
