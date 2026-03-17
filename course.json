@@ -163,6 +163,11 @@
             "type": "content",
             "source": "/content/04/nesting.html"
           },
+          "day-of-week": {
+            "title": "Using Nested Loops - Sample Code",
+            "type": "content",
+            "source": "/content/04/DayOfWeek.cpp"
+          },
           "whitespace": {
             "title": "Whitespace and Formatting",
             "type": "content",
