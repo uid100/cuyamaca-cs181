@@ -49,6 +49,60 @@
         </div>
     </div>
 
+    <!-- Card: Default Parameters -->
+<div class="card mb-3">
+    <div class="card-header">
+        <h4>Default Parameters</h4>
+    </div>
+    <div class="card-body">
+        <p>
+            In C++, a function can specify <strong>default parameters</strong>. These are values
+            the function will automatically use if the caller does not supply arguments for them.
+        </p>
+
+        <p>
+            Default parameters make functions more flexible and reduce the number of overloaded
+            versions needed for similar tasks.
+        </p>
+
+        <p><strong>Example:</strong></p>
+        <pre><code>void greet(string name = "Guest") {
+    cout << "Hello, " << name << "!";
+}</code></pre>
+
+        <p>
+            Calling the function with an argument:
+        </p>
+
+        <pre><code>greet("Alice");   // prints: Hello, Alice!</code></pre>
+
+        <p>
+            Calling the function <em>without</em> an argument uses the default:
+        </p>
+
+        <pre><code>greet();          // prints: Hello, Guest!</code></pre>
+
+        <p>
+            Default values must be placed in the <strong>function prototype</strong> or the
+            <strong>function declaration</strong> (not in both). The function definition should
+            repeat only the parameter list without the defaults.
+        </p>
+
+        <pre><code>// Prototype with default parameter
+void greet(string name = "Guest");
+
+// Definition (no default here)
+void greet(string name) {
+    cout << "Hello, " << name << "!";
+}</code></pre>
+
+        <p>
+            When used properly, default parameters can make function calls shorter,
+            clearer, and easier for beginners to use without sacrificing flexibility.
+        </p>
+    </div>
+</div>
+
     <!-- Card: Returning a Value and the Return Statement -->
     <div class="card mb-3">
         <div class="card-header">
