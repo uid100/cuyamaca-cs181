@@ -1,0 +1,133 @@
+<div class="container mt-4">
+
+    <!-- Card: Variable Scope and Lifetime -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Variable Scope and Lifetime</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                In C++, <strong>scope</strong> refers to where a variable can be accessed in a program.
+                <strong>Lifetime</strong> refers to how long that variable exists in memory.
+            </p>
+
+            <p>
+                Types of scope:
+                <ul>
+                    <li><strong>Local scope</strong> — variables declared inside a function or block; accessible only there.</li>
+                    <li><strong>Global scope</strong> — variables declared outside all functions; accessible throughout the file.</li>
+                </ul>
+            </p>
+
+            <p>
+                Local variables exist only while the function is running.  
+                Global variables exist for the entire duration of the program.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Passing Values as Parameters -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Passing Values as Parameters</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                Parameters allow us to send information into a function so it can work with different data.
+                Parameters behave like local variables inside the function.
+            </p>
+
+            <p>
+                In introductory C++, we focus on <strong>pass‑by‑value</strong>, where the function receives
+                a <em>copy</em> of each argument. Changing the parameter inside the function does not change
+                the original value in <code>main()</code>.
+            </p>
+
+            <pre><code>void showDouble(int x) {
+    cout &lt;&lt; x * 2;
+}</code></pre>
+        </div>
+    </div>
+
+    <!-- Card: Returning a Value and the Return Statement -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Returning a Value from a Function</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                When a function needs to send a result back to the place where it was called,
+                it uses a <strong>return statement</strong>. The returned value must match the
+                function’s <strong>return type</strong>.
+            </p>
+
+            <pre><code>int add(int a, int b) {
+    return a + b;   // sends the sum back to the caller
+}</code></pre>
+
+            <p>
+                A function stops running as soon as it reaches a <code>return</code> statement.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Local and Global Variables, and Using Global Constants -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Local and Global Variables</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                <strong>Local variables</strong> are declared inside a block or function and exist only while
+                that function or block is running.
+            </p>
+
+            <p>
+                <strong>Global variables</strong> are declared outside all functions. They exist for the entire
+                runtime of the program and are accessible everywhere in the file.
+            </p>
+
+            <p>
+                In good practice, global <strong>constants</strong> are preferred over global variables.  
+                Constants are safe because their values cannot be changed.
+            </p>
+
+            <pre><code>const double PI = 3.14159;  // global constant</code></pre>
+
+            <p>
+                Use global constants when multiple functions need to share the same fixed value.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Local Static Variables -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Local Static Variables</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                A local <strong>static</strong> variable is created inside a function but behaves differently
+                from a regular local variable.
+            </p>
+
+            <ul>
+                <li>It is created only once.</li>
+                <li>It keeps its value between function calls.</li>
+                <li>Its scope is still local to the function.</li>
+            </ul>
+
+            <pre><code>void counter() {
+    static int count = 0;  // initialized only once
+    count++;
+    cout &lt;&lt; count;
+}</code></pre>
+
+            <p>
+                Every time <code>counter()</code> is called, <code>count</code> continues increasing—
+                it does not reset. This is useful for tracking how many times a function has run.
+            </p>
+        </div>
+    </div>
+
+</div>
