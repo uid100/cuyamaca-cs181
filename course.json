@@ -217,7 +217,11 @@
             "type": "content",
             "source": "/content/04/scope.html"
           },
-
+          "tracing": {
+            "title": "Tracing Execution and Function Calls",
+            "type": "content",
+            "source": "/content/05/tracing.html"
+          },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "function-parameters": {
             "title": "Function Parameters and Return Values",
