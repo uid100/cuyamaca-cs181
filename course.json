@@ -222,6 +222,11 @@
             "type": "content",
             "source": "/content/05/tracing.html"
           },
+          "reference-parameters": {
+            "title": "Reference Parameters",
+            "type": "content",
+            "source": "/content/05/reference-parameters.html"
+          },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "function-parameters": {
             "title": "Function Parameters and Return Values",
