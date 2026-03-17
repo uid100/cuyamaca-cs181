@@ -215,7 +215,7 @@
           "scope": {
             "title": "Variable Scope and Lifetime",
             "type": "content",
-            "source": "/content/04/scope.html"
+            "source": "/content/05/scope.html"
           },
           "tracing": {
             "title": "Tracing Execution and Function Calls",
