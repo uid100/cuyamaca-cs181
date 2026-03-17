@@ -207,10 +207,10 @@
             "type": "content",
             "source": "/content/05/module5.html"
           },
-          "defining-functions": {
+          "functions": {
             "title": "Defining and Calling Functions",
             "type": "content",
-            "source": "/content/05/defining-functions.html"
+            "source": "/content/05/functions.html"
           },
           "scope": {
             "title": "Variable Scope and Lifetime",
