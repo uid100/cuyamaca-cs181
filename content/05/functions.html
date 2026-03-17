@@ -1,0 +1,125 @@
+<div class="container mt-4">
+
+    <!-- Card: Introduction to Modular Code -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Introduction to Modular Code</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                Modular code means breaking a program into smaller, reusable, and well‑defined pieces.
+                In C++, these pieces are usually <strong>functions</strong>. Each function handles one task,
+                which helps make programs easier to read, test, and maintain.
+            </p>
+            <p>
+                <strong>Why modular code?</strong>
+                <ul>
+                    <li>Improves readability by organizing code into meaningful parts</li>
+                    <li>Makes debugging easier—problems are isolated in smaller sections</li>
+                    <li>Allows reusability across multiple programs</li>
+                    <li>Encourages team collaboration by dividing tasks into logical units</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Return Types -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Understanding Return Types</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                Every C++ function has a <strong>return type</strong>, which tells the program what kind of
+                value the function will give back when it finishes running.
+            </p>
+            <p>
+                Examples:
+                <ul>
+                    <li><code>int</code> – returns an integer</li>
+                    <li><code>double</code> – returns a decimal value</li>
+                    <li><code>bool</code> – returns true or false</li>
+                    <li><code>void</code> – returns nothing</li>
+                </ul>
+            </p>
+            <p>
+                The return type appears at the very beginning of a function declaration or definition.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Parameters -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Understanding Parameters</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                Parameters are values that a function needs in order to do its job.
+                They act as variables inside the function and are supplied when the function is called.
+            </p>
+            <p>
+                Examples:
+                <ul>
+                    <li><code>int add(int a, int b)</code> – requires two integers</li>
+                    <li><code>void printMessage(string msg)</code> – takes a string to display</li>
+                </ul>
+            </p>
+            <p>
+                Parameters make functions flexible and reusable with different inputs.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Defining and Calling Functions -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Defining and Calling Functions</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                A <strong>function definition</strong> is where the function’s code actually lives.
+                It includes the return type, the function name, parameters, and the statements that run.
+            </p>
+            <pre><code>int add(int a, int b) {
+    return a + b;
+}</code></pre>
+
+            <p>
+                A <strong>function call</strong> is how you use the function elsewhere in your program.
+            </p>
+            <pre><code>int result = add(3, 4);</code></pre>
+
+            <p>
+                The call supplies values (arguments) that match the function's parameters.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Function Prototypes -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>Using Function Prototypes</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                A function prototype is a declaration placed <strong>before main()</strong> that tells the
+                compiler a function exists and what its return type and parameter types are.
+            </p>
+
+            <p>Example prototype with parameter names:</p>
+            <pre><code>int add(int a, int b);</code></pre>
+
+            <p>Parameter names in prototypes are <strong>optional</strong>, but including them helps
+            readability:</p>
+            <pre><code>int add(int, int);     // also valid, less readable</code></pre>
+
+            <p>
+                Technically, prototypes can be optional if the function is defined before it is used.
+                However, in this course we will <strong>always use prototypes</strong> for clarity and
+                best practice.
+            </p>
+        </div>
+    </div>
+
+</div>
