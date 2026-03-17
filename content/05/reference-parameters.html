@@ -1,0 +1,138 @@
+<div class="container mt-4">
+
+    <!-- Card: Introduction to Reference Parameters -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Reference Parameters</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                In C++, a <strong>reference parameter</strong> allows a function to work directly with
+                the original variable that was passed in, instead of a copy.  
+                This means the function can <strong>change the caller’s variable</strong>.
+            </p>
+
+            <p>
+                With regular parameters (pass‑by‑value), the function receives a <em>copy</em> of the argument,
+                so any changes remain only inside the function. Reference parameters fix this by using the
+                <strong>&amp; symbol</strong> in the parameter list.
+            </p>
+
+            <p><strong>Why use reference parameters?</strong></p>
+            <ul>
+                <li>To allow a function to modify a variable in the caller</li>
+                <li>To avoid making copies of large objects (more efficient)</li>
+                <li>To return multiple results through parameters</li>
+            </ul>
+
+            <p>
+                A reference parameter acts like an <strong>alias</strong> — a second name for the same variable.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: Sample Demo Code Using Reference Parameters -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>Demo Code: Reference Parameters in Action</h4>
+        </div>
+        <div class="card-body">
+            <p>
+                In this example, the function <code>triple()</code> receives a reference parameter.
+                Because of that, the function can change the actual variable from <code>main()</code>.
+            </p>
+
+            <pre><code>
+ 1 | #include &lt;iostream&gt;
+ 2 | using namespace std;
+ 3 |
+ 4 | void triple(int &amp;num);   // reference parameter
+ 5 |
+ 6 | int main() {
+ 7 |     int value = 10;
+ 8 |     cout &lt;&lt; "Before: " &lt;&lt; value &lt;&lt; endl;
+ 9 |
+10 |     triple(value);        // passes the original variable
+11 |
+12 |     cout &lt;&lt; "After:  " &lt;&lt; value &lt;&lt; endl;
+13 |     return 0;
+14 | }
+15 |
+16 | void triple(int &amp;num) {
+17 |     num = num * 3;        // modifies the original variable
+18 | }
+            </code></pre>
+
+            <p><strong>Tracing what happens:</strong></p>
+            <ul>
+                <li>Line 7: <code>value</code> is created and set to 10</li>
+                <li>Line 10: <code>triple(value)</code> sends <strong>the actual variable</strong></li>
+                <li>Line 17: <code>num</code> refers to <code>value</code>, so changing <code>num</code> changes <code>value</code></li>
+                <li>Line 12: <code>value</code> now contains <strong>30</strong></li>
+            </ul>
+
+            <p>
+                Because the parameter in <code>triple()</code> is a reference, the function
+                does not work with a copy — it works with the real variable.
+            </p>
+        </div>
+    </div>
+
+    <!-- Card: When to Use Pass‑by‑Value vs. Pass‑by‑Reference -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h4>When to Use Pass‑by‑Value vs. Pass‑by‑Reference</h4>
+        </div>
+        <div class="card-body">
+
+            <p>
+                In C++, choosing between <strong>pass‑by‑value</strong> and 
+                <strong>pass‑by‑reference</strong> depends on what you want the function to do
+                and how much data you are working with. Here is a simple guide for beginners:
+            </p>
+
+            <h5 class="mt-3">Use <span class="text-primary">Pass‑by‑Value</span> when:</h5>
+            <ul>
+                <li>You do <strong>not</strong> want the function to change the original variable.</li>
+                <li>You only need a <strong>copy</strong> of the data to work with.</li>
+                <li>You are passing <strong>small</strong> and inexpensive types, such as:
+                    <code>int</code>, <code>double</code>, <code>char</code>, or <code>bool</code>.
+                </li>
+                <li>Safety and clarity matter more than micro‑efficiency.</li>
+            </ul>
+
+            <p>Example:</p>
+            <pre><code>void showSquare(int x) {   // value is copied
+        cout << x * x;
+    }</code></pre>
+
+            <h5 class="mt-4">Use <span class="text-success">Pass‑by‑Reference</span> when:</h5>
+            <ul>
+                <li>You want the function to <strong>modify</strong> the caller’s variable.</li>
+                <li>You are passing a <strong>large object</strong> (string, vector, struct, class)
+                    and want to avoid copying it.</li>
+                <li>You need to return <strong>multiple values</strong> through parameters.</li>
+            </ul>
+
+            <p>Example:</p>
+            <pre><code>void increase(int &value) {   // original value is modified
+        value++;
+    }</code></pre>
+
+            <h5 class="mt-4">A Helpful Rule of Thumb</h5>
+            <ul>
+                <li>If the function <strong>should not change</strong> the argument → use <strong>value</strong>.</li>
+                <li>If the function <strong>must change</strong> the argument → use <strong>reference</strong>.</li>
+                <li>If the data is <strong>large</strong> and copying is wasteful → use 
+                    <strong>reference</strong> or <strong>const reference</strong>.
+                </li>
+            </ul>
+
+            <p>
+                For beginners, thinking about “copy vs. original” is usually the clearest way
+                to choose the correct parameter type.
+            </p>
+
+        </div>
+    </div>
+</div>
