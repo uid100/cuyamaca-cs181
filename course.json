@@ -207,11 +207,6 @@
             "type": "content",
             "source": "/content/05/module5.html"
           },
-          "modular": {
-            "title": "Using Modular Code",
-            "type": "content",
-            "source": "/content/05/modular.html"
-          },
           "functions": {
             "title": "Defining and Calling Functions",
             "type": "content",
