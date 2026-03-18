@@ -1,9 +1,8 @@
 [
-  { "title": "Lab #4 - Looping and Iteration", "file": "0-lab.html" },
-  { "title": "Ex.1: That's Odd", "file": "1-odd.html" },
-  { "title": "Ex.2: Getting Even", "file": "2-even.html" },
-  { "title": "Ex.3: Number Guessing Game", "file": "3-guess.html" },
-  { "title": "Ex.4: Password Retry", "file": "4-password.html" },
-  { "title": "Ex.5: Multiplication Table", "file": "5-multiplication.html" },
+  { "title": "Lab #5 - Writing Modular Code", "file": "0-lab.html" },
+  { "title": "Ex.1: Execution Trace", "file": "1-trace.html" },
+  { "title": "Ex.2: Custom Functions", "file": "2-functions.html" },
+  { "title": "Ex.3: HiThere", "file": "3-greeting.html" },
+  { "title": "Ex.4: Overloading Functions", "file": "4-overloading.html" },
   { "title": "Submit", "file": "9-submit.html" }
 ]
