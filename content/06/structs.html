@@ -1,0 +1,181 @@
+<!-- Introduction Card -->
+<div class="card mb-4">
+    <div class="card-header">Structs: Introduction</div>
+  <div class="card-body">
+    <h2 class="card-title">Introducing Structs in C++</h2>
+    <p class="card-text">
+      As C++ programs grow, we often need to group related pieces of data together.
+      One of the simplest tools for doing this is the <strong>struct</strong>.
+      Structs allow you to combine multiple variables into a single, meaningful unit.
+    </p>
+    <p class="card-text">
+      This page introduces structs, shows how to use them with examples,
+      and explains how they compare to classes.
+    </p>
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">What Is a Struct?</h3>
+    <p class="card-text">
+      A <strong>struct</strong> (short for <em>structure</em>) is a user-defined data type
+      that groups variables of different types under a single name.
+    </p>
+    <p class="card-text">
+      Each variable inside a struct is called a <strong>member</strong>.
+      Structs are commonly used to represent objects that are mainly collections of data.
+    </p>
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">Basic Struct Example</h3>
+<pre class="bg-light p-3 border rounded"><code>
+struct Student
+{
+    int id;
+    std::string name;
+    double gpa;
+};
+</code></pre>
+    <p class="card-text">
+      This struct defines a new type called <code>Student</code> that groups together an
+      ID number, a name, and a GPA.
+    </p>
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">Creating and Using Struct Variables</h3>
+<pre class="bg-light p-3 border rounded"><code>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+int main()
+{
+    Student s1;
+    s1.id = 12345;
+    s1.name = "Alex Kim";
+    s1.gpa = 3.75;
+
+    std::cout &lt;&lt; s1.name &lt;&lt; " has GPA " &lt;&lt; s1.gpa &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+    <p class="card-text">
+      You access struct members using the dot (<code>.</code>) operator.
+      Each variable behaves like a normal variable, but is grouped inside the struct.
+    </p>
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">Structs and Functions</h3>
+    <p class="card-text">
+      Structs can be passed to functions, just like any other data type.
+    </p>
+<pre class="bg-light p-3 border rounded"><code>
+void printStudent(const Student& s)
+{
+    std::cout &lt;&lt; s.id &lt;&lt; " - " &lt;&lt; s.name &lt;&lt; std::endl;
+}
+</code></pre>
+    <p class="card-text">
+      Passing by reference avoids copying and keeps the function efficient.
+    </p>
+  </div>
+</div>
+
+<!-- Structs vs Classes Card -->
+<div class="card mb-4">
+    <div class="card-header">Structs vs. Classes</div>
+  <div class="card-body">
+    <h3 class="card-title">But which one to use?</h3>
+    <p class="card-text">
+      Structs and classes in C++ are very similar. In fact, they support the same features,
+      including constructors, methods, and access control.
+      The key differences are <strong>default access</strong> and <strong>typical usage</strong>.
+    </p>
+
+    <ul>
+      <li><strong>Structs</strong>
+        <ul>
+          <li>Members are <strong>public by default</strong></li>
+          <li>Primarily used to group data</li>
+          <li>Often have little or no behavior</li>
+        </ul>
+      </li>
+      <li><strong>Classes</strong>
+        <ul>
+          <li>Members are <strong>private by default</strong></li>
+          <li>Used to model objects with behavior</li>
+          <li>Encapsulate data and enforce rules</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Struct with Methods Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Structs Can Have Functions Too</h3>
+    <p class="card-text">
+      Even though structs are often simple, they can include member functions.
+    </p>
+<pre class="bg-light p-3 border rounded"><code>
+struct Point
+{
+    double x;
+    double y;
+
+    double distanceFromOrigin() const
+    {
+        return std::sqrt(x * x + y * y);
+    }
+};
+</code></pre>
+    <p class="card-text">
+      This looks very similar to a class—because underneath, it essentially is.
+    </p>
+  </div>
+</div>
+
+<!-- When to Use Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">When to Use a Struct</h3>
+    <ul>
+      <li>When the type mainly stores data</li>
+      <li>When all members should be public</li>
+      <li>When modeling simple records or values</li>
+      <li>When learning or prototyping simple designs</li>
+    </ul>
+    <p class="card-text">
+      Examples include coordinates, configuration data, or simple records read from a file.
+    </p>
+  </div>
+</div>
+
+<!-- When to Use Class Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">When to Use a Class</h3>
+    <ul>
+      <li>When data must be protected or controlled</li>
+      <li>When enforcing rules or invariants</li>
+      <li>When modeling real-world objects with behavior</li>
+      <li>When designing large or reusable systems</li>
+    </ul>
+    <p class="card-text">
+      As your programs grow more complex, classes become the more appropriate choice.
+    </p>
+  </div>
+</div>
+
+<!-- Key Takeaway Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Key Takeaway</h3>
+    <p class="card-text">
+      Structs are a powerful and simple way to bundle related data together.
+      While structs and classes are technically very similar in C++, they serve different design purposes.
+      Understanding when to use each is an important step toward writing clean, professional C++ code.
+    </p>
+  </div>
+</div>
