@@ -276,6 +276,11 @@
             "type": "content",
             "source": "/content/06/files.html"
           },
+          "structs": {
+            "title": "Structs vs. Classes",
+            "type": "content",
+            "source": "/content/06/structs.html"
+          },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "end": {
             "title": "End of Module 06",
