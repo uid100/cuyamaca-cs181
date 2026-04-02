@@ -24,8 +24,9 @@
     </div> <!-- card -->
 
     <div class="card mb-4 shadow-sm">
-        <div class="card-header"> Abstract Data Types (ADTs) </div>
+        <div class="card-header">  </div>
         <div class="card-body">
+            <h3>Abstract Data Types (ADTs)</h3>
             <p class="card-text">An <strong>Abstract Data Type (ADT)</strong> is a data type 
                 whose behavior is defined by a set of values and a set of operations. It is a 
                 theoretical model that specifies:</p>
@@ -36,25 +37,61 @@
             <p class="text-muted small"><em>Note: An ADT tells you what operations are available, 
                 but not how they are coded. In C++, we use <strong>Classes</strong> to implement 
                 ADTs.</em></p>
-        </div> <!-- card-body -->
-    </div> <!-- card -->
+            <hr>
+            <h3>Classes and Objects</h3>
+            <p>
+                In C++, a <strong>Class</strong> is a blueprint or template for creating objects. 
+                An <strong>Object</strong> is a specific instance of that class.</p>
 
-    <div class="card mb-4 shadow-sm">
-        <div class="card-header"> Classes and Objects </div>
-        <div class="card-body">
-            <p>In C++, a <strong>Class</strong> is a blueprint or template for creating objects. An <strong>Object</strong> is a specific instance of that class.</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <h6>Attributes (Data)</h6>
-                    <p>Variables that hold the state of the object (e.g., <code>color</code>, <code>speed</code>).</p>
-                </div>
-                <div class="col-md-6">
-                    <h6>Methods (Functions)</h6>
-                    <p>Functions that define the behavior of the object (e.g., <code>accelerate()</code>, <code>brake()</code>).</p>
-                </div>
-            </div>
-        </div>
-    </div>
+            <h4>Attributes (Data)</h4>
+            <p>Variables that hold the state of the object (e.g., <code>color</code>, 
+                <code>speed</code>).</p>
+            <h4>Methods (Functions)</h4>
+            <p>Functions that define the behavior of the object (e.g., <code>accelerate()</code>, 
+                <code>brake()</code>).</p>
+            <h4>Example: An Animal Class</h4>
+            <p>
+                <pre class="bg-light p-3 border rounded"><code>    class Animal {
+                    public:
+                        string name;
+                        int age;
+                        double weight;
+
+                        // Constructor
+                        Animal(string n, int a, double w) {
+                            name = n;
+                            age = a;
+                            weight = w;
+                        }
+
+                        void speak() { // Method
+                            cout << "Hello, I am an animal!" << endl;
+                        }
+
+                        void printInfo() { // Method
+                            cout << "Name: " << name << ", Age: " << age 
+                                 << ", Weight: " << weight << " pounds" << endl;
+                        }
+                    };</code></pre>
+            </p>
+            <h4>Creating the Object(s)</h4>
+            <p>
+                <pre class="bg-light p-3 border rounded"><code>    int main() {
+        // Create an object of the Animal class
+        Animal myPet("Buddy", 5, 30.5);
+        myPet.speak(); // Call the speak method
+        myPet.printInfo(); // Call the printInfo method
+        return 0;
+    }</code></pre>
+            </p>
+
+            <h4 class="border fst-italic">Objects are instances of a class</h4>
+            <img 
+                src="https://uid100.github.io/edu-core/images/animal_objects.png" 
+                alt="Diagram of an Animal class with various object instances including giraffe, deer, dog, bird, elephant, and lion." 
+                class="img-fluid mt-3">
+        </div> <!-- card-body -->        
+    </div> <!-- card -->
 
     <div class="card mb-4 shadow-sm">
         <div class="card-header"> Access Specifiers: Public vs. Private </div>
