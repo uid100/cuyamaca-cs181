@@ -1,0 +1,128 @@
+<div class="container mt-4">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header"> Understanding Abstraction </div>
+        <div class="card-body">
+            <p class="card-text">
+                <strong>Abstraction</strong> is the process of hiding complex implementation 
+                details and showing only the necessary features of an object. It allows 
+                programmers to focus on <em>what</em> an object does rather than <em>how</em> 
+                it does it.
+            </p>
+            <hr>
+            <h5>Real-World Examples:</h5>
+            <ul>
+                <li>
+                    <strong>A Microwave:</strong> 
+                    You know how to set the timer and press "Start" (the interface), but you 
+                    don't need to understand how the magnetron generates radio waves to heat 
+                    your food.</li>
+                <li>
+                    <strong>A Car:</strong> 
+                    You use the steering wheel and pedals to drive without needing to know the 
+                    thermodynamics of the internal combustion engine.</li>
+            </ul>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header"> Abstract Data Types (ADTs) </div>
+        <div class="card-body">
+            <p class="card-text">An <strong>Abstract Data Type (ADT)</strong> is a data type 
+                whose behavior is defined by a set of values and a set of operations. It is a 
+                theoretical model that specifies:</p>
+            <ol>
+                <li>The <strong>data</strong> being stored.</li>
+                <li>The <strong>operations</strong> that can be performed on that data.</li>
+            </ol>
+            <p class="text-muted small"><em>Note: An ADT tells you what operations are available, 
+                but not how they are coded. In C++, we use <strong>Classes</strong> to implement 
+                ADTs.</em></p>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h2 class="h5 mb-0">Classes and Objects</h2>
+        </div>
+        <div class="card-body">
+            <p>In C++, a <strong>Class</strong> is a blueprint or template for creating objects. An <strong>Object</strong> is a specific instance of that class.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Attributes (Data)</h6>
+                    <p>Variables that hold the state of the object (e.g., <code>color</code>, <code>speed</code>).</p>
+                </div>
+                <div class="col-md-6">
+                    <h6>Methods (Functions)</h6>
+                    <p>Functions that define the behavior of the object (e.g., <code>accelerate()</code>, <code>brake()</code>).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-warning">
+            <h2 class="h5 mb-0">Access Specifiers: Public vs. Private</h2>
+        </div>
+        <div class="card-body">
+            <p>Access specifiers define how the members (attributes and methods) of a class can be accessed.</p>
+            <ul>
+                <li><strong>Private:</strong> Members can only be accessed by code inside the class. This is used for "Data Hiding."</li>
+                <li><strong>Public:</strong> Members can be accessed from outside the class using the object.</li>
+            </ul>
+            <pre class="bg-light p-3 border rounded"><code>class BankAccount {
+        private:
+            double balance; // Cannot be accessed directly from main()
+
+        public:
+            void deposit(double amount) { // Can be called from main()
+            balance += amount;
+        }
+    };</code></pre>
+        </div>  <!-- card-body -->
+    </div> <!-- card -->
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h2 class="h5 mb-0">Accessors and Mutators</h2>
+        </div>
+        <div class="card-body">
+            <p>
+                Since we typically keep data <strong>private</strong>, we use special public 
+                functions to interact with it:</p>
+            <div class="list-group">
+                <div class="list-group-item">
+                    <strong>Accessors (Getters):</strong> Functions that "get" or retrieve a 
+                    value but do not change it. Usually marked as <code>const</code>.
+                </div>
+                <div class="list-group-item">
+                    <strong>Mutators (Setters):</strong> Functions that "set" or modify the 
+                    value of a private attribute, often including validation logic.
+                </div>
+            </div>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h2 class="h5 mb-0">Constructors</h2>
+        </div>
+        <div class="card-body">
+            <p>A <strong>Constructor</strong> is a special member function that is automatically called when an object is created. It is primarily used to initialize the object's attributes.</p>
+            <ul>
+                <li>It has the <strong>same name</strong> as the class.</li>
+                <li>It has <strong>no return type</strong> (not even <code>void</code>).</li>
+            </ul>
+            <pre class="bg-light p-3 border rounded"><code>class Rectangle {
+                public:
+                    // Constructor
+                    Rectangle() {
+                        width = 1.0;
+                        height = 1.0;
+                    }
+                private:
+                    double width, height;
+            };</code></pre>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+
+</div> <!-- container -->
