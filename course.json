@@ -272,7 +272,7 @@
             "source": "/content/06/classes.html"
           },
           "files": {
-            "title": "Separating Class Definitions and Implementations into Header and Source Files",
+            "title": "Classes: File Structure",
             "type": "content",
             "source": "/content/06/files.html"
           },
