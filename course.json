@@ -271,6 +271,11 @@
             "type": "content",
             "source": "/content/06/classes.html"
           },
+          "files": {
+            "title": "Separating Class Definitions and Implementations into Header and Source Files",
+            "type": "content",
+            "source": "/content/06/files.html"
+          },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "end": {
             "title": "End of Module 06",
