@@ -1,0 +1,219 @@
+<!-- Introduction Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">From One File to Many: Organizing C++ Programs</h2>
+    <p class="card-text">
+      Up to this point in the course, all of your C++ programs have lived in a single <code>.cpp</code> file.
+      This works well for small programs and learning syntax, but it does not scale.
+      Real-world C++ programs are split across multiple files, each with a clear responsibility.
+    </p>
+    <p class="card-text">
+      This page introduces <strong>separation of concerns</strong> in C++:
+      <ul>
+        <li><strong>Class specification</strong> (header files)</li>
+        <li><strong>Class implementation</strong> (implementation files)</li>
+        <li><strong>Client code</strong> (<code>main()</code>)</li>
+      </ul>
+      This structure is not optional in professional code—it is a core C++ practice.
+    </p>
+  </div>
+</div>
+
+<!-- Concept Overview Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Why Separate Files?</h3>
+    <p class="card-text">
+      Separating a program into multiple files provides several benefits:
+    </p>
+    <ul>
+      <li>Improves readability and organization</li>
+      <li>Makes code easier to test and maintain</li>
+      <li>Supports reuse of classes in multiple programs</li>
+      <li>Allows multiple programmers to work on the same project</li>
+    </ul>
+    <p class="card-text">
+      Each file has a specific role, and understanding these roles is essential to writing correct
+      and maintainable C++ code.
+    </p>
+  </div>
+</div>
+
+<!-- Header File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">1. Class Specification: Header Files (<code>.h</code>)</h3>
+    <p class="card-text">
+      A <strong>header file</strong> describes what a class <em>is</em> and what it <em>can do</em>,
+      but not how it does it.
+    </p>
+    <p class="card-text">
+      Header files typically contain:
+    </p>
+    <ul>
+      <li>Class declarations</li>
+      <li>Public method prototypes</li>
+      <li>Private data members</li>
+      <li>Include guards</li>
+    </ul>
+
+<pre><code>
+// Rectangle.h
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
+
+class Rectangle
+{
+public:
+    Rectangle(double width, double height);
+    double getArea() const;
+
+private:
+    double width;
+    double height;
+};
+
+#endif
+</code></pre>
+
+    <p class="card-text">
+      Notice that function <strong>bodies</strong> are not included here—only their declarations.
+    </p>
+  </div>
+</div>
+
+<!-- Implementation File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">2. Class Implementation: Implementation Files (<code>.cpp</code>)</h3>
+    <p class="card-text">
+      The implementation file defines <em>how</em> the class works.
+      This file contains the full function definitions for the methods declared in the header.
+    </p>
+
+<pre><code>
+// Rectangle.cpp
+#include "Rectangle.h"
+
+Rectangle::Rectangle(double w, double h)
+{
+    width = w;
+    height = h;
+}
+
+double Rectangle::getArea() const
+{
+    return width * height;
+}
+</code></pre>
+
+    <p class="card-text">
+      Key points:
+      <ul>
+        <li>The header is included using quotes, not angle brackets</li>
+        <li>Each method name is prefixed with <code>ClassName::</code></li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<!-- Client Code Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">3. Client Code: <code>main()</code></h3>
+    <p class="card-text">
+      The <strong>client</strong> is the code that uses the class.
+      In most beginner programs, this means the file containing <code>main()</code>.
+    </p>
+
+<pre><code>
+// main.cpp
+#include &lt;iostream&gt;
+#include "Rectangle.h"
+
+int main()
+{
+    Rectangle box(5.0, 3.0);
+    std::cout &lt;&lt; "Area: " &lt;&lt; box.getArea() &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+    <p class="card-text">
+      The client code:
+      <ul>
+        <li>Includes the header file</li>
+        <li>Uses the class without knowing its implementation details</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<!-- File Naming Best Practices Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">File Naming Best Practices</h3>
+    <ul>
+      <li>Use the same base name for related files:
+        <ul>
+          <li><code>Rectangle.h</code></li>
+          <li><code>Rectangle.cpp</code></li>
+        </ul>
+      </li>
+      <li>Match class names exactly, including capitalization</li>
+      <li>Use <code>.h</code> for headers and <code>.cpp</code> for implementations</li>
+      <li>Place <code>main()</code> in a file named <code>main.cpp</code></li>
+    </ul>
+    <p class="card-text">
+      Consistent naming reduces confusion and compiler errors, especially as projects grow.
+    </p>
+  </div>
+</div>
+
+<!-- Mandatory File Header Content Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Mandatory File Header Comments</h3>
+    <p class="card-text">
+      All files in this course must begin with a standardized header comment.
+      This is not optional—it ensures clarity, ownership, and consistency.
+    </p>
+    <p class="card-text">
+      Your required file header format includes:
+    </p>
+    <ul>
+      <li>Your name</li>
+      <li>Course and section</li>
+      <li>Assignment name or number</li>
+      <li>File name</li>
+      <li>Brief description of the file’s purpose</li>
+      <li>Date (as required by the course standard)</li>
+    </ul>
+
+<pre><code>
+// Name: Your Name
+// Course: C++ Programming
+// Assignment: Project 4
+// File: Rectangle.h
+// Description: Class specification for Rectangle objects
+// Date: YYYY-MM-DD
+</code></pre>
+
+    <p class="card-text">
+      These comments help instructors, teammates, and your future self quickly understand the role
+      of each file.
+    </p>
+  </div>
+</div>
+
+<!-- Closing Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Key Takeaway</h3>
+    <p class="card-text">
+      Moving from a single-file program to a multi-file structure is a major milestone in learning C++.
+      By separating specification, implementation, and client code, you write programs that are clearer,
+      safer, and closer to professional standards.
+    </p>
+  </div>
+</div>
