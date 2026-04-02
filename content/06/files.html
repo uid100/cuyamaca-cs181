@@ -64,13 +64,13 @@
 
         class Rectangle
         {
-        public:
-        Rectangle(double width, double height);
-        double getArea() const;
+            public:
+                Rectangle(double width, double height);
+                double getArea() const;
 
-        private:
-        double width;
-        double height;
+            private:
+                double width;
+                double height;
         };
 
         #endif
@@ -146,9 +146,9 @@
 
         int main()
         {
-        Rectangle box(5.0, 3.0);
-        std::cout &lt;&lt; "Area: " &lt;&lt; box.getArea() &lt;&lt; std::endl;
-        return 0;
+            Rectangle box(5.0, 3.0);
+            std::cout &lt;&lt; "Area: " &lt;&lt; box.getArea() &lt;&lt; std::endl;
+            return 0;
         }
         </code></pre>
 
@@ -164,44 +164,46 @@
 
 <!-- File Naming Best Practices Card -->
 <div class="card mb-4">
-  <div class="card-body">
-    <h3 class="card-title">File Naming Best Practices</h3>
-    <ul>
-      <li>Use the same base name for related files:
+    <div class="card-header">File Names</div>
+    <div class="card-body">
+        <h3 class="card-title">File Naming Best Practices</h3>
         <ul>
-          <li><code>Rectangle.h</code></li>
-          <li><code>Rectangle.cpp</code></li>
+            <li>Use the same base name for related files:
+            <ul>
+                <li><code>Rectangle.h</code></li>
+                <li><code>Rectangle.cpp</code></li>
+            </ul>
+            </li>
+            <li>Match class names exactly, including capitalization</li>
+            <li>Use <code>.h</code> for headers and <code>.cpp</code> for implementations</li>
+            <li>Place <code>main()</code> in a file named <code>main.cpp</code></li>
         </ul>
-      </li>
-      <li>Match class names exactly, including capitalization</li>
-      <li>Use <code>.h</code> for headers and <code>.cpp</code> for implementations</li>
-      <li>Place <code>main()</code> in a file named <code>main.cpp</code></li>
-    </ul>
-    <p class="card-text">
-      Consistent naming reduces confusion and compiler errors, especially as projects grow.
-    </p>
-  </div>
+        <p class="card-text">
+            Consistent naming reduces confusion and compiler errors, especially as projects grow.
+        </p>
+    </div>
 </div>
 
 <!-- Mandatory File Header Content Card -->
 <div class="card mb-4">
-  <div class="card-body">
-    <h3 class="card-title">Mandatory File Header Comments</h3>
-    <p class="card-text">
-      All files in this course must begin with a standardized header comment.
-      This is not optional—it ensures clarity, ownership, and consistency.
-    </p>
-    <p class="card-text">
-      Your required file header format includes:
-    </p>
-    <ul>
-      <li>Your name</li>
-      <li>Course and section</li>
-      <li>Assignment name or number</li>
-      <li>File name</li>
-      <li>Brief description of the file’s purpose</li>
-      <li>Date (as required by the course standard)</li>
-    </ul>
+    <div class="card-header">File Headers</div>
+    <div class="card-body">
+        <p class="card-text" style="font-style: italic;">
+            Don't confuse File Header with Class Header Files.
+        </p>
+        <p class="card-text">
+            A <strong>file header</strong> is a standardized comment block at the top of each source file.
+            It provides essential information about the file's purpose, authorship, and other metadata.
+        </p>
+        <h3 class="card-title">Mandatory File Header Comments</h3>
+        <p class="card-text">
+            All files in this course must begin with a standardized header comment.
+            This is not optional—it ensures clarity, ownership, and consistency.
+        </p>
+        <p class="card-text">
+            The file header requirements were discussed in <strong>Module 1</strong>. Instead of repeating 
+            the details here, please refer back to that module for the specific content and format required.
+        </p>
 
 <pre class="bg-light p-3 border rounded"><code>
 // Name: Your Name
@@ -227,6 +229,10 @@
       Moving from a single-file program to a multi-file structure is a major milestone in learning C++.
       By separating specification, implementation, and client code, you write programs that are clearer,
       safer, and closer to professional standards.
+    </p>
+    <p class="card-text">
+        Keep your files in the same directory for now. Later, you'll learn about organizing files into
+        folders and using build systems to manage larger projects.
     </p>
   </div>
 </div>
