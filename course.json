@@ -287,6 +287,11 @@
             "type": "content",
             "source": "/content/end-module.html"
           }
+        },
+        "lab": {
+          "title": "Lab #6 - Classes and Objects",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/06/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/06/lab/"
         }
       },
       "07": { "title": "Arrays",
