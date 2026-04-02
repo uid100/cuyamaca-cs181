@@ -266,10 +266,10 @@
             "type": "content",
             "source": "/content/06/module6.html"
           },
-          "classes-objects": {
+          "classes": {
             "title": "Classes and Objects",
             "type": "content",
-            "source": "/content/06/classes-objects.html"
+            "source": "/content/06/classes.html"
           },
           "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
           "end": {
