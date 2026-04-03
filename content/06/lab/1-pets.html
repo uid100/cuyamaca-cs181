@@ -1,6 +1,6 @@
 <!-- Overview Card -->
 <div class="card mb-4">
-  <div class="card-body">
+  <div class="card-body"> 
     <h2 class="card-title">Guided Exercise: Building a Pet Class</h2>
     <p class="card-text">
       In this lab, you will practice creating a simple custom C++ class using
@@ -25,7 +25,7 @@
     <ul>
       <li><code>Pet.h</code> &mdash; class specification (header)</li>
       <li><code>Pet.cpp</code> &mdash; class implementation</li>
-      <li><code>main.cpp</code> &mdash; application (driver)</li>
+      <li><code>PetsDemo.cpp</code> &mdash; application (driver)</li>
     </ul>
     <p class="card-text">
       <strong>Important:</strong> Each file must begin with the
@@ -47,7 +47,7 @@
       Your header file should include:
     </p>
     <ul>
-      <li>Include guards</li>
+      <li><strong>Include guards</strong> - Prevent multiple inclusions of the header file</li>
       <li>The <code>Pet</code> class declaration</li>
       <li>Private data members for:
         <ul>
@@ -88,7 +88,7 @@
           in a readable format</li>
     </ul>
     <p class="card-text">
-      Again, <strong>do not hard‑code specific pet values</strong>.
+      Again, <strong>do not hard-code specific pet values</strong>.
       The implementation must work with any data passed in from the program.
     </p>
   </div>
@@ -97,9 +97,9 @@
 <!-- Step 3 Driver File Card -->
 <div class="card mb-4">
   <div class="card-body">
-    <h3 class="card-title">Step 3: Write the Driver Program (<code>main.cpp</code>)</h3>
+    <h3 class="card-title">Step 3: Write the Driver Program (<code>PetsDemo.cpp</code>)</h3>
     <p class="card-text">
-      The <code>main.cpp</code> file is the <strong>client</strong> of your class.
+      The <code>PetsDemo.cpp</code> file is the <strong>client</strong> of your class.
       This is the only place where sample data should appear.
     </p>
     <p class="card-text">
@@ -107,11 +107,11 @@
     </p>
     <ul>
       <li>Include <code>&lt;iostream&gt;</code> and <code>"Pet.h"</code></li>
-      <li>Create at least two <code>Pet</code> objects using sample data</li>
+      <li>Create at least three <code>Pet</code> objects using sample data</li>
       <li>Call the description function for each object</li>
     </ul>
     <p class="card-text">
-      Example (conceptually): one dog and one cat with different attributes.
+      Example (conceptually): two dogs and one cat with different attributes.
     </p>
   </div>
 </div>
@@ -124,10 +124,10 @@
       Compile all three files together:
     </p>
 <pre><code>
-g++ main.cpp Pet.cpp -o pets
+g++ PetsDemo.cpp Pet.cpp -o PetsDemo
 </code></pre>
     <p class="card-text">
-      Run the program and confirm that each pet’s information is displayed correctly.
+      Run the program and confirm that each pet's information is displayed correctly.
     </p>
   </div>
 </div>
@@ -139,8 +139,8 @@ g++ main.cpp Pet.cpp -o pets
     <ul>
       <li>All three files are in the lab folder</li>
       <li>Mandatory standard file header content is present in each file</li>
-      <li>No data is hard‑coded in <code>Pet.h</code> or <code>Pet.cpp</code></li>
-      <li>Multiple objects are created in <code>main.cpp</code></li>
+      <li>No data is hard-coded in <code>Pet.h</code> or <code>Pet.cpp</code></li>
+      <li>Multiple objects are created in <code>PetsDemo.cpp</code></li>
       <li>The program compiles and runs without errors</li>
     </ul>
   </div>
