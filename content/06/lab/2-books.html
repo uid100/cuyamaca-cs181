@@ -1,0 +1,176 @@
+<!-- Overview Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">Guided Exercise: Building a Book Class and BookStore App</h2>
+    <p class="card-text">
+      In this lab, you will create a simple <code>Book</code> class using
+      proper C++ file separation and then write a small bookstore application
+      that manages and displays an inventory of books.
+    </p>
+    <p class="card-text">
+      This exercise reinforces:
+      <ul>
+        <li>Writing custom classes</li>
+        <li>Using private data with public accessors</li>
+        <li>Separating specification, implementation, and client code</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<!-- File Setup Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Lab Folder Setup</h3>
+    <p class="card-text">
+      Add the following three files to your <strong>lab folder</strong>:
+    </p>
+    <ul>
+      <li><code>Book.h</code> — class specification (header)</li>
+      <li><code>Book.cpp</code> — class implementation</li>
+      <li><code>main.cpp</code> — BookStore application (driver)</li>
+    </ul>
+    <p class="card-text">
+      Each file <strong>must</strong> begin with the mandatory standard file
+      header content required for this course.
+    </p>
+  </div>
+</div>
+
+<!-- UML Diagram Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">UML Class Diagram</h3>
+<pre><code>
+--------------------------
+|          Book          |
+--------------------------
+| - title : string       |
+| - author : string      |
+| - pages : int          |
+| - price : double       |
+--------------------------
+| + Book(...)            |
+| + getTitle() : string  |
+| + getAuthor() : string |
+| + getPages() : int     |
+| + getPrice() : double  |
+| + setPrice(double)     |
+| + printDescription()  |
+--------------------------
+</code></pre>
+    <p class="card-text">
+      This UML diagram shows the required private attributes and public functions
+      for the <code>Book</code> class.
+    </p>
+  </div>
+</div>
+
+<!-- Step 1 Header File -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 1: Create the Class Specification (<code>Book.h</code>)</h3>
+    <p class="card-text">
+      In <code>Book.h</code>, declare the <code>Book</code> class.
+      This file defines the interface only.
+    </p>
+    <p class="card-text">
+      Your header file must include:
+    </p>
+    <ul>
+      <li>Include guards</li>
+      <li>Private data members:
+        <ul>
+          <li>title</li>
+          <li>author</li>
+          <li>number of pages</li>
+          <li>price</li>
+        </ul>
+      </li>
+      <li>Public members:
+        <ul>
+          <li>A constructor that initializes all attributes</li>
+          <li>Getter functions for each attribute</li>
+          <li>A setter function for updating the sales price</li>
+          <li>A function to print a short description</li>
+        </ul>
+      </li>
+    </ul>
+    <p class="card-text">
+      <strong>Do not hard‑code any book data</strong> in this file.
+    </p>
+  </div>
+</div>
+
+<!-- Step 2 Implementation File -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 2: Implement the Class (<code>Book.cpp</code>)</h3>
+    <p class="card-text">
+      In <code>Book.cpp</code>, implement all functions declared in the header.
+    </p>
+    <p class="card-text">
+      This file should:
+    </p>
+    <ul>
+      <li>Include <code>"Book.h"</code></li>
+      <li>Define the constructor and initialize all private attributes</li>
+      <li>Define each getter to return the correct value</li>
+      <li>Define the setter to update the book’s price</li>
+      <li>Format the description output in a readable way</li>
+    </ul>
+    <p class="card-text">
+      The class must work with <em>any</em> data passed in by the application.
+    </p>
+  </div>
+</div>
+
+<!-- Step 3 Driver File -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 3: Build the BookStore Application (<code>main.cpp</code>)</h3>
+    <p class="card-text">
+      The <code>main.cpp</code> file represents a simple bookstore program and
+      acts as the client of the <code>Book</code> class.
+    </p>
+    <p class="card-text">
+      In this file:
+    </p>
+    <ul>
+      <li>Include <code>&lt;iostream&gt;</code>, <code>&lt;vector&gt;</code>, and <code>"Book.h"</code></li>
+      <li>Create a small inventory (e.g., a vector of <code>Book</code> objects)</li>
+      <li>Include sample book data here only</li>
+      <li>Write a function named something like <code>printInventory()</code>
+          that prints all books in the inventory</li>
+      <li>Call the inventory function from <code>main()</code></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Build and Run -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 4: Compile and Run</h3>
+<pre><code>
+g++ main.cpp Book.cpp -o bookstore
+</code></pre>
+    <p class="card-text">
+      Run the program and verify that the inventory displays correctly and that
+      each book’s description is shown.
+    </p>
+  </div>
+</div>
+
+<!-- Checklist -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Submission Checklist</h3>
+    <ul>
+      <li>All three files are included in the lab folder</li>
+      <li>Mandatory standard file header content is present in each file</li>
+      <li>No data is hard‑coded in <code>Book.h</code> or <code>Book.cpp</code></li>
+      <li>Private data is accessed only through public functions</li>
+      <li>The program compiles and runs without errors</li>
+    </ul>
+  </div>
+</div>
