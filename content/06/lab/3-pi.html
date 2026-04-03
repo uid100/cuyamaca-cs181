@@ -7,10 +7,14 @@
       <strong>random number generation</strong>, and <strong>loops</strong> can work together
       to solve a mathematical problem.
     </p>
+
     <p class="card-text">
       You will use the Monte Carlo method to estimate the value of π
       by randomly generating points and determining how many fall inside a circle.
+      In this version, all points will be generated in the first quadrant
+      from <code>(0,0)</code> to <code>(1,1)</code>.
     </p>
+
   </div>
 </div>
 
@@ -89,6 +93,13 @@ struct Point
     <p class="card-text">
       The ratio of the area of the circle to the area of the square is π / 4.
     </p>
+        <p class="card-text">
+        By randomly generating points in the square and counting how many fall inside the circle,
+        we can estimate this ratio and thus compute an approximation for π.</p>
+    <p>
+        For this assignment, we will only generate points in the first quadrant (from 0 to 1 on both axes),
+        so we will be working with a quarter circle and a unit square.
+    </p>
     <p>
         <img src="https://uid100.github.io/cuyamaca-cs181/images/monte-carlo-pi.png" 
         alt="Monte Carlo π estimation diagram">
@@ -113,13 +124,13 @@ struct Point
       Write a function that:
     </p>
     <ul>
-      <li>Generates a random <code>x</code> value between -1.0 and 1.0</li>
-      <li>Generates a random <code>y</code> value between -1.0 and 1.0</li>
+      <li>Generates a random <code>x</code> value between 0 and 1.0</li>
+      <li>Generates a random <code>y</code> value between 0 and 1.0</li>
       <li>Stores these values in a <code>Point</code> struct</li>
       <li>Returns the <code>Point</code> to the caller</li>
     </ul>
     <p class="card-text">
-      Use C++’s random number facilities (not hard-coded values).
+      Use C++'s random number facilities (not hard-coded values).
     </p>
   </div>
 </div>
@@ -139,31 +150,31 @@ struct Point
       <li>Use a <code>for</code> loop to generate that many points</li>
       <li>Keep a count of how many points fall inside the circle
         (<code>distanceFromOrigin() &lt;= 1.0</code>)</li>
+    
     </ul>
   </div>
 </div>
 
+
 <!-- Calculations Card -->
 <div class="card mb-4">
   <div class="card-body">
-    <h3 class="card-title">Step 5: Calculate π and Error</h3>
+    <h3 class="card-title">Step 5: Calculate π and the Error</h3>
     <p class="card-text">
-      After generating all points:
+      After all points have been generated:
     </p>
     <ul>
-      <li>Compute the Monte Carlo estimate of π</li>
-      <li>Calculate the error (variance) as the difference between
-          your estimate and the defined constant</li>
-      <li>Output:
-        <ul>
-          <li>Total points generated</li>
-          <li>Estimated value of π</li>
-          <li>Error compared to the constant</li>
-        </ul>
+      <li>Compute the estimate:
+        <code>piEstimate = 4.0 * (insideCircle / totalPoints)</code>
       </li>
+      <li>Compute the error (variance) as:
+        <code>absolute difference between piEstimate and pi</code>
+      </li>
+      <li>Display the estimate and the error clearly</li>
     </ul>
   </div>
 </div>
+
 
 <!-- Output Expectations Card -->
 <div class="card mb-4">
