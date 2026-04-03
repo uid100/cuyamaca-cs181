@@ -1,8 +1,7 @@
 [
   { "title": "Lab #6 - Writing Custom Classes", "file": "0-lab.html" },
   { "title": "Ex.1: Pets", "file": "1-pets.html" },
-  { "title": "Ex.2: Custom Functions", "file": "2-functions.html" },
-  { "title": "Ex.3: HiThere", "file": "3-greeting.html" },
-  { "title": "Ex.4: Overloading Functions", "file": "4-overloading.html" },
+  { "title": "Ex.2: Bookstore", "file": "2-books.html" },
+  { "title": "Ex.3: Estimating pi", "file": "3-pi.html" },
   { "title": "Submit", "file": "9-submit.html" }
 ]
