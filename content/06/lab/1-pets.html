@@ -1,0 +1,147 @@
+<!-- Overview Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">Guided Exercise: Building a Pet Class</h2>
+    <p class="card-text">
+      In this lab, you will practice creating a simple custom C++ class using
+      <strong>separate header and implementation files</strong>, and then write
+      a small driver program to instantiate and use several objects.
+    </p>
+    <p class="card-text">
+      You will create a <code>Pet</code> class that stores a pet’s
+      name, breed, age, and weight, along with a member function that prints a
+      short description.
+    </p>
+  </div>
+</div>
+
+<!-- File Setup Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Lab Folder Setup</h3>
+    <p class="card-text">
+      Add the following three files to your <strong>lab folder</strong>:
+    </p>
+    <ul>
+      <li><code>Pet.h</code> &mdash; class specification (header)</li>
+      <li><code>Pet.cpp</code> &mdash; class implementation</li>
+      <li><code>main.cpp</code> &mdash; application (driver)</li>
+    </ul>
+    <p class="card-text">
+      <strong>Important:</strong> Each file must begin with the
+      <em>mandatory standard file header content</em> required by this course.
+    </p>
+  </div>
+</div>
+
+<!-- Step 1 Header File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 1: Create the Class Specification (<code>Pet.h</code>)</h3>
+    <p class="card-text">
+      In <code>Pet.h</code>, define the <code>Pet</code> class interface.
+      This file should describe <em>what</em> the class contains, but not
+      how it works internally.
+    </p>
+    <p class="card-text">
+      Your header file should include:
+    </p>
+    <ul>
+      <li>Include guards</li>
+      <li>The <code>Pet</code> class declaration</li>
+      <li>Private data members for:
+        <ul>
+          <li>name</li>
+          <li>breed</li>
+          <li>age</li>
+          <li>weight</li>
+        </ul>
+      </li>
+      <li>Public member functions:
+        <ul>
+          <li>A constructor that receives all values as parameters</li>
+          <li>A function that prints a short description of the pet</li>
+        </ul>
+      </li>
+    </ul>
+    <p class="card-text">
+      <strong>Do not hard‑code any pet data</strong> in this file.
+    </p>
+  </div>
+</div>
+
+<!-- Step 2 Implementation File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 2: Implement the Class (<code>Pet.cpp</code>)</h3>
+    <p class="card-text">
+      In <code>Pet.cpp</code>, write the function definitions for the
+      <code>Pet</code> class.
+    </p>
+    <p class="card-text">
+      This file should:
+    </p>
+    <ul>
+      <li>Include <code>"Pet.h"</code></li>
+      <li>Implement the constructor to initialize all data members</li>
+      <li>Implement the description function to display the pet’s information
+          in a readable format</li>
+    </ul>
+    <p class="card-text">
+      Again, <strong>do not hard‑code specific pet values</strong>.
+      The implementation must work with any data passed in from the program.
+    </p>
+  </div>
+</div>
+
+<!-- Step 3 Driver File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 3: Write the Driver Program (<code>main.cpp</code>)</h3>
+    <p class="card-text">
+      The <code>main.cpp</code> file is the <strong>client</strong> of your class.
+      This is the only place where sample data should appear.
+    </p>
+    <p class="card-text">
+      In this file:
+    </p>
+    <ul>
+      <li>Include <code>&lt;iostream&gt;</code> and <code>"Pet.h"</code></li>
+      <li>Create at least two <code>Pet</code> objects using sample data</li>
+      <li>Call the description function for each object</li>
+    </ul>
+    <p class="card-text">
+      Example (conceptually): one dog and one cat with different attributes.
+    </p>
+  </div>
+</div>
+
+<!-- Build and Run Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 4: Build and Run</h3>
+    <p class="card-text">
+      Compile all three files together:
+    </p>
+<pre><code>
+g++ main.cpp Pet.cpp -o pets
+</code></pre>
+    <p class="card-text">
+      Run the program and confirm that each pet’s information is displayed correctly.
+    </p>
+  </div>
+</div>
+
+<!-- Checklist Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Submission Checklist</h3>
+    <ul>
+      <li>All three files are in the lab folder</li>
+      <li>Mandatory standard file header content is present in each file</li>
+      <li>No data is hard‑coded in <code>Pet.h</code> or <code>Pet.cpp</code></li>
+      <li>Multiple objects are created in <code>main.cpp</code></li>
+      <li>The program compiles and runs without errors</li>
+    </ul>
+  </div>
+</div>
