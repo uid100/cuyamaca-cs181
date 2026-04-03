@@ -1,0 +1,185 @@
+<!-- Overview Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="card-title">Assignment: Estimating π Using Structs and Monte Carlo Simulation</h2>
+    <p class="card-text">
+      This assignment demonstrates how <strong>structs</strong>, <strong>functions</strong>,
+      <strong>random number generation</strong>, and <strong>loops</strong> can work together
+      to solve a mathematical problem.
+    </p>
+    <p class="card-text">
+      You will use the Monte Carlo method to estimate the value of π
+      by randomly generating points and determining how many fall inside a circle.
+    </p>
+  </div>
+</div>
+
+<!-- Learning Objectives Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Learning Objectives</h3>
+    <ul>
+      <li>Define and use a <code>struct</code> with data and behavior</li>
+      <li>Generate random numbers in C++</li>
+      <li>Use functions to return structured data</li>
+      <li>Apply a Monte Carlo simulation</li>
+      <li>Compute an approximation and error (variance)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- File Requirements Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">File Requirements</h3>
+    <p class="card-text">
+      Build this assignment as a <strong>single C++ file</strong> named:
+    </p>
+    <ul>
+      <li><code>EstimatePi.cpp</code></li>
+    </ul>
+    <p class="card-text">
+      The <strong>mandatory standard file header</strong> must appear at the top of the file.
+    </p>
+  </div>
+</div>
+
+<!-- Struct Definition Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 1: Define the Point Struct</h3>
+    <p class="card-text">
+      Use the <code>Point</code> struct shown below. This struct stores an <code>x</code>
+      and <code>y</code> coordinate and also includes a member function that calculates
+      the distance from the origin.
+    </p>
+
+<pre><code>
+struct Point
+{
+    double x;
+    double y;
+
+    double distanceFromOrigin() const
+    {
+        return std::sqrt(x * x + y * y);
+    }
+};
+</code></pre>
+
+    <p class="card-text">
+      This demonstrates an important idea: although structs are often used to group data,
+      they can also contain functions.
+    </p>
+  </div>
+</div>
+
+<!-- Monte Carlo Concept Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 2: Understanding the Monte Carlo Method</h3>
+    <p class="card-text">
+      To estimate π, imagine a circle of radius 1 centered at the origin,
+      inside a square that runs from -1 to +1 on both axes.
+    </p>
+    <ul>
+      <li>Randomly generate points within the square</li>
+      <li>Check whether each point is inside the circle</li>
+      <li>The ratio of points inside the circle to total points
+          approximates <code>π / 4</code></li>
+    </ul>
+    <p class="card-text">
+      From this ratio, you can compute an estimate for π.
+    </p>
+  </div>
+</div>
+
+<!-- Random Point Function Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 3: Create a Function to Generate Random Points</h3>
+    <p class="card-text">
+      Write a function that:
+    </p>
+    <ul>
+      <li>Generates a random <code>x</code> value between -1.0 and 1.0</li>
+      <li>Generates a random <code>y</code> value between -1.0 and 1.0</li>
+      <li>Stores these values in a <code>Point</code> struct</li>
+      <li>Returns the <code>Point</code> to the caller</li>
+    </ul>
+    <p class="card-text">
+      Use C++’s random number facilities (not hard-coded values).
+    </p>
+  </div>
+</div>
+
+<!-- Main Logic Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 4: Main Program Logic</h3>
+    <p class="card-text">
+      In <code>main()</code>:
+    </p>
+    <ul>
+      <li>Define the constant:
+        <code>constexpr double pi = 3.14159265;</code>
+      </li>
+      <li>Ask the user to enter the number of random points to generate</li>
+      <li>Use a <code>for</code> loop to generate that many points</li>
+      <li>Keep a count of how many points fall inside the circle
+        (<code>distanceFromOrigin() &lt;= 1.0</code>)</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Calculations Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 5: Calculate π and Error</h3>
+    <p class="card-text">
+      After generating all points:
+    </p>
+    <ul>
+      <li>Compute the Monte Carlo estimate of π</li>
+      <li>Calculate the error (variance) as the difference between
+          your estimate and the defined constant</li>
+      <li>Output:
+        <ul>
+          <li>Total points generated</li>
+          <li>Estimated value of π</li>
+          <li>Error compared to the constant</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Output Expectations Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Expected Behavior</h3>
+    <p class="card-text">
+      As the number of points increases, your estimated value of π
+      should become more accurate and the error should decrease.
+    </p>
+    <p class="card-text">
+      This demonstrates the power—and limitations—of probabilistic methods.
+    </p>
+  </div>
+</div>
+
+<!-- Checklist Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Submission Checklist</h3>
+    <ul>
+      <li>Single file named <code>EstimatePi.cpp</code></li>
+      <li>Standard file header is present</li>
+      <li><code>Point</code> struct defined exactly as specified</li>
+      <li>Random point generation uses a function</li>
+      <li>User input controls the number of points</li>
+      <li>π estimate and error are correctly calculated and displayed</li>
+      <li>Program compiles and runs without errors</li>
+    </ul>
+  </div>
+</div>
