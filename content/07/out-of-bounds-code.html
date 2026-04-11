@@ -1,0 +1,44 @@
+<h2 style="display: block;">Program 8-4:Out-of-bounds code</h2>
+<div class="code">
+    <pre><code class="language-cplusplus">
+// Program 8-4: Out-of-bounds code
+// This program unsafely stores values beyond an array's boundary.
+// What happens depends on how your computer manages memory.
+// It MAY overwrite other memory variables. It MAY crash your computer.
+// It MAY do nothing at all. It is unpredictable.
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    const int SIZE = 3;
+    int A[SIZE] = {1, 1, 1}; // Define A as a 3-element int array.
+    int B[SIZE];             // Define B as another 3-element int array.
+
+    // Here is what is stored in array A
+    cout &lt;&lt; "Array A contains: ";
+    for (int count = 0; count &lt; SIZE; count++)
+        cout &lt;&lt; A[count] &lt;&lt; "   ";
+
+    // Attempt to store seven numbers in the 3-element array.
+    cout &lt;&lt; "\n\nAttempting to store 7 numbers in the 3-element array A.\n";
+    for (int count = 0; count &lt; 7; count++)
+        B[count] = 5; // This is an out-of-bounds error. The result is unpredictable.
+
+    // If the program is still running, display the numbers.
+    cout &lt;&lt; "\nIf you see this message, the program did not crash."
+         &lt;&lt; "\n\nHere are the 7 numbers that were stored in the array B:\n";
+    for (int count = 0; count &lt; 7; count++)
+        cout &lt;&lt; B[count] &lt;&lt; "   ";
+    
+    cout &lt;&lt; "\n\nHere is what is stored in array A:\n";
+    for (int count = 0; count &lt; SIZE; count++)
+        cout &lt;&lt; A[count] &lt;&lt; "   ";
+
+    cout &lt;&lt; "\n\nIf you see 5s in array A, the out-of-bounds code overwrote the values in A.\n";
+
+    return 0;
+}
+    </code></pre>
+</div>

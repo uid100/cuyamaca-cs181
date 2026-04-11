@@ -1,4 +1,4 @@
-<div class="card" id="content" style="padding: 20px;">
+<div class="card mb-3" id="arrays-card" style="margin: 10px;">
     <div class="card-header">Arrays</div>
     <div class="card-body">
         <h3>Variable type</h3>
@@ -71,4 +71,47 @@
         <p>Arrays provide a convenient and efficient way to work with collections of data 
             in programming, making them a valuable tool for various tasks.</p>
     </div> <!-- .card-body -->
+    <div class="card mb-3" id="bounds-checking" style="margin: 10px;">
+        <div class="card-header">Bounds Checking</div>
+        <div class="card-body">
+            <p>
+                <span class="bg-warning">Caution:</span> In languages like C++, arrays 
+                do not perform bounds checking by default. This means that if you try to 
+                access an element outside the defined range of the array, it can lead to
+                <em>undefined behavior</em>, which may cause your program to crash or produce
+                incorrect results.
+            </p>
+            <p>
+                When working with arrays, it's crucial to be mindful of bounds checking. 
+                This means ensuring that you do not access elements outside the defined 
+                range of the array, as this can lead to undefined behavior and potential 
+                security vulnerabilities. Always make sure to check the size of the array 
+                before accessing its elements to prevent out-of-bounds errors.
+            </p>
+            <p>
+                <span class="bg-info">Try:</span> Write the code from
+                <span style="font-weight: bold;">Program 8-4</span> to see what happens 
+                when you attempt to access an array element that is out of bounds.
+            </p>
+            <p>
+                You may need to run the code multiple times to see the different outcomes, 
+                as the behavior can be unpredictable when accessing out-of-bounds elements.
+            </p>
+            <p>
+                You may have heard that the C++ language is 
+                <span class="fts-italic">close-to-the-metal</span> or 
+                <span class="fts-italic">unsafe</span>. 
+                This means that it provides a lot of control over how memory is managed and 
+                accessed, but it also means that the programmer must be careful to avoid 
+                mistakes that can lead to undefined behavior, such as accessing out-of-bounds 
+                array elements.
+            </p>
+            <p>
+                Reading and writing to memory locations outside the bounds of an array can 
+                lead to various issues, including crashes, data corruption, and security 
+                vulnerabilities. It's essential to always ensure that you are accessing valid
+                indices within the bounds of the array to maintain the integrity and security
+                of your program.
+            </p>
+        </div> <!-- .card-body -->
 </div> <!-- .card -->

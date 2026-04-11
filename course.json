@@ -318,6 +318,11 @@
             "type": "content",
             "source": "/content/07/arrays.html"
           },
+          "program8-4": {
+            "title": "Sample Code: Out-of-Bounds Code",
+            "type": "content",
+            "source": "/content/07/out-of-bounds-code.html"
+          },
           "end": {
             "title": "End of Module 7",
             "type": "content",
