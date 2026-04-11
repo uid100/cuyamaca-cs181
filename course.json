@@ -323,6 +323,16 @@
             "type": "content",
             "source": "/content/07/out-of-bounds-code.html"
           },
+          "2d-arrays": {
+            "title": "Multidimensional Arrays",
+            "type": "content",
+            "source": "/content/07/multi-dimension-arrays.html"
+          },
+          "vectors": {
+            "title": "Vectors vs. Arrays",
+            "type": "content",
+            "source": "/content/07/vectors.html"
+          },
           "end": {
             "title": "End of Module 7",
             "type": "content",
