@@ -1,0 +1,36 @@
+{
+  "canvas": {
+    "server": "https://gcccd.instructure.com",
+    "coursePath": "/courses/99999"
+  },
+  "sectionNumber": "9999",
+  "courseId": "CS-181-9999",
+  "term": "Fall 2026",
+  "dates": {
+    "start": "2026-08-24",
+    "end": "2026-12-21",
+    "withdraw": "",
+    "classesEnd": "",
+    "finals": "",
+    "finalsEnd": "",
+    "gradesDue": "2026-12-23",
+    "gradesPosted": "",
+    "holidays": {
+      "mlkDay": "2026-01-19",
+      "Pres. Lincoln's Day": "2026-02-13",
+      "Pres. Washington's Day": "2026-02-16",
+      "thanksgiving": {
+        "start": "2026-11-23",
+        "end": "2026-11-25"
+      },
+      "memorialDay": "2026-05-25"
+    }
+  },
+  "*startDate": "2026-08-24T08:00:00",
+  "*endDate": "2026-12-21T08:00:00",
+  "schedule": {
+    "day": "Monday",
+    "time": "6P - 10P",
+    "location": "E 212"
+  }
+}
