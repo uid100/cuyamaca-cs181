@@ -328,16 +328,9 @@
             "type": "content",
             "source": "/content/07/multi-dimension-arrays.html"
           },
-          "vectors": {
-            "title": "Vectors vs. Arrays",
-            "type": "content",
-            "source": "/content/07/vectors.html"
-          },
-          "end": {
-            "title": "End of Module 7",
-            "type": "content",
-            "source": "/content/end-module.html"
-          }
+          "vectors": {"title": "Vectors vs. Arrays","type": "content","source": "/content/07/vectors.html"},
+          "droids": { "title": "Droids: A Case Study in OOP","type": "content",  "resource": "https://uid100.github.io/edu-core/shared/modules/oop-concepts/droids.html"},
+          "end": {"title": "End of Module 7","type": "content","source": "/content/end-module.html" }
         }
       },
       "08": { "title": "Sorting, Searching & Vectors",
