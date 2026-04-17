@@ -1,0 +1,295 @@
+<!-- Overview Card -->
+<div class="card mb-4">
+  <div class="card-body"> 
+    <h2 class="card-title">Array Utilities</h2>
+    <p class="card-text">
+      In this lab, you will practice creating and using arrays in C++.
+    </p>
+    <p class="card-text">
+      You will create a set of utility functions that operate on arrays,
+      and have a look at automated testing to verify your implementations.
+    </p>
+    <div>
+      <h3>Incremental Development</h3>
+      <p>
+        Do not "write everything at once". Instead, work step-by-step through the instructions.
+        Each TODO unlocks the next test. This is a common approach to incremental development and testing.
+      </p>
+    </div> 
+    <div>
+      <h3>Separation of Concerns</h3>
+      <p class="card-text">
+        Add the following three files to your <strong>lab folder</strong>:
+      </p>
+      <ul>
+        <li>Tests live in <code>ArrayTests.cpp</code></li>
+        <li>Function prototypes live in <code>ArrayFunctions.h</code></li>
+        <li>Function implementations live in <code>ArrayFunctions.cpp</code></li>
+      </ul>
+      <p>
+        This mirrors <span class="font-weight-bold">professional C++ workflows.</span>
+      </p>
+      <p class="card-text">
+        <strong>Important:</strong> Each file must begin with the
+        <em>mandatory standard file header content</em> required by this course.
+      </p>
+    </div>
+    <div>
+      <h3>Automated Testing</h3>
+      <ul>
+        <li>Code correctness is verified automatically</li>
+        <li>Passing tests = correct behavior</li>
+        <li>Failing tests = bugs to fix</li>
+        <li>Regression is visible immediately</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Build Fundamentals</h3>
+      <p>The project:
+        <ul>
+          <li>Compiles and runs even with incomplete implementations</li>
+          <li>Has no hard-coded data in the header or implementation files</li>
+          <li>Forces correct linkage of multiple .cpp files</li>
+          <li>Reinforces why headers don't produce code</li>
+        </ul>
+      </p>
+    </div>
+    <p class="boxed-paragraph mt-4">
+      <strong>Note:</strong> If your function is correct, the test will pass without modification.<br>
+  If the test fails, debug your function — not the test.
+    </p>
+  </div>
+</div>
+
+<!-- Step 1 Header File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 1: Header File <code>ArrayFunctions.h</code></h3>
+    <p>
+      The <code>ArrayFunctions.h</code> file contains the function prototypes
+      for the array utility functions you will implement.
+    </p>
+    <p>
+      You can use the following code as a starting point for your header file.
+      Make sure to add the mandatory standard file header content at the top.
+    </p>
+    <pre style="background-color: lightpink;"><code>
+/* 
+    TODO:
+        - Add required standard header content
+
+    File: ArrayFunctions.h 
+*/
+#ifndef ARRAYFUNCTIONS_H
+#define ARRAYFUNCTIONS_H
+
+int find(char charArray[], int size, char target);
+// TODO: Add prototypes for the other functions here
+
+#endif // ARRAYFUNCTIONS_H
+</code></pre>
+  </div>
+</div>
+
+<!-- Step 2 Test File Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 2: Test File <code>ArrayTests.cpp</code></h3>
+    <p class="card-text">
+      Create a test file to verify the functionality of your array utility functions.
+    </p>
+    <p class="card-text">
+      This file should:
+    </p>
+    <ul>
+      <li>Include <code>"ArrayFunctions.h"</code></li>
+      <li>Implement test cases for each array utility function</li>
+    </ul>
+    <p class="card-text">
+      For the test cases and logic, use the provided <code>ArrayTests.cpp</code>. 
+    </p>
+    <p>
+      Work step-by-step through the file, uncommenting and implementing each test
+      and the corresponding function in <code>ArrayFunctions.cpp</code> as you go.
+    </p>
+    <pre style="background-color: lightpink;"><code>
+/*
+    File: ArrayFunctionTesting.cpp
+
+    PURPOSE:
+    This file contains automated tests for array utility functions.
+
+    STUDENT INSTRUCTIONS:
+    - The program should COMPILE and RUN before any tests are enabled.
+    - You will UNCOMMENT each test section ONLY AFTER completing
+      the required function(s) in ArrayFunctions.h and ArrayFunctions.cpp.
+    - Work through this file FROM TOP TO BOTTOM.
+
+    DO NOT modify the test logic itself.
+*/
+
+#include <iostream>
+#include "ArrayFunctions.h"
+
+#define SUCCESS 0
+
+using namespace std;
+
+int main() {
+
+    // This program should build and run even before
+    // any array utility functions are implemented.
+    cout << "\nArray Utilities Test Program\n";
+    cout << "----------------------------------\n";
+
+    int testCounter  = 0;
+    int passedCounter = 0;
+
+    /*
+    ============================================================
+    TODO #1: find() and countValues()
+    ============================================================
+    Instructions:
+    - Implement the following functions:
+        int find(char[], int, char);
+        int countValues(char[], int, char);
+
+    - Add the function PROTOTYPES to ArrayFunctions.h
+    - Add the function DEFINITIONS to ArrayFunctions.cpp
+    - When finished, UNCOMMENT this entire section.
+    */
+
+    /*
+    cout << "\nTesting find() and countValues() functions:\n";
+
+    char myCharArray[] = {};
+    testCounter++;
+    if (find(myCharArray, 0, 'a') != -1)
+        cout << "Error: find() failed on empty array\n";
+    else passedCounter++;
+
+    testCounter++;
+    if (countValues(myCharArray, 0, 'a') != 0)
+        cout << "Error: countValues() failed on empty array\n";
+    else passedCounter++;
+    */
+
+    /*
+    ============================================================
+    TODO #2: copyArray() and ArrayElementsEqual()
+    ============================================================
+    Instructions:
+    - Implement BOTH int and char versions of:
+        void copyArray(...)
+        bool ArrayElementsEqual(...)
+
+    - When finished, UNCOMMENT this section.
+    */
+
+    /*
+    cout << "\nTesting copyArray() and ArrayElementsEqual() functions:\n";
+
+    char letters1[] = {'h','e','l','l','o'};
+    char letters2[5];
+    testCounter++;
+    copyArray(letters1, letters2, 5);
+    if (!ArrayElementsEqual(letters1, letters2, 5))
+        cout << "Error: char copy or equality failed\n";
+    else passedCounter++;
+    */
+
+    /*
+    ============================================================
+    TODO #3: inOrder()
+    ============================================================
+    Instructions:
+    - Implement:
+        bool inOrder(int[], int);
+
+    - UNCOMMENT after implementation.
+    */
+
+    /*
+    cout << "\nTesting inOrder() function:\n";
+
+    int sorted[]   = {1,2,3,4,5};
+    int unsorted[] = {5,4,3,2,1};
+
+    testCounter++;
+    if (!inOrder(sorted, 5))
+        cout << "Error: inOrder() failed on sorted array\n";
+    else passedCounter++;
+
+    testCounter++;
+    if (inOrder(unsorted, 5))
+        cout << "Error: inOrder() failed on unsorted array\n";
+    else passedCounter++;
+    */
+
+    /*
+    ============================================================
+    TODO #4: swapElements() and bubbleUp()
+    ============================================================
+    Instructions:
+    - Implement:
+        void swapElements(int[], int, int);
+        void bubbleUp(int[], int, int);
+    */
+
+    /*
+    ============================================================
+    TODO #5: bubbleSort()
+    ============================================================
+    Instructions:
+    - Implement:
+        void bubbleSort(int[], int);
+
+    - UNCOMMENT after all previous functions work correctly.
+    */
+
+    cout << "\nProgram finished.\n";
+    return SUCCESS;
+}
+    </code></pre>
+  </div>
+</div>
+
+<!-- Step 3 Utilities -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Step 3: <code>ArrayFunctions.cpp</code></h3>
+    <p class="card-text">
+      The <code>ArrayFunctions.cpp</code> file contains the implementations 
+      of the array utility functions.
+    </p>
+    <p class="card-text">
+      In this file:
+    </p>
+    <ul>
+      <li>Include <code>&lt;iostream&gt;</code> and <code>"Pet.h"</code></li>
+      <li>Create at least three <code>Pet</code> objects using sample data</li>
+    </ul>
+    <p class="card-text">
+
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Checklist Card -->
+<div class="card mb-4">
+  <div class="card-body">
+    <h3 class="card-title">Submission Checklist</h3>
+    <ul>
+      <li>All three files are in the lab folder</li>
+      <li>Mandatory standard file header content is present in each file</li>
+      <li>No data is hard-coded in <code>ArrayFunctions.h</code> or 
+        <code>ArrayFunctions.cpp</code></li>
+      <li>All tests in <code>ArrayTests.cpp</code> are uncommented, run without 
+        errors, and reporting passing results</li>
+      <li>All TODOs have been completed and deleted from the code</li>
+      <li>The program compiles and runs without errors</li>
+    </ul>
+  </div>
+</div>

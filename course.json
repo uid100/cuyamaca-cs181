@@ -308,29 +308,18 @@
           "Visualizing array memory as contiguous blocks"
         ],
         "pages": {
-          "overview": {
-            "title": "Module Overview",
-            "type": "content",
-            "source": "/content/07/module7.html"
-          },
-          "arrays": {
-            "title": "Arrays",
-            "type": "content",
-            "source": "/content/07/arrays.html"
-          },
-          "program8-4": {
-            "title": "Sample Code: Out-of-Bounds Code",
-            "type": "content",
-            "source": "/content/07/out-of-bounds-code.html"
-          },
-          "2d-arrays": {
-            "title": "Multidimensional Arrays",
-            "type": "content",
-            "source": "/content/07/multi-dimension-arrays.html"
-          },
+          "overview": {"title": "Module Overview","type": "content","source": "/content/07/module7.html"},
+          "arrays": {"title": "Arrays","type": "content","source": "/content/07/arrays.html"},
+          "program8-4": {"title": "Sample Code: Out-of-Bounds Code","type": "content","source": "/content/07/out-of-bounds-code.html"},
+          "2d-arrays": {"title": "Multidimensional Arrays","type": "content","source": "/content/07/multi-dimension-arrays.html"},
           "vectors": {"title": "Vectors vs. Arrays","type": "content","source": "/content/07/vectors.html"},
           "droids": { "title": "Droids: A Case Study in OOP","type": "content",  "resource": "https://uid100.github.io/edu-core/shared/modules/oop-concepts/droids.html"},
           "end": {"title": "End of Module 7","type": "content","source": "/content/end-module.html" }
+        },
+        "lab": {
+          "title": "Lab #7 - Arrays",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/07/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/07/lab/"
         }
       },
       "08": { "title": "Sorting, Searching & Vectors",

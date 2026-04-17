@@ -1,0 +1,77 @@
+    <div class="card mb-3 ">
+        <div class="card-body">
+            <h5 class="card-title">Tic Tac Toe</h5>
+            <p class="card-text">Tic Tac Toe is a simple game played on a 3x3 grid. 
+                Two players take turns marking a space in the grid with their respective 
+                symbols (usually X and O). The first player to get three of their symbols 
+                in a row (horizontally, vertically, or diagonally) wins the game. If all 
+                spaces are filled and no player has three in a row, the game is a draw.
+            </p>
+            <h3>Overview</h3>
+            <p>
+                In this console-based C++ exercise, the computer plays both X and O in a 
+                Tic-Tac-Toe game. There is no user input. The goal is to practice working 
+                with 2D arrays, loops, random numbers, and functions.
+            </p>
+            <h3>Requirements</h3>
+            <ul>
+                <li>Use a 3 x 3 2D array of characters to represent the board. </li>
+                <li>Initialize all spaces to '-' to indicate blank spaces. </li>
+                <li>The computer alternates turns between 'X' and 'O'. </li>    
+                <li>For each turn, randomly select a row and column. </li>
+                <li>If the selected space is already taken, generate new random values until an empty space is found. </li>
+                <li>After each valid move:
+                    <ul>
+                        <li>Print the updated grid </li>
+                        <li>Check for a winner   </li>
+                    </ul>
+                </li>
+                <li>If a player gets three in a row (row, column, or diagonal), display the winner and stop the game. </li>
+                <li>If the board fills with no winner, declare a tie. </li>
+            </ul>
+            <p>Turns should be randomly generated, no user input or AI logic is required or expected.</p>
+            <h3>Simplified Game Logic</h3>
+            <ol>
+                <li>Create and initialize the board. </li>
+                <li>Set the current player to 'X'. </li>
+                <li>Repeat until the game ends:
+                    <ul>Display Player X or Player O. </ul>
+                    <ul>Generate a random row and column. </ul>
+                    <ul>If the space is empty, place the player's symbol there. </ul>
+                    <ul>Print the board. </ul>
+                    <ul>Check for a winner. </ul>
+                    <ul>If no winner and the board is not full, switch players.</ul> 
+                </li>
+            </ol>
+            <h3>Functions to Implement</h3>
+            <ul>
+                <li>void initializeBoard(char board[3][3]); </li>
+                <li>void printBoard(char board[3][3]); </li>
+                <li>bool checkWinner(char board[3][3], char player); </li>
+                <li>bool isBoardFull(char board[3][3]); </li>
+            </ul>
+            <h3>Example Output (partial)</h3>
+            <pre>
+Player X's turn:
+- - -
+X - -
+- - -
+Player O's turn:
+- O -
+X - -
+- - -
+Player X's turn:
+- O -
+X - -
+- X -
+
+ . . .
+
+Player O's turn:
+O O X
+X O O
+O X X
+Tie game! No winner.
+            </pre>
+        </div>
+    </div>
