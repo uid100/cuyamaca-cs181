@@ -163,16 +163,28 @@ int main() {
     /*
     cout << "\nTesting find() and countValues() functions:\n";
 
-    char myCharArray[] = {};
+    char myCharArray[] = {' '};
     testCounter++;
-    if (find(myCharArray, 0, 'a') != -1)
-        cout << "Error: find() failed on empty array\n";
+    if (find(myCharArray, 1, 'a') != -1)
+        cout << "Error: find() value intended to be not found\n";
     else passedCounter++;
 
     testCounter++;
-    if (countValues(myCharArray, 0, 'a') != 0)
-        cout << "Error: countValues() failed on empty array\n";
+    if (countValues(myCharArray, 1, 'a') != 0)
+        cout << "Error: countValues() should return 0 count for not found.\n";
     else passedCounter++;
+
+    char myCharArray2[] = { 'A', 'B', 'A', 'C', 'A', 'B' };
+    testCounter++;
+    if (find(myCharArray2, 6, 'A') != 0)
+        cout << "Error: find() value should return first occurence \n";
+    else passedCounter++;
+
+    testCounter++;
+    if (countValues(myCharArray2, 6, 'A') != 3)
+        cout << "Error: countValues() should find 3 occurences.\n";
+    else passedCounter++;
+
     */
 
     /*
