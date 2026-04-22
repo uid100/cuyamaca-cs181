@@ -192,10 +192,15 @@ int main() {
     TODO #2: copyArray() and ArrayElementsEqual()
     ============================================================
     Instructions:
+       (hint:  overloaded functions.)          
     - Implement BOTH int and char versions of:
         void copyArray(...)
         bool ArrayElementsEqual(...)
 
+    - for copyArray(), pass 2 arrays and the size of them and copy values 
+       from one to the other
+    - remember to add the prototype to the header file and the implementation to the utility 
+       file for all of these
     - When finished, UNCOMMENT this section.
     */
 
@@ -247,6 +252,11 @@ int main() {
     - Implement:
         void swapElements(int[], int, int);
         void bubbleUp(int[], int, int);
+
+    - swapElements() and bubbleUp() are two important steps in the bubble sort 
+        algorithm
+    - you can use the information at https://en.wikipedia.org/wiki/Bubble_sort
+        to learn more about Bubble Sort          
     */
 
     /*
@@ -257,6 +267,8 @@ int main() {
     - Implement:
         void bubbleSort(int[], int);
 
+    - your bubbleSort() function must call your swapElements() and 
+          bubbleUp() functions.
     - UNCOMMENT after all previous functions work correctly.
     */
 
