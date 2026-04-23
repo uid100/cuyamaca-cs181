@@ -1,0 +1,142 @@
+<!-- Student Handout: Searching Through Arrays (C++) -->
+
+<div class="container my-4">
+
+  <!-- Card: Introduction -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Searching Through Arrays</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In programming, <strong>searching</strong> means finding the location of a specific value
+        inside a collection of data. Since arrays store multiple values under one name,
+        we often need efficient ways to search through them.
+      </p>
+      <p>
+        In this lesson, you will learn two common search techniques:
+      </p>
+      <ul>
+        <li><strong>Linear Search</strong> – checks each element one by one</li>
+        <li><strong>Binary Search</strong> – repeatedly divides a sorted array in half</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card: Linear Search -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Linear Search</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A <strong>linear search</strong> looks at each element in the array starting from
+        the beginning and compares it to the value we are looking for.
+      </p>
+      <p>
+        This method works with <em>any</em> array, whether it is sorted or not.
+      </p>
+
+      <h6>How It Works</h6>
+      <ol>
+        <li>Start at index 0</li>
+        <li>Compare each value to the target</li>
+        <li>Stop when the value is found or the array ends</li>
+      </ol>
+
+      <h6>Example Code (Linear Search)</h6>
+      <pre><code>// Search for a value in an array using linear search
+int numbers[5] = {4, 7, 2, 9, 1};
+int target = 9;
+int index = -1;
+
+for (int i = 0; i &lt; 5; i++) {
+    if (numbers[i] == target) {
+        index = i;
+        break;
+    }
+}
+
+// index will be the position of target, or -1 if not found</code></pre>
+
+      <p>
+        <strong>Performance:</strong> Linear search may need to check every element
+        in the worst case.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Binary Search -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Binary Search</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A <strong>binary search</strong> is much faster than linear search, but it
+        only works on arrays that are <strong>sorted</strong>.
+      </p>
+
+      <p>
+        Instead of checking every value, binary search repeatedly cuts the
+        search range in half.
+      </p>
+
+      <h6>How It Works</h6>
+      <ol>
+        <li>Find the middle element</li>
+        <li>If it matches, the search is complete</li>
+        <li>If the target is smaller, search the left half</li>
+        <li>If larger, search the right half</li>
+      </ol>
+
+      <h6>Example Code (Binary Search)</h6>
+      <pre><code>// Binary search on a sorted array
+int numbers[6] = {2, 4, 6, 8, 10, 12};
+int target = 8;
+
+int low = 0;
+int high = 5;
+int index = -1;
+
+while (low &lt;= high) {
+    int mid = (low + high) / 2;
+
+    if (numbers[mid] == target) {
+        index = mid;
+        break;
+    } else if (numbers[mid] &lt; target) {
+        low = mid + 1;
+    } else {
+        high = mid - 1;
+    }
+}
+
+// index will be the position of target, or -1 if not found</code></pre>
+
+      <p>
+        <strong>Important:</strong> Binary search will give incorrect results
+        if the array is not sorted.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Comparison -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Linear Search vs. Binary Search</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li><strong>Linear Search</strong>: simpler, works on any array, slower for large data</li>
+        <li><strong>Binary Search</strong>: faster, but requires a sorted array</li>
+      </ul>
+
+      <p>
+        As arrays grow larger, choosing the right search method can
+        significantly affect program performance.
+      </p>
+    </div>
+  </div>
+
+</div>

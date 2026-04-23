@@ -1,0 +1,166 @@
+<!-- Student Handout: C++ Programming Assignment – Simple Statistical Analysis -->
+
+<div class="container my-4">
+
+  <!-- Card: Assignment Overview -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Programming Assignment: Statistical Analysis</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In this assignment, you will write a C++ program that performs simple
+        statistical analysis on a set of integer values stored in an array.
+      </p>
+      <p>
+        Your program will calculate and display the following:
+      </p>
+      <ul>
+        <li>Minimum value</li>
+        <li>Maximum value</li>
+        <li>Mean (average)</li>
+        <li>Median</li>
+      </ul>
+      <p>
+        This assignment reinforces your understanding of arrays, functions,
+        loops, and basic problem solving.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Given Data -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Sample Data</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        You may assume the program is given an array of integers similar to
+        the following:
+      </p>
+      <pre><code>int data[] = {12, 7, 3, 9, 15, 4};
+const int SIZE = 6;</code></pre>
+
+      <p>
+        Do <strong>not</strong> change the values directly inside your functions.
+        Functions should work with any integer array passed to them.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Statistical Concepts -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Statistical Concepts</h5>
+    </div>
+    <div class="card-body">
+      <h6>Minimum and Maximum</h6>
+      <p>
+        The <strong>minimum</strong> is the smallest value in the array.
+        The <strong>maximum</strong> is the largest value in the array.
+      </p>
+
+      <h6>Mean (Average)</h6>
+      <p>
+        The <strong>mean</strong>, also called the <em>average</em>, is calculated
+        by adding all values in the array and then dividing by the number of values.
+      </p>
+
+      <h6>Median</h6>
+      <p>
+        The <strong>median</strong> is the middle value of a data set.
+        <strong>Important:</strong> The data must be <em>sorted</em> before
+        the median can be calculated.
+      </p>
+      <ul>
+        <li>
+          If the number of values is <strong>odd</strong>, the median is the
+          single middle value.
+        </li>
+        <li>
+          If the number of values is <strong>even</strong>, the median is the
+          average of the two middle values.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card: Required Functions -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Required Functions</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        You must write <strong>your own functions</strong> for each of the following
+        tasks:
+      </p>
+      <ul>
+        <li><code>min()</code> – returns the smallest value</li>
+        <li><code>max()</code> – returns the largest value</li>
+        <li><code>mean()</code> – returns the average</li>
+        <li><code>sort()</code> – sorts the array in ascending order</li>
+        <li><code>median()</code> – returns the median value</li>
+      </ul>
+      <p>
+        The <code>median()</code> function must assume the array has
+        already been sorted.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Sample Output -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Sample Output</h5>
+    </div>
+    <div class="card-body">
+      <pre><code>Data values:
+12 7 3 9 15 4
+
+Minimum value: 3
+Maximum value: 15
+Mean: 8.3
+Median: 8.0</code></pre>
+    </div>
+  </div>
+
+  <!-- Card: Program Requirements -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Program Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Use functions for all calculations</li>
+        <li>Do not use global variables</li>
+        <li>Do not use built-in sorting or statistics libraries</li>
+        <li>Use constants (e.g., <code>SIZE</code>) instead of hard-coded numbers</li>
+        <li>Display clear labels for all output</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card: Coding Standards & Reminders -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Good Coding Standards</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Include the mandatory program header comment (name, course, assignment, date)</li>
+        <li>Use meaningful variable and function names</li>
+        <li>Indent code consistently</li>
+        <li>
+          Avoid <strong>magic numbers</strong> (unnamed constants). Use
+          <code>const</code> variables instead.
+        </li>
+        <li>Write comments that explain <em>why</em> your code works</li>
+      </ul>
+      <p>
+        Clean, readable code is just as important as correct output.
+      </p>
+    </div>
+  </div>
+
+</div>

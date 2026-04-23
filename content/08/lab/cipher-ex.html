@@ -1,0 +1,153 @@
+<!-- Student Handout: C++ Programming Exercise – Caesar Cipher -->
+
+<div class="container my-4">
+
+  <!-- Card: Exercise="card-header">  <!-- Card: Exercise Overview -->
+      <h5 class="card-title mb-0">Programming Exercise: Caesar Cipher</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In this exercise, you will write a <strong>simple console-based C++ program</strong>
+        that performs a <strong>Caesar cipher</strong> on a message entered by the user.
+      </p>
+      <p>
+        This assignment gives you practice with character arrays (or strings),
+        functions, loops, and conditional logic.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: What Is a Caesar Cipher -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">What Is a Caesar Cipher?</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A <strong>Caesar cipher</strong> is one of the earliest and simplest forms of encryption.
+        It works by shifting each letter in a message forward or backward in the alphabet
+        by a fixed number of positions.
+      </p>
+      <p>
+        For example, using a shift of 3:
+      </p>
+      <ul>
+        <li><code>A</code> becomes <code>D</code></li>
+        <li><code>B</code> becomes <code>E</code></li>
+        <li><code>X</code> becomes <code>A</code></li>
+      </ul>
+      <p>
+        When decoding, the process is reversed by shifting letters back.
+      </p>
+      <p>
+        Non-letter characters (spaces, punctuation, numbers) are typically left unchanged.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Program Behavior -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Program Behavior</h5>
+    </div>
+    <div class="card-body">
+      <p>Your program should:</p>
+      <ol>
+        <li>Ask the user whether they want to <strong>encode</strong> or <strong>decode</strong> a message</li>
+        <li>Prompt the user to enter a message (up to 80 characters)</li>
+        <li>Apply a Caesar cipher using a fixed shift value</li>
+        <li>Display the resulting encoded or decoded message</li>
+      </ol>
+      <p>
+        The user may copy and paste longer sentences, but your program must
+        limit the message size to a maximum of <strong>80 characters</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card: Algorithm Outline -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Algorithm Outline</h5>
+    </div>
+    <div class="card-body">
+      <ol>
+        <li>Read the user choice (encode or decode)</li>
+        <li>Read the message into a character array</li>
+        <li>For each character in the message:
+          <ul>
+            <li>If it is a letter, apply the shift</li>
+            <li>Wrap around the alphabet if needed</li>
+            <li>Leave non-letter characters unchanged</li>
+          </ul>
+        </li>
+        <li>Output the transformed message</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- Card: Sample Output -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Sample Output</h5>
+    </div>
+    <div class="card-body">
+      <pre><code>Caesar Cipher Program
+---------------------
+Enter E to encode or D to decode: E
+Enter your message (max 80 characters):
+HELLO WORLD
+
+Encoded message:
+KHOOR ZRUOG</code></pre>
+
+      <pre><code>Enter E to encode or D to decode: D
+Enter your message (max 80 characters):
+KHOOR ZRUOG
+
+Decoded message:
+HELLO WORLD</code></pre>
+    </div>
+  </div>
+
+  <!-- Card: Program Requirements -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Program Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Console application only (no GUI)</li>
+        <li>Maximum message length of 80 characters</li>
+        <li>Use constants for values such as message size and shift amount</li>
+        <li>Do not use encryption libraries</li>
+        <li>Ensure the program works for both uppercase and lowercase letters</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card: Coding Standards & Reminders -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <h5 class="card-title mb-0">Good Coding Standards & Reminders</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Include the mandatory program header comment (name, course, assignment, date)</li>
+        <li>Use meaningful variable and function names</li>
+        <li>Break logic into functions where appropriate</li>
+        <li>
+          Avoid <strong>magic numbers</strong> (unnamed constants). Use <code>const</code>
+          variables such as <code>MAX_MESSAGE_LENGTH</code> and <code>SHIFT</code>.
+        </li>
+        <li>Use consistent indentation and spacing</li>
+        <li>Comment your code to explain your logic</li>
+      </ul>
+      <p>
+        Clear, readable code is required for full credit.
+      </p>
+    </div>
+  </div>
+
+</div>
+  <div class="card mb-4">
