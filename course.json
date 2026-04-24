@@ -487,6 +487,11 @@
             "type": "content",
             "source": "/content/08/search.html"
           },
+          "sort": {
+            "title": "Sorting and Searching Arrays",
+            "type": "content",
+            "source": "/content/08/sort.html"
+          },
           "vectors": {
             "title": "Vectors",
             "type": "content",
