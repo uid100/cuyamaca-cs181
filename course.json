@@ -32,14 +32,16 @@
   "textbook": "materials/textbook.json",
   "content": {
     "modules": {
-      "00": { "title": "Notes ## DO NOT PUBLISH ##",
+      "00": {
+        "title": "Notes ## DO NOT PUBLISH ##",
         "shortTitle": "notes",
         "pages": {
           "1": "use *resource* for absolute (external) links",
           "2": "use *source* for course-repo relative (internal) links, courseBase + source"
         }
       },
-      "01": { "title": "Introduction to Computers, Programming, and C++",
+      "01": {
+        "title": "Introduction to Computers, Programming, and C++",
         "shortTitle": "intro",
         "length": "1 week",
         "chapter": "1 & 2: An Intro to Computers and Programming and C++",
@@ -53,23 +55,60 @@
           "IDE setup"
         ],
         "pages": {
-          "start": {"title": "PICK ME! PICK ME! ---- ( ***START HERE*** )","type": "content","source": "content/01/start.html"},
-          "overview": {"title": "Module Overview","type": "content","source": "content/01/module1.html"},
-          "ack": { "title": "Syllabus Acknowledgement","type": "content", "source": "content/01/ack.html"},
-          "intro": { "title": "About me", "type": "discussion", "source": "content/01/intro.html" },
-          "chapter": {"title": "Chapter 1 & 2 Notes","type": "content","source": "content/01/ch1-2-notes.html"},
-          "pgm-header": {"title": "Required Header Content","type": "content","source": "content/pgm-header.html"},  
-          "dev-environment": {"title": "Typical C++ Program Development Environment","type": "content","source": "content/dev-env.html"},
-          "simple-program": {"title": "Anatomy of a Simple C++ Program","type": "content","source": "content/01/simple-program.html"},  
-          "end": {"title": "End of Module 1: Introduction to Computers, Programming, and C++", "type": "content","source": "content/end-module.html"}
+          "start": {
+            "title": "PICK ME! PICK ME! ---- ( ***START HERE*** )",
+            "type": "content",
+            "source": "content/01/start.html"
+          },
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "content/01/module1.html"
+          },
+          "ack": {
+            "title": "Syllabus Acknowledgement",
+            "type": "content",
+            "source": "content/01/ack.html"
+          },
+          "intro": {
+            "title": "About me",
+            "type": "discussion",
+            "source": "content/01/intro.html"
+          },
+          "chapter": {
+            "title": "Chapter 1 & 2 Notes",
+            "type": "content",
+            "source": "content/01/ch1-2-notes.html"
+          },
+          "pgm-header": {
+            "title": "Required Header Content",
+            "type": "content",
+            "source": "content/pgm-header.html"
+          },
+          "dev-environment": {
+            "title": "Typical C++ Program Development Environment",
+            "type": "content",
+            "source": "content/dev-env.html"
+          },
+          "simple-program": {
+            "title": "Anatomy of a Simple C++ Program",
+            "type": "content",
+            "source": "content/01/simple-program.html"
+          },
+          "end": {
+            "title": "End of Module 1: Introduction to Computers, Programming, and C++",
+            "type": "content",
+            "source": "content/end-module.html"
+          }
         },
         "lab": {
-            "title": "Lab #1 - Getting Started",
-            "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/task-list.json",
-            "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/"
-          }
+          "title": "Lab #1 - Getting Started",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/01/lab/"
+        }
       },
-      "02": { "title": "Variables, Data Types, Expressions",
+      "02": {
+        "title": "Variables, Data Types, Expressions",
         "shortTitle": "variables",
         "length": "2 weeks",
         "chapter": "3: Variables, Data Types, and Expressions",
@@ -80,22 +119,55 @@
           "Style and naming conventions"
         ],
         "pages": {
-          "overview": {"title": "Module Overview","type": "content","source": "/content/02/module2.html"},
-          "data-types": {"title": "Basic Data Types in C++","type": "content","source": "content/02/data-types.html"},
-          "variables": {"title": "Variables and Data Types","type": "content", "resource": "https://uid100.github.io/py/content/variables.html"},
-          "operators": {"title": "Operators","type": "content","source": "/content/02/operators.html"},
-          "magic-numbers": { "title": "Unnamed Constants - Magic Numbers","type": "content","resource": "https://uid100.github.io/edu-core/shared/magic-numbers.html"},
-          "c-strings": {"title": "c-strings","type": "content","source": "/content/02/c-strings.html"},
-          "random": {"title": "(Pseudo) Random Numbers","type": "content","source": "/content/02/prng.html"},
-          "end": {"title": "End of Module 2: Variables, Data Types, Expressions","type": "content","source": "/content/end-module.html"}
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/02/module2.html"
+          },
+          "data-types": {
+            "title": "Basic Data Types in C++",
+            "type": "content",
+            "source": "content/02/data-types.html"
+          },
+          "variables": {
+            "title": "Variables and Data Types",
+            "type": "content",
+            "resource": "https://uid100.github.io/py/content/variables.html"
+          },
+          "operators": {
+            "title": "Operators",
+            "type": "content",
+            "source": "/content/02/operators.html"
+          },
+          "magic-numbers": {
+            "title": "Unnamed Constants - Magic Numbers",
+            "type": "content",
+            "resource": "https://uid100.github.io/edu-core/shared/magic-numbers.html"
+          },
+          "c-strings": {
+            "title": "c-strings",
+            "type": "content",
+            "source": "/content/02/c-strings.html"
+          },
+          "random": {
+            "title": "(Pseudo) Random Numbers",
+            "type": "content",
+            "source": "/content/02/prng.html"
+          },
+          "end": {
+            "title": "End of Module 2: Variables, Data Types, Expressions",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         },
         "lab": {
-            "title": "Lab #2 - Variables and Data Types",
-            "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/task-list.json",
-            "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/"
-          }
+          "title": "Lab #2 - Variables and Data Types",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/02/lab/"
+        }
       },
-      "03": { "title": "Decisions, Debugging, and Pseudocode",
+      "03": {
+        "title": "Decisions, Debugging, and Pseudocode",
         "shortTitle": "decisions",
         "length": "2 weeks",
         "chapter": "4: Making Decisions",
@@ -112,14 +184,46 @@
           "Program design with pseudocode and flowcharts"
         ],
         "pages": {
-          "overview": {"title": "Module Overview","type": "content","source": "/content/03/module3.html"},
-          "self-documenting": { "title": "Documenting Code","type": "content","resource": "https://uid100.github.io/edu-core/shared/self-documenting-code.html"},
-          "logical-operators": {"title": "Logical Operators","type": "content","source": "/content/03/logical-operators.html"},
-          "if-statements": {"title": "If Statements","type": "content","resource": "https://uid100.github.io/edu-core/shared/conditionals-cpp.html"},
-          "debugging": {"title": "Debugging Techniques","type": "content","source": "/content/03/cpp-blocks-tracing-scope.html"},
-          "switch-case": {"title": "Switch Case","type": "content","source": "/content/03/switch-case.html"},
-          "menu-app": {"title": "Demo: Menu-Driven Application","type": "content","source": "/content/03/menu-app.html"},
-          "end": {"title": "End of Module 3: Conditional Processing","type": "content","source": "/content/end-module.html"}
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/03/module3.html"
+          },
+          "self-documenting": {
+            "title": "Documenting Code",
+            "type": "content",
+            "resource": "https://uid100.github.io/edu-core/shared/self-documenting-code.html"
+          },
+          "logical-operators": {
+            "title": "Logical Operators",
+            "type": "content",
+            "source": "/content/03/logical-operators.html"
+          },
+          "if-statements": {
+            "title": "If Statements",
+            "type": "content",
+            "resource": "https://uid100.github.io/edu-core/shared/conditionals-cpp.html"
+          },
+          "debugging": {
+            "title": "Debugging Techniques",
+            "type": "content",
+            "source": "/content/03/cpp-blocks-tracing-scope.html"
+          },
+          "switch-case": {
+            "title": "Switch Case",
+            "type": "content",
+            "source": "/content/03/switch-case.html"
+          },
+          "menu-app": {
+            "title": "Demo: Menu-Driven Application",
+            "type": "content",
+            "source": "/content/03/menu-app.html"
+          },
+          "end": {
+            "title": "End of Module 3: Conditional Processing",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         },
         "lab": {
           "title": "Lab #3 - Conditional Logic and Program Design",
@@ -127,7 +231,8 @@
           "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/03/lab/"
         }
       },
-      "04": { "title": "Iteration using Loops",
+      "04": {
+        "title": "Iteration using Loops",
         "shortTitle": "loops",
         "length": "2 weeks",
         "chapter": "5: Looping",
@@ -185,7 +290,8 @@
           "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/04/lab/"
         }
       },
-      "05": { "title": "Functions and Scope",
+      "05": {
+        "title": "Functions and Scope",
         "shortTitle": "functions",
         "length": "1 week",
         "chapter": "6: Functions",
@@ -244,7 +350,8 @@
           "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/05/lab/"
         }
       },
-      "06": { "title": "Classes and Objects",
+      "06": {
+        "title": "Classes and Objects",
         "shortTitle": "oop",
         "length": "2 weeks",
         "chapter": "7: Object-Oriented Programming",
@@ -281,7 +388,11 @@
             "type": "content",
             "source": "/content/06/structs.html"
           },
-          "pseudocode": {"title": "Pseudocode for Program Design","type": "content","source": "/content/06/pseudocode.html"},
+          "pseudocode": {
+            "title": "Pseudocode for Program Design",
+            "type": "content",
+            "source": "/content/06/pseudocode.html"
+          },
           "end": {
             "title": "End of Module 06",
             "type": "content",
@@ -294,7 +405,8 @@
           "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/06/lab/"
         }
       },
-      "07": { "title": "Arrays",
+      "07": {
+        "title": "Arrays",
         "shortTitle": "arrays",
         "length": "1 week",
         "chapter": "8: Arrays",
@@ -308,13 +420,41 @@
           "Visualizing array memory as contiguous blocks"
         ],
         "pages": {
-          "overview": {"title": "Module Overview","type": "content","source": "/content/07/module7.html"},
-          "arrays": {"title": "Arrays","type": "content","source": "/content/07/arrays.html"},
-          "program8-4": {"title": "Sample Code: Out-of-Bounds Code","type": "content","source": "/content/07/out-of-bounds-code.html"},
-          "2d-arrays": {"title": "Multidimensional Arrays","type": "content","source": "/content/07/multi-dimension-arrays.html"},
-          "vectors": {"title": "Vectors vs. Arrays","type": "content","source": "/content/07/vectors.html"},
-          "droids": { "title": "Droids: A Case Study in OOP","type": "content",  "resource": "https://uid100.github.io/edu-core/shared/modules/oop-concepts/droids.html"},
-          "end": {"title": "End of Module 7","type": "content","source": "/content/end-module.html" }
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/07/module7.html"
+          },
+          "arrays": {
+            "title": "Arrays",
+            "type": "content",
+            "source": "/content/07/arrays.html"
+          },
+          "program8-4": {
+            "title": "Sample Code: Out-of-Bounds Code",
+            "type": "content",
+            "source": "/content/07/out-of-bounds-code.html"
+          },
+          "2d-arrays": {
+            "title": "Multidimensional Arrays",
+            "type": "content",
+            "source": "/content/07/multi-dimension-arrays.html"
+          },
+          "vectors": {
+            "title": "Vectors vs. Arrays",
+            "type": "content",
+            "source": "/content/07/vectors.html"
+          },
+          "droids": {
+            "title": "Droids: A Case Study in OOP",
+            "type": "content",
+            "resource": "https://uid100.github.io/edu-core/shared/modules/oop-concepts/droids.html"
+          },
+          "end": {
+            "title": "End of Module 7",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         },
         "lab": {
           "title": "Lab #7 - Arrays",
@@ -322,7 +462,8 @@
           "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/07/lab/"
         }
       },
-      "08": { "title": "Sorting, Searching & Vectors",
+      "08": {
+        "title": "Sorting, Searching & Vectors",
         "shortTitle": "vectors and algorithms",
         "length": "1 week",
         "chapter": "9: Algorithms",
@@ -341,10 +482,10 @@
             "type": "content",
             "source": "/content/08/module8.html"
           },
-          "sorting-searching": {
+          "search": {
             "title": "Sorting and Searching Arrays",
             "type": "content",
-            "source": "/content/08/sorting-searching.html"
+            "source": "/content/08/search.html"
           },
           "vectors": {
             "title": "Vectors",
@@ -358,7 +499,8 @@
           }
         }
       },
-      "09": { "title": "Pointers",
+      "09": {
+        "title": "Pointers",
         "shortTitle": "pointers",
         "length": "1 week",
         "chapter": "10: Pointers",
@@ -421,7 +563,8 @@
           }
         }
       },
-      "11": { "title": "Strings",
+      "11": {
+        "title": "Strings",
         "shortTitle": "strings",
         "length": "1 week",
         "topics": [
@@ -451,12 +594,21 @@
           }
         }
       },
-      "12": { "title": "Wrap-up",
+      "12": {
+        "title": "Wrap-up",
         "shortTitle": "wrap-up",
         "length": "1 week",
         "pages": {
-          "overview": { "title": "Module Overview", "type": "content", "source": "/content/12/module12.html" },
-          "end": { "title": "End of Module 12", "type": "content", "source": "/content/end-module.html" } 
+          "overview": {
+            "title": "Module Overview",
+            "type": "content",
+            "source": "/content/12/module12.html"
+          },
+          "end": {
+            "title": "End of Module 12",
+            "type": "content",
+            "source": "/content/end-module.html"
+          }
         }
       },
       "99": {
