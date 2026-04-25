@@ -502,6 +502,11 @@
             "type": "content",
             "source": "/content/end-module.html"
           }
+        },
+        "lab": {
+          "title": "Lab #8 - Algorithms",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/08/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/08/lab/"
         }
       },
       "09": {
