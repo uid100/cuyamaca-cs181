@@ -2,20 +2,20 @@
 
 <div class="container my-4">
 
-  <!-- Card: Exercise="card-header">  <!-- Card: Exercise Overview -->
-      <h5 class="card-title mb-0">Programming Exercise: Caesar Cipher</h5>
-    </div>
+  <div class="card mb-4">
+    <!-- Card: Exercise="card-header">  <!-- Card: Exercise Overview -->
+    <h5 class="card-title mb-0">Programming Exercise: Caesar Cipher</h5>
     <div class="card-body">
       <p>
-        In this exercise, you will write a <strong>simple console-based C++ program</strong>
+        Write a <strong>simple console-based C++ program</strong>
         that performs a <strong>Caesar cipher</strong> on a message entered by the user.
       </p>
       <p>
-        This assignment gives you practice with character arrays (or strings),
+        This is intended for practice with character arrays (or strings),
         functions, loops, and conditional logic.
       </p>
-    </div>
-  </div>
+    </div> <!-- .card-body -->
+  </div> <!-- .card -->
 
   <!-- Card: What Is a Caesar Cipher -->
   <div class="card mb-4">
@@ -57,6 +57,7 @@
         <li>Prompt the user to enter a message (up to 80 characters)</li>
         <li>Apply a Caesar cipher using a fixed shift value</li>
         <li>Display the resulting encoded or decoded message</li>
+        <li>Use the constant value for the shift amount: <code>const int SHIFT = 3;</code></li>
       </ol>
       <p>
         The user may copy and paste longer sentences, but your program must
