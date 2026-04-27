@@ -1,0 +1,90 @@
+<section>
+  <h2>Programming Exercise: Linear Search in an Integer Array</h2>
+
+  <p>
+    In this exercise, you will write a simple C++ program that demonstrates a
+    <strong>linear search</strong>. A linear search checks each element in an array
+    one at a time until a target value is found or the end of the array is reached.
+    To practice good program design, the search logic must be placed in its own
+    function.
+  </p>
+
+  <h3>Learning Objectives</h3>
+  <ul>
+    <li>Practice working with integer arrays</li>
+    <li>Write and call user-defined functions</li>
+    <li>Use loops to process array data</li>
+    <li>Understand how a linear search works</li>
+    <li>Relate program behavior to <code>O(n)</code> time complexity</li>
+  </ul>
+
+  <h3>Program Requirements</h3>
+  <ul>
+    <li>Declare and initialize an integer array with at least 10 values. This array should be declared
+        as a constant near the top of your source file, outside of any function, to allow for easy modification.
+    </li>
+    <li>Declare a constant int NOT_FOUND = -1;</li>
+    <li>Prompt the user to enter an integer to search for</li>
+    <li>Implement the linear search in a separate function</li>
+    <li>Call the search function from <code>main()</code></li>
+    <li>If the value is found, return the index and display its value (from main(), not in the search function)</li>
+    <li>If the value is not found, return NOT_FOUND</li>
+  </ul>
+
+  <h3>Search Function Prototype</h3>
+  <p>
+    Your linear search function should use the following prototype:
+  </p>
+
+  <pre><code>
+int linearSearch(const int arr[], int size, int target);
+  </code></pre>
+
+  <p>
+    This function should return the index of the target value if it is found, or
+    <code>NOT_FOUND</code> if the value is not in the array.
+  </p>
+
+  <h3>Instructions</h3>
+  <ol>
+    <li>Create a new C++ source file.</li>
+    <li>Define and initialize an integer array in <code>main()</code>.</li>
+    <li>Prompt the user for a number to search for.</li>
+    <li>Call the <code>linearSearch</code> function, passing the array, its size, and the search value.</li>
+    <li>Use the return value to determine what message to display.</li>
+  </ol>
+
+  <h3>Hints</h3>
+  <ul>
+    <li>Arrays are passed by reference, so no copying occurs.</li>
+    <li>Use a <code>for</code> loop inside the search function.</li>
+    <li>Remember that array indexes start at 0.</li>
+  </ul>
+
+  <h3>Sample Output</h3>
+  <pre>
+Enter a number to search for: 42
+Value found at index 5.
+  </pre>
+
+  <pre>
+Enter a number to search for: 99
+Value not found in the array.
+  </pre>
+
+  <p>
+    When finished, you should understand why this approach checks each element
+    sequentially and why linear search is considered an <code>O(n)</code> algorithm.
+  </p>
+  <p>
+    You should also understand why the size of the array is a required parameter for
+    the search function, since arrays do not carry size information with them.
+  </p>
+  <p>
+    Except for the test data in the array, there should be no hard-coded values in your program. 
+  </p>
+  <p>
+    Like all programming exercises, don't forget the required header content at the top of your 
+    source file, including comments that describe the program's purpose, author, and date.
+  </p>
+</section>
