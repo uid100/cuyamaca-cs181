@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="card my-4">
+        <div class="card-header">
+        <h5 class="card-title mb-0">Algorithm Complexity</h5>
+
+        </div>
+        <div class="card-body">
+            <section>
+            <p>
+                <strong>Algorithm complexity</strong> describes how an algorithm's performance
+                (usually runtime, sometimes memory usage) changes as the size of the input grows.
+                Instead of measuring exact execution time, complexity focuses on how an algorithm
+                <em>scales</em> as more data is processed.
+            </p>
+
+            <p>
+                Different algorithms are better suited for different situations. For example,
+                a simple loop that compares every value in a list to every other value may work
+                perfectly fine for 10 or 20 items, but it can become very slow when the list
+                contains thousands or millions of values. On the other hand, a more efficient
+                algorithm may handle large datasets well, even if it is a bit more complex to
+                understand or implement.
+            </p>
+
+            <p>
+                Consider a basic example: searching for a number in an array. One approach is
+                to check each element one by one until the value is found. This is easy to write
+                and works well for small arrays. A different approach might sort the data first
+                and use a faster search technique. That second method may take extra work up
+                front, but it can be much faster when working with large amounts of data.
+            </p>
+
+            <p>
+                To describe algorithm efficiency, programmers often use <strong>Big-O notation</strong>.
+                Big-O provides a way to classify algorithms based on how their runtime grows as
+                input size increases. It does not give exact timing; instead, it describes the
+                overall growth pattern.
+            </p>
+
+            <p>
+                For example, an algorithm that processes each item once is often described as
+                <code>O(n)</code>, where <code>n</code> represents the number of inputs. If an
+                algorithm uses a loop inside another loop, its runtime may grow more rapidly,
+                such as <code>O(n²)</code>. Even for beginners, Big-O is useful because it helps
+                explain why some programs slow down quickly as data sizes increase.
+            </p>
+
+            <p>
+                In an introductory C++ course, the goal is not to memorize many complexity rules,
+                but to build intuition. By understanding how loops, nested loops, and algorithm
+                choices affect performance, you can write programs that are both correct and
+                efficient for the problem at hand.
+            </p>
+            </section>
+
+        </div>
+    </div>
+</div>
