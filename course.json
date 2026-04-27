@@ -492,10 +492,10 @@
             "type": "content",
             "source": "/content/08/sort.html"
           },
-          "vectors": {
-            "title": "Vectors",
+          "complexity": {
+            "title": "Algorithm Complexity",
             "type": "content",
-            "source": "/content/08/vectors.html"
+            "source": "/content/08/complexity.html"
           },
           "end": {
             "title": "End of Module 8",
