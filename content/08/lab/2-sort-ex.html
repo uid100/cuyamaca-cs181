@@ -1,0 +1,73 @@
+<section>
+  <h2>Programming Exercise: Bubble Sort on an Integer Array</h2>
+
+  <p>
+    In this exercise, you will write a C++ program that demonstrates
+    <strong>bubble sort</strong>. Bubble sort is a simple sorting algorithm that
+    repeatedly steps through an array, compares adjacent elements, and swaps them
+    if they are out of order. The process continues until the entire array is sorted.
+  </p>
+
+  <h3>Learning Objectives</h3>
+  <ul>
+    <li>Practice working with integer arrays</li>
+    <li>Write and call user-defined functions</li>
+    <li>Use nested loops to process array data</li>
+    <li>Understand how bubble sort works</li>
+    <li>Relate nested loops to <code>O(n²)</code> time complexity</li>
+  </ul>
+
+  <h3>Program Requirements</h3>
+  <ul>
+    <li>Declare and initialize an integer array with at least 10 values</li>
+    <li>Implement the bubble sort algorithm in a separate function</li>
+    <li>Call the sorting function from <code>main()</code></li>
+    <li>Display the array before and after sorting</li>
+  </ul>
+
+  <h3>Sort Function Prototype</h3>
+  <p>
+    Your bubble sort function should use the following prototype:
+  </p>
+
+  <pre><code>
+void bubbleSort(int arr[], int size);
+  </code></pre>
+
+  <p>
+    This function should modify the array so that its elements are sorted in
+    ascending order.
+  </p>
+
+  <h3>Instructions</h3>
+  <ol>
+    <li>Create a new C++ source file.</li>
+    <li>Define and initialize an integer array in <code>main()</code>.</li>
+    <li>Display the original contents of the array.</li>
+    <li>Call the <code>bubbleSort</code> function, passing the array and its size.</li>
+    <li>Display the sorted array after the function completes.</li>
+  </ol>
+
+  <h3>Hints</h3>
+  <ul>
+    <li>Use two nested <code>for</code> loops inside the sorting function.</li>
+    <li>Compare adjacent elements (<code>arr[i]</code> and <code>arr[i + 1]</code>).</li>
+    <li>Swap values when they are out of order.</li>
+    <li>Each outer pass moves the largest remaining value to the end of the array.</li>
+  </ul>
+
+  <h3>Sample Output</h3>
+  <pre>
+Original array:
+5 3 8 1 9 2 7 4 6 0
+
+Sorted array:
+0 1 2 3 4 5 6 7 8 9
+  </pre>
+
+  <p>
+    When finished, be prepared to explain why bubble sort uses nested loops and why
+    its performance becomes slow for large datasets, making it an
+    <code>O(n²)</code> algorithm.
+  </p>
+</section>
