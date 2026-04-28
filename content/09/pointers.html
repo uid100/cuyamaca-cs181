@@ -1,0 +1,130 @@
+<div class="container my-4">
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Introduction to Pointers</h2>
+      <p>
+        In C++, a <strong>pointer</strong> is a variable that stores the memory address
+        of another variable. Instead of working directly with a value, pointers allow
+        you to work with the location where that value is stored in memory.
+      </p>
+      <p>
+        Pointers are fundamental to understanding how C++ manages memory, enables
+        efficient function calls, and supports dynamic data structures.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">The Address Operator (<code>&amp;</code>)</h2>
+      <p>
+        The <strong>address operator</strong> (<code>&amp;</code>) is used to obtain the
+        memory address of a variable. This operator does not change the variable’s value;
+        it simply tells you where the variable is stored in memory.
+      </p>
+
+      <pre><code class="language-cpp">
+int number = 42;
+int* ptr = &number; // ptr stores the address of number
+      </code></pre>
+
+      <p>
+        In this example, <code>&amp;number</code> produces the memory address of
+        <code>number</code>, which is then stored in the pointer variable <code>ptr</code>.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Pointer Variables</h2>
+      <p>
+        A <strong>pointer variable</strong> is declared by placing an asterisk
+        (<code>*</code>) between the data type and the pointer name. The data type
+        indicates what kind of value the pointer will point to.
+      </p>
+
+      <pre><code class="language-cpp">
+int* intPtr;       // pointer to an int
+double* dblPtr;   // pointer to a double
+char* charPtr;    // pointer to a character
+      </code></pre>
+
+      <p>
+        The asterisk is part of the declaration and means “pointer to.” It does
+        <em>not</em> dereference the pointer at this stage.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Declaring and Assigning Pointer Values</h2>
+      <p>
+        Pointers should be assigned a valid address before being used. This is typically
+        done using the address operator.
+      </p>
+
+      <pre><code class="language-cpp">
+int value = 10;
+int* ptr = &value;  // ptr points to value
+      </code></pre>
+
+      <p>
+        To access or modify the value a pointer points to, use the <strong>dereference
+        operator</strong> (<code>*</code>).
+      </p>
+
+      <pre><code class="language-cpp">
+*ptr = 20;          // changes value to 20
+std::cout &lt;&lt; value; // outputs 20
+      </code></pre>
+
+      <p>
+        Dereferencing tells the program to “go to the address stored in the pointer and
+        work with the value found there.”
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Passing Pointers to Functions</h2>
+      <p>
+        Pointers are commonly passed to functions when the function needs to modify the
+        original variable or work efficiently with large data.
+      </p>
+
+      <pre><code class="language-cpp">
+void updateValue(int* p) {
+    *p = 100;
+}
+
+int main() {
+    int num = 5;
+    updateValue(&num);
+    // num is now 100
+}
+      </code></pre>
+
+      <p>
+        Here, the function receives a pointer to <code>num</code>. By dereferencing that
+        pointer inside the function, the original variable in <code>main</code> is changed.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Key Takeaways</h2>
+      <ul>
+        <li>Pointers store memory addresses, not actual values.</li>
+        <li>The address operator (<code>&amp;</code>) gets a variable’s address.</li>
+        <li>The dereference operator (<code>*</code>) accesses the value at an address.</li>
+        <li>Passing pointers to functions allows direct modification of arguments.</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
