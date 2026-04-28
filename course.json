@@ -540,6 +540,11 @@
             "type": "content",
             "source": "/content/09/pointersyntax.html"
           },
+          "pointers-arrays": {
+            "title": "Pointers and Arrays",
+            "type": "content",
+            "source": "/content/09/pointers-and-arrays.html"
+          },
           "end": {
             "title": "End of Module 09",
             "type": "content",
