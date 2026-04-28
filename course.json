@@ -473,7 +473,7 @@
           "Linear search",
           "Binary search",
           "Selection sort / bubble sort",
-          "Intro to std::vector and why it’s safer",
+          "Intro to std::vector and why its safer",
           "Using vectors"
         ],
         "pages": {
