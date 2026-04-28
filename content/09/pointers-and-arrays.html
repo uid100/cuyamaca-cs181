@@ -1,0 +1,99 @@
+<div class="container my-4">
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Arrays and Pointers</h2>
+      <p>
+        In C++, arrays and pointers are closely related. The name of an array acts like
+        a pointer to its first element in memory. This allows pointer notation to be
+        used to access and traverse array elements.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Accessing Array Elements with Pointers</h2>
+      <p>
+        Given an array, the array name represents the address of the first element.
+        You can store this address in a pointer.
+      </p>
+
+      <pre><code class="language-cpp">
+int numbers[4] = {10, 20, 30, 40};
+int* ptr = numbers;   // points to numbers[0]
+      </code></pre>
+
+      <p>
+        Dereferencing the pointer accesses the value at that address:
+      </p>
+
+      <pre><code class="language-cpp">
+std::cout << *ptr;       // 10
+std::cout << *(ptr + 1); // 20
+      </code></pre>
+
+      <p>
+        Pointer arithmetic automatically accounts for the size of the data type.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Pointer Arithmetic and Arrays</h2>
+      <p>
+        Adding an integer to a pointer moves it forward by that many elements
+        in the array—not bytes.
+      </p>
+
+      <pre><code class="language-cpp">
+int* ptr = numbers;
+
+ptr = ptr + 2;          // now points to numbers[2]
+std::cout << *ptr;      // 30
+      </code></pre>
+
+      <p>
+        This works because the compiler knows the data type the pointer refers to.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Traversing an Array Using a Pointer</h2>
+      <p>
+        Pointers can be used to loop through an array by advancing the pointer
+        from the first element to the last.
+      </p>
+
+      <pre><code class="language-cpp">
+int numbers[4] = {10, 20, 30, 40};
+int* ptr = numbers;
+
+for (int i = 0; i < 4; i++) {
+    std::cout << *ptr << " ";
+    ptr++;
+}
+      </code></pre>
+
+      <p>
+        Each increment moves the pointer to the next array element.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Key Takeaways</h2>
+      <ul>
+        <li>An array name acts like a pointer to the first element</li>
+        <li>Pointers can access array elements using dereferencing</li>
+        <li>Pointer arithmetic moves by elements, not bytes</li>
+        <li>Pointers provide an efficient way to traverse arrays</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
