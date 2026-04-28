@@ -550,6 +550,11 @@
             "type": "content",
             "source": "/content/end-module.html"
           }
+        },
+        "lab": {
+          "title": "Lab #9 - Pointers",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/09/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/09/lab/"
         }
       },
       "10": {

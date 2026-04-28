@@ -1,0 +1,99 @@
+<div class="container my-4">
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Lab Exercise 2: Swapping Values Using Pointers</h2>
+      <p>
+        In this lab, you will write a C++ program that uses pointers to modify variables
+        passed to a function. This exercise demonstrates how pointers allow functions
+        to directly change values stored in memory.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Learning Goal</h3>
+      <p>
+        Practice passing pointers to functions and using dereferencing to modify
+        the original variables.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Program Requirements</h3>
+      <p>Your program must do the following:</p>
+      <ul>
+        <li>Define a function that accepts two <code>int*</code> parameters</li>
+        <li>Swap the values stored at the addresses provided</li>
+        <li>Declare two integer variables in <code>main</code></li>
+        <li>Call the swap function using the addresses of those variables</li>
+        <li>Display the values before and after the function call</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Starter Code</h3>
+      <p>
+        Use the following code as a starting point. Complete the function and
+        function call as directed.
+      </p>
+
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+void swapValues(int* a, int* b) {
+    // declare a temporary variable
+    // swap the values using dereferencing
+}
+
+int main() {
+    int x = 5;
+    int y = 10;
+
+    cout << "Before swap:" << endl;
+    cout << "x = " << x << ", y = " << y << endl;
+
+    // call swapValues using addresses of x and y
+
+    cout << "After swap:" << endl;
+    cout << "x = " << x << ", y = " << y << endl;
+
+    return 0;
+}
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Expected Behavior</h3>
+      <p>
+        When your program runs, the values of <code>x</code> and <code>y</code>
+        should be exchanged after the function call.
+      </p>
+      <p>
+        This confirms that the function modified the original variables
+        through their memory addresses.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Submission Checklist</h3>
+      <ul>
+        <li>Your program compiles and runs without errors</li>
+        <li>The swap function uses <code>int*</code> parameters</li>
+        <li>You use dereferencing to access and modify values</li>
+        <li>Output clearly shows values before and after swapping</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,89 @@
+<div class="container my-4">
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Lab Exercise 3: Array Access Using Pointer Notation</h2>
+      <p>
+        In this lab, you will use pointers and pointer arithmetic to access and display
+        elements of an array. This exercise demonstrates the close relationship
+        between arrays and pointers in C++.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Learning Goal</h3>
+      <p>
+        Understand how arrays are stored in memory and how pointer notation can be used
+        to access array elements without using array indexing.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Program Requirements</h3>
+      <p>Your program must meet the following requirements:</p>
+      <ul>
+        <li>Declare and initialize an array of integers</li>
+        <li>Use a pointer to refer to the first element of the array</li>
+        <li>Print all array elements using pointer dereferencing</li>
+        <li>Use pointer arithmetic to move through the array</li>
+        <li><strong>Do not use the array indexing operator (<code>[]</code>)</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Starter Code</h3>
+      <p>
+        Use the following code as a starting point. Complete the loop so that it prints
+        each element using pointer notation.
+      </p>
+
+      <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int numbers[5] = {10, 20, 30, 40, 50};
+    int* ptr = numbers;   // points to the first element
+
+    // use a loop to print all elements using ptr
+    // do NOT use array indexing []
+
+    return 0;
+}
+      </code></pre>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Expected Behavior</h3>
+      <p>
+        When the program runs, it should print each value stored in the array
+        in order. The output should match the values in the array.
+      </p>
+      <p>
+        Pointer arithmetic should be used to move from one element to the next.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Submission Checklist</h3>
+      <ul>
+        <li>Your program compiles without errors</li>
+        <li>You use a pointer to access array elements</li>
+        <li>You use pointer arithmetic (<code>ptr + i</code> or pointer incrementing)</li>
+        <li>You do not use <code>[]</code> to access array elements</li>
+        <li>Your output clearly displays all array values</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
