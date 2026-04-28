@@ -1,0 +1,127 @@
+<div class="container my-4">
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Pointer Spacing and Style Conventions</h2>
+      <p>
+        In C++, pointer declarations can be written in more than one way. While the
+        compiler accepts several forms, professional and academic coding standards
+        recommend specific conventions to improve readability and reduce errors.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Single Pointer Declarations</h2>
+      <p>
+        The following two declarations are <strong>functionally identical</strong>:
+      </p>
+
+      <pre><code class="language-cpp">
+int* ptr = &value;
+int *ptr = &value;
+      </code></pre>
+
+      <p>
+        Both lines declare <code>ptr</code> as a pointer to an <code>int</code>. The choice
+        between them is a matter of <strong>style</strong>, not correctness.
+      </p>
+
+      <p>
+        Most modern C++ style guides recommend attaching the asterisk
+        (<code>*</code>) to the <strong>variable name</strong>:
+      </p>
+
+      <pre><code class="language-cpp">
+int* ptr = &value;
+      </code></pre>
+
+      <p>
+        This emphasizes that <code>ptr</code> itself is the pointer.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Why Asterisk Placement Matters</h2>
+      <p>
+        In C++, the asterisk binds to the <em>variable</em>, not the data type.
+        This becomes important when declaring multiple variables on one line.
+      </p>
+
+      <pre><code class="language-cpp">
+int* x, y;
+      </code></pre>
+
+      <p>
+        This code declares:
+      </p>
+      <ul>
+        <li><code>x</code> → pointer to <code>int</code></li>
+        <li><code>y</code> → plain <code>int</code></li>
+      </ul>
+
+      <p>
+        This is often confusing to beginners and can easily lead to bugs.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Multiple Pointer Declarations</h2>
+      <p>
+        To correctly declare multiple pointers on a single line, each variable must
+        have its own asterisk:
+      </p>
+
+      <pre><code class="language-cpp">
+int *x, *y;
+      </code></pre>
+
+      <p>
+        While this is correct C++, most style guides advise against declaring multiple
+        variables on one line at all.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Best Practice Recommendation</h2>
+      <p>
+        For clarity and safety—especially when learning C++—follow these rules:
+      </p>
+
+      <ul>
+        <li>Declare <strong>one variable per line</strong></li>
+        <li>Attach the <code>*</code> to the variable name</li>
+      </ul>
+
+      <pre><code class="language-cpp">
+int* x = nullptr;
+int* y = nullptr;
+      </code></pre>
+
+      <p>
+        This format makes it clear that each variable is a pointer and avoids
+        misleading declarations.
+      </p>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Key Takeaways</h2>
+      <ul>
+        <li>Spacing around <code>*</code> does not affect compilation</li>
+        <li><code>int* ptr</code> is usually preferred over <code>int *ptr</code></li>
+        <li>The asterisk applies to the variable, not the type</li>
+        <li>Declare one pointer variable per line for clarity</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

@@ -535,6 +535,11 @@
             "type": "content",
             "source": "/content/09/pointers.html"
           },
+          "syntax": {
+            "title": "Pointer Syntax",
+            "type": "content",
+            "source": "/content/09/pointersyntax.html"
+          },
           "end": {
             "title": "End of Module 09",
             "type": "content",
