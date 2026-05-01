@@ -1,0 +1,51 @@
+13 - entry main()
+16, 19 - declarations
+23 - formatting
+25 - do loop
+26 - displayMenu()
+52 - func.
+54, 55, 56, 57, 58, 59
+26 - return void
+27 - getChoice()
+67 - func.
+69, 71 -  SELECTION: 1
+72 - while() -- check valid SELECTION 
+76 - return SELECTION: 1
+27 - assign return value to getChoice
+29 - if() TRUE
+31 - prompt
+32 - get MONTHS: 3
+34 - switch
+40 - case 3: showFees()
+88 - func.
+90, 91, 92, 93 - output result
+96 - prompt 
+97, 98 - user interaction
+40 - return from showFees
+43 - evaluate boolean TRUE
+25 - repeat do loop
+26 - displayMenu()
+     --- Case # 2 ---
+25 - do loop
+26 - displayMenu()
+52 - func.
+54, 55, 56, 57, 58, 59
+26 - return void
+27 - getChoice()
+67 - func.
+69, 71 -  SELECTION: 2
+72 - while() -- check valid SELECTION 
+76 - return SELECTION: 2
+27 - assign return value to getChoice
+29 - if() TRUE
+31 - prompt
+32 - get MONTHS: 6
+34 - switch
+38 - case 2: showFees()
+88 - func.
+90, 91, 92, 93 - output result
+96 - prompt 
+97, 98 - user interaction
+40 - return from showFees
+43 - evaluate boolean TRUE
+69, 71 -  SELECTION: 
