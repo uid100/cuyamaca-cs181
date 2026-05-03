@@ -32,7 +32,7 @@
     <ul>
       <li><code>Book.h</code> — class specification (header)</li>
       <li><code>Book.cpp</code> — class implementation</li>
-      <li><code>main.cpp</code> — BookStore application (driver)</li>
+      <li><code>BookStore.cpp</code> — BookStore application (driver)</li>
     </ul>
     <p class="card-text">
       Each file <strong>must</strong> begin with the mandatory standard file
@@ -132,9 +132,9 @@
 <!-- Step 3 Driver File -->
 <div class="card mb-4">
   <div class="card-body">
-    <h3 class="card-title">Step 3: Build the BookStore Application (<code>main.cpp</code>)</h3>
+    <h3 class="card-title">Step 3: Build the BookStore Application (<code>BookStore.cpp</code>)</h3>
     <p class="card-text">
-      The <code>main.cpp</code> file represents a simple bookstore program and
+      The <code>BookStore.cpp</code> file represents a simple bookstore program and
       acts as the client of the <code>Book</code> class.
     </p>
     <p class="card-text">
@@ -156,7 +156,7 @@
   <div class="card-body">
     <h3 class="card-title">Step 4: Compile and Run</h3>
 <pre><code>
-g++ main.cpp Book.cpp -o bookstore
+g++ BookStore.cpp Book.cpp -o bookstore
 </code></pre>
     <p class="card-text">
       Run the program and verify that the inventory displays correctly and that
