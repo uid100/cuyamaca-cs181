@@ -157,35 +157,33 @@ int main() {
     - find() returns the index or -1 if not found
     - Add the function PROTOTYPES to ArrayFunctions.h
     - Add the function DEFINITIONS to ArrayFunctions.cpp
-    - When finished, UNCOMMENT this entire section.
+    - When ready, UNCOMMENT the following section to test.
     */
 
-    /*
-    cout << "\nTesting find() and countValues() functions:\n";
+    // cout << "\nTesting find() and countValues() functions:\n";
 
-    char myCharArray[] = {' '};
-    testCounter++;
-    if (find(myCharArray, 1, 'a') != -1)
-        cout << "Error: find() value intended to be not found\n";
-    else passedCounter++;
+    // char myCharArray[] = {' '};
+    // testCounter++;
+    // if (find(myCharArray, 1, 'a') != -1)
+    //     cout << "Error: find() value intended to be not found\n";
+    // else passedCounter++;
 
-    testCounter++;
-    if (countValues(myCharArray, 1, 'a') != 0)
-        cout << "Error: countValues() should return 0 count for not found.\n";
-    else passedCounter++;
+    // testCounter++;
+    // if (countValues(myCharArray, 1, 'a') != 0)
+    //     cout << "Error: countValues() should return 0 count for not found.\n";
+    // else passedCounter++;
 
-    char myCharArray2[] = { 'A', 'B', 'A', 'C', 'A', 'B' };
-    testCounter++;
-    if (find(myCharArray2, 6, 'A') != 0)
-        cout << "Error: find() value should return first occurence \n";
-    else passedCounter++;
+    // char myCharArray2[] = { 'A', 'B', 'A', 'C', 'A', 'B' };
+    // testCounter++;
+    // if (find(myCharArray2, 6, 'A') != 0)
+    //     cout << "Error: find() value should return first occurence \n";
+    // else passedCounter++;
 
-    testCounter++;
-    if (countValues(myCharArray2, 6, 'A') != 3)
-        cout << "Error: countValues() should find 3 occurences.\n";
-    else passedCounter++;
+    // testCounter++;
+    // if (countValues(myCharArray2, 6, 'A') != 3)
+    //     cout << "Error: countValues() should find 3 occurences.\n";
+    // else passedCounter++;
 
-    */
 
     /*
     ============================================================
@@ -201,20 +199,19 @@ int main() {
        from one to the other
     - remember to add the prototype to the header file and the implementation to the utility 
        file for all of these
-    - When finished, UNCOMMENT this section.
+    - When ready, UNCOMMENT the following section to test.
     */
 
-    /*
-    cout << "\nTesting copyArray() and ArrayElementsEqual() functions:\n";
+    // cout << "\nTesting copyArray() and ArrayElementsEqual() functions:\n";
 
-    char letters1[] = {'h','e','l','l','o'};
-    char letters2[5];
-    testCounter++;
-    copyArray(letters1, letters2, 5);
-    if (!ArrayElementsEqual(letters1, letters2, 5))
-        cout << "Error: char copy or equality failed\n";
-    else passedCounter++;
-    */
+    // char letters1[] = {'h','e','l','l','o'};
+    // char letters2[5];
+    // testCounter++;
+    // copyArray(letters1, letters2, 5);
+    // if (!ArrayElementsEqual(letters1, letters2, 5))
+    //     cout << "Error: char copy or equality failed\n";
+    // else passedCounter++;
+    // cout << passedCounter << " out of " << testCounter << " tests passing.\n";
 
     /*
     ============================================================
@@ -224,25 +221,24 @@ int main() {
     - Implement:
         bool inOrder(int[], int);
 
-    - UNCOMMENT after implementation.
+    - UNCOMMENT to test after implementation.
     */
 
-    /*
-    cout << "\nTesting inOrder() function:\n";
+    // cout << "\nTesting inOrder() function:\n";
 
-    int sorted[]   = {1,2,3,4,5};
-    int unsorted[] = {5,4,3,2,1};
+    // int sorted[]   = {1,2,3,4,5};
+    // int unsorted[] = {5,4,3,2,1};
 
-    testCounter++;
-    if (!inOrder(sorted, 5))
-        cout << "Error: inOrder() failed on sorted array\n";
-    else passedCounter++;
+    // testCounter++;
+    // if (!inOrder(sorted, 5))
+    //     cout << "Error: inOrder() failed on sorted array\n";
+    // else passedCounter++;
 
-    testCounter++;
-    if (inOrder(unsorted, 5))
-        cout << "Error: inOrder() failed on unsorted array\n";
-    else passedCounter++;
-    */
+    // testCounter++;
+    // if (inOrder(unsorted, 5))
+    //     cout << "Error: inOrder() failed on unsorted array\n";
+    // else passedCounter++;
+    // cout << passedCounter << " out of " << testCounter << " tests passing.\n";
 
     /*
     ============================================================
@@ -259,6 +255,16 @@ int main() {
         to learn more about Bubble Sort          
     */
 
+    // cout << "\nTesting swapElements() and bubbleUp() functions:\n";
+    // int arr1[] = {1,2,3,4,5};
+
+    // testCounter++;
+    // swapElements(arr1, 0, 4);
+    // if (arr1[0] != 5 || arr1[4] != 1)
+    //     cout << "Error: swapElements() did not swap correctly\n";
+    // else passedCounter++;
+    // cout << passedCounter << " out of " << testCounter << " tests passing.\n";
+
     /*
     ============================================================
     TODO #5: bubbleSort()
@@ -272,10 +278,27 @@ int main() {
     - UNCOMMENT after all previous functions work correctly.
     */
 
+    // cout << "\nTesting bubbleSort() function:\n";
+    // int arr[] = {5,1,4,2,8};
+
+    // testCounter++;
+    // bubbleSort(arr, 5);
+    // cout << "Sorted array: ";
+    // for (int i = 0; i < 5; i++) {
+    //     cout << arr[i] << " ";
+    // }
+    // cout << "\n";
+
+    // if (!inOrder(arr, 5))
+    //     cout << "Error: bubbleSort() did not sort the array correctly\n";
+    // else passedCounter++;
+    // cout << passedCounter << " out of " << testCounter << " tests passing.\n";
+
     cout << "\nPassed: " << passedCounter << " out of: " << testCounter << " tests run.\n\n";
     cout << "\nProgram finished.\n";
     return SUCCESS;
 }
+
     </code></pre>
   </div>
 </div>
