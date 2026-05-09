@@ -1,0 +1,125 @@
+<div class="card shadow-sm">
+  <div class="card-header bg-primary text-white">
+    <h5 class="mb-0">C++ Exercise: Inheritance with Constructors (Vehicle → Car)</h5>
+  </div>
+
+  <div class="card-body">
+
+    <h6 class="fw-bold">Objective</h6>
+    <p>
+      Demonstrate how <strong>constructors are inherited and called</strong> in C++ by creating a base class
+      <code>Vehicle</code> and a derived class <code>Car</code>.
+    </p>
+
+    <h6 class="fw-bold mt-3">Project Requirements</h6>
+    <ul>
+      <li>Create a base class named <code>Vehicle</code>.
+        <ul>
+          <li>Include one public data member: <code>string brand</code></li>
+          <li>Define a constructor that:
+            <ul>
+              <li>Accepts one parameter (<code>string</code>)</li>
+              <li>Initializes the <code>brand</code> member</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>Create a derived class named <code>Car</code>.
+        <ul>
+          <li>Use <code>public</code> inheritance from <code>Vehicle</code></li>
+          <li>Add one public data member: <code>string model</code></li>
+        </ul>
+      </li>
+
+      <li>In the <code>Car</code> class:
+        <ul>
+          <li>Create a constructor that:
+            <ul>
+              <li>Accepts two parameters: <code>brand</code> and <code>model</code></li>
+              <li>Calls the base class (<code>Vehicle</code>) constructor using an initializer list</li>
+              <li>Initializes the <code>model</code> member</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>Add a member function in <code>Car</code>:
+        <ul>
+          <li><code>void display()</code></li>
+          <li>Outputs both <code>brand</code> and <code>model</code> on one line</li>
+        </ul>
+      </li>
+
+      <li>In the <code>main()</code> function:
+        <ul>
+          <li>Create one <code>Car</code> object</li>
+          <li>Pass values for both brand and model through the constructor</li>
+          <li>Call the <code>display()</code> function</li>
+        </ul>
+      </li>
+
+      <li>Program must include:
+        <ul>
+          <li><code>#include &lt;iostream&gt;</code></li>
+          <li><code>#include &lt;string&gt;</code></li>
+          <li><code>using namespace std;</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Output Requirements</h6>
+    <p>Your program must display both values clearly, for example:</p>
+    <pre class="bg-light p-2 border rounded">
+Toyota Corolla
+    </pre>
+
+    <h6 class="fw-bold mt-3">Implementation Notes</h6>
+    <ul>
+      <li>You must use an <strong>initializer list</strong> to call the base class constructor</li>
+      <li>Do not assign the <code>brand</code> value inside the <code>Car</code> constructor body</li>
+      <li>The <code>Car</code> constructor must explicitly call <code>Vehicle(brand)</code></li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Minimal Starter Code</h6>
+    <pre class="bg-light p-2 border rounded">
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Vehicle {
+public:
+    string brand;
+
+    // constructor here
+};
+
+class Car : public Vehicle {
+public:
+    string model;
+
+    // constructor here (must call Vehicle constructor)
+
+    void display();
+};
+
+int main() {
+    // create Car object and test
+}
+    </pre>
+
+    <h6 class="fw-bold mt-3">Key Concepts Demonstrated</h6>
+    <ul>
+      <li><strong>Constructor inheritance:</strong> Derived class uses base constructor</li>
+      <li><strong>Initializer lists:</strong> Required to call parent constructors</li>
+      <li><strong>Code reuse:</strong> Base class handles shared data initialization</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Optional Challenge</h6>
+    <ul>
+      <li>Add a second method in <code>Vehicle</code> (e.g., <code>printBrand()</code>) and call it from <code>main()</code></li>
+      <li>Create and display two different <code>Car</code> objects</li>
+    </ul>
+
+  </div>
+</div>

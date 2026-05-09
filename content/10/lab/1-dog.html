@@ -1,0 +1,88 @@
+<div class="card shadow-sm">
+  <div class="card-header bg-primary text-white">
+    <h5 class="mb-0">C++ Exercise: Class Inheritance (Animal → Dog)</h5>
+  </div>
+
+  <div class="card-body">
+
+    <h6 class="fw-bold">Objective</h6>
+    <p>
+      Practice <strong>basic class inheritance</strong>, <strong>method reuse</strong>, and 
+      <strong>function overriding</strong> by implementing an <code>Animal</code> base class 
+      and a <code>Dog</code> derived class.
+    </p>
+
+    <h6 class="fw-bold mt-3">Project Requirements</h6>
+    <ul>
+      <li>Create a base class named <code>Animal</code>.</li>
+      <li>Add one public member function:
+        <ul>
+          <li><code>void speak()</code> that outputs exactly: <em>"Animal makes a sound"</em></li>
+        </ul>
+      </li>
+
+      <li>Create a derived class named <code>Dog</code> that:
+        <ul>
+          <li>Uses <code>public</code> inheritance from <code>Animal</code></li>
+        </ul>
+      </li>
+
+      <li>In the <code>Dog</code> class:
+        <ul>
+          <li>Define a new version of <code>void speak()</code></li>
+          <li>This function must override the base class version</li>
+          <li>Output exactly: <em>"Dog barks"</em></li>
+        </ul>
+      </li>
+
+      <li>In the <code>main()</code> function:
+        <ul>
+          <li>Create a <code>Dog</code> object</li>
+          <li>Call <code>speak()</code> using the <code>Dog</code> object</li>
+        </ul>
+      </li>
+
+      <li>Demonstrate method reuse:
+        <ul>
+          <li>Call the original <code>Animal::speak()</code> function from the <code>Dog</code> object</li>
+          <li>Use scope resolution (<code>DogObject.Animal::speak()</code>)</li>
+        </ul>
+      </li>
+
+      <li>Include required elements:
+        <ul>
+          <li><code>#include &lt;iostream&gt;</code></li>
+          <li><code>using namespace std;</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Program Output Requirements</h6>
+    <p>Your program must produce the following output (order matters):</p>
+    <pre class="bg-light p-2 border rounded">
+Dog barks
+Animal makes a sound
+    </pre>
+
+    <h6 class="fw-bold mt-3">Constraints</h6>
+    <ul>
+      <li>No global variables</li>
+      <li>No additional classes beyond <code>Animal</code> and <code>Dog</code></li>
+      <li>Output must match exactly (including capitalization and spacing)</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Key Concepts Demonstrated</h6>
+    <ul>
+      <li><strong>Inheritance:</strong> <code>Dog</code> inherits from <code>Animal</code></li>
+      <li><strong>Method Reuse:</strong> Calling base class function from derived class object</li>
+      <li><strong>Function Overriding:</strong> Redefining <code>speak()</code> in <code>Dog</code></li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Optional Extension</h6>
+    <ul>
+      <li>Add a second derived class (e.g., <code>Cat</code>) with its own <code>speak()</code></li>
+      <li>Test all classes in <code>main()</code></li>
+    </ul>
+
+  </div>
+</div>

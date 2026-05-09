@@ -1,0 +1,118 @@
+<div class="card shadow-sm">
+  <div class="card-header bg-primary text-white">
+    <h5 class="mb-0">C++ Exercise: Multi-Level Inheritance (Person → Student → GraduateStudent)</h5>
+  </div>
+
+  <div class="card-body">
+
+    <h6 class="fw-bold">Objective</h6>
+    <p>
+      Implement a <strong>multi-level inheritance chain</strong> in C++ to demonstrate how data and behavior
+      are passed through multiple derived classes.
+    </p>
+
+    <h6 class="fw-bold mt-3">Project Requirements</h6>
+    <ul>
+      <li>Create a base class named <code>Person</code>.
+        <ul>
+          <li>Include one public data member: <code>string name</code></li>
+        </ul>
+      </li>
+
+      <li>Create a class named <code>Student</code> that:
+        <ul>
+          <li>Inherits publicly from <code>Person</code></li>
+          <li>Adds one public data member: <code>int id</code></li>
+        </ul>
+      </li>
+
+      <li>Create a class named <code>GraduateStudent</code> that:
+        <ul>
+          <li>Inherits publicly from <code>Student</code></li>
+          <li>Adds one public data member: <code>string thesis</code></li>
+        </ul>
+      </li>
+
+      <li>In the <code>GraduateStudent</code> class:
+        <ul>
+          <li>Create a public member function <code>void display()</code></li>
+          <li>This function must output all three values:
+            <ul>
+              <li>Name (inherited from <code>Person</code>)</li>
+              <li>ID (inherited from <code>Student</code>)</li>
+              <li>Thesis topic (defined in <code>GraduateStudent</code>)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>In the <code>main()</code> function:
+        <ul>
+          <li>Create one <code>GraduateStudent</code> object</li>
+          <li>Assign values directly to all inherited and declared members:
+            <ul>
+              <li><code>name</code></li>
+              <li><code>id</code></li>
+              <li><code>thesis</code></li>
+            </ul>
+          </li>
+          <li>Call the <code>display()</code> function</li>
+        </ul>
+      </li>
+
+      <li>Program must include:
+        <ul>
+          <li><code>#include &lt;iostream&gt;</code></li>
+          <li><code>#include &lt;string&gt;</code></li>
+          <li><code>using namespace std;</code></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Output Requirements</h6>
+    <p>
+      Your program must print all three fields clearly in a single function call.
+      Follow a readable format such as:
+    </p>
+<pre class="bg-light p-2 border rounded">
+Alice, ID: 101, Thesis: AI Research
+</pre>
+
+    <h6 class="fw-bold mt-3">Implementation Notes</h6>
+    <ul>
+      <li>Do not duplicate variables across classes</li>
+      <li>Access inherited members directly from the most derived class</li>
+      <li>Ensure proper use of <code>public</code> inheritance at each level</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Minimal Example Structure (Guidance Only)</h6>
+    <pre class="bg-light p-2 border rounded">
+// Class declarations only (details omitted)
+class Person {
+  // name
+};
+
+class Student : public Person {
+  // id
+};
+
+class GraduateStudent : public Student {
+  // thesis + display()
+};
+    </pre>
+
+    <h6 class="fw-bold mt-3">Key Concepts Demonstrated</h6>
+    <ul>
+      <li><strong>Multi-level inheritance:</strong> A class derived from another derived class</li>
+      <li><strong>Data inheritance:</strong> Child classes access parent class members</li>
+      <li><strong>Code organization:</strong> Extending functionality step-by-step</li>
+    </ul>
+
+    <h6 class="fw-bold mt-3">Optional Challenge</h6>
+    <ul>
+      <li>Add a constructor to each class and initialize values using constructor chaining</li>
+      <li>Create a second <code>GraduateStudent</code> and display both</li>
+    </ul>
+
+  </div>
+</div>
