@@ -1,0 +1,48 @@
+<div class="container mb-3" id="constructors">
+    <h2 class="mb-4">Constructors</h2>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">Constructors</h3>
+            <p class="card-text">
+                As we have seen, a constructor is a special member function of a class 
+                that is automatically called when an object of the class is created. 
+                It is used to initialize the object's data members and perform any setup 
+                required for the object to be in a valid state.
+            </p>
+            <p class="card-text">
+                Overloading constructors works much the same way as overloading any other
+                member function. You can have multiple constructors with different parameter
+                lists, and the appropriate constructor will be called based on the arguments
+                provided when creating an object.
+            </p>
+            <p class="card-text">
+                This is a common practice in C++ to provide multiple ways to initialize an
+                object. For example, you might have a default constructor that initializes 
+                an object with default values, and another constructor that takes parameters 
+                to initialize the object with specific values, or even a copy constructor 
+                that initializes an object as a copy of another object.
+            </p>
+            <code><pre>
+                class MyClass {
+                private:
+                    int value;
+                public:
+                    MyClass() {
+                        value = 0; // Default constructor initializes value to 0
+                    }
+                    MyClass(int value) {
+                        this->value = value; // Parameterized constructor initializes value to the provided argument
+                    }
+                    MyClass(const MyClass& other) {
+                        this->value = other.value; // Copy constructor initializes value to the value of another MyClass object
+                    }
+                };
+            </pre></code>
+            <p class="card-text">
+                In this example, we have three constructors for the 'MyClass' class: a default
+                constructor that initializes 'value' to 0, a parameterized constructor that initializes
+                'value' to a specific integer, and a copy constructor that initializes 'value' to the value of another 'MyClass' object.
+            </p>
+        </div> <!-- card-body -->
+    </div> <!-- card -->
+</div> <!-- container -->

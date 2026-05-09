@@ -1,0 +1,86 @@
+<div class="container" id="static-members">
+    <h2 class="mb-4">Static Class Members</h2>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">Static Members</h3>
+            <p class="card-text">
+                Static members are shared across all instances of a class. They 
+                belong to the class itself rather than any specific instance. 
+                Static members can be accessed without creating an instance of 
+                the class.</p>
+            <p>
+                The textbook says:
+                <blockquote>
+                    "If a member function is declared <code>static</code>,
+                    it may be called before any instances of the class are defined."
+                </blockquote>
+            </p>
+            <p class="card-text">
+                In C++, static members are declared using the 'static' keyword. They 
+                can include static variables, static methods, and static properties.
+            </p>
+            <p class="card-text">
+                Static members are often used for utility functions, constants, or to 
+                maintain state that is shared across all instances of a class.
+            </p>
+            <h4 class="card-title">Static Variables</h4>
+            <p class="card-text">
+                Static variables are shared among all instances of a class. They 
+                are initialized only once and retain their value across all instances.
+            </p>
+            <p class="card-text">
+                For example, a static variable can be used to count the number of 
+                instances of a class that have been created.
+            </p>
+            <code><pre>
+                class Customer {
+                public:
+                    static int customerCount; // Static variable declaration
+                    Customer() {
+                        customerCount++; // Increment the static variable in the constructor
+                        int id = customerNumber; // Access the static variable
+                        customerNumber = customerCount; // Assign the static variable to the instance variable
+                    }
+                };
+            </pre></code>
+            <p class="card-text">
+                In this example, the static variable 'customerCount' is shared among 
+                all instances of 'MyClass'. Each time a new instance is created, 
+                'customerCount' is incremented, allowing us to keep track of how many 
+                instances have been created.
+            </p>
+            <p class="card-text">
+                Each new <code>Customer</code> that is created will have its own unique 
+                customer number, but they will all share the same <code>customerCount</code> 
+                variable that keeps track of the total number of customers.
+            </p>
+            <h4 class="card-title">Static Methods</h4>
+            <p class="card-text">
+                Static methods are functions that belong to the class rather than any 
+                instance. They can be called without creating an instance of the class.
+            </p>
+            <p class="card-text">
+                Static methods can only access static members of the class. They cannot 
+                access instance members because they do not have a reference to any specific
+                instance.
+            </p>
+            <p class="card-text">
+                Static methods are often used for utility functions that do not require 
+                access to instance data.
+            </p>
+            <p class="card-text">
+                For example, a collection of related utility functions can be implemented
+                as static methods within a class, where the instance of a class is not 
+                necessary to use those functions.
+            </p>
+            <code><pre>
+                class MathUtils {
+                public:
+                    static int add(int a, int b) {
+                        return a + b; // Static method that adds two numbers
+                    }
+                };
+            </pre></code>
+        </div> <!-- .card-body -->
+    </div> <!-- .card -->
+</div> <!-- .container -->

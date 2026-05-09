@@ -1,0 +1,38 @@
+<div class="container mb-3" id="this">
+    <h2 class="mb-4">The 'this' Pointer</h2>
+    <div class="card mb-3">
+        <div class="card-body">
+            <h3 class="card-title">The 'this' Pointer</h3>
+            <p class="card-text">
+                The 'this' pointer is a special pointer available in C++ that points to the 
+                current instance of a class. It is implicitly passed to all non-static member 
+                functions and can be used to access the members of the current object.
+            </p>
+            <p class="card-text">
+                The textbook says:
+                <blockquote>
+                    "The 'this' pointer is an implicit parameter to all non-static member functions. It points to the object for which the member function is called."
+                </blockquote>
+            </p>
+            <p class="card-text">
+                The 'this' pointer is often used to resolve naming conflicts between member variables and parameters, or to return a reference to the current object from a member function.
+            </p>
+            <code><pre>
+                class MyClass {
+                private:
+                    int value;
+                public:
+                    MyClass(int value) {
+                        this->value = value; // Using 'this' to distinguish between the member variable and the parameter
+                    }
+                    MyClass& setValue(int value) {
+                        this->value = value; // Using 'this' to set the member variable
+                        return *this; // Returning a reference to the current object
+                    }
+                };
+            </pre></code>
+            <p class="card-text">
+                In this example, the constructor and the 'setValue' method use the 'this' pointer to refer to the current instance of 'MyClass'. This allows us to differentiate between the member variable 'value' and the parameter 'value'.
+            </p>
+        </div>
+    </div>

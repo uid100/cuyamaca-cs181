@@ -581,6 +581,26 @@
             "type": "content",
             "source": "/content/10/polymorphism.html"
           },
+          "this": {
+            "title": "The this Pointer",
+            "type": "content",
+            "source": "/content/10/this.html"
+          },
+          "static": {
+            "title": "Static Members",
+            "type": "content",
+            "source": "/content/10/static-members.html"
+          },
+          "inheritance": {
+            "title": "Class Inheritance",
+            "type": "content",
+            "source": "/content/10/inheritance.html"
+          },
+          "constructors": {
+            "title": "Overloading and overriding class methods",
+            "type": "content",
+            "source": "/content/10/constructors.html"
+          },
           "end": {
             "title": "End of Module 10",
             "type": "content",
@@ -607,8 +627,18 @@
             "type": "content",
             "source": "/content/11/module11.html"
           },
+          "c-strings": {
+            "title": "C-strings - Review",
+            "type": "content",
+            "source": "/content/02/c-strings.html"
+          },
+          "numerals": {
+            "title": "What are <em>numerals</em>?",
+            "type": "content",
+            "source": "/content/11/numerals.html"
+          },
           "strings": {
-            "title": "Strings",
+            "title": "C++ std::string Class",
             "type": "content",
             "source": "/content/11/strings.html"
           },
