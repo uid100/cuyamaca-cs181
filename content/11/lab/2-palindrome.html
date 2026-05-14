@@ -1,0 +1,118 @@
+<div class="container my-4">
+
+  <!-- Description Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Assignment: Palindrome Checker (std::string)</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A <strong>palindrome</strong> is a word, phrase, or sequence that reads the same forward and backward
+        <em>after removing spaces, punctuation, and differences in letter case</em>.
+      </p>
+
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><code>racecar</code></li>
+        <li><code>madam</code></li>
+        <li><code>A man, a plan, a canal: Panama</code></li>
+        <li><code>No lemon, no melon</code></li>
+      </ul>
+
+      <p>
+        In this assignment, you will build a program using <code>std::string</code> to determine whether
+        a given input is a palindrome under these rules.
+      </p>
+    </div>
+  </div>
+
+  <!-- Requirements Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">Program Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Prompt the user to enter a full line of text (use <code>getline()</code>).</li>
+        <li>Store the input using <code>std::string</code>.</li>
+        <li>Process the string so that:
+          <ul>
+            <li>All uppercase letters are treated as lowercase.</li>
+            <li>All spaces are removed.</li>
+            <li>All punctuation is ignored (only letters and/or digits should remain).</li>
+          </ul>
+        </li>
+        <li>Create a reversed version of the processed string.</li>
+        <li>Compare the processed string with its reversed version.</li>
+        <li>Output whether the input <strong>is or is not a palindrome</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Functional Expectations Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">Functional Expectations</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Use <code>std::string</code> methods such as:
+          <ul>
+            <li><code>.length()</code> or <code>.size()</code></li>
+            <li>Character access with <code>[]</code> or <code>.at()</code></li>
+            <li>Concatenation or building new strings</li>
+          </ul>
+        </li>
+        <li>Use a loop to examine each character in the string.</li>
+        <li>Use conditional logic to filter out unwanted characters.</li>
+        <li>Do NOT use external libraries beyond standard headers covered in class.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Example Interaction Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">Example Program Behavior</h5>
+    </div>
+    <div class="card-body">
+      <pre><code>Enter a phrase: A man, a plan, a canal: Panama
+Result: This is a palindrome.
+
+Enter a phrase: Hello World
+Result: This is NOT a palindrome.</code></pre>
+    </div>
+  </div>
+
+  <!-- Coding Standards Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h5 class="mb-0">Coding Standards & Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Use the <strong>course-standardized header comment block</strong> at the top of your file.</li>
+        <li>Include appropriate headers (<code>&lt;iostream&gt;</code>, <code>&lt;string&gt;</code>, etc.).</li>
+        <li>Use meaningful variable names (e.g., <code>original</code>, <code>cleaned</code>, <code>reversed</code>).</li>
+        <li>Indent and format your code consistently.</li>
+        <li>Include inline comments explaining key steps of your logic.</li>
+        <li>Test your program with multiple inputs, including edge cases.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hint Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h5 class="mb-0">Hints (Optional Guidance)</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Use <code>tolower()</code> to normalize character case.</li>
+        <li>Check characters with functions like <code>isalpha()</code> or <code>isdigit()</code>.</li>
+        <li>Build a cleaned version of the string before reversing it.</li>
+        <li>Consider using a loop to construct the reversed string manually.</li>
+      </ul>
+    </div>
+  </div>
+

@@ -1,0 +1,129 @@
+<div class="container my-4">
+
+  <!-- Naming Conventions Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Assignment: Convert Sentence to camelCase</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In programming, <strong>compound variable naming</strong> is used when a variable name contains
+        multiple words combined into one identifier. Different naming conventions help improve readability
+        and maintain consistency across codebases.
+      </p>
+
+      <p><strong>Common Naming Styles:</strong></p>
+      <ul>
+        <li><strong>camelCase:</strong> First word lowercase, subsequent words capitalized  
+          <br><code>myVariableName</code></li>
+        <li><strong>PascalCase:</strong> Every word capitalized  
+          <br><code>MyVariableName</code></li>
+        <li><strong>snake_case:</strong> Words separated by underscores  
+          <br><code>my_variable_name</code></li>
+        <li><strong>kebab-case:</strong> Words separated by hyphens (not valid in C++ identifiers)  
+          <br><code>my-variable-name</code></li>
+      </ul>
+
+      <p>
+        <strong>Conventions in C++:</strong>
+      </p>
+      <ul>
+        <li>Class names are typically written in <strong>PascalCase</strong></li>
+        <li>Constants are often written in <strong>ALL_CAPS</strong></li>
+        <li>Variables and functions commonly use <strong>camelCase</strong></li>
+      </ul>
+
+      <p>
+        In this assignment, you will create a utility program that converts a sentence into <strong>camelCase</strong>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Requirements Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">Program Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Prompt the user to enter a full sentence using <code>getline()</code>.</li>
+        <li>Store the input using <code>std::string</code>.</li>
+        <li>Convert the sentence into <strong>camelCase format</strong>:
+          <ul>
+            <li>The first word should be entirely lowercase.</li>
+            <li>Each subsequent word should have its first letter capitalized.</li>
+            <li>All other letters should be lowercase.</li>
+            <li>All spaces should be removed in the final result.</li>
+          </ul>
+        </li>
+        <li>Assume words are separated by spaces.</li>
+        <li>Output the resulting camelCase string.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Functional Expectations Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">Functional Expectations</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Use <code>std::string</code> operations to build the result string.</li>
+        <li>Use loops to process each character in the input.</li>
+        <li>Use conditional logic to detect word boundaries.</li>
+        <li>Convert characters using functions like <code>tolower()</code> and <code>toupper()</code>.</li>
+        <li>Do NOT use advanced libraries or functions not covered in class.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Example Behavior Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">Example Program Behavior</h5>
+    </div>
+    <div class="card-body">
+      <pre><code>Enter a sentence: hello world
+Output: helloWorld
+
+Enter a sentence: C++ programming is FUN
+Output: c++ProgrammingIsFun
+
+Enter a sentence: convert THIS sentence now
+Output: convertThisSentenceNow</code></pre>
+    </div>
+  </div>
+
+  <!-- Coding Standards Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h5 class="mb-0">Coding Standards & Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Include the <strong>course-standardized header comment block</strong>.</li>
+        <li>Use appropriate headers (<code>&lt;iostream&gt;</code>, <code>&lt;string&gt;</code>, <code>&lt;cctype&gt;</code>).</li>
+        <li>Use meaningful variable names (e.g., <code>input</code>, <code>result</code>, <code>newWord</code>).</li>
+        <li>Follow consistent indentation and formatting.</li>
+        <li>Comment key parts of your logic clearly.</li>
+        <li>Test your program with different sentence formats.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hint Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h5 class="mb-0">Hints (Optional Guidance)</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Track whether you are at the beginning of a new word.</li>
+        <li>Use a boolean flag like <code>newWord = true</code>.</li>
+        <li>Capitalize the first letter of each new word except the first.</li>
+        <li>Skip spaces when building the result string.</li>
+      </ul>
+    </div>
+  </div>
+

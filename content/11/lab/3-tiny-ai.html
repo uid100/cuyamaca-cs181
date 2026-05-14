@@ -1,0 +1,189 @@
+<div class="container my-4">
+
+  <!-- Intro Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Assignment: Build a Tiny AI Text Generator (With Starter Code)</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In this assignment, you will build a <strong>simple AI-like program</strong> that generates text
+        by learning patterns from a sentence. This mimics, at a very small scale, how real AI language
+        models work.
+      </p>
+
+      <p>
+        Your task is to complete a partially written program that:
+      </p>
+      <ul>
+        <li>Reads a sentence</li>
+        <li>Breaks it into words</li>
+        <li>Stores word relationships</li>
+        <li>Generates new text using those relationships</li>
+      </ul>
+
+      <p>
+        The structure is already provided — your job is to complete the <code>TODO</code> sections.
+      </p>
+    </div>
+  </div>
+
+  <!-- Concept Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">Key Idea: Predicting the Next Word</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        If your program sees:
+      </p>
+      <pre><code>the cat sits on the mat</code></pre>
+
+      <p>It will learn:</p>
+      <ul>
+        <li><code>"the"</code> → <code>cat, mat</code></li>
+        <li><code>"cat"</code> → <code>sits</code></li>
+      </ul>
+
+      <p>
+        Then it can generate new text like:
+      </p>
+      <pre><code>the cat sits on the cat sits</code></pre>
+    </div>
+  </div>
+
+  <!-- Starter Code Card -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">Starter Code (Complete the TODOs)</h5>
+    </div>
+    <div class="card-body">
+<pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+#include &lt;vector&gt;
+#include &lt;sstream&gt;
+#include &lt;cstdlib&gt;
+#include &lt;ctime&gt;
+
+using namespace std;
+
+int main() {
+    // Training text (you may modify this later)
+    string text = "the cat sits on the mat the cat sleeps on the rug";
+
+    map&lt;string, vector&lt;string&gt;&gt; model;
+
+    stringstream ss(text);
+    string previous, current;
+
+    // Read first word
+    ss &gt;&gt; previous;
+
+    // TODO 1:
+    // Loop through remaining words in the stream
+    // For each word:
+    //   - Store it in "current"
+    //   - Add current as a possible next word for "previous"
+    //   - Update previous = current
+
+    // Example structure:
+    // while (ss &gt;&gt; current) {
+    //     model[previous].push_back(current);
+    //     previous = current;
+    // }
+
+    // -----------------------------
+    // TEXT GENERATION
+    // -----------------------------
+
+    srand(time(0));
+
+    string word = "the"; // starting word
+
+    cout &lt;&lt; "Generated text: " &lt;&lt; endl;
+
+    // TODO 2:
+    // Use a loop to generate ~10 words
+    // Each step:
+    //   - Print the current word
+    //   - Look up possible next words from the map
+    //   - If none exist, stop early
+    //   - Randomly select one of the next words
+    //   - Update the current word
+
+    // Example structure:
+    // for (int i = 0; i &lt; 10; i++) {
+    //     cout &lt;&lt; word &lt;&lt; " ";
+    //
+    //     vector&lt;string&gt; options = model[word];
+    //     if (options.size() == 0) break;
+    //
+    //     int index = rand() % options.size();
+    //     word = options[index];
+    // }
+
+    cout &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+    </div>
+  </div>
+
+  <!-- Requirements -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">Program Requirements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Complete all <code>TODO</code> sections.</li>
+        <li>Use <code>stringstream</code> to parse the input string into words.</li>
+        <li>Store relationships using <code>map&lt;string, vector&lt;string&gt;&gt;</code>.</li>
+        <li>Generate at least 10 words of output.</li>
+        <li>Output should vary each run due to randomness.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Example Output -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-secondary text-white">
+      <h5 class="mb-0">Example Output</h5>
+    </div>
+    <div class="card-body">
+<pre><code>Generated text:
+the cat sleeps on the rug</code></pre>
+    </div>
+  </div>
+
+  <!-- Coding Standards -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h5 class="mb-0">Coding Standards</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Include the <strong>course-standardized header comment block</strong></li>
+        <li>Use meaningful variable names</li>
+        <li>Maintain clean indentation and formatting</li>
+        <li>Comment your logic (especially TODO sections)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Stretch Goals -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h5 class="mb-0">Optional Enhancements</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li>Let the user enter their own training sentence</li>
+        <li>Allow the user to choose the starting word</li>
+        <li>Ignore punctuation when building the model</li>
+        <li>Increase output length dynamically</li>
+      </ul>
+    </div>
+  </div>
+

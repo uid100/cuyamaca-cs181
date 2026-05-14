@@ -1,6 +1,6 @@
 [
   { "title": "Lab #11 - Processing Strings", "file": "0-lab.html" },
-  { "title": "Ex.1: String Manipulation", "file": "1-.html" },
-  { "title": "Ex.2: String Search and Replace", "file": "2-.html" },
-  { "title": "Ex.3: String Validation", "file": "3-.html" }
+  { "title": "Ex.1: String Concatenation", "file": "1-camelCase.html" },
+  { "title": "Ex.2: String Comparison", "file": "2-palindrome.html" },
+  { "title": "Ex.3: Tiny AI", "file": "3-tiny-ai.html" }
 ]
