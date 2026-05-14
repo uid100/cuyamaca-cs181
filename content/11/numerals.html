@@ -1,0 +1,159 @@
+<div class="container my-4">
+
+  <!-- Card 1: Concept Overview -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Numerals vs Numeric Data in C++</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        In C++, it is important to distinguish between <strong>numerals as characters or strings</strong>
+        and <strong>numeric data types</strong>. While they may look similar, they are fundamentally
+        different in how the compiler interprets and processes them.
+      </p>
+      <ul>
+        <li><strong>Character:</strong> A single symbol, such as <code>'5'</code></li>
+        <li><strong>String:</strong> A sequence of characters, such as <code>"123"</code></li>
+        <li><strong>Numeric Type:</strong> A value used for arithmetic, such as <code>5</code> or <code>123</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card 2: Characters -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">Characters: Numerals as Symbols</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A character like <code>'5'</code> is <strong>not the number five</strong>. It is simply a symbol
+        stored using its ASCII (or Unicode) value.
+      </p>
+      <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    char c = '5';
+
+    cout &lt;&lt; c &lt;&lt; endl;           // Outputs: 5
+    cout &lt;&lt; (int)c &lt;&lt; endl;     // Outputs: 53 (ASCII value)
+
+    return 0;
+}</code></pre>
+
+      <p>
+        Even though <code>'5'</code> prints as 5, internally it is stored as the ASCII value 53.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 3: Strings -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">Strings: Sequences of Numeral Characters</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        A string like <code>"123"</code> is a sequence of characters: <code>'1'</code>, <code>'2'</code>, and <code>'3'</code>.
+        It is <strong>not automatically treated as the number 123</strong>.
+      </p>
+
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string s = "123";
+
+    cout &lt;&lt; s &lt;&lt; endl;   // Outputs: 123
+
+    // This is NOT numeric addition
+    cout &lt;&lt; s + "1" &lt;&lt; endl;  // Outputs: 1231
+
+    return 0;
+}</code></pre>
+
+      <p>
+        Concatenation occurs instead of arithmetic because strings store text, not numbers.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 4: Numeric Data -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">Numeric Types: Actual Values</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        Numeric types like <code>int</code>, <code>double</code>, etc. represent actual values that can be used in calculations.
+      </p>
+
+      <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int x = 123;
+
+    cout &lt;&lt; x + 1 &lt;&lt; endl;  // Outputs: 124
+
+    return 0;
+}</code></pre>
+
+      <p>
+        Unlike strings, numeric types support arithmetic operations directly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 5: Conversion Between Types -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h5 class="mb-0">Converting Between Strings and Numbers</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        To use numeric values stored in strings, you must explicitly convert them.
+      </p>
+
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string s = "123";
+
+    int num = stoi(s);  // Convert string to integer
+
+    cout &lt;&lt; num + 1 &lt;&lt; endl;  // Outputs: 124
+
+    return 0;
+}</code></pre>
+
+      <p>
+        Similarly, you can convert numbers to strings:
+      </p>
+
+      <pre><code>int n = 456;
+string str = to_string(n);
+
+cout &lt;&lt; str + "1" &lt;&lt; endl;  // Outputs: 4561</code></pre>
+    </div>
+  </div>
+
+  <!-- Card 6: Key Takeaways -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h5 class="mb-0">Key Takeaways</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li><code>'5'</code> is a character, not the number 5</li>
+        <li><code>"123"</code> is a string, not the number 123</li>
+        <li><code>123</code> (without quotes) is numeric data</li>
+        <li>Strings concatenate; numbers perform arithmetic</li>
+        <li>Conversions like <code>stoi()</code> are required to treat strings as numbers</li>
+      </ul>
+    </div>
+  </div>
+

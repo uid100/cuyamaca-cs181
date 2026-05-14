@@ -1,0 +1,175 @@
+<div class="container my-4">
+
+  <!-- Card 1: Overview -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Introduction to std::string in C++</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        The <code>std::string</code> class provides a modern, safe, and convenient way to work with text in C++.
+        Unlike C-style strings (character arrays), <code>std::string</code> automatically manages memory,
+        grows dynamically, and provides many useful built-in methods.
+      </p>
+      <p>
+        Since you have already used C-strings, think of <code>std::string</code> as a higher-level abstraction
+        that removes many of the manual and error-prone tasks such as buffer management and null terminators.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 2: Basic Usage -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-success text-white">
+      <h5 class="mb-0">Creating and Using std::string</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        To use <code>std::string</code>, include the <code>&lt;string&gt;</code> header.
+      </p>
+
+      <pre><code>#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string name = "Alice";
+
+    cout &lt;&lt; name &lt;&lt; endl;
+
+    return 0;
+}</code></pre>
+
+      <ul>
+        <li>No need for manual memory allocation</li>
+        <li>No need for null terminators (<code>'\0'</code>)</li>
+        <li>Works seamlessly with streams like <code>cout</code></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Card 3: Length and Access -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-info text-white">
+      <h5 class="mb-0">Length and Character Access</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        You can easily inspect and access characters in a string.
+      </p>
+
+      <pre><code>string s = "hello";
+
+cout &lt;&lt; s.length() &lt;&lt; endl;   // Outputs: 5
+cout &lt;&lt; s.size() &lt;&lt; endl;     // Same as length()
+
+cout &lt;&lt; s[0] &lt;&lt; endl;        // 'h'
+cout &lt;&lt; s.at(1) &lt;&lt; endl;     // 'e'</code></pre>
+
+      <p>
+        <strong>Note:</strong> <code>at()</code> performs bounds checking, while <code>[]</code> does not.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 4: Concatenation -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-warning text-dark">
+      <h5 class="mb-0">Concatenation and Appending</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        Strings can be combined easily using operators or member functions.
+      </p>
+
+      <pre><code>string first = "Hello";
+string second = "World";
+
+string result = first + " " + second;
+cout &lt;&lt; result &lt;&lt; endl;  // Hello World
+
+first += "!";
+cout &lt;&lt; first &lt;&lt; endl;   // Hello!</code></pre>
+
+      <p>
+        This is much simpler than using <code>strcat()</code> with C-strings.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 5: Common Methods -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-danger text-white">
+      <h5 class="mb-0">Commonly Used Methods</h5>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li><code>.length()</code> / <code>.size()</code> — returns number of characters</li>
+        <li><code>.substr(pos, len)</code> — returns a substring</li>
+        <li><code>.find(str)</code> — finds position of substring</li>
+        <li><code>.append(str)</code> — adds text to the end</li>
+        <li><code>.clear()</code> — removes all characters</li>
+        <li><code>.empty()</code> — checks if string is empty</li>
+      </ul>
+
+      <pre><code>string text = "C++ Programming";
+
+cout &lt;&lt; text.substr(0, 3) &lt;&lt; endl;   // C++
+cout &lt;&lt; text.find("Pro") &lt;&lt; endl;   // position of "Pro"
+
+text.append(" is fun");
+cout &lt;&lt; text &lt;&lt; endl;
+
+text.clear();
+cout &lt;&lt; text.empty() &lt;&lt; endl;     // 1 (true)</code></pre>
+    </div>
+  </div>
+
+  <!-- Card 6: Comparison -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-secondary text-white">
+      <h5 class="mb-0">Comparing Strings</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        Unlike C-strings, you can directly compare <code>std::string</code> values using operators.
+      </p>
+
+      <pre><code>string a = "apple";
+string b = "banana";
+
+if (a == b) {
+    cout &lt;&lt; "Equal";
+}
+
+if (a &lt; b) {
+    cout &lt;&lt; "apple comes before banana";
+}</code></pre>
+
+      <p>
+        This is much safer and simpler than using <code>strcmp()</code>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Card 7: Interoperability with C-Strings -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header bg-dark text-white">
+      <h5 class="mb-0">Working with C-Strings</h5>
+    </div>
+    <div class="card-body">
+      <p>
+        You may need to interact with legacy code that uses C-style strings.
+      </p>
+
+      <pre><code>string s = "hello";
+
+const char* cstr = s.c_str();
+
+cout &lt;&lt; cstr &lt;&lt; endl;</code></pre>
+
+      <p>
+        <code>c_str()</code> provides a read-only C-style string view of the data.
+      </p>
+    </div>
+  </div>
