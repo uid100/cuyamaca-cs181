@@ -652,6 +652,11 @@
             "type": "content",
             "source": "/content/end-module.html"
           }
+        },
+        "lab": {
+          "title": "Lab #11 - std::string",
+          "taskListUrl": "https://uid100.github.io/cuyamaca-cs181/content/11/lab/task-list.json",
+          "fragmentsBase": "https://uid100.github.io/cuyamaca-cs181/content/11/lab/"
         }
       },
       "12": {
