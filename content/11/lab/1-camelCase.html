@@ -56,7 +56,7 @@
             <li>All spaces should be removed in the final result.</li>
           </ul>
         </li>
-        <li>Assume words are separated by spaces.</li>
+        <li>Assume words are separated by one or more(!) spaces.</li>
         <li>Output the resulting camelCase string.</li>
       </ul>
     </div>
@@ -122,7 +122,9 @@ Output: convertThisSentenceNow</code></pre>
         <li>Track whether you are at the beginning of a new word.</li>
         <li>Use a boolean flag like <code>newWord = true</code>.</li>
         <li>Capitalize the first letter of each new word except the first.</li>
-        <li>Skip spaces when building the result string.</li>
+        <li>Skip (all) spaces when building the result string.</li>
+        <li>There may be multiple spaces between words.</li>
+        <li>There may be leading spaces too. Don't assume the first character is not a space.</li>
       </ul>
     </div>
   </div>
