@@ -1,29 +1,26 @@
 {
   "canvas": {
     "server": "https://gcccd.instructure.com",
-    "coursePath": "/courses/99999"
+    "coursePath": "/courses/74623"
   },
-  "sectionNumber": "9999",
-  "courseId": "CS-181-9999",
+  "sectionNumber": "9383",
+  "courseId": "CS-181-9383",
   "term": "Fall 2026",
+  "calendar": "https://www.gcccd.edu/_resources/docs/academic-calendars/academic-calendar-2026-2027.pdf",
   "dates": {
     "start": "2026-08-24",
     "end": "2026-12-21",
-    "withdraw": "",
-    "classesEnd": "",
-    "finals": "",
-    "finalsEnd": "",
+    "withdraw": "2026-09-06",
+    "census": "2026-09-08",
+    "classesEnd": "2026-12-21",
     "gradesDue": "2026-12-23",
     "gradesPosted": "",
     "holidays": {
-      "mlkDay": "2026-01-19",
-      "Pres. Lincoln's Day": "2026-02-13",
-      "Pres. Washington's Day": "2026-02-16",
+      "laborDay": "2026-09-07",
       "thanksgiving": {
-        "start": "2026-11-23",
-        "end": "2026-11-25"
-      },
-      "memorialDay": "2026-05-25"
+        "start": "2026-11-26",
+        "end": "2026-11-27"
+      }
     }
   },
   "*startDate": "2026-08-24T08:00:00",
