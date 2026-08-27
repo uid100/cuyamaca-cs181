@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-        <div class="boxed paragraph">
+        <div class="boxed-paragraph">
             <p>
                 <strong>Important:</strong> Visual Studio Code (VS Code) is <em>not</em> the same product as Visual Studio.
             </p>
@@ -21,71 +21,89 @@
             design allows developers to install only the tools they need for a particular project.
         </p>
 
-        <h3>Step 1: Download and Install Visual Studio Code</h3>
+        <div class="card">
+            <div class="card-header">
+                Install VS Code and a C++ Compiler
+            </div>
+            <div class="card-body">
+                <h3>Download and Install Visual Studio Code</h3>
 
-        <ol>
-            <li>Open a web browser and go to:
-                <br>
-                <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com
-                </a>
-            </li>
-            <li>Download the version appropriate for your operating system.</li>
-            <li>Run the installer.</li>
-            <li>Accept the default installation options.</li>
-            <li>Launch Visual Studio Code when installation is complete.</li>
-        </ol>
+                <ol>
+                    <li>Open a web browser and go to:
+                        <br>
+                        <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com
+                        </a>
+                    </li>
+                    <li>Download the version appropriate for your operating system.</li>
+                    <li>Run the installer.</li>
+                    <li>Accept the default installation options.</li>
+                    <li>Launch Visual Studio Code when installation is complete.</li>
+                </ol>
 
-        <h3>Step 2: Install a C++ Compiler</h3>
+                <h3>Install a C++ Compiler</h3>
 
-        <p>VS Code provides editing features, but you must also install a C++ compiler.</p>
+                <p>VS Code provides editing features, but you must also install a C++ compiler.</p>
 
-        <ul>
-            <li><strong>Windows:</strong> Install MinGW-w64 or MSYS2 GCC.</li>
-            <li><strong>macOS:</strong> Install Xcode Command Line Tools.</li>
-            <li><strong>Linux:</strong> Install GCC using your package manager.</li>
-        </ul>
+                <ul>
+                    <li><strong>Windows:</strong> Install MinGW-w64 or MSYS2 GCC.</li>
+                    <li><strong>macOS:</strong> Install Xcode Command Line Tools.</li>
+                    <li><strong>Linux:</strong> Install GCC using your package manager.</li>
+                </ul>
 
-        <p>Verify installation from a terminal:</p>
+                <p>Verify installation from a terminal:</p>
 
-<pre><code>g++ --version
-</code></pre>
+                <pre><code>g++ --version
+                </code></pre>
+            </div> <!-- card-body -->
+        </div> <!-- card -->
 
-        <h3>Step 3: Install Recommended VS Code Extensions</h3>
+        <div class="card">
+            <div class="card-header">
+                Configure VS Code for C++ Development
+            </div>
+            <div class="card-body">
+                <h3>Install Recommended VS Code Extensions</h3>
+                <ol>
+                    <li>Open <strong>VS Code.</strong></li>
+                    <li>Select the <strong>Extensions</strong> icon from the left toolbar.</li>
+                    <li>Install the following extensions:</li>
+                </ol>
 
-        <ol>
-            <li>Open VS Code.</li>
-            <li>Select the <strong>Extensions</strong> icon from the left toolbar.</li>
-            <li>Install the following extensions:</li>
-        </ol>
+                <ul>
+                    <li><strong>C/C++</strong> (Microsoft)</li>
+                    <li><strong>C/C++ Extension Pack</strong> (optional)</li>
+                    <li><strong>Error Lens</strong> (optional)</li>
+                    <li><strong>Code Runner</strong> (optional)</li>
+                </ul>
 
-        <ul>
-            <li><strong>C/C++</strong> (Microsoft)</li>
-            <li><strong>C/C++ Extension Pack</strong> (optional)</li>
-            <li><strong>Error Lens</strong> (optional)</li>
-            <li><strong>Code Runner</strong> (optional)</li>
-        </ul>
+                <div class="boxed-paragraph">
+                    <strong>Note:</strong> Extensions provide language-specific features such as syntax highlighting,
+                    code completion, debugging support, and error detection.
+                </div>
+            </div> <!-- card-body -->
+        </div> <!-- card -->
+        
+        <div class="card">
+            <div class="card-header">
+                Create a Simple C++ Program
+            </div>
+            <div class="card-body">
+                <h3>Create a Project Folder</h3>
 
-        <div class="boxed paragraph">
-            <strong>Note:</strong> Extensions provide language-specific features such as syntax highlighting,
-            code completion, debugging support, and error detection.
-        </div>
+                <ol>
+                    <li>Create a new folder named <code>HelloWorld</code>.</li>
+                    <li>Open VS Code.</li>
+                    <li>Select <strong>File → Open Folder</strong>.</li>
+                    <li>Open the <code>HelloWorld</code> folder.</li>
+                </ol>
 
-        <h3>Step 4: Create a Project Folder</h3>
+                <h3>Create a Simple C++ Program</h3>
 
-        <ol>
-            <li>Create a new folder named <code>HelloWorld</code>.</li>
-            <li>Open VS Code.</li>
-            <li>Select <strong>File → Open Folder</strong>.</li>
-            <li>Open the <code>HelloWorld</code> folder.</li>
-        </ol>
-
-        <h3>Step 5: Create a Simple C++ Program</h3>
-
-        <ol>
-            <li>Select <strong>File → New Text File</strong>.</li>
-            <li>Save the file as <code>hello.cpp</code>.</li>
-            <li>Enter the following program:</li>
-        </ol>
+                <ol>
+                    <li>Select <strong>File → New Text File</strong>.</li>
+                    <li>Save the file as <code>hello.cpp</code>.</li>
+                    <li>Enter the following program:</li>
+                </ol>
 
 <pre><code>#include &lt;iostream&gt;
 
@@ -96,75 +114,82 @@ int main()
 }
 </code></pre>
 
-        <li>Save the file (<strong>Ctrl+S</strong> or <strong>Cmd+S</strong>).</li>
+                <li>Save the file (<strong>Ctrl+S</strong> or <strong>Cmd+S</strong>).</li>
 
-        <h3>Step 6: Edit and Save the Program</h3>
+                <h3>Edit and Save the Program</h3>
 
-        <p>
-            Make a simple change to the output message, such as replacing
-            <code>Hello, World!</code> with your own text.
-        </p>
+                <p>
+                    Make a simple change to the output message, such as replacing
+                    <code>Hello, World!</code> with your own text.
+                </p>
 
-        <p>Example:</p>
+                <p>Example:</p>
 
 <pre><code>std::cout &lt;&lt; "Welcome to CIS Programming!" &lt;&lt; std::endl;
 </code></pre>
 
-        <p>Save the file after making your changes.</p>
-
-        <h3>Step 7: Compile the Program</h3>
-
-        <ol>
-            <li>Open a terminal in VS Code:
-                <ul>
-                    <li>Menu: <strong>Terminal → New Terminal</strong></li>
-                </ul>
-            </li>
-            <li>Compile the source file:</li>
-        </ol>
+                <p>Save the file after making your changes.</p>
+            </div> <!-- card-body -->
+        </div> <!-- card -->
+        
+        <div class="card">
+            <div class="card-header">
+                Build and Run the Program
+            </div>
+            <div class="card-body">
+                <ol>
+                    <li>Open a terminal in VS Code:
+                        <ul>
+                            <li>Menu: <strong>Terminal → New Terminal</strong></li>
+                        </ul>
+                    </li>
+                    <li>Compile the source file:</li>
+                </ol>
 
 <pre><code>g++ hello.cpp -o hello
 </code></pre>
 
-        <p>If there are no errors, an executable file will be created.</p>
+                <p>If there are no errors, an executable file will be created.</p>
 
-        <h3>Step 8: Run the Program</h3>
+                <h3>Run the Program</h3>
 
-        <p><strong>Windows:</strong></p>
+                <p><strong>Windows:</strong></p>
 
 <pre><code>hello.exe
 </code></pre>
 
-        <p><strong>macOS / Linux:</strong></p>
+                <p><strong>macOS / Linux:</strong></p>
 
 <pre><code>./hello
 </code></pre>
 
-        <p>You should see your output displayed in the terminal.</p>
+                <p>You should see your output displayed in the terminal.</p>
 
-        <h3>Step 9: Test Your Program</h3>
+                <h3>Test Your Program</h3>
 
-        <ol>
-            <li>Change the output text.</li>
-            <li>Save the source file.</li>
-            <li>Recompile:</li>
-        </ol>
+                <ol>
+                    <li>Change the output text.</li>
+                    <li>Save the source file.</li>
+                    <li>Recompile:</li>
+                </ol>
 
 <pre><code>g++ hello.cpp -o hello
 </code></pre>
 
-        <ol start="4">
-            <li>Run the program again.</li>
-            <li>Verify that the output reflects your changes.</li>
-        </ol>
+                <ol start="4">
+                    <li>Run the program again.</li>
+                    <li>Verify that the output reflects your changes.</li>
+                </ol>
 
-        <h3>Common Compile and Run Cycle</h3>
+                <h3>Common Compile and Run Cycle</h3>
 
 <pre><code>g++ hello.cpp -o hello
 ./hello
 </code></pre>
+            </div> <!-- card-body -->
+        </div> <!-- card -->
 
-        <div class="boxed paragraph">
+        <div class="boxed-paragraph">
             <strong>Caution:</strong> For this course, write portable Standard C++ code whenever possible.
             Avoid using precompiled headers such as <code>pch.h</code> or <code>stdafx.h</code>, and avoid
             IDE-specific files and project dependencies that may be automatically created by some development
@@ -172,11 +197,11 @@ int main()
             requiring Visual Studio project files, proprietary libraries, or generated configuration files.
         </div>
 
-        <div class="boxed paragraph">
+        <div class="boxed-paragraph">
             <strong>Best Practice:</strong> Submit only the files your instructor requests, typically the
             <code>.cpp</code> source files. Do not submit generated executables, temporary files, build folders,
             or IDE configuration files unless specifically instructed to do so.
         </div>
 
-    </div>
-</div>
+    </div> <!-- card-body -->
+</div> <!-- card -->
