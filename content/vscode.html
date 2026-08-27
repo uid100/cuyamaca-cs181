@@ -12,6 +12,11 @@
                 VS Code has a lightweight editor that can be customized with extensions. Visual Studio is a larger,
                 full-featured Integrated Development Environment (IDE) that includes many tools and features already built in.
             </p>
+            <div class="boxed-paragraph">
+                <strong>Windows Note:</strong>
+                If you do not already have a C++ compiler,
+                MSYS2 is typically the easiest way to install GCC on Windows.
+            </div>
         </div>
 
         <p>
@@ -53,6 +58,12 @@
                 <p>Verify installation from a terminal:</p>
 
                 <pre><code>g++ --version</code></pre>
+
+                <p>
+                    If a version number is displayed, your compiler is installed correctly.
+                    If you receive a "command not found" or similar error, revisit the
+                    compiler installation instructions for your operating system.
+                </p>
             </div> <!-- card-body -->
         </div> <!-- card -->
 
@@ -114,6 +125,7 @@ int main()
                     </li>
                     <li>Save the file (<strong>Ctrl+S</strong> or <strong>Cmd+S</strong>)</li>
                 </ol>
+
                 <h3>Edit and Save the Program</h3>
 
                 <p>
@@ -153,7 +165,7 @@ int main()
 
                 <p><strong>Windows:</strong></p>
 
-<pre><code>hello.exe
+<pre><code>.\hello.exe
 </code></pre>
 
                 <p><strong>macOS / Linux:</strong></p>
@@ -181,18 +193,46 @@ int main()
 
                 <h3>Common Compile and Run Cycle</h3>
 
+<h4>macOS / Linux</h4>
 <pre><code>g++ hello.cpp -o hello
 ./hello
 </code></pre>
+
+<h4>Windows</h4>
+<pre><code>g++ hello.cpp -o hello.exe
+.\hello.exe
+</code></pre>
+
             </div> <!-- card-body -->
         </div> <!-- card -->
 
         <div class="boxed-paragraph">
-            <strong>Caution:</strong> For this course, write portable Standard C++ code whenever possible.
-            Avoid using precompiled headers such as <code>pch.h</code> or <code>stdafx.h</code>, and avoid
-            IDE-specific files and project dependencies that may be automatically created by some development
-            tools. Your source code should compile using a standard C++ compiler from the command line without
-            requiring Visual Studio project files, proprietary libraries, or generated configuration files.
+            <p>
+                <strong>Caution:</strong> For this course, we will stick to writing portable Standard C++ code.
+            </p>
+            <p>
+                Avoid using precompiled headers such as <code>pch.h</code> or <code>stdafx.h</code>, and avoid
+                IDE-specific files and project dependencies that may be automatically created by some development
+                tools.
+            </p>
+            <p>
+                If your code contains references such as
+                <code>#include "pch.h"</code> or
+                <code>#include "stdafx.h"</code>,
+                it will often compile only in a specific IDE configuration and
+                may fail to compile for your instructor or classmates.
+            </p>
+            <p>
+                Your source code should compile using a standard C++ compiler from the command line without
+                requiring Visual Studio project files, proprietary libraries, or generated configuration files.
+            </p>
+            <p>
+                <strong>Course Requirement:</strong>
+                All assignments should compile using a standard C++ compiler from the
+                command line. Your code should not depend on Visual Studio projects,
+                Code Runner, or any other IDE-specific configuration.
+            </p>
+        </div>
         </div>
 
         <div class="boxed-paragraph">
