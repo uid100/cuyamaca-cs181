@@ -693,7 +693,7 @@
           "compilers": {
             "title": "Installing a C++ Compiler",
             "type": "content",
-            "source": "/content/99/compilers.html"
+            "source": "content/compilers.html"
           }
         }
       }
