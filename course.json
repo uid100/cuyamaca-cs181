@@ -684,7 +684,12 @@
             "title": "Course Resources",
             "type": "content",
             "source": "/content/99/resources.html"
-          }
+          },
+          "vscode": {
+            "title": "VS Code Setup",
+            "type": "content",
+            "source": "content/vscode.html"
+          }          
         }
       }
     }
