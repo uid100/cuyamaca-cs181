@@ -1,0 +1,89 @@
+<div class="card mb-4">
+    <div class="card-header">
+        <h2>Installing a C++ Compiler</h2>
+    </div>
+
+    <div class="card-body">
+
+        <p>
+            Visual Studio Code (VS Code) is an editor, not a compiler.
+            To build and run C++ programs, you must install a C++ compiler
+            appropriate for your operating system.
+        </p>
+
+        <div class="boxed-paragraph">
+            <strong>Important:</strong>
+            Installing VS Code alone is not enough to compile C++ programs.
+            You must also install a compiler such as GCC or Clang.
+        </div>
+
+        <h3>Windows</h3>
+
+        <ol>
+            <li>Install <strong>MSYS2</strong> (recommended) or <strong>MinGW-w64</strong>.</li>
+            <li>Follow the installation instructions provided by the compiler vendor.</li>
+            <li>Open a terminal or command prompt after installation.</li>
+            <li>Verify the compiler is installed by entering:</li>
+        </ol>
+
+<pre><code>g++ --version
+</code></pre>
+
+        <h3>macOS</h3>
+
+        <ol>
+            <li>Open the <strong>Terminal</strong> application.</li>
+            <li>Run the following command:</li>
+        </ol>
+
+<pre><code>xcode-select --install
+</code></pre>
+
+        <ol start="3">
+            <li>Follow the prompts to install the Xcode Command Line Tools.</li>
+            <li>Verify installation:</li>
+        </ol>
+
+<pre><code>g++ --version
+</code></pre>
+
+        <h3>Linux</h3>
+
+        <ol>
+            <li>Install GCC using your distribution's package manager.</li>
+            <li>Examples:</li>
+        </ol>
+
+<pre><code># Ubuntu / Debian
+sudo apt install g++
+
+# Fedora
+sudo dnf install gcc-c++
+
+# Arch Linux
+sudo pacman -S gcc
+</code></pre>
+
+        <ol start="3">
+            <li>Verify installation:</li>
+        </ol>
+
+<pre><code>g++ --version
+</code></pre>
+
+        <div class="boxed-paragraph">
+            <strong>Verification:</strong>
+            If a version number is displayed, your compiler is installed correctly.
+            If you receive an error such as "command not found," revisit the
+            installation steps for your operating system.
+        </div>
+
+        <div class="boxed-paragraph">
+            <strong>Next Step:</strong>
+            After installing a compiler, return to VS Code and install the
+            Microsoft <strong>C/C++</strong> extension to enable syntax
+            highlighting, code completion, and debugging support.
+        </div>
+
+    </div>
+</div>

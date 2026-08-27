@@ -689,7 +689,11 @@
             "title": "VS Code Setup",
             "type": "content",
             "source": "content/vscode.html"
-          }          
+          },
+          "compilers": {
+            "title": "Installing a C++ Compiler",
+            "type": "content",
+            "source": "/content/99/compilers.html"
         }
       }
     }
