@@ -1,0 +1,149 @@
+<h2>Assignment Feedback</h2>
+<p>
+    Just a quick reminder about assignment feedback.
+</p>
+<h3>General</h3>
+<p>
+    I added feedback to many of your assignments, but Canvas does not always make that feedback 
+    very obvious. To view it, open your assignment submission and click to expand the rubric. 
+    Please take a few moments to read any comments that were left there.
+</p>
+<p>
+    Also, if you received 98 or 99 points, your assignment was likely correct overall, but I may 
+    have deducted a small number of points simply to encourage you to open the feedback and review
+    an important comment, suggestion, or lesson learned. If you see a score that is just short of 100, 
+    please check the rubric comments before assuming it was only a minor grading adjustment.
+</p>
+<p>
+    To help everyone learn from common mistakes, I have also been trying to summarize recurring 
+    issues and lessons learned in announcements and class discussions. Even if a particular comment 
+    was not directed toward your submission, reviewing these common issues can help you avoid similar 
+    problems in future assignments.
+</p>
+<p>
+    Remember, the goal of feedback is not just to explain a grade. It is to help you improve your 
+    programming skills and develop good coding habits as we move through the course.
+</p>
+<h3>C++ Input: <code>cin</code> vs. <code>getline()</code></h3>
+<p>
+  In C++, both <code>cin</code> and <code>getline()</code> are used to get input from the 
+  keyboard, but they work differently.
+</p>
+
+<ul>
+  <li>
+    <strong>cin</strong> reads input only until it encounters a whitespace character
+    (such as a space, tab, or Enter key). It is commonly used for single words or numeric values.
+  </li>
+  <li>
+    <strong>getline()</strong> reads an entire line of text, including spaces,
+    until the user presses Enter. It is commonly used for sentences or full names.
+  </li>
+</ul>
+
+<p><strong>Example:</strong></p>
+
+<pre>
+Input: John Smith
+
+cin >> name;          // Stores: "John"
+getline(cin, name);   // Stores: "John Smith"
+</pre>
+
+<p>
+  Use <code>cin</code> when reading individual values such as numbers or single words,
+  and use <code>getline()</code> when you need to capture an entire line of text that 
+  may contain spaces.
+</p>
+
+<h3>Required file headers</h3>
+<p>
+    As discussed in class, use the required file header provided in Canvas for all your 
+    assigned source files.
+</p>
+<p>
+    It is not optional; failing to include the required file header may result in a loss 
+    of points.
+</p>
+<p>
+    As discussed in class, the values indicated as placeholders, should be replaced with
+    your own information, such as your name, student ID, and the date. Don't include
+    angle brackets ("&lt;" and "&gt;") or square brackets ("[" and "]") around these values.
+</p>
+
+<h3>Syntax Errors</h3>
+<p>
+    It is expected that all your code will compile and has been tested before submission.
+</p>
+
+<h3>Coding style and conventions</h3>
+<p>
+    Although these may not prevent your code from compiling and running, following good 
+    coding style and conventions will help make your code more readable, maintainable, 
+    and professional.
+</p>
+<h4>Variable Naming</h4>
+<p>
+    Identifier names such as constants, variables, methods, classes, and even filenames 
+    should be descriptive and meaningful.
+</p>
+<p>
+    Avoid single-letter names unless they are commonly used for loop counters.
+</p>
+<p>
+    By convention, use lowerCamelCase for variable and method names, and UPPER_CASE for 
+    constants. In addition to ensure they are treated as immutable, it is recommended 
+    to use the <code>const</code> keyword when declaring constants.
+</p>
+<p>
+    In later chapters, you will see the use of PascalCase (UpperCamelCase) for class names.
+</p>
+<h4>Indentation</h4>
+<p>
+    Use consistent indentation to make your code easier to read. Typically, 4 spaces are 
+    used for each level of indentation.
+</p>
+<p style="margin:auto; text-align: center; border-style: solid;">
+    Indent code inside braces by 4 spaces
+</p>
+<blockquote>
+    <p>
+        Indentation does not affect how a C++ program runs, but it makes the program easier 
+        for humans to read. Code inside a block (between { and }) should be indented 
+        consistently so the structure of the program is clear. Consistent formatting improves 
+        readability and helps others understand and maintain your code.
+    </p>
+    <p><a href="https://www.learncpp.com/cpp-tutorial/whitespace-and-basic-formatting">
+        learncpp link for more.</a></p>
+</blockquote>
+<h4>Formatting</h4>
+<p>
+    Avoid writing code with source lines that are hundreds of characters long. As a general 
+    rule, keep lines within 80 characters whenever practical, and never exceed 100 characters. 
+    Code should fit comfortably on a printed page and be easy to read without horizontal 
+    scrolling. If a statement becomes too long, break it into multiple lines with meaningful 
+    indentation. Remember: code is read far more often than it is written.
+</p>
+<p>
+    Most common IDEs support automatic indentation, with consistent code conventions and 
+    formatting by default. Do not override these defaults until you are more experienced 
+    with the language and its conventions. 
+</p>
+<p>
+    Consistent indentation helps in understanding the structure and flow of your code.
+</p>
+
+<h3>Variable types</h3>
+<p>
+    If you used a string instead of a character for exercise #4, Was the result what you expected?
+</p>
+<pre>
+   123
+  123123123
+ 123123123123123
+123123123123123123123
+ 123123123123123
+  123123123
+   123
+</pre>
+
