@@ -455,8 +455,8 @@
             "type": "content",
             "source": "content/07/sample-code-unit-testing.html"
           },
-          "arraytests": {
-            "title": "Array Unit Tests",
+          "2d-arrays": {
+            "title": "2-D Arrays sample code",
             "type": "content",
             "source": "content/07/sample-code-arrays.html"
           },
