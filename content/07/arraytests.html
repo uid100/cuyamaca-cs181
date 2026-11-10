@@ -6,15 +6,15 @@
  * Find the Arrange-Act-Assert pattern used in each test function.
  */
 
-#include <cassert>
-#include <iostream>
+#include &lt;cassert&gt;
+#include &lt;iostream&gt;
 
 // ---------- 1-D Array Functions ----------
 
 int sumArray(const int arr[], int size) {
     int sum = 0;
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i &lt; size; i++) {
         sum += arr[i];
     }
 
@@ -24,7 +24,7 @@ int sumArray(const int arr[], int size) {
 int findMax(const int arr[], int size) {
     int maxValue = arr[0];
 
-    for (int i = 1; i < size; i++) {
+    for (int i = 1; i &lt; size; i++) {
         if (arr[i] > maxValue) {
             maxValue = arr[i];
         }
@@ -41,8 +41,8 @@ const int COLS = 3;
 int sumMatrix(const int matrix[ROWS][COLS]) {
     int sum = 0;
 
-    for (int row = 0; row < ROWS; row++) {
-        for (int col = 0; col < COLS; col++) {
+    for (int row = 0; row &lt; ROWS; row++) {
+        for (int col = 0; col &lt; COLS; col++) {
             sum += matrix[row][col];
         }
     }
@@ -53,7 +53,7 @@ int sumMatrix(const int matrix[ROWS][COLS]) {
 int rowSum(const int matrix[ROWS][COLS], int row) {
     int sum = 0;
 
-    for (int col = 0; col < COLS; col++) {
+    for (int col = 0; col &lt; COLS; col++) {
         sum += matrix[row][col];
     }
 
@@ -110,7 +110,7 @@ int main() {
     testSumMatrix();
     testRowSum();
 
-    std::cout << "All tests passed!\n";
+    std::cout &lt;&lt; "All tests passed!\n";
 
     return 0;
 }

@@ -455,7 +455,7 @@
             "type": "content",
             "source": "content/07/sample-code-unit-testing.html"
           },
-          "2d-arrays": {
+          "2d-array-sample": {
             "title": "2-D Arrays sample code",
             "type": "content",
             "source": "content/07/sample-code-arrays.html"
@@ -463,7 +463,7 @@
           "arraytests-cpp": {
             "title": "Array Unit Tests (C++)",
             "type": "content",
-            "source": "content/07/arraytests.cpp"
+            "source": "content/07/arraytests.html"
           },
           "vector-tests": {
             "title": "Vector Unit Tests",
