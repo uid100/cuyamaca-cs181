@@ -7,9 +7,9 @@
             and unit testing to verify that our functions work correctly.
         </p>
         <pre><code>
-#include <cassert>
-#include <iostream>
-#include <vector>
+#include &lt;cassert&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
 using namespace std;
 
@@ -17,7 +17,7 @@ using namespace std;
 // Utility Functions
 //--------------------------------------------------
 
-int sumVector(const vector<int>& values) {
+int sumVector(const vector&lt;int&gt;&amp; values) {
     int sum = 0;
 
     for (int value : values) {
@@ -27,7 +27,7 @@ int sumVector(const vector<int>& values) {
     return sum;
 }
 
-int findMax(const vector<int>& values) {
+int findMax(const vector&lt;int&gt;&amp; values) {
     int maxValue = values.at(0);
 
     for (int value : values) {
@@ -44,25 +44,25 @@ int findMax(const vector<int>& values) {
 //--------------------------------------------------
 
 void testSumVector() {
-    vector<int> numbers = {10, 20, 30, 40};
+    vector&lt;int&gt; numbers = {10, 20, 30, 40};
 
     assert(sumVector(numbers) == 100);
 }
 
 void testFindMax() {
-    vector<int> numbers = {10, 50, 30, 20};
+    vector&lt;int&gt; numbers = {10, 50, 30, 20};
 
     assert(findMax(numbers) == 50);
 }
 
 void testSize() {
-    vector<int> numbers = {10, 20, 30};
+    vector&lt;int&gt; numbers = {10, 20, 30};
 
     assert(numbers.size() == 3);
 }
 
 void testAt() {
-    vector<int> numbers = {10, 20, 30};
+    vector&lt;int&gt; numbers = {10, 20, 30};
 
     assert(numbers.at(0) == 10);
     assert(numbers.at(1) == 20);
@@ -70,7 +70,7 @@ void testAt() {
 }
 
 void testPushBack() {
-    vector<int> numbers;
+    vector&lt;int&gt; numbers;
 
     numbers.push_back(10);
     numbers.push_back(20);
@@ -81,7 +81,7 @@ void testPushBack() {
 }
 
 void testPopBack() {
-    vector<int> numbers = {10, 20, 30};
+    vector&lt;int&gt; numbers = {10, 20, 30};
 
     numbers.pop_back();
 
@@ -91,7 +91,7 @@ void testPopBack() {
 }
 
 void testClear() {
-    vector<int> numbers = {10, 20, 30};
+    vector&lt;int&gt; numbers = {10, 20, 30};
 
     numbers.clear();
 
@@ -100,7 +100,7 @@ void testClear() {
 }
 
 void testVectorWorkflow() {
-    vector<int> scores;
+    vector&lt;int&gt; scores;
 
     // Add elements
     scores.push_back(85);
@@ -140,7 +140,7 @@ int main() {
 
     testVectorWorkflow();
 
-    cout << "All tests passed!" << endl;
+    cout &lt;&lt; "All tests passed!" &lt;&lt; endl;
 
     return 0;
 }
