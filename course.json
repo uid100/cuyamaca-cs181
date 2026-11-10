@@ -450,6 +450,26 @@
             "type": "content",
             "resource": "https://uid100.github.io/edu-core/shared/modules/oop-concepts/droids.html"
           },
+          "unit-test": {
+            "title": "Unit Testing",
+            "type": "content",
+            "source": "/content/07/sample-code-unit-testing.html"
+          },
+          "arraytests": {
+            "title": "Array Unit Tests",
+            "type": "content",
+            "source": "/content/07/sample-code-arrays.cpp"
+          },
+          "arraytests-cpp": {
+            "title": "Array Unit Tests (C++)",
+            "type": "content",
+            "source": "/content/07/arraytests.cpp"
+          },
+          "vector-tests": {
+            "title": "Vector Unit Tests",
+            "type": "content",
+            "source": "/content/07/vector-tests.html"
+          },
           "end": {
             "title": "End of Module 7",
             "type": "content",

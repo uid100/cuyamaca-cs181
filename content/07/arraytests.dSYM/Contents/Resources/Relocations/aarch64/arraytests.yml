@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Volumes/ext/proj/edu/cuyamaca-cs181/content/07/arraytests'
+relocations:     []
+...

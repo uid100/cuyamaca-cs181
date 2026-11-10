@@ -1,0 +1,45 @@
+<div class="card mb-3">
+    <div class="card-header">
+        range-based for loop
+    </div>
+    <div class="card-body">
+        <pre><code>
+int numbers[] = {10, 20, 30, 40, 50};
+
+for (int value : numbers) {
+    std::cout << value << '\n';
+}
+        </code></pre>
+
+    </div>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">
+        2-dimensional array
+    </div>
+    <div class="card-body">
+        <pre><code>
+#include <iostream>
+
+int main() {
+    int matrix[2][3] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    for (int row = 0; row < 2; row++) {
+        for (int col = 0; col < 3; col++) {
+            std::cout << matrix[row][col] << " ";
+        }
+        std::cout << '\n';
+    }
+
+    return 0;
+}
+        </code></pre>
+    </div>
+</div>
+
+<div class="card mb-3">
+    

@@ -1,0 +1,149 @@
+<div class="card">
+    <div class="card-header">Unit Tests with Vectors</div>
+    <div class="card-body">
+        <p>This page contains unit tests for vectors in C++.</p>
+
+        <p>As we demonstrated using arrays, we can use vectors to store collections of data
+            and unit testing to verify that our functions work correctly.
+        </p>
+        <pre><code>
+#include <cassert>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+//--------------------------------------------------
+// Utility Functions
+//--------------------------------------------------
+
+int sumVector(const vector<int>& values) {
+    int sum = 0;
+
+    for (int value : values) {
+        sum += value;
+    }
+
+    return sum;
+}
+
+int findMax(const vector<int>& values) {
+    int maxValue = values.at(0);
+
+    for (int value : values) {
+        if (value > maxValue) {
+            maxValue = value;
+        }
+    }
+
+    return maxValue;
+}
+
+//--------------------------------------------------
+// Unit Tests
+//--------------------------------------------------
+
+void testSumVector() {
+    vector<int> numbers = {10, 20, 30, 40};
+
+    assert(sumVector(numbers) == 100);
+}
+
+void testFindMax() {
+    vector<int> numbers = {10, 50, 30, 20};
+
+    assert(findMax(numbers) == 50);
+}
+
+void testSize() {
+    vector<int> numbers = {10, 20, 30};
+
+    assert(numbers.size() == 3);
+}
+
+void testAt() {
+    vector<int> numbers = {10, 20, 30};
+
+    assert(numbers.at(0) == 10);
+    assert(numbers.at(1) == 20);
+    assert(numbers.at(2) == 30);
+}
+
+void testPushBack() {
+    vector<int> numbers;
+
+    numbers.push_back(10);
+    numbers.push_back(20);
+
+    assert(numbers.size() == 2);
+    assert(numbers.at(0) == 10);
+    assert(numbers.at(1) == 20);
+}
+
+void testPopBack() {
+    vector<int> numbers = {10, 20, 30};
+
+    numbers.pop_back();
+
+    assert(numbers.size() == 2);
+    assert(numbers.at(0) == 10);
+    assert(numbers.at(1) == 20);
+}
+
+void testClear() {
+    vector<int> numbers = {10, 20, 30};
+
+    numbers.clear();
+
+    assert(numbers.size() == 0);
+    assert(numbers.empty());
+}
+
+void testVectorWorkflow() {
+    vector<int> scores;
+
+    // Add elements
+    scores.push_back(85);
+    scores.push_back(90);
+    scores.push_back(95);
+
+    assert(scores.size() == 3);
+
+    // Access elements
+    assert(scores.at(0) == 85);
+    assert(scores.at(2) == 95);
+
+    // Remove last element
+    scores.pop_back();
+
+    assert(scores.size() == 2);
+
+    // Remove all elements
+    scores.clear();
+
+    assert(scores.empty());
+}
+
+//--------------------------------------------------
+// Main
+//--------------------------------------------------
+
+int main() {
+    testSumVector();
+    testFindMax();
+
+    testSize();
+    testAt();
+    testPushBack();
+    testPopBack();
+    testClear();
+
+    testVectorWorkflow();
+
+    cout << "All tests passed!" << endl;
+
+    return 0;
+}
+        </code></pre>
+    </div>
+</div>

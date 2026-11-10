@@ -1,0 +1,116 @@
+/*
+ * This file contains unit tests for array utility functions.
+ * It demonstrates how to use the assert macro to verify
+ * the correctness of sumArray, findMax, sumMatrix, and rowSum functions.
+ *
+ * Find the Arrange-Act-Assert pattern used in each test function.
+ */
+
+#include <cassert>
+#include <iostream>
+
+// ---------- 1-D Array Functions ----------
+
+int sumArray(const int arr[], int size) {
+    int sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+int findMax(const int arr[], int size) {
+    int maxValue = arr[0];
+
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
+        }
+    }
+
+    return maxValue;
+}
+
+// ---------- 2-D Array Functions ----------
+
+const int ROWS = 2;
+const int COLS = 3;
+
+int sumMatrix(const int matrix[ROWS][COLS]) {
+    int sum = 0;
+
+    for (int row = 0; row < ROWS; row++) {
+        for (int col = 0; col < COLS; col++) {
+            sum += matrix[row][col];
+        }
+    }
+
+    return sum;
+}
+
+int rowSum(const int matrix[ROWS][COLS], int row) {
+    int sum = 0;
+
+    for (int col = 0; col < COLS; col++) {
+        sum += matrix[row][col];
+    }
+
+    return sum;
+}
+
+// ---------- Unit Tests ----------
+
+void testSumArray() {
+    // Arrange
+    int numbers[] = {10, 20, 30};
+
+    // Act + Assert
+    //assert(sumArray(numbers, 3) == 60);
+
+    // what happens?
+    assert(sumArray(numbers, 3) == 50);
+}
+
+void testFindMax() {
+    int numbers[] = {10, 50, 30};
+
+    assert(findMax(numbers, 3) == 50);
+
+    int moreNumbers[] = {8, 6, 7, 5, 3, 0, 9};
+    assert(findMax(moreNumbers, 7) == 9);
+
+    int singleNumber[] = {42};
+    assert(findMax(singleNumber, 1) == 42);
+}
+
+void testSumMatrix() {
+    int matrix[ROWS][COLS] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    assert(sumMatrix(matrix) == 21);
+}
+
+void testRowSum() {
+    int matrix[ROWS][COLS] = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    assert(rowSum(matrix, 0) == 6);
+    assert(rowSum(matrix, 1) == 15);
+}
+
+int main() {
+    testSumArray();
+    testFindMax();
+    testSumMatrix();
+    testRowSum();
+
+    std::cout << "All tests passed!\n";
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+<div class="card mb-3">
+    <div class="card-header">
+        unit testing
+    </div>
+    <div class="card-body">
+        <p>
+            Unit testing verifies that individual functions behave as expected.
+        </p>
+        <p>
+            The <code>assert</code> macro checks that a condition is true. If the 
+            condition is false, the program will terminate with an error message.
+        </p>
+        <pre><code>
+#include <cassert>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    assert(add(2, 3) == 5);
+    assert(add(-1, 1) == 0);
+    return 0;
+}
+        </code></pre>
+    </div>
+</div>
