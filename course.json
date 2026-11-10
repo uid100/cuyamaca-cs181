@@ -423,27 +423,27 @@
           "overview": {
             "title": "Module Overview",
             "type": "content",
-            "source": "/content/07/module7.html"
+            "source": "content/07/module7.html"
           },
           "arrays": {
             "title": "Arrays",
             "type": "content",
-            "source": "/content/07/arrays.html"
+            "source": "content/07/arrays.html"
           },
           "program8-4": {
             "title": "Sample Code: Out-of-Bounds Code",
             "type": "content",
-            "source": "/content/07/out-of-bounds-code.html"
+            "source": "content/07/out-of-bounds-code.html"
           },
           "2d-arrays": {
             "title": "Multidimensional Arrays",
             "type": "content",
-            "source": "/content/07/multi-dimension-arrays.html"
+            "source": "content/07/multi-dimension-arrays.html"
           },
           "vectors": {
             "title": "Vectors vs. Arrays",
             "type": "content",
-            "source": "/content/07/vectors.html"
+            "source": "content/07/vectors.html"
           },
           "droids": {
             "title": "Droids: A Case Study in OOP",
@@ -453,27 +453,27 @@
           "unit-test": {
             "title": "Unit Testing",
             "type": "content",
-            "source": "/content/07/sample-code-unit-testing.html"
+            "source": "content/07/sample-code-unit-testing.html"
           },
           "arraytests": {
             "title": "Array Unit Tests",
             "type": "content",
-            "source": "/content/07/sample-code-arrays.cpp"
+            "source": "content/07/sample-code-arrays.html"
           },
           "arraytests-cpp": {
             "title": "Array Unit Tests (C++)",
             "type": "content",
-            "source": "/content/07/arraytests.cpp"
+            "source": "content/07/arraytests.cpp"
           },
           "vector-tests": {
             "title": "Vector Unit Tests",
             "type": "content",
-            "source": "/content/07/vector-tests.html"
+            "source": "content/07/vector-tests.html"
           },
           "end": {
             "title": "End of Module 7",
             "type": "content",
-            "source": "/content/end-module.html"
+            "source": "content/end-module.html"
           }
         },
         "lab": {
