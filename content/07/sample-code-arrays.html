@@ -7,7 +7,7 @@
 int numbers[] = {10, 20, 30, 40, 50};
 
 for (int value : numbers) {
-    std::cout << value << '\n';
+    std::cout &lt;&lt; value &lt;&lt; '\n';
 }
         </code></pre>
 
@@ -20,7 +20,7 @@ for (int value : numbers) {
     </div>
     <div class="card-body">
         <pre><code>
-#include <iostream>
+#include &lt;iostream&gt;
 
 int main() {
     int matrix[2][3] = {
@@ -30,9 +30,9 @@ int main() {
 
     for (int row = 0; row < 2; row++) {
         for (int col = 0; col < 3; col++) {
-            std::cout << matrix[row][col] << " ";
+            std::cout &lt;&lt; matrix[row][col] &lt;&lt; " ";
         }
-        std::cout << '\n';
+        std::cout &lt;&lt; '\n';
     }
 
     return 0;
